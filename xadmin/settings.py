@@ -91,8 +91,8 @@ DATABASES = {
         "NAME": "xadmin",
         "USER": "amd",
         "PASSWORD": "amdyes",
-        "HOST": "127.0.0.1",
-        "PORT": 5432,
+        "HOST": "10.67.167.53",
+        "PORT": 5433,
         "OPTIONS": {
             "options": "-c TimeZone=Asia/Shanghai",
         },
@@ -103,10 +103,10 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
+        "LOCATION": "redis://10.67.167.53:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "PASSWORD": "amdyes",
+            "PASSWORD": "dsy_201411",
             "CONNECTION_POOL_KWARGS": {
                 "max_connections": 100,
                 "retry_on_timeout": True,

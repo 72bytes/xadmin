@@ -1,0 +1,110 @@
+.tpgen-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+
+  .tpgen-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3498db, #e67e22, #27ae60);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .arco-icon {
+          color: #3498db;
+          background: white;
+          padding: 10px;
+          border-radius: 10px;
+          font-size: 2rem;
+        }
+      }
+
+      .progress-info {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .tpgen-main {
+    flex: 1;
+    overflow: auto;
+    padding: 25px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+    .tpgen-tabs {
+      :deep(.arco-tabs-nav) {
+        background: white;
+        border-radius: 12px;
+        padding: 5px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        margin-bottom: 25px;
+      }
+
+      :deep(.arco-tabs-tab) {
+        padding: 15px 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+
+        &:hover {
+          background: #f8f9fa;
+        }
+      }
+
+      :deep(.arco-tabs-tab-active) {
+        background: #3498db;
+        color: white;
+        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+      }
+    }
+  }
+}
+
+// 响应式
+@media (max-width: 768px) {
+  .tpgen-container {
+    .tpgen-header {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
