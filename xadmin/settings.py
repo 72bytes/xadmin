@@ -92,7 +92,7 @@ DATABASES = {
         "USER": "amd",
         "PASSWORD": "amdyes",
         "HOST": "127.0.0.1",
-        "PORT": 5432,
+        "PORT": 5433,
         "OPTIONS": {
             "options": "-c TimeZone=Asia/Shanghai",
         },
@@ -106,7 +106,6 @@ CACHES = {
         "LOCATION": "redis://127.0.0.1:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "PASSWORD": "amdyes",
             "CONNECTION_POOL_KWARGS": {
                 "max_connections": 100,
                 "retry_on_timeout": True,

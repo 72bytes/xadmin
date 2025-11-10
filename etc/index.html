@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPGen - Test Plan Generator</title>
+    <link rel="stylesheet" href="tp_gen.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1><i class="fas fa-vial"></i> TPGen - Test Plan Generator</h1>
+                <div id="progress-text">Progress: 0%</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="upload-plan">
+                <i class="fas fa-upload"></i> Upload Test Plan
+            </div>
+            <div class="tab" data-tab="custom-plan">
+                <i class="fas fa-cogs"></i> Custom Test Plan
+            </div>
+        </div>
+        
+        <!-- Upload Test Plan Tab -->
+        <div class="tab-content active" id="upload-plan">
+            <div class="form-section">
+                <h2 class="section-title"><i class="fas fa-file-upload"></i> Upload Your Test Plan</h2>
+                
+                <div class="form-group">
+                    <div class="upload-area" id="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload YAML Test Plan</h3>
+                        <p>Drag & drop your YAML file here or click to browse</p>
+                        <input type="file" id="yaml-upload" accept=".yaml,.yml" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-info-circle"></i> Uploaded Plan Analysis</label>
+                    <div id="validation-results" class="validation-results">
+                        <p>Upload a YAML file to see analysis results</p>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button type="button" id="analyze-btn" class="btn-primary" disabled>
+                        <i class="fas fa-search"></i> Analyze Test Plan
+                    </button>
+                </div>
+            </div>
+            
+            <div id="yaml-analysis-output" style="display: none;">
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-chart-bar"></i> Analysis Results</h2>
+                    <div id="analysis-content"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Custom Test Plan Tab -->
+        <div class="tab-content" id="custom-plan">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <form id="tpgen-form">
+                <!-- Hardware Platform Configuration -->
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-microchip"></i> Hardware Platform Configuration</h2>
+                    
+                    <div class="form-group">
+                        <label for="cpu"><i class="fas fa-microchip"></i> CPU Model</label>
+                        <select id="cpu" name="cpu" required>
+                            <option value="Ryzen Threadripper" selected>Ryzen Threadripper</option>
+                            <option value="EPYC">EPYC</option>
+                            <option value="Ryzen 9">Ryzen 9</option>
+                            <option value="Ryzen 7">Ryzen 7</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gpu"><i class="fas fa-desktop"></i> AMD GPU Product Line</label>
+                        <select id="gpu" name="gpu" required>
+                            <option value="Radeon RX 7900 Series" selected>Radeon RX 7900 Series</option>
+                            <option value="Radeon Pro W7800">Radeon Pro W7800</option>
+                            <option value="Radeon RX 6800 Series">Radeon RX 6800 Series</option>
+                            <option value="Radeon Pro W6800">Radeon Pro W6800</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-server"></i> Available Test Machines</label>
+                        
+                        <!-- Filter Summary and Stats -->
+                        <div class="filter-summary" id="filter-summary">
+                            <div class="filter-info">
+                                <span class="filter-label">Current Filter:</span>
+                                <span class="filter-value" id="filter-value">None</span>
+                                <button type="button" id="clear-filter-btn" class="btn-clear-filter hidden">
+                                    <i class="fas fa-times-circle"></i> Clear Filter
+                                </button>
+                            </div>
+                            <div class="machine-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number" id="total-machines">0</span>
+                                    <span class="stat-label">Total</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" id="matched-machines">0</span>
+                                    <span class="stat-label">Matched</span>
+                                </div>
+                                <div class="stat-item stat-highlight">
+                                    <span class="stat-number" id="selected-machines">0</span>
+                                    <span class="stat-label">Selected</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Batch Operations -->
+                        <div class="batch-operations" id="batch-operations">
+                            <button type="button" id="select-all-btn" class="btn-batch">
+                                <i class="fas fa-check-double"></i> Select All
+                            </button>
+                            <button type="button" id="invert-selection-btn" class="btn-batch">
+                                <i class="fas fa-exchange-alt"></i> Invert
+                            </button>
+                            <button type="button" id="clear-selection-btn" class="btn-batch">
+                                <i class="fas fa-times"></i> Clear
+                            </button>
+                        </div>
+                        
+                        <!-- Invalid Selection Warning -->
+                        <div class="invalid-selection-warning hidden" id="invalid-selection-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>
+                                <strong>Warning:</strong> 
+                                <span id="invalid-count">0</span> selected machine(s) do not match current filter.
+                            </span>
+                            <button type="button" id="clear-invalid-btn" class="btn-warning-action">
+                                Clear Invalid
+                            </button>
+                        </div>
+                        
+                        <div class="machine-list" id="machine-list">
+                            <!-- Machines will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Operating System Environment -->
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fab fa-ubuntu"></i> Operating System Environment</h2>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-cog"></i> OS Configuration Method</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="radio" id="same-os" name="os-config-method" value="same" checked>
+                                <label for="same-os">Same OS for all machines</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="radio" id="individual-os" name="os-config-method" value="individual">
+                                <label for="individual-os">Individual OS configuration</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="same-os-config">
+                        <div class="form-group">
+                            <label for="os"><i class="fab fa-linux"></i> OS Distribution</label>
+                            <select id="os" name="os" required>
+                                <option value="">Select an OS</option>
+                                <option value="Ubuntu 22.04">Ubuntu 22.04</option>
+                                <option value="Ubuntu 20.04">Ubuntu 20.04</option>
+                                <option value="RHEL 9">RHEL 9</option>
+                                <option value="RHEL 8">RHEL 8</option>
+                                <option value="RHEL 7">RHEL 7</option>
+                                <option value="CentOS Stream">CentOS Stream</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-layer-group"></i> Deployment Method</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="radio" id="bare-metal" name="deployment" value="Bare Metal" required>
+                                    <label for="bare-metal">Bare Metal</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="radio" id="virtual-machine" name="deployment" value="Virtual Machine">
+                                    <label for="virtual-machine">Virtual Machine</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="radio" id="container" name="deployment" value="Container">
+                                    <label for="container">Container</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="individual-os-config" class="hidden">
+                        <!-- Individual OS configurations will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Kernel and Driver Configuration -->
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-code-branch"></i> Kernel and Driver Configuration</h2>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-cog"></i> Kernel Configuration Method</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="radio" id="same-kernel" name="kernel-config-method" value="same" checked>
+                                <label for="same-kernel">Same kernel for all machines</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="radio" id="individual-kernel" name="kernel-config-method" value="individual">
+                                <label for="individual-kernel">Individual kernel configuration</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="same-kernel-config">
+                        <div class="form-group">
+                            <label for="kernel-type"><i class="fas fa-code"></i> Kernel Type</label>
+                            <select id="kernel-type" name="kernel-type" required>
+                                <option value="">Select kernel type</option>
+                                <option value="DKMS">DKMS</option>
+                                <option value="Mainline">Mainline</option>
+                                <option value="Custom Build">Custom Build</option>
+                                <option value="LTS">LTS</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="kernel-version"><i class="fas fa-hashtag"></i> Kernel Version</label>
+                            <select id="kernel-version" name="kernel-version" required>
+                                <option value="">Select kernel version</option>
+                                <option value="6.1">6.2</option>
+                                <option value="6.1">6.1</option>
+                                <option value="6.0">6.0</option>
+                                <option value="5.15">5.15</option>
+                                <option value="5.10">5.10</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="individual-kernel-config" class="hidden">
+                        <!-- Individual kernel configurations will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Firmware Management -->
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-microchip"></i> Firmware Management</h2>
+                    
+                    <div class="form-group">
+                        <label for="firmware-version"><i class="fas fa-code"></i> GPU Firmware Version</label>
+                        <select id="firmware-version" name="firmware-version" required>
+                            <option value="">Select firmware version</option>
+                            <option value="2023.07">2023.07</option>
+                            <option value="2023.05">2023.05</option>
+                            <option value="2023.03">2023.03</option>
+                            <option value="2022.12">2022.12</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-exchange-alt"></i> Version Comparison Testing</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="version-comparison" name="version-comparison">
+                                <label for="version-comparison">Enable firmware version comparison testing</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Test Case Management -->
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-tasks"></i> Test Case Management</h2>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-layer-group"></i> Test Case Groups</label>
+                        <div id="test-type-groups">
+                            <!-- Test type groups will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="button" id="add-custom-group" class="btn-secondary">
+                                <i class="fas fa-plus-circle"></i> Add Custom Test Group
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="test-case-search"><i class="fas fa-search"></i> Search Test Cases</label>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="test-case-search" placeholder="Search for test cases...">
+                        </div>
+                        <div id="search-results" class="search-results hidden">
+                            <!-- Search results will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="test-case-container" id="test-case-container">
+                        <!-- Test cases will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button type="button" id="reset-btn" class="btn-secondary">
+                        <i class="fas fa-redo"></i> Reset Form
+                    </button>
+                    <button type="button" id="generate-btn" class="btn-primary">
+                        <i class="fas fa-cogs"></i> Generate Test Plan
+                    </button>
+                </div>
+            </form>
+            
+            <div id="yaml-output" style="display: none;">
+                <div class="form-section">
+                    <h2 class="section-title"><i class="fas fa-file-code"></i> Generated Test Plan (YAML)</h2>
+					<div class="yaml-preview">
+                        <div class="yaml-line-numbers" id="yaml-line-numbers"></div>
+						<div class="yaml-code-content" id="yaml-content"></div>
+                    	<div class="yaml-preview" id="yaml-content"></div>
+					</div>
+                    <div class="actions">
+                        <button type="button" id="copy-btn" class="btn-secondary">
+                            <i class="fas fa-copy"></i> Copy to Clipboard
+                        </button>
+                        <button type="button" id="download-btn" class="btn-success">
+                            <i class="fas fa-download"></i> Download YAML
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Custom Group Modal -->
+    <div id="custom-group-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Create Custom Test Group</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            
+            <div class="form-group">
+                <label for="custom-group-name"><i class="fas fa-tag"></i> Group Name</label>
+                <input type="text" id="custom-group-name" placeholder="Enter group name">
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-search"></i> Add Existing Test Cases</label>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="existing-case-search" placeholder="Search existing test cases...">
+                </div>
+                <div id="existing-cases-list" class="existing-cases-list">
+                    <!-- Existing cases will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-plus"></i> Or Create New Test Cases</label>
+                <input type="text" id="custom-test-case-name" placeholder="Test case name">
+                <input type="text" id="custom-test-case-desc" placeholder="Test case description" style="margin-top: 10px;">
+                <button type="button" id="add-test-case" class="btn-primary" style="margin-top: 10px;">
+                    <i class="fas fa-plus"></i> Add Test Case
+                </button>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-list"></i> Selected Test Cases</label>
+                <div id="custom-test-cases-list" class="existing-cases-list">
+                    <!-- Selected test cases will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="modal-actions">
+                <button type="button" id="save-custom-group" class="btn-success">
+                    <i class="fas fa-save"></i> Save Group
+                </button>
+                <button type="button" id="cancel-custom-group" class="btn-secondary">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="notification" id="notification">Copied to clipboard!</div>
+    
+    <script src="tp_gen.js"></script>
+</body>
+</html>

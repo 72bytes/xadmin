@@ -27,6 +27,7 @@ export default defineConfig(({ command, mode }) => {
     // 添加需要vite优化的依赖
     optimizeDeps: {
       include: ['vue-draggable-plus'],
+      exclude: ['@vue-office/docx', '@vue-office/excel', '@vue-office/pdf'],
     },
     server: {
       // 服务启动时是否自动打开浏览器
