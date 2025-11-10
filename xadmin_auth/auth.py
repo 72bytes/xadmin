@@ -30,7 +30,7 @@ class TitwPermAuth(JWTAuth):
         ).values('menu_id')
         permissions = models.SysMenu.objects.filter(
             id__in=Subquery(menus)
-        ).values_list('permission', flat=True)
+        ).exclude(permission__isnull=True).exclude(permission='').values_list('permission', flat=True)
         if not bool(self.permission):
             return
         if self.permission not in tuple(permissions):
@@ -44,11 +44,17 @@ class TitwPermAuth(JWTAuth):
 
 class TitwBaseAuth(JWTAuth):
     def authenticate(self, request: HttpRequest, token: str) -> Any:
-        user = self.jwt_authenticate(request, token)
-        if user.status == 2:
-            raise AuthenticationFailed(
-                _("Forbidden: You don't have permission to access this API"),
-                code=401
-            )
-        return user
+        logger.info(f"认证请求 - Token: {token[:50]}...")  # 只记录前50个字符
+        try:
+            user = self.jwt_authenticate(request, token)
+            logger.info(f"认证成功 - 用户: {user.username}")
+            if user.status == 2:
+                raise AuthenticationFailed(
+                    _("Forbidden: You don't have permission to access this API"),
+                    code=401
+                )
+            return user
+        except Exception as e:
+            logger.error(f"认证失败: {str(e)}")
+            raise
     

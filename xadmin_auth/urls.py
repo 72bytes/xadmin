@@ -16,6 +16,7 @@ from . import api_dict
 from . import api_dict_item
 from . import api_option
 from . import api_common
+from . import api_test_plan
 
 
 api = NinjaExtraAPI(auth=auth.TitwBaseAuth(), 
@@ -31,12 +32,15 @@ api.add_router('dict/item', api_dict_item.router)
 api.add_router('dict', api_dict.router)
 api.add_router('option', api_option.router)
 api.add_router('common', api_common.router)
+api.add_router('test/plan', api_test_plan.router)
 
 @api.exception_handler(AuthenticationFailed)
-def handl_auth_fail(reqeust, exception):
+def handl_auth_fail(request, exception):
     resp = RespFailedTempl()
-    resp.code = exception.code
-    resp.data = str(exception)
+    # 安全获取 code 属性，如果不存在则使用 403
+    resp.code = getattr(exception, 'code', 403)
+    # 获取错误消息
+    resp.data = str(exception) if str(exception) else 'Authentication failed'
     return JsonResponse(resp.as_dict(), status=resp.code)
 
 def create_exception_handler(code: int):

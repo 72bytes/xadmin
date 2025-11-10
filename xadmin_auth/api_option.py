@@ -9,7 +9,7 @@ from . import auth
 
 router = Router()
 
-@router.get('', auth=auth.TitwPermAuth('system:option:update'))
+@router.get('', auth=auth.TitwPermAuth('system:option:list'))
 def get_option(request: HttpRequest):
     resp = utils.RespSuccessTempl()
     resp.data = list()

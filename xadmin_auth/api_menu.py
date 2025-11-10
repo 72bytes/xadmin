@@ -8,7 +8,7 @@ from . import auth
 
 router = Router()
 
-@router.get('/tree', auth=auth.TitwPermAuth('system:menu:tree'))
+@router.get('/tree', auth=auth.TitwPermAuth('system:menu:list'))
 def get_menu_tree(request):
     data = cache.get('menu_tree')
     if not data:
