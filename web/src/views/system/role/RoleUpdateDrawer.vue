@@ -32,7 +32,7 @@
       </fieldset>
       <fieldset>
         <legend>功能权限</legend>
-        <a-form-item hide-label :disabled="form.isSystem">
+        <a-form-item hide-label :disabled="!!form.isSystem">
           <a-space>
             <a-checkbox v-model="isMenuExpanded" @change="onExpanded('menu')">展开/折叠</a-checkbox>
             <a-checkbox v-model="isMenuCheckAll" @change="onCheckAll('menu')">全选/全不选</a-checkbox>
@@ -57,10 +57,10 @@
             v-model.trim="form.dataScope"
             :options="data_scope_enum"
             placeholder="请选择数据权限"
-            :disabled="form.isSystem"
+            :disabled="!!form.isSystem"
           />
         </a-form-item>
-        <a-form-item v-if="form.dataScope === 5" hide-label :disabled="form.isSystem">
+        <a-form-item v-if="form.dataScope === 5" hide-label :disabled="!!form.isSystem">
           <a-space>
             <a-checkbox v-model="isDeptExpanded" @change="onExpanded('dept')">展开/折叠</a-checkbox>
             <a-checkbox v-model="isDeptCheckAll" @change="onCheckAll('dept')">全选/全不选</a-checkbox>

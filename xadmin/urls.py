@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('system/', include('xadmin_auth.urls')),
+    path('system/', include('xauth.urls')),
+    path('case/', include('xcase.urls')),  # 用例管理模块
 ]

@@ -48,7 +48,7 @@
           <a-link
             v-permission="['system:dept:delete']"
             status="danger"
-            :disabled="record.isSystem"
+            :disabled="!!record.isSystem"
             :title="record.isSystem ? '系统内置数据不能删除' : '删除'"
             @click="onDelete(record)"
           >

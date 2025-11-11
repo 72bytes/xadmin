@@ -195,6 +195,7 @@ const reload = () => {
 
 .tabs {
   padding-top: 5px;
+  padding-left: 5px;
   background-color: var(--color-bg-1);
   position: relative;
 }

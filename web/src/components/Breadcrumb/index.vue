@@ -1,17 +1,13 @@
 <template>
   <a-breadcrumb>
-    <transition-group name="breadcrumb">
-      <div v-for="(item, index) in breadcrumbList" :key="item.meta.title">
-        <a-breadcrumb-item>
-          <span
-            v-if="item.redirect === 'noRedirect' || item.redirect === '' || index === breadcrumbList.length - 1"
-            class="gi_line_1"
-          >{{ item.meta.title }}</span>
-          <span v-else class="gi_line_1 breadcrumb-item-title" @click="handleLink(item)">{{ item.meta.title }}</span>
-          <icon-right v-if="index !== breadcrumbList.length - 1" />
-        </a-breadcrumb-item>
-      </div>
-    </transition-group>
+    <a-breadcrumb-item v-for="(item, index) in breadcrumbList" :key="item.meta.title">
+      <span
+        v-if="item.redirect === 'noRedirect' || item.redirect === '' || index === breadcrumbList.length - 1"
+        class="gi_line_1"
+      >{{ item.meta.title }}</span>
+      <span v-else class="gi_line_1 breadcrumb-item-title" @click="handleLink(item)">{{ item.meta.title }}</span>
+      <icon-right v-if="index !== breadcrumbList.length - 1" />
+    </a-breadcrumb-item>
   </a-breadcrumb>
 </template>
 
@@ -62,17 +58,6 @@ function handleLink(item: RouteLocationMatched) {
 </script>
 
 <style scoped lang="scss">
-/** breadcrumb-transform 面包屑动画 */
-.breadcrumb-enter-active {
-  transition: all 0.2s;
-}
-
-.breadcrumb-enter-from,
-.breadcrumb-leave-active {
-  opacity: 0;
-  transform: translateX(10px);
-}
-
 :deep(.arco-breadcrumb-item) {
   padding: 0;
   display: flex;

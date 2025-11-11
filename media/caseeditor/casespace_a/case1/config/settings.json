@@ -1,0 +1,17 @@
+{
+  "app": {
+    "name": "My Application",
+    "version": "1.0.0",
+    "environment": "development"
+  },
+  "server": {
+    "port": 8080,
+    "host": "localhost"
+  },
+  "features": {
+    "authentication": true,
+    "logging": true,
+    "caching": false
+  }
+}
+

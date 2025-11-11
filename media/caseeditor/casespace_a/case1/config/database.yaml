@@ -1,0 +1,13 @@
+database:
+  host: localhost
+  port: 5432
+  name: myapp_db
+  user: admin
+  password: secret
+  pool:
+    min: 2
+    max: 10
+  options:
+    ssl: true
+    timeout: 30
+

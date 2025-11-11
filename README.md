@@ -35,7 +35,7 @@ xadmin/
 │   ├── wsgi.py            # WSGI 配置
 │   ├── asgi.py            # ASGI 配置
 │   └── logru_config.py    # 日志配置
-├── xadmin_auth/           # 认证和权限模块
+├── xauth/                 # 认证和权限模块
 │   ├── api_auth.py        # 认证 API
 │   ├── api_user.py        # 用户管理 API
 │   ├── api_role.py        # 角色管理 API
@@ -47,12 +47,12 @@ xadmin/
 │   ├── api_common.py      # 通用 API
 │   ├── auth.py            # 认证逻辑
 │   └── urls.py            # 认证模块路由
-├── xadmin_db/             # 数据库模型模块
+├── xdb/                   # 数据库模型模块
 │   ├── models.py          # 数据模型定义
 │   ├── schemas.py         # Pydantic 模式
 │   ├── signals.py         # 数据库信号处理
 │   └── migrations/        # 数据库迁移文件
-├── xadmin_utils/          # 工具模块
+├── xutils/                # 工具模块
 │   └── utils.py           # 通用工具函数
 ├── manage.py              # Django 管理脚本
 ├── gunicorn.conf.py       # Gunicorn 配置

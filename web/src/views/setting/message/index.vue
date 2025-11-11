@@ -43,7 +43,7 @@
         <a-button type="primary" :disabled="!selectedKeys.length" @click="onRead">
           <span>标记为已读</span>
         </a-button>
-        <a-button type="primary" :disabled="selectedKeys.length" @click="onReadAll">全部已读</a-button>
+        <a-button type="primary" :disabled="!!selectedKeys.length" @click="onReadAll">全部已读</a-button>
       </template>
       <template #title="{ record }">
         <a-tooltip :content="record.content"><span>{{ record.title }}</span></a-tooltip>

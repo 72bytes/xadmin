@@ -60,15 +60,15 @@
             <a-space>
               <a-link v-permission="['system:user:detail']" title="详情" @click="onDetail(record)">详情</a-link>
               <a-link v-permission="['system:user:update']" title="修改" @click="onUpdate(record)">修改</a-link>
-              <a-link
-                v-permission="['system:user:delete']"
-                status="danger"
-                :disabled="record.isSystem"
-                :title="record.isSystem ? '系统内置数据不能删除' : '删除'"
-                @click="onDelete(record)"
-              >
-                删除
-              </a-link>
+          <a-link
+            v-permission="['system:user:delete']"
+            status="danger"
+            :disabled="!!record.isSystem"
+            :title="record.isSystem ? '系统内置数据不能删除' : '删除'"
+            @click="onDelete(record)"
+          >
+            删除
+          </a-link>
               <a-dropdown>
                 <a-button v-if="has.hasPermOr(['system:user:resetPwd', 'system:user:updateRole'])" type="text" size="mini" title="更多">
                   <template #icon>

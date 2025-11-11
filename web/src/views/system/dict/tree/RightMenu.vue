@@ -6,7 +6,7 @@
     <a-menu-item
       v-permission="['system:dict:delete']"
       class="danger"
-      :disabled="data.isSystem"
+      :disabled="!!data.isSystem"
       :title="data.isSystem ? '系统内置数据不能删除' : '删除'"
       @click="onClick('delete')"
     >

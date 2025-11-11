@@ -76,7 +76,6 @@
 
       <a-empty v-if="!fileList.length" />
     </a-spin>
-    <FilePreview ref="filePreviewRef" />
     <div class="pagination">
       <a-pagination v-bind="pagination" />
     </div>
@@ -100,10 +99,6 @@ import { ImageTypes, OfficeTypes } from '@/constant/file'
 import 'viewerjs/dist/viewer.css'
 import { downloadByUrl } from '@/utils/downloadFile'
 
-import type { ExcelConfig } from '@/components/FilePreview/type'
-
-const FilePreview = defineAsyncComponent(() => import('@/components/FilePreview/index.vue'))
-
 const FileList = defineAsyncComponent(() => import('./FileList.vue'))
 const route = useRoute()
 const { mode, selectedFileIds, toggleMode, addSelectedFileItem } = useFileManage()
@@ -124,7 +119,7 @@ const {
   pagination,
   search,
 } = useTable((page) => listFile({ ...queryForm, ...page }), { immediate: false, paginationOption })
-const filePreviewRef = ref()
+
 // 点击文件
 const handleClickFile = (item: FileItem) => {
   if (ImageTypes.includes(item.extension)) {
@@ -142,23 +137,13 @@ const handleClickFile = (item: FileItem) => {
     }
   }
   if (OfficeTypes.includes(item.extension)) {
-    const excelConfig: ExcelConfig = {
-      xls: item.extension === 'xls',
-      minColLength: 0,
-      minRowLength: 0,
-      widthOffset: 10,
-      heightOffset: 10,
-      beforeTransformData: (workbookData) => {
-        return workbookData
-      },
-      transformData: (workbookData) => {
-        return workbookData
-      },
+    // 在新标签页中打开 Office 文件（PDF、Word、Excel 等）
+    if (item.url) {
+      window.open(item.url, '_blank')
+      Message.info('已在新标签页中打开文件')
+    } else {
+      Message.warning('文件链接不可用')
     }
-    filePreviewRef.value.onPreview({
-      fileInfo: { data: item.url, fileName: item.name, fileType: item.extension },
-      excelConfig,
-    })
   }
   if (item.extension === 'mp4') {
     previewFileVideoModal(item)

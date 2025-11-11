@@ -53,7 +53,7 @@
           <a-link
             v-permission="['system:storage:delete']"
             status="danger"
-            :disabled="record.isDefault"
+            :disabled="!!record.isDefault"
             :title="record.isDefault ? '默认存储不能删除' : '删除'"
             @click="onDelete(record)"
           >

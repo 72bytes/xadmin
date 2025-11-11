@@ -1,0 +1,47 @@
+testplan_example:
+    actions:
+        - name: install_mysql
+          properties:
+              shell: xxx.sh 32 192.168.1.100 192.168.1.101 10.0.0.50 7777
+        - name: check_mysql
+          properties:
+              shell: systemctl status mysqld
+    properties:
+        config:
+            debug: true
+            parallel: true
+            timeout: 3600
+        machine:
+            cloud: aws
+            region: us-east-1
+            tags:
+                - production
+                - web
+                - backend
+                - api
+            type: production
+        hardware:
+            cpu: $cpu_count
+            disk: $disk_size
+            memory: $mem_size
+        cpu:
+            cores: 16
+            threads: 32
+            vendor: intel
+        os:
+            arch: x86_64
+            name: ubuntu
+            version: "22.04"
+        network:
+            bandwidth: 10000
+            interfaces: 2
+            ips:
+                - 192.168.1.100
+                - 192.168.1.101
+                - 10.0.0.50
+        mysql:
+            port: 7777
+    variables:
+        $cpu_count: 16
+        $disk_size: 1000
+        $mem_size: 32768665

@@ -1,0 +1,16 @@
+{
+  "name": "Monaco Editor Test",
+  "version": "1.0.0",
+  "features": [
+    "syntax highlighting",
+    "line numbers",
+    "code folding"
+  ],
+  "config": {
+    "theme": "vs",
+    "fontSize": 14,
+    "enabled": true
+  }
+}
+
+

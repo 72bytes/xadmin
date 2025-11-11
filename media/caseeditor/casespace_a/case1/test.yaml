@@ -1,0 +1,44 @@
+# 测试 YAML 文件
+name: Case Editor 测试
+version: 1.0.0
+
+# 配置项
+config:
+  editor:
+    theme: dark
+    lineNumbers: true
+    syntaxHighlight: true
+  features:
+    - 语法高亮
+    - 行号显示
+    - 代码折叠
+    - 多标签编辑
+
+# 支持的语言
+languages:
+  - name: JavaScript
+    extensions: [.js, .jsx]
+    support: complete
+  - name: TypeScript
+    extensions: [.ts, .tsx]
+    support: complete
+  - name: YAML
+    extensions: [.yaml, .yml]
+    support: complete
+  - name: JSON
+    extensions: [.json]
+    support: basic
+
+# 性能优化
+performance:
+  debounce: 500ms
+  lazyLoading: true
+  shallowRef: true
+  lineNumbers: enabled
+
+# 元数据
+metadata:
+  created: 2025-11-10
+  author: Case Editor Team
+  status: production
+

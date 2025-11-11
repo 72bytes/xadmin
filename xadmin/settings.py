@@ -44,9 +44,9 @@ INSTALLED_APPS = [
     # 'django.contrib.sessions',
     # 'django.contrib.messages',
     # 'django.contrib.staticfiles',
-    "xadmin_utils",
-    "xadmin_db",
-    "xadmin_auth",
+    "xutils",
+    "xauth",  # 包含所有模型和逻辑（原 xdb + xauth）
+    "xcase",  # 用例管理模块
 ]
 
 MIDDLEWARE = [
@@ -135,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "xadmin_db.SysUser"
+AUTH_USER_MODEL = "xauth.SysUser"
 
 
 # Internationalization
@@ -161,7 +161,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = "/tmp"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Django Ninja JWT
 NINJA_JWT = {

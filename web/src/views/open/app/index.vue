@@ -60,7 +60,7 @@
           <a-link
             v-permission="['open:app:delete']"
             status="danger"
-            :disabled="record.disabled"
+            :disabled="!!record.disabled"
             :title="record.disabled ? '禁止删除' : '删除'"
             @click="onDelete(record)"
           >
