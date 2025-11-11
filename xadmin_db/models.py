@@ -603,6 +603,8 @@ class SysUserSocial(models.Model):
     
     def __str__(self):
         return f"<{self.user_id}, {self.open_id}>"
+<<<<<<< HEAD
+=======
 
 
 class TestPlan(ModelSaveMixin, models.Model):
@@ -631,3 +633,64 @@ class TestPlan(ModelSaveMixin, models.Model):
 
     def __str__(self):
         return f'<{self.id}, {self.name}>'
+
+
+class TpgenSavedPlan(ModelSaveMixin, models.Model):
+    """测试计划配置保存表"""
+    
+    id = models.BigAutoField(primary_key=True, db_comment='ID')
+    
+    # 基本信息
+    name = models.CharField(max_length=100, db_index=True, db_comment='测试计划名称')
+    category = models.CharField(max_length=50, db_index=True, db_comment='类别(Benchmark/Functional/Performance/Stress/Custom等)')
+    description = models.TextField(blank=True, null=True, db_comment='描述')
+    
+    # 配置内容（JSON格式）
+    config_data = models.JSONField(db_comment='完整的测试计划配置数据（包含FormData）')
+    yaml_data = models.JSONField(blank=True, null=True, db_comment='生成的YAML数据结构')
+    
+    # 硬件配置概览（用于快速筛选和显示）
+    cpu = models.CharField(max_length=100, blank=True, null=True, db_comment='CPU类型')
+    gpu = models.CharField(max_length=100, blank=True, null=True, db_comment='GPU类型')
+    machine_count = models.IntegerField(default=0, db_comment='选择的机器数量')
+    
+    # 环境配置概览
+    os_type = models.CharField(max_length=50, blank=True, null=True, db_comment='操作系统')
+    kernel_type = models.CharField(max_length=50, blank=True, null=True, db_comment='内核类型')
+    
+    # 测试用例统计
+    test_case_count = models.IntegerField(default=0, db_comment='测试用例数量')
+    
+    # 状态和标签
+    status = models.PositiveIntegerField(
+        default=1, 
+        db_index=True,
+        db_comment='状态(1: 草稿; 2: 已发布; 3: 归档)'
+    )
+    tags = models.CharField(max_length=200, blank=True, null=True, db_comment='标签，逗号分隔')
+    
+    # 使用情况统计
+    use_count = models.IntegerField(default=0, db_comment='使用次数')
+    last_used_time = models.DateTimeField(blank=True, null=True, db_comment='最后使用时间')
+    
+    # 标准字段
+    create_user = models.BigIntegerField(db_index=True, db_comment='创建人ID')
+    create_user_name = models.CharField(max_length=50, blank=True, null=True, db_comment='创建人姓名')
+    create_time = models.DateTimeField(auto_now_add=True, db_index=True, db_comment='创建时间')
+    update_user = models.BigIntegerField(blank=True, null=True, db_comment='修改人ID')
+    update_user_name = models.CharField(max_length=50, blank=True, null=True, db_comment='修改人姓名')
+    update_time = models.DateTimeField(auto_now=True, blank=True, null=True, db_comment='修改时间')
+    
+    class Meta:
+        db_table = 'tpgen_saved_plan'
+        db_table_comment = '测试计划配置保存表'
+        indexes = [
+            models.Index(fields=['name', 'category'], name='idx_name_category'),
+            models.Index(fields=['create_user', 'category'], name='idx_user_category'),
+            models.Index(fields=['-create_time'], name='idx_create_time_desc'),
+        ]
+        ordering = ['-create_time']
+    
+    def __str__(self):
+        return f'<{self.id}, {self.name}>'
+>>>>>>> 9af31be6cb22fdb430351d6de76e81dd03ff4c58

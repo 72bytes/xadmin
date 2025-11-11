@@ -1,9 +1,10 @@
 from django.http import HttpRequest
 from django.db.models import Q
 from ninja_extra import Router
-from xadmin_db import models
+from tpgen import models as tp_models
+from tpgen import schemas as tp_schemas
+from xadmin_db import models  # For SysUser
 from xadmin_utils import utils
-from xadmin_db import schemas
 from datetime import datetime
 
 
@@ -35,10 +36,10 @@ def get_test_plan_list(request: HttpRequest):
         filter_q &= Q(priority=int(priority))
     
     # 查询总数
-    total = models.TestPlan.objects.filter(filter_q).count()
+    total = tp_models.TestPlan.objects.filter(filter_q).count()
     
     # 分页查询
-    test_plans = models.TestPlan.objects.filter(filter_q).order_by('-create_time')[(page-1)*size:page*size]
+    test_plans = tp_models.TestPlan.objects.filter(filter_q).order_by('-created_at')[(page-1)*size:page*size]
     
     for plan in test_plans:
         # 获取创建人和更新人信息
@@ -86,7 +87,7 @@ def get_test_plan_list(request: HttpRequest):
 def get_test_plan(request: HttpRequest, plan_id: int):
     """获取单个测试计划详情"""
     try:
-        plan = models.TestPlan.objects.get(id=plan_id)
+        plan = tp_models.TestPlan.objects.get(id=plan_id)
         
         # 获取创建人和更新人信息
         create_user = models.SysUser.objects.get(id=plan.create_user)
@@ -131,11 +132,11 @@ def get_test_plan(request: HttpRequest, plan_id: int):
 
 
 @router.post('')
-def add_test_plan(request: HttpRequest, plan: schemas.TestPlanIn):
+def add_test_plan(request: HttpRequest, plan: tp_schemas.TestPlanIn):
     """新增测试计划"""
     try:
         # 检查编号是否已存在
-        if models.TestPlan.objects.filter(code=plan.code).exists():
+        if tp_models.TestPlan.objects.filter(code=plan.code).exists():
             resp = utils.RespFailedTempl()
             resp.data = '测试计划编号已存在'
             return resp.as_dict()
@@ -155,7 +156,7 @@ def add_test_plan(request: HttpRequest, plan: schemas.TestPlanIn):
                 pass
         
         # 创建测试计划
-        test_plan = models.TestPlan.objects.create(
+        test_plan = tp_models.TestPlan.objects.create(
             name=plan.name,
             code=plan.code,
             description=plan.description,
@@ -182,13 +183,13 @@ def add_test_plan(request: HttpRequest, plan: schemas.TestPlanIn):
 
 
 @router.put('/{plan_id}')
-def update_test_plan(request: HttpRequest, plan_id: int, plan: schemas.TestPlanIn):
+def update_test_plan(request: HttpRequest, plan_id: int, plan: tp_schemas.TestPlanIn):
     """修改测试计划"""
     try:
-        test_plan = models.TestPlan.objects.get(id=plan_id)
+        test_plan = tp_models.TestPlan.objects.get(id=plan_id)
         
         # 检查编号是否被其他记录占用
-        if models.TestPlan.objects.filter(code=plan.code).exclude(id=plan_id).exists():
+        if tp_models.TestPlan.objects.filter(code=plan.code).exclude(id=plan_id).exists():
             resp = utils.RespFailedTempl()
             resp.data = '测试计划编号已存在'
             return resp.as_dict()
@@ -242,7 +243,7 @@ def delete_test_plan(request: HttpRequest, plan_ids: str):
     """删除测试计划（支持批量）"""
     try:
         id_list = plan_ids.split(',')
-        deleted_count = models.TestPlan.objects.filter(id__in=id_list).delete()[0]
+        deleted_count = tp_models.TestPlan.objects.filter(id__in=id_list).delete()[0]
         
         resp = utils.RespSuccessTempl()
         resp.data = dict(deleted=deleted_count)

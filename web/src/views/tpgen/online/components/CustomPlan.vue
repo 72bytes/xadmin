@@ -62,6 +62,16 @@
           <template #icon v-if="!isGenerating"><icon-settings /></template>
           {{ isGenerating ? 'Generating...' : 'Generate Test Plan' }}
         </a-button>
+        <a-space>
+          <a-button type="outline" @click="handleSave">
+            <template #icon><icon-save /></template>
+            Save Plan
+          </a-button>
+          <a-button type="primary" @click="handleGenerate">
+            <template #icon><icon-settings /></template>
+            Generate Test Plan
+          </a-button>
+        </a-space>
       </div>
     </a-form>
 
@@ -96,6 +106,8 @@
 <script setup lang="ts">
 import type { FormData, YamlData } from '../types'
 import { mockMachines } from '../mockData'
+import { addSavedPlan } from '@/apis/tpgen'
+import { Message } from '@arco-design/web-vue'
 import HardwareConfig from './HardwareConfig.vue'
 import OSConfig from './OSConfig.vue'
 import KernelConfig from './KernelConfig.vue'
@@ -407,6 +419,24 @@ const generatedYaml = ref<YamlData | null>(null)
 const isGenerating = ref(false)
 const validationStatus = ref<any>(null)
 const errorLineNumbers = ref<number[]>([])
+
+// 保存相关状态
+const saveDialogVisible = ref(false)
+const saveForm = reactive({
+  name: '',
+  category: 'Benchmark',
+  description: '',
+  tags: '',
+  status: 1,
+})
+
+const saveFormRules = {
+  name: [
+    { required: true, message: '请输入计划名称' },
+    { minLength: 2, message: '计划名称至少2个字符' },
+  ],
+  category: [{ required: true, message: '请选择类别' }],
+}
 
 // 更新进度
 const updateProgress = () => {
@@ -732,11 +762,77 @@ const handleDownload = async () => {
   }
 }
 
-// 暴露方法供父组件调用
-defineExpose({
-  handleCopy,
-  handleDownload,
-})
+// 处理保存按钮点击
+const handleSave = () => {
+  // 验证表单是否有数据
+  if (formData.selectedMachines.length === 0) {
+    Message.warning('请先选择机器')
+    return
+  }
+  if (formData.selectedTestCases.length === 0) {
+    Message.warning('请先选择测试用例')
+    return
+  }
+  
+  // 显示保存对话框
+  saveDialogVisible.value = true
+}
+
+// 确认保存
+const handleSaveConfirm = async () => {
+  if (!saveForm.name) {
+    Message.warning('请输入计划名称')
+    return
+  }
+  if (!saveForm.category) {
+    Message.warning('请选择类别')
+    return
+  }
+  
+  try {
+    // 准备保存数据
+    const saveData = {
+      name: saveForm.name,
+      category: saveForm.category,
+      description: saveForm.description,
+      tags: saveForm.tags,
+      configData: { ...formData },
+      yamlData: generatedYaml.value || undefined,
+      cpu: formData.cpu,
+      gpu: formData.gpu,
+      machineCount: formData.selectedMachines.length,
+      osType: formData.os || '',
+      kernelType: formData.kernelType || '',
+      testCaseCount: formData.selectedTestCases.length,
+      status: saveForm.status,
+    }
+    
+    // 调用 API 保存
+    const res = await addSavedPlan(saveData)
+    if (res.code === 200) {
+      Message.success('保存成功')
+      saveDialogVisible.value = false
+      // 重置保存表单
+      saveForm.name = ''
+      saveForm.description = ''
+      saveForm.tags = ''
+      saveForm.status = 1
+      saveForm.category = 'Benchmark'
+    }
+    else {
+      Message.error(res.data || '保存失败')
+    }
+  }
+  catch (error) {
+    Message.error('保存失败，请重试')
+    console.error(error)
+  }
+}
+
+// 取消保存
+const handleSaveCancel = () => {
+  saveDialogVisible.value = false
+}
 
 // 监听表单变化
 watch(() => formData, updateProgress, { deep: true })
