@@ -6,7 +6,7 @@ import logging
 
 logger.remove()
 logger.add(sys.stdout, format="{time} {level} {message}", level="DEBUG")
-logger.add("/var/log/xadmin.log", rotation="50MB", retention=10, 
+logger.add("/home/zx/xadmin_zx/logs/xadmin.log", rotation="50MB", retention=10, 
            compression="zip", level="DEBUG")
 
 class InterceptHandler(logging.Handler):

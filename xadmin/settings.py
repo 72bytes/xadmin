@@ -92,7 +92,7 @@ DATABASES = {
         "NAME": "xadmin",
         "USER": "amd",
         "PASSWORD": "amdyes",
-        "HOST": "10.67.167.53",
+        "HOST": "10.67.167.53",  # ← 保留 dev 的修改
         "PORT": 5433,
         "OPTIONS": {
             "options": "-c TimeZone=Asia/Shanghai",
@@ -107,7 +107,7 @@ CACHES = {
         "LOCATION": "redis://10.67.167.53:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "PASSWORD": "dsy_201411",
+            "PASSWORD": "dsy_201411",  # ← 保留 dev 的修改
             "CONNECTION_POOL_KWARGS": {
                 "max_connections": 100,
                 "retry_on_timeout": True,

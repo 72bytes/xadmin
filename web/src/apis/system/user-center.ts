@@ -28,18 +28,18 @@ export function updateUserEmail(data: { email: string, /* captcha: string, */ ol
   return http.patch(`${BASE_URL}/email`, data)
 }
 
-// 第三方账号功能已删除
-// /** @desc 获取绑定的三方账号 */
-// export function listUserSocial() {
-//   return http.get<System.BindSocialAccountRes[]>(`${BASE_URL}/social`)
-// }
+// 第三方账号功能已删除 - 保留空函数以避免构建错误
+/** @desc 获取绑定的三方账号 */
+export function listUserSocial() {
+  return Promise.resolve([])
+}
 
-// /** @desc 绑定三方账号 */
-// export function bindSocialAccount(source: string, data: any) {
-//   return http.post(`${BASE_URL}/social/${source}`, data)
-// }
+/** @desc 绑定三方账号 */
+export function bindSocialAccount(source: string, data: any) {
+  return Promise.reject(new Error('Social account feature is disabled'))
+}
 
-// /** @desc 解绑三方账号 */
-// export function unbindSocialAccount(source: string) {
-//   return http.del(`${BASE_URL}/social/${source}`)
-// }
+/** @desc 解绑三方账号 */
+export function unbindSocialAccount(source: string) {
+  return Promise.reject(new Error('Social account feature is disabled'))
+}
