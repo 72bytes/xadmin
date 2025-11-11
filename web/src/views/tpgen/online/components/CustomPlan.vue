@@ -114,7 +114,7 @@ import KernelConfig from './KernelConfig.vue'
 // import FirmwareConfig from './FirmwareConfig.vue'
 import TestCaseManager from './TestCaseManager.vue'
 import YamlPreview from './YamlPreview.vue'
-import { Message } from '@arco-design/web-vue'
+
 // 导入兼容性分析函数和通知函数
 // import { compatibility_analysis, showNotification } from '../check_yaml'
 // 导入后端 API（如果存在）

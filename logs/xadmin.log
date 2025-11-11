@@ -1066,3 +1066,72 @@
 2025-11-11 17:07:07.124 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
 2025-11-11 17:07:07.279 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
 2025-11-11 17:07:07.279 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.15505599975585938
+2025-11-11 17:29:37.817 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_auth/api_test_plan.py changed, reloading.
+2025-11-11 17:29:40.325 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:29:41.236 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:31:06.795 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:31:07.128 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:31:07.362 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:32:33.646 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:32:33.953 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:32:34.138 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:35:38.991 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:35:39.371 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:35:39.601 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:36:00.996 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-11 17:36:01.435 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:36:01.723 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:36:16.115 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-11 17:36:16.430 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:36:16.656 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:36:30.060 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/schemas.py changed, reloading.
+2025-11-11 17:36:30.362 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:36:30.542 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:36:36.818 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/schemas.py changed, reloading.
+2025-11-11 17:36:37.154 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 17:36:37.348 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-11 17:36:43.767 | INFO     | xadmin_auth.api_auth:login:52 - Received password (raw): 'YWRtaW4xMjM='
+2025-11-11 17:36:43.767 | INFO     | xadmin_auth.api_auth:login:53 - Password type: <class 'str'>
+2025-11-11 17:36:43.768 | INFO     | xadmin_auth.api_auth:login:55 - user password: admin123
+2025-11-11 17:36:44.003 | INFO     | xadmin_auth.api_auth:login:59 - 登录成功 - 用户: admin, Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:36:44.004 | INFO     | xadmin.logru_config:emit:15 - "POST - login /system/auth/login" 0.7654440402984619
+2025-11-11 17:36:44.022 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:36:44.200 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:36:44.277 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.25435829162597656
+2025-11-11 17:36:44.287 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:36:44.897 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:36:45.475 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 1.1881303787231445
+2025-11-11 17:38:51.050 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:38:51.289 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.24646973609924316
+2025-11-11 17:38:51.541 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:38:51.658 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.6078536510467529
+2025-11-11 17:38:51.680 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:38:52.165 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:38:53.030 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 1.349907398223877
+2025-11-11 17:38:56.203 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:38:56.642 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:38:56.875 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.6720101833343506
+2025-11-11 17:39:03.514 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:04.143 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:04.144 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6300439834594727
+2025-11-11 17:39:06.167 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:06.684 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:06.685 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5171475410461426
+2025-11-11 17:39:08.415 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:09.378 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:09.378 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.9633803367614746
+2025-11-11 17:39:09.563 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:09.730 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:10.156 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:10.157 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5946896076202393
+2025-11-11 17:39:10.323 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:10.325 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.594597339630127
+2025-11-11 17:39:11.134 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:11.269 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:11.347 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:11.348 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.2143259048461914
+2025-11-11 17:39:11.416 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-11 17:39:11.701 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:11.702 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.43259739875793457
+2025-11-11 17:39:11.820 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-11 17:39:11.821 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.40501976013183594

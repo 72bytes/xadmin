@@ -160,8 +160,7 @@ class SysUserLogin(Schema):
 class SysUserProfile(Schema):
     gender: int
     nickname: str
-<<<<<<< HEAD
-=======
+
 
 
 # TestPlan
@@ -233,4 +232,4 @@ class TpgenSavedPlanUpdate(Schema):
     tags: Optional[str] = None
 
 
->>>>>>> 9af31be6cb22fdb430351d6de76e81dd03ff4c58
+
