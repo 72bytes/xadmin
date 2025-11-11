@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "xadmin_utils",
     "xadmin_db",
     "xadmin_auth",
+    "xadmin_tpgen",
 ]
 
 MIDDLEWARE = [
