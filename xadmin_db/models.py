@@ -603,8 +603,6 @@ class SysUserSocial(models.Model):
     
     def __str__(self):
         return f"<{self.user_id}, {self.open_id}>"
-<<<<<<< HEAD
-=======
 
 
 class TestPlan(ModelSaveMixin, models.Model):
@@ -693,4 +691,3 @@ class TpgenSavedPlan(ModelSaveMixin, models.Model):
     
     def __str__(self):
         return f'<{self.id}, {self.name}>'
->>>>>>> 9af31be6cb22fdb430351d6de76e81dd03ff4c58

@@ -47,11 +47,8 @@ INSTALLED_APPS = [
     "xadmin_utils",
     "xadmin_db",
     "xadmin_auth",
-<<<<<<< HEAD
     "tpgen",  # Test Plan Generator
-=======
     "xadmin_tpgen",
->>>>>>> 9af31be6cb22fdb430351d6de76e81dd03ff4c58
 ]
 
 MIDDLEWARE = [
