@@ -603,31 +603,3 @@ class SysUserSocial(models.Model):
     
     def __str__(self):
         return f"<{self.user_id}, {self.open_id}>"
-
-
-class TestPlan(ModelSaveMixin, models.Model):
-    id = models.BigAutoField(primary_key=True, db_comment='ID')
-    name = models.CharField(max_length=100, db_comment='测试计划名称')
-    code = models.CharField(max_length=50, unique=True, db_comment='测试计划编号')
-    description = models.TextField(blank=True, null=True, db_comment='描述')
-    start_time = models.DateTimeField(blank=True, null=True, db_comment='开始时间')
-    end_time = models.DateTimeField(blank=True, null=True, db_comment='结束时间')
-    owner_id = models.BigIntegerField(blank=True, null=True, db_comment='负责人ID')
-    owner_name = models.CharField(max_length=50, blank=True, null=True, db_comment='负责人姓名')
-    priority = models.PositiveIntegerField(default=2, db_comment='优先级(1: 高; 2: 中; 3: 低)')
-    status = models.PositiveIntegerField(default=1, db_comment='状态(1: 未开始; 2: 进行中; 3: 已完成; 4: 已取消)')
-    test_type = models.CharField(max_length=50, blank=True, null=True, db_comment='测试类型')
-    test_env = models.CharField(max_length=50, blank=True, null=True, db_comment='测试环境')
-    related_project = models.CharField(max_length=100, blank=True, null=True, db_comment='关联项目')
-    remark = models.TextField(blank=True, null=True, db_comment='备注')
-    create_user = models.BigIntegerField(db_comment='创建人')
-    create_time = models.DateTimeField(auto_now_add=True, db_comment='创建时间')
-    update_user = models.BigIntegerField(blank=True, null=True, db_comment='修改人')
-    update_time = models.DateTimeField(auto_now=True, blank=True, null=True, db_comment='修改时间')
-
-    class Meta:
-        db_table = 'test_plan'
-        db_table_comment = '测试计划表'
-
-    def __str__(self):
-        return f'<{self.id}, {self.name}>'

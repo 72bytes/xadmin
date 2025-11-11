@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "xadmin_utils",
     "xadmin_db",
     "xadmin_auth",
+    "tpgen",  # Test Plan Generator
 ]
 
 MIDDLEWARE = [
@@ -96,8 +97,22 @@ DATABASES = {
         "OPTIONS": {
             "options": "-c TimeZone=Asia/Shanghai",
         },
-    }
+    },
+    "tpdb": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "tpdb",
+        "USER": "amd",
+        "PASSWORD": "amdyes",
+        "HOST": "10.67.167.53",
+        "PORT": 5433,
+        "OPTIONS": {
+            "options": "-c TimeZone=Asia/Shanghai",
+        },
+    },
 }
+
+# 数据库路由器 - 将 tpgen 应用路由到 tpdb 数据库
+DATABASE_ROUTERS = ["xadmin.database_router.TpgenDatabaseRouter"]
 
 # Cache
 CACHES = {
