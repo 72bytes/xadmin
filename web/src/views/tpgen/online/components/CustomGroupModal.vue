@@ -95,8 +95,8 @@
 </template>
 
 <script setup lang="ts">
-import type { TestCase } from '../types'
 import { Message } from '@arco-design/web-vue'
+import type { TestCase } from '../types'
 
 defineOptions({ name: 'CustomGroupModal' })
 
@@ -112,7 +112,7 @@ const emit = defineEmits<{
 
 const localVisible = computed({
   get: () => props.visible,
-  set: val => emit('update:visible', val),
+  set: (val) => emit('update:visible', val),
 })
 
 const formData = reactive({
@@ -133,7 +133,7 @@ const filteredCases = computed(() => {
   }
 
   const keyword = searchKeyword.value.toLowerCase()
-  return props.existingCases.filter(testCase =>
+  return props.existingCases.filter((testCase) =>
     testCase.name.toLowerCase().includes(keyword)
     || testCase.description.toLowerCase().includes(keyword)
     || testCase.testType?.toLowerCase().includes(keyword)
@@ -147,19 +147,18 @@ const canSave = computed(() => {
 
 const isSelected = (testCase: TestCase) => {
   return formData.selectedCases.some(
-    c => c.id === testCase.id && c.testType === testCase.testType && c.subgroup === testCase.subgroup,
+    (c) => c.id === testCase.id && c.testType === testCase.testType && c.subgroup === testCase.subgroup,
   )
 }
 
 const toggleCase = (testCase: TestCase) => {
   const index = formData.selectedCases.findIndex(
-    c => c.id === testCase.id && c.testType === testCase.testType && c.subgroup === testCase.subgroup,
+    (c) => c.id === testCase.id && c.testType === testCase.testType && c.subgroup === testCase.subgroup,
   )
 
   if (index === -1) {
     formData.selectedCases.push(testCase)
-  }
-  else {
+  } else {
     formData.selectedCases.splice(index, 1)
   }
 }
@@ -291,4 +290,3 @@ const handleCancel = () => {
   }
 }
 </style>
-

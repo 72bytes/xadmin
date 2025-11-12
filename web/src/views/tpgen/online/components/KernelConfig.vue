@@ -100,7 +100,8 @@
 </template>
 
 <script setup lang="ts">
-import { kernelTypeOptions, kernelVersionOptions, mockMachines } from '../mockData'
+import { kernelTypeOptions, kernelVersionOptions } from '../mockData'
+import { useMachines } from '../composables/useMachines'
 
 defineOptions({ name: 'KernelConfig' })
 
@@ -108,7 +109,7 @@ const props = defineProps<{
   configMethod: 'same' | 'individual'
   kernelType?: string
   kernelVersion?: string
-  individualConfig: Record<number, { type: string; version: string }>
+  individualConfig: Record<number, { type: string, version: string }>
   selectedMachines: number[]
 }>()
 
@@ -116,28 +117,31 @@ const emit = defineEmits<{
   'update:configMethod': [value: 'same' | 'individual']
   'update:kernelType': [value: string]
   'update:kernelVersion': [value: string]
-  'update:individualConfig': [value: Record<number, { type: string; version: string }>]
+  'update:individualConfig': [value: Record<number, { type: string, version: string }>]
   'update': []
 }>()
 
+// 使用 machines composable
+const { getMachineName } = useMachines()
+
 const localConfigMethod = computed({
   get: () => props.configMethod,
-  set: val => emit('update:configMethod', val),
+  set: (val) => emit('update:configMethod', val),
 })
 
 const localKernelType = computed({
   get: () => props.kernelType || '',
-  set: val => emit('update:kernelType', val),
+  set: (val) => emit('update:kernelType', val),
 })
 
 const localKernelVersion = computed({
   get: () => props.kernelVersion || '',
-  set: val => emit('update:kernelVersion', val),
+  set: (val) => emit('update:kernelVersion', val),
 })
 
 const localIndividualConfig = computed({
   get: () => props.individualConfig,
-  set: val => emit('update:individualConfig', val),
+  set: (val) => emit('update:individualConfig', val),
 })
 
 watch(() => props.selectedMachines, (machines) => {
@@ -150,9 +154,7 @@ watch(() => props.selectedMachines, (machines) => {
   emit('update:individualConfig', config)
 }, { immediate: true })
 
-const getMachineName = (id: number) => {
-  return mockMachines.find(m => m.id === id)?.name || `Machine ${id}`
-}
+// getMachineName 现在从 composable 提供
 
 const handleUpdate = () => {
   emit('update')
@@ -217,4 +219,3 @@ const handleUpdate = () => {
   }
 }
 </style>
-

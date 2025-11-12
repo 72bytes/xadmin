@@ -56,4 +56,3 @@ export interface SavedPlanForm {
   status: number
   tags?: string
 }
-

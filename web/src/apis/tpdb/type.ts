@@ -110,8 +110,8 @@ export interface TestComponentForm {
 }
 
 export interface TestComponentQuery {
-  testTypeId?: number
-  componentCategory?: string
+  test_type_id?: number  // 使用下划线命名以匹配后端 API
+  component_category?: string
 }
 
 // ============================================================================
@@ -134,7 +134,7 @@ export interface TestCaseForm {
 }
 
 export interface TestCaseQuery {
-  testComponentId?: number
+  test_component_id?: number  // 使用下划线命名以匹配后端 API
   page?: number
   size?: number
 }
@@ -174,4 +174,3 @@ export interface TestPlanQuery {
   page?: number
   size?: number
 }
-

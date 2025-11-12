@@ -154,7 +154,7 @@ const formData = reactive<TestComponentForm>({
 })
 
 const getTestTypeName = (id: number) => {
-  const type = testTypes.value.find(t => t.id === id)
+  const type = testTypes.value.find((t) => t.id === id)
   return type?.typeName || '-'
 }
 
@@ -276,4 +276,3 @@ onMounted(() => {
   color: var(--color-text-4);
 }
 </style>
-

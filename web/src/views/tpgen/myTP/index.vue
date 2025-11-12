@@ -5,15 +5,15 @@
         <div class="title">我的测试计划</div>
       </a-space>
     </a-row>
-    
+
     <a-row class="h-full page_content">
       <a-col :span="24" class="h-full ov-hidden">
         <PlanTable
+          v-model:query-form="queryForm"
           :data-list="dataList"
           :loading="loading"
           :pagination="pagination"
           :selected-keys="selectedKeys"
-          v-model:query-form="queryForm"
           @refresh="search"
           @search="search"
           @reset="reset"
@@ -43,11 +43,11 @@
 </template>
 
 <script setup lang="ts">
-import { useResetReactive } from '@/hooks'
 import PlanTable from './components/PlanTable.vue'
 import PlanPreviewDrawer from './components/PlanPreviewDrawer.vue'
 import PlanEditModal from './components/PlanEditModal.vue'
-import { usePlanData, usePlanPreview, usePlanUsage, usePlanEdit, usePlanDelete } from './composables/usePlanData'
+import { usePlanData, usePlanDelete, usePlanEdit, usePlanPreview, usePlanUsage } from './composables/usePlanData'
+import { useResetReactive } from '@/hooks'
 
 defineOptions({ name: 'MyTestPlans' })
 

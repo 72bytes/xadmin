@@ -36,7 +36,7 @@
 import { type FormInstance, Message } from '@arco-design/web-vue'
 // import { getImageCaptcha } from '@/apis/common' // 验证码功能已注释
 import { useTabsStore, useUserStore } from '@/stores'
-import { encryptByRsa, encodeByBase64 } from '@/utils/encrypt'
+import { encodeByBase64, encryptByRsa } from '@/utils/encrypt'
 
 // 验证码图片 - 已注释
 // const captchaImgBase64 = ref()

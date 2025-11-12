@@ -98,7 +98,7 @@
         <a-form-item label="用例配置" field="caseConfig">
           <a-textarea
             v-model="configJson"
-            placeholder='请输入JSON格式配置，如: {"timeout": 300}'
+            placeholder="请输入JSON格式配置，如: {&quot;timeout&quot;: 300}"
             :auto-size="{ minRows: 4, maxRows: 10 }"
           />
         </a-form-item>
@@ -120,7 +120,7 @@
 <script setup lang="ts">
 import { Message } from '@arco-design/web-vue'
 import * as tpdbApi from '@/apis/tpdb'
-import type { TestCase, TestCaseForm, TestCaseQuery, TestType, TestComponent } from '@/apis/tpdb'
+import type { TestCase, TestCaseForm, TestCaseQuery, TestComponent, TestType } from '@/apis/tpdb'
 
 defineOptions({ name: 'TestCaseManager' })
 
@@ -157,12 +157,12 @@ const selectedComponent = ref<(string | number)[]>([])
 const formComponentPath = ref<(string | number)[]>([])
 
 const componentOptions = computed(() => {
-  return testTypes.value.map(type => ({
+  return testTypes.value.map((type) => ({
     value: type.id,
     label: type.typeName,
     children: testComponents.value
-      .filter(comp => comp.testTypeId === type.id)
-      .map(comp => ({
+      .filter((comp) => comp.testTypeId === type.id)
+      .map((comp) => ({
         value: comp.id,
         label: comp.componentName,
       })),
@@ -275,13 +275,13 @@ const handleEdit = (record: TestCase) => {
   modalMode.value = 'edit'
   modalVisible.value = true
   currentEditId.value = record.id
-  
+
   // 找到组件所属的测试类型
-  const component = testComponents.value.find(c => c.id === record.testComponentId)
+  const component = testComponents.value.find((c) => c.id === record.testComponentId)
   if (component) {
     formComponentPath.value = [component.testTypeId, component.id]
   }
-  
+
   Object.assign(formData, {
     testComponentId: record.testComponentId,
     caseName: record.caseName,
@@ -376,4 +376,3 @@ onMounted(async () => {
   overflow: auto;
 }
 </style>
-

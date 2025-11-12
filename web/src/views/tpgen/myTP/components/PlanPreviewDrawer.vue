@@ -10,7 +10,7 @@
         <a-descriptions-item label="计划名称" :span="2">
           <a-typography-text copyable>{{ record.name }}</a-typography-text>
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="类别">
           <a-tag v-if="record.category === 'Benchmark'" color="blue">Benchmark</a-tag>
           <a-tag v-else-if="record.category === 'Functional'" color="green">Functional</a-tag>
@@ -18,49 +18,49 @@
           <a-tag v-else-if="record.category === 'Stress'" color="red">Stress</a-tag>
           <a-tag v-else color="purple">Custom</a-tag>
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="状态">
           <a-tag v-if="record.status === 1" color="gray">草稿</a-tag>
           <a-tag v-else-if="record.status === 2" color="green">已发布</a-tag>
           <a-tag v-else color="arcoblue">归档</a-tag>
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="描述" :span="2">
           {{ record.description || '-' }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="CPU">
           {{ record.cpu || '-' }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="GPU">
           {{ record.gpu || '-' }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="机器数量">
           {{ record.machineCount }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="操作系统">
           {{ record.osType || '-' }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="内核类型">
           {{ record.kernelType || '-' }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="测试用例数">
           {{ record.testCaseCount }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="使用次数">
           {{ record.useCount }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="最后使用">
           {{ record.lastUsedTime || '-' }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="标签" :span="2">
           <a-space v-if="record.tags" wrap :size="4">
             <a-tag v-for="tag in record.tags.split(',')" :key="tag" size="small">
@@ -69,11 +69,11 @@
           </a-space>
           <span v-else>-</span>
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="创建人">
           {{ record.createUserString }}
         </a-descriptions-item>
-        
+
         <a-descriptions-item label="创建时间">
           {{ record.createTime }}
         </a-descriptions-item>
@@ -127,21 +127,17 @@ function jsToYaml(obj: any, indent = 0): string {
           lines.forEach((line, i) => {
             if (i === 0) {
               yaml += ` ${line.trim()}\n`
-            }
-            else {
+            } else {
               yaml += `${spaces}    ${line.trim()}\n`
             }
           })
-        }
-        else {
+        } else {
           yaml += `${spaces}  - ${item}\n`
         }
       })
-    }
-    else if (typeof value === 'object' && value !== null) {
+    } else if (typeof value === 'object' && value !== null) {
       yaml += `${spaces}${key}:\n${jsToYaml(value, indent + 1)}`
-    }
-    else if (value !== null && value !== undefined) {
+    } else if (value !== null && value !== undefined) {
       yaml += `${spaces}${key}: ${value}\n`
     }
   }
@@ -172,4 +168,3 @@ function jsToYaml(obj: any, indent = 0): string {
   }
 }
 </style>
-

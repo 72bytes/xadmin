@@ -51,4 +51,3 @@ const handleProgressChange = (val: number) => {
 <style scoped lang="scss">
 @import './index.scss';
 </style>
-

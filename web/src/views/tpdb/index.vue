@@ -72,4 +72,3 @@ const activeTab = ref<TabKey>('sutDevice')
 <style scoped lang="scss">
 @import './index.scss';
 </style>
-

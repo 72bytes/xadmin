@@ -11,27 +11,27 @@
     @refresh="emit('refresh')"
   >
     <template #top>
-      <GiForm 
+      <GiForm
         :model-value="queryForm"
+        :options="options"
+        :columns="queryFormColumns"
         @update:model-value="handleQueryFormUpdate"
-        :options="options" 
-        :columns="queryFormColumns" 
-        @search="emit('search')" 
-        @reset="emit('reset')" 
+        @search="emit('search')"
+        @reset="emit('reset')"
       />
     </template>
-    
+
     <template #toolbar-left>
-      <a-button 
-        :disabled="!selectedKeys.length" 
-        status="danger" 
+      <a-button
+        :disabled="!selectedKeys.length"
+        status="danger"
         @click="emit('batch-delete')"
       >
         <template #icon><icon-delete /></template>
         <template #default>删除</template>
       </a-button>
     </template>
-    
+
     <template #category="{ record }">
       <a-tag v-if="record.category === 'Benchmark'" color="blue">Benchmark</a-tag>
       <a-tag v-else-if="record.category === 'Functional'" color="green">Functional</a-tag>
@@ -39,13 +39,13 @@
       <a-tag v-else-if="record.category === 'Stress'" color="red">Stress</a-tag>
       <a-tag v-else color="purple">Custom</a-tag>
     </template>
-    
+
     <template #status="{ record }">
       <a-tag v-if="record.status === 1" color="gray">草稿</a-tag>
       <a-tag v-else-if="record.status === 2" color="green">已发布</a-tag>
       <a-tag v-else color="arcoblue">归档</a-tag>
     </template>
-    
+
     <!-- 标签列暂时隐藏 -->
     <!-- <template #tags="{ record }">
       <a-space v-if="record.tags" wrap :size="4">
@@ -55,7 +55,7 @@
       </a-space>
       <span v-else class="text-gray-400">-</span>
     </template> -->
-    
+
     <template #hardware="{ record }">
       <div class="hardware-info">
         <div v-if="record.cpu" class="info-item">
@@ -72,7 +72,7 @@
         </div>
       </div>
     </template>
-    
+
     <template #stats="{ record }">
       <div class="stats-info">
         <a-space :size="8">
@@ -91,7 +91,7 @@
         </a-space>
       </div>
     </template>
-    
+
     <template #action="{ record }">
       <a-space>
         <a-link title="预览" @click="emit('preview', record)">
@@ -116,11 +116,11 @@
 </template>
 
 <script setup lang="ts">
+import { CATEGORY_OPTIONS, STATUS_OPTIONS } from '../types'
+import type { QueryForm } from '../types'
 import type { SavedPlanResp } from '@/apis/tpgen'
 import type { Columns, Options } from '@/components/GiForm'
 import type { TableInstanceColumns } from '@/components/GiTable/type'
-import { CATEGORY_OPTIONS, STATUS_OPTIONS } from '../types'
-import type { QueryForm } from '../types'
 
 interface Props {
   dataList: SavedPlanResp[]
@@ -133,14 +133,14 @@ interface Props {
 const props = defineProps<Props>()
 
 const emit = defineEmits<{
-  refresh: []
-  search: []
-  reset: []
+  'refresh': []
+  'search': []
+  'reset': []
   'batch-delete': []
-  preview: [record: SavedPlanResp]
-  use: [record: SavedPlanResp]
-  update: [record: SavedPlanResp]
-  delete: [record: SavedPlanResp]
+  'preview': [record: SavedPlanResp]
+  'use': [record: SavedPlanResp]
+  'update': [record: SavedPlanResp]
+  'delete': [record: SavedPlanResp]
   'update:queryForm': [value: any]
 }>()
 
@@ -287,4 +287,3 @@ const rowSelection = reactive({
   }
 }
 </style>
-

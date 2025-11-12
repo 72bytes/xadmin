@@ -9,23 +9,23 @@
 
     <div class="yaml-content">
       <div class="yaml-display">
-        <div class="yaml-line-numbers" ref="lineNumbersRef" @scroll="syncScroll">
+        <div ref="lineNumbersRef" class="yaml-line-numbers" @scroll="syncScroll">
           <div
             v-for="(line, index) in yamlLines"
             :key="index"
             class="line-number"
-            :class="{ 'error': isErrorLine(index + 1) }"
+            :class="{ error: isErrorLine(index + 1) }"
           >
             {{ index + 1 }}
           </div>
         </div>
-        <div class="yaml-code-content" ref="yamlContentRef" @scroll="handleYamlScroll">
+        <div ref="yamlContentRef" class="yaml-code-content" @scroll="handleYamlScroll">
           <div
             v-for="(line, index) in yamlLines"
             :key="index"
+            :ref="isErrorLine(index + 1) ? 'errorLineRef' : undefined"
             class="code-line"
             :class="{ 'error-line': isErrorLine(index + 1) }"
-            :ref="isErrorLine(index + 1) ? 'errorLineRef' : undefined"
           >
             {{ line }}
           </div>
@@ -47,8 +47,8 @@
 </template>
 
 <script setup lang="ts">
-import type { YamlData } from '../types'
 import { Message } from '@arco-design/web-vue'
+import type { YamlData } from '../types'
 
 defineOptions({ name: 'YamlPreview' })
 
@@ -57,16 +57,16 @@ const props = defineProps<{
   errorLines?: number[]
 }>()
 
-// 监听 props 变化
-watch(() => props.errorLines, (newVal) => {
-  console.log('[YamlPreview props] errorLines prop 收到:', newVal)
-}, { immediate: true })
-
 const emit = defineEmits<{
   close: []
   copy: []
   download: []
 }>()
+
+// 监听 props 变化
+watch(() => props.errorLines, (newVal) => {
+  console.log('[YamlPreview props] errorLines prop 收到:', newVal)
+}, { immediate: true })
 
 // Refs for line numbers and content
 const lineNumbersRef = ref<HTMLElement | null>(null)
@@ -113,21 +113,17 @@ function jsToYaml(obj: any, indent = 0): string {
           lines.forEach((line, i) => {
             if (i === 0) {
               yaml += ` ${line.trim()}\n`
-            }
-            else {
+            } else {
               yaml += `${spaces}    ${line.trim()}\n`
             }
           })
-        }
-        else {
+        } else {
           yaml += `${spaces}  - ${item}\n`
         }
       })
-    }
-    else if (typeof value === 'object' && value !== null) {
+    } else if (typeof value === 'object' && value !== null) {
       yaml += `${spaces}${key}:\n${jsToYaml(value, indent + 1)}`
-    }
-    else {
+    } else {
       yaml += `${spaces}${key}: ${value}\n`
     }
   }
@@ -163,22 +159,22 @@ const syncScroll = () => {
 const scrollToErrorLine = () => {
   console.log('[YamlPreview scrollToErrorLine] 开始滚动到错误行')
   console.log('[YamlPreview scrollToErrorLine] props.errorLines:', props.errorLines)
-  
+
   if (!props.errorLines || props.errorLines.length === 0) {
     console.log('[YamlPreview scrollToErrorLine] ⚠️ 没有错误行，跳过滚动')
     return
   }
-  
+
   nextTick(() => {
     console.log('[YamlPreview scrollToErrorLine] nextTick 执行')
     const errorLine = errorLineRef.value
     console.log('[YamlPreview scrollToErrorLine] errorLineRef.value:', errorLine)
-    
+
     if (errorLine && yamlContentRef.value) {
       // 如果 errorLineRef 是数组（多个错误行），取第一个
       const target = Array.isArray(errorLine) ? errorLine[0] : errorLine
       console.log('[YamlPreview scrollToErrorLine] 滚动目标元素:', target)
-      
+
       if (target) {
         console.log('[YamlPreview scrollToErrorLine] ✅ 执行滚动')
         target.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -196,7 +192,7 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
   console.log('[YamlPreview watch] errorLines 变化')
   console.log('[YamlPreview watch] 旧值:', oldErrorLines)
   console.log('[YamlPreview watch] 新值:', newErrorLines)
-  
+
   if (newErrorLines && newErrorLines.length > 0) {
     console.log('[YamlPreview watch] ✅ 检测到错误行:', newErrorLines)
     scrollToErrorLine()
@@ -363,4 +359,3 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
   }
 }
 </style>
-

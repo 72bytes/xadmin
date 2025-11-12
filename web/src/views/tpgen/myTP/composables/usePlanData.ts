@@ -1,8 +1,8 @@
+import { Message, Modal } from '@arco-design/web-vue'
+import type { EditForm, QueryForm } from '../types'
 import type { SavedPlanResp } from '@/apis/tpgen'
 import { deleteSavedPlan, getSavedPlan, listSavedPlan, updateSavedPlan, useSavedPlan } from '@/apis/tpgen'
 import { useTable } from '@/hooks'
-import { Message, Modal } from '@arco-design/web-vue'
-import type { EditForm, QueryForm } from '../types'
 
 /**
  * 测试计划数据管理
@@ -48,12 +48,10 @@ export function usePlanPreview() {
       if (res.code === 200) {
         currentRecord.value = res.data as SavedPlanResp
         previewDrawerVisible.value = true
-      }
-      else {
+      } else {
         Message.error(String(res.data) || '获取详情失败')
       }
-    }
-    catch (error) {
+    } catch (error) {
       Message.error('获取详情失败')
       console.error(error)
     }
@@ -88,14 +86,12 @@ export function usePlanUsage() {
             // 暂时先提示成功
             Message.success('配置已加载，请前往在线生成页面')
             // TODO: 实现配置加载逻辑
-          }
-          else {
+          } else {
             Message.error(String(res.data) || '加载配置失败')
           }
         },
       })
-    }
-    catch (error) {
+    } catch (error) {
       Message.error('操作失败')
       console.error(error)
     }
@@ -142,12 +138,10 @@ export function usePlanEdit(refresh: () => void) {
         Message.success('修改成功')
         editModalVisible.value = false
         refresh()
-      }
-      else {
+      } else {
         Message.error(res.data || '修改失败')
       }
-    }
-    catch (error) {
+    } catch (error) {
       Message.error('修改失败')
       console.error(error)
     }
@@ -181,12 +175,10 @@ export function usePlanDelete(refresh: () => void, selectedKeys: Ref<(string | n
           if (res.code === 200) {
             Message.success('删除成功')
             refresh()
-          }
-          else {
+          } else {
             Message.error(res.data || '删除失败')
           }
-        }
-        catch (error) {
+        } catch (error) {
           Message.error('删除失败')
           console.error(error)
         }
@@ -210,12 +202,10 @@ export function usePlanDelete(refresh: () => void, selectedKeys: Ref<(string | n
             Message.success('删除成功')
             selectedKeys.value = []
             refresh()
-          }
-          else {
+          } else {
             Message.error(res.data || '删除失败')
           }
-        }
-        catch (error) {
+        } catch (error) {
           Message.error('删除失败')
           console.error(error)
         }
@@ -236,4 +226,3 @@ export function usePlanDelete(refresh: () => void, selectedKeys: Ref<(string | n
     onBatchDelete,
   }
 }
-

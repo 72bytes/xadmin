@@ -17,62 +17,99 @@
       />
     </a-form-item>
 
-    <!-- 测试用例组 -->
+    <!-- 测试用例组 - 使用折叠面板减少初始显示 -->
     <div class="test-type-groups">
-      <a-card
-        v-for="(subgroups, testType) in testCaseGroups"
-        :key="testType"
-        class="test-type-group"
+      <a-collapse
+        :default-active-key="defaultExpandedKeys"
         :bordered="false"
+        expand-icon-position="right"
       >
-        <template #title>
-          <div class="group-title">
-            <icon-layers />
-            {{ testType }}
-          </div>
-        </template>
+        <!-- 每个测试类型一个折叠面板 -->
+        <a-collapse-item
+          v-for="(subgroups, testType) in testCaseGroups"
+          :key="testType"
+        >
+          <template #header>
+            <div class="collapse-header">
+              <icon-layers style="margin-right: 8px" />
+              <span class="header-text">{{ testType }}</span>
+              <a-tag color="purple" size="small" style="margin-left: 12px">
+                {{ getTestTypeCount(subgroups) }} 个用例
+              </a-tag>
+            </div>
+          </template>
 
-        <div v-for="(testCases, subgroupName) in subgroups" :key="subgroupName" class="test-case-subgroup">
-          <h5>{{ subgroupName }}</h5>
-          <div class="checkbox-list">
-            <a-checkbox
-              v-for="testCase in testCases"
-              :key="testCase.id"
-              :model-value="isSelected(testCase.id, testType, subgroupName)"
-              @change="(checked) => handleCheckboxChange(checked as boolean, testCase, testType, subgroupName)"
+          <!-- 子组件级别的折叠 -->
+          <a-collapse :bordered="false" class="subgroup-collapse">
+            <a-collapse-item
+              v-for="(testCases, subgroupName) in subgroups"
+              :key="subgroupName"
             >
-              {{ testCase.name }}
-            </a-checkbox>
-          </div>
-        </div>
-      </a-card>
+              <template #header>
+                <span class="subgroup-header">{{ subgroupName }}</span>
+                <a-tag color="blue" size="small" style="margin-left: 8px">
+                  {{ testCases.length }} 个
+                </a-tag>
+              </template>
 
-      <!-- 自定义组 -->
-      <a-card
-        v-for="(testCases, groupName) in customGroups"
-        :key="groupName"
-        class="test-type-group custom"
-        :bordered="false"
-      >
-        <template #title>
-          <div class="group-title">
-            <icon-star />
-            {{ groupName }}
-            <a-tag color="orangered" size="small">Custom</a-tag>
-          </div>
-        </template>
+              <div class="checkbox-list">
+                <a-checkbox
+                  v-for="testCase in testCases"
+                  :key="testCase.id"
+                  :model-value="isSelected(testCase.id, testType, subgroupName)"
+                  @change="(checked) => handleCheckboxChange(checked as boolean, testCase, testType, subgroupName)"
+                >
+                  <span class="test-case-name">{{ testCase.caseName || testCase.name }}</span>
+                  <span v-if="testCase.description || testCase.caseConfig?.description" class="test-case-desc">
+                    - {{ testCase.description || testCase.caseConfig?.description }}
+                  </span>
+                </a-checkbox>
+              </div>
+            </a-collapse-item>
+          </a-collapse>
+        </a-collapse-item>
 
-        <div class="checkbox-list">
-          <a-checkbox
-            v-for="testCase in testCases"
-            :key="testCase.id"
-            :model-value="isSelected(testCase.id, 'Custom', groupName)"
-            @change="(checked) => handleCheckboxChange(checked as boolean, testCase, 'Custom', groupName)"
-          >
-            {{ testCase.name }}
-          </a-checkbox>
-        </div>
-      </a-card>
+        <!-- 自定义组 -->
+        <a-collapse-item
+          v-if="Object.keys(customGroups).length > 0"
+          key="custom-groups"
+        >
+          <template #header>
+            <div class="collapse-header">
+              <icon-star style="margin-right: 8px" />
+              <span class="header-text">Custom Groups</span>
+              <a-tag color="orange" size="small" style="margin-left: 12px">
+                {{ Object.keys(customGroups).length }} 个自定义组
+              </a-tag>
+            </div>
+          </template>
+
+          <a-collapse :bordered="false" class="subgroup-collapse">
+            <a-collapse-item
+              v-for="(testCases, groupName) in customGroups"
+              :key="groupName"
+            >
+              <template #header>
+                <span class="subgroup-header">{{ groupName }}</span>
+                <a-tag color="green" size="small" style="margin-left: 8px">
+                  {{ testCases.length }} 个
+                </a-tag>
+              </template>
+
+              <div class="checkbox-list">
+                <a-checkbox
+                  v-for="testCase in testCases"
+                  :key="testCase.id"
+                  :model-value="isSelected(testCase.id, 'Custom', groupName)"
+                  @change="(checked) => handleCheckboxChange(checked as boolean, testCase, 'Custom', groupName)"
+                >
+                  {{ testCase.caseName || testCase.name }}
+                </a-checkbox>
+              </div>
+            </a-collapse-item>
+          </a-collapse>
+        </a-collapse-item>
+      </a-collapse>
     </div>
 
     <!-- 添加自定义组按钮 -->
@@ -121,9 +158,9 @@
 </template>
 
 <script setup lang="ts">
-import type { TestCase } from '../types'
-import { testCaseGroups } from '../mockData'
 import { VueDraggable } from 'vue-draggable-plus'
+import type { TestCase } from '../types'
+import { useTestCases } from '../composables/useTestCases'
 import CustomGroupModal from './CustomGroupModal.vue'
 
 defineOptions({ name: 'TestCaseManager' })
@@ -137,6 +174,14 @@ const emit = defineEmits<{
   'update': []
 }>()
 
+// 使用测试用例 composable
+const { testCaseGroups, loadTestCases, getAllTestCases: getAllTestCasesFromDb } = useTestCases()
+
+// 更新事件处理（定义在前面，避免 no-use-before-define 错误）
+const handleUpdate = () => {
+  emit('update')
+}
+
 const localSelectedTestCases = computed({
   get: () => props.selectedTestCases,
   set: (val) => {
@@ -149,10 +194,25 @@ const searchKeyword = ref('')
 const showCustomGroupModal = ref(false)
 const customGroups = ref<Record<string, TestCase[]>>({})
 
+// 默认展开的面板（只展开第一个测试类型）
+const defaultExpandedKeys = computed(() => {
+  const keys = Object.keys(testCaseGroups.value)
+  return keys.length > 0 ? [keys[0]] : []
+})
+
+// 获取测试类型下的总用例数
+const getTestTypeCount = (subgroups: any) => {
+  let count = 0
+  Object.values(subgroups).forEach((cases: any) => {
+    count += cases.length
+  })
+  return count
+}
+
 // 检查测试用例是否被选中
 const isSelected = (id: number, testType: string, subgroup: string) => {
   return localSelectedTestCases.value.some(
-    tc => tc.id === id && tc.testType === testType && tc.subgroup === subgroup,
+    (tc) => tc.id === id && tc.testType === testType && tc.subgroup === subgroup,
   )
 }
 
@@ -166,30 +226,19 @@ const handleCheckboxChange = (checked: boolean, testCase: TestCase, testType: st
 
   if (checked) {
     localSelectedTestCases.value = [...localSelectedTestCases.value, enhancedTestCase]
-  }
-  else {
+  } else {
     localSelectedTestCases.value = localSelectedTestCases.value.filter(
-      tc => !(tc.id === testCase.id && tc.testType === testType && tc.subgroup === subgroup),
+      (tc) => !(tc.id === testCase.id && tc.testType === testType && tc.subgroup === subgroup),
     )
   }
 }
 
-// 获取所有测试用例
+// 获取所有测试用例（包括自定义组）
 const getAllTestCases = () => {
   const allCases: TestCase[] = []
 
-  // 添加预定义的测试用例
-  Object.entries(testCaseGroups).forEach(([testType, subgroups]) => {
-    Object.entries(subgroups).forEach(([subgroupName, testCases]) => {
-      testCases.forEach((testCase) => {
-        allCases.push({
-          ...testCase,
-          testType,
-          subgroup: subgroupName,
-        })
-      })
-    })
-  })
+  // 从数据库获取的测试用例
+  allCases.push(...getAllTestCasesFromDb.value)
 
   // 添加自定义组的测试用例
   Object.entries(customGroups.value).forEach(([groupName, testCases]) => {
@@ -198,6 +247,7 @@ const getAllTestCases = () => {
         ...testCase,
         testType: 'Custom',
         subgroup: groupName,
+        customGroup: groupName,
       })
     })
   })
@@ -207,8 +257,8 @@ const getAllTestCases = () => {
 
 // 处理搜索
 const handleSearch = () => {
-  // 搜索逻辑可以在这里实现，暂时作为展示
-  console.log('Searching for:', searchKeyword.value)
+  // 搜索逻辑可以在这里实现，根据 searchKeyword.value 过滤测试用例
+  // 未来可扩展实时搜索过滤功能
 }
 
 // 添加自定义组
@@ -217,9 +267,10 @@ const handleAddCustomGroup = (groupName: string, testCases: TestCase[]) => {
   showCustomGroupModal.value = false
 }
 
-const handleUpdate = () => {
-  emit('update')
-}
+// 组件挂载时加载测试用例
+onMounted(async () => {
+  await loadTestCases()
+})
 </script>
 
 <style scoped lang="scss">
@@ -254,63 +305,125 @@ const handleUpdate = () => {
 }
 
 .test-type-groups {
-  display: grid;
-  gap: 20px;
   margin-bottom: 20px;
 
-  .test-type-group {
-    border: 2px solid #e1e5eb;
-    border-radius: 12px;
-    transition: all 0.3s ease;
+  :deep(.arco-collapse) {
+    background: transparent;
 
-    &:hover {
-      border-color: #3498db;
+    // 顶层折叠面板样式（测试类型）
+    > .arco-collapse-item {
+      margin-bottom: 16px;
+      background: var(--color-bg-2);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
-    &.custom {
-      border-color: #e67e22;
-    }
-
-    .group-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #2c3e50;
+    // 顶层折叠面板头部
+    > .arco-collapse-item > .arco-collapse-item-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      font-size: 1.1rem;
       font-weight: 600;
-      font-size: 1.3rem;
+      padding: 16px 20px;
+
+      &:hover {
+        background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+      }
+
+      .collapse-header {
+        display: flex;
+        align-items: center;
+
+        .header-text {
+          font-weight: 600;
+          flex: 1;
+        }
+      }
     }
 
-    .test-case-subgroup {
-      margin-bottom: 20px;
+    // 顶层折叠面板内容区
+    > .arco-collapse-item > .arco-collapse-item-content {
+      padding: 16px;
+      background: white;
+    }
+  }
+
+  // 子组件级别的折叠样式
+  .subgroup-collapse {
+    :deep(.arco-collapse-item) {
+      margin-bottom: 12px;
+      background: var(--color-fill-1);
+      border-radius: 8px;
+      border: 1px solid var(--color-border-2);
 
       &:last-child {
         margin-bottom: 0;
       }
 
-      h5 {
-        margin: 15px 0 10px 0;
-        color: #555;
-        font-size: 1.1rem;
-        padding-bottom: 5px;
-        border-bottom: 1px dashed #e1e5eb;
+      &:hover {
+        border-color: rgb(var(--primary-5));
+      }
+    }
+
+    :deep(.arco-collapse-item-header) {
+      background: var(--color-fill-2);
+      color: var(--color-text-1);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 12px 16px;
+
+      &:hover {
+        background: var(--color-fill-3);
       }
 
-      .checkbox-list {
-        display: grid;
-        gap: 10px;
+      .subgroup-header {
+        font-weight: 500;
+      }
+    }
 
-        :deep(.arco-checkbox) {
-          background: #f8f9fa;
-          padding: 12px 18px;
-          border-radius: 8px;
-          transition: all 0.3s ease;
-          border: 1px solid #e1e5eb;
+    :deep(.arco-collapse-item-content) {
+      padding: 12px 16px;
+      background: white;
+    }
+  }
 
-          &:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-          }
-        }
+  // 复选框列表样式
+  .checkbox-list {
+    display: grid;
+    gap: 8px;
+
+    :deep(.arco-checkbox) {
+      background: var(--color-fill-1);
+      padding: 10px 14px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      border: 1px solid var(--color-border-2);
+
+      &:hover {
+        background: var(--color-fill-2);
+        border-color: rgb(var(--primary-5));
+        transform: translateX(3px);
+      }
+
+      .test-case-name {
+        font-weight: 500;
+        color: var(--color-text-1);
+      }
+
+      .test-case-desc {
+        color: var(--color-text-3);
+        font-size: 0.85rem;
+        margin-left: 8px;
       }
     }
   }
@@ -390,4 +503,3 @@ const handleUpdate = () => {
   }
 }
 </style>
-

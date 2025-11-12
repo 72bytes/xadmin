@@ -111,4 +111,3 @@ export const firmwareVersionOptions = [
   { label: '2023.03', value: '2023.03' },
   { label: '2022.12', value: '2022.12' },
 ]
-

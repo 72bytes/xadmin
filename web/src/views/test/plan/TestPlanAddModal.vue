@@ -239,7 +239,7 @@ const save = async () => {
   try {
     const isInvalid = await formRef.value?.validate()
     if (isInvalid) return false
-    
+
     saveLoading.value = true
     await addTestPlan(form)
     Message.success('新增成功')
@@ -301,4 +301,3 @@ fieldset legend {
   margin-top: -20px;
 }
 </style>
-

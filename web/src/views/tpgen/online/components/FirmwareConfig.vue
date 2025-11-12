@@ -45,12 +45,12 @@ const emit = defineEmits<{
 
 const localFirmwareVersion = computed({
   get: () => props.firmwareVersion,
-  set: val => emit('update:firmwareVersion', val),
+  set: (val) => emit('update:firmwareVersion', val),
 })
 
 const localVersionComparison = computed({
   get: () => props.versionComparison,
-  set: val => emit('update:versionComparison', val),
+  set: (val) => emit('update:versionComparison', val),
 })
 
 const handleUpdate = () => {
@@ -89,4 +89,3 @@ const handleUpdate = () => {
   }
 }
 </style>
-

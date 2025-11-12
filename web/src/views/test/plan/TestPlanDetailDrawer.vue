@@ -49,7 +49,7 @@
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core'
 import { Message } from '@arco-design/web-vue'
-import { getTestPlan, type TestPlanDetailResp } from '@/apis/test/plan'
+import { type TestPlanDetailResp, getTestPlan } from '@/apis/test/plan'
 
 const { width } = useWindowSize()
 
@@ -134,4 +134,3 @@ defineExpose({ onOpen })
   font-weight: 500;
 }
 </style>
-

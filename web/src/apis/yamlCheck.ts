@@ -20,5 +20,5 @@ export interface ValidationResponse {
  */
 export async function validateYaml(yamlData: any): Promise<ValidationResponse> {
   const response = await http.post<ValidationResponse>('/system/yaml/validate', { yamlData })
-  return response.data  // ← 关键：提取 data 字段
+  return response.data // ← 关键：提取 data 字段
 }

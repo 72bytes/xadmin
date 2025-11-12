@@ -39,4 +39,3 @@ export function useSavedPlan(id: string) {
 export function getCategories() {
   return http.get<string[]>(`${BASE_URL}/categories/list`)
 }
-

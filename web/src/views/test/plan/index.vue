@@ -60,6 +60,7 @@
 </template>
 
 <script setup lang="ts">
+import { Message, Modal } from '@arco-design/web-vue'
 import TestPlanAddModal from './TestPlanAddModal.vue'
 import TestPlanUpdateModal from './TestPlanUpdateModal.vue'
 import TestPlanDetailDrawer from './TestPlanDetailDrawer.vue'
@@ -67,7 +68,6 @@ import { type TestPlanResp, deleteTestPlan, listTestPlan } from '@/apis/test/pla
 import type { Columns, Options } from '@/components/GiForm'
 import type { TableInstanceColumns } from '@/components/GiTable/type'
 import { useResetReactive, useTable } from '@/hooks'
-import { Message, Modal } from '@arco-design/web-vue'
 
 defineOptions({ name: 'TestPlan' })
 
@@ -234,4 +234,3 @@ const onBatchDelete = () => {
   font-weight: 500;
 }
 </style>
-

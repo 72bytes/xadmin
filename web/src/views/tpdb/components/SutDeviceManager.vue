@@ -292,7 +292,7 @@ const handleBatchDelete = () => {
     Message.warning('请选择要删除的设备')
     return
   }
-  
+
   tpdbApi.deleteSutDevice(selectedKeys.value)
     .then(() => {
       Message.success('批量删除成功')
@@ -373,4 +373,3 @@ onMounted(() => {
   }
 }
 </style>
-

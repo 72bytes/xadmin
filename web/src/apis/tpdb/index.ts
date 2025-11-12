@@ -170,3 +170,30 @@ export function deleteTestPlan(ids: number | number[]) {
   return http.del(`${BASE_URL}/test-plan/${idStr}`)
 }
 
+// ============================================================================
+// TPGEN Online 专用 API (用于在线测试计划生成器)
+// ============================================================================
+
+/** @desc 获取可用测试设备（带筛选） */
+export function getAvailableDevices(query?: {
+  gpuModel?: string
+  gpuSeries?: string
+  asicName?: string
+}) {
+  return http.get<T.SutDevice[]>(`${BASE_URL}/sut-device/list`, query)
+}
+
+/** @desc 获取测试用例树形结构 */
+export function getTestCaseTree() {
+  return http.get(`${BASE_URL}/test-case/tree`)
+}
+
+/** @desc 获取 OS 配置选项列表 */
+export function getOsOptions() {
+  return http.get<Array<{ label: string, value: string }>>(`${BASE_URL}/os-config/options`)
+}
+
+/** @desc 获取内核版本选项 */
+export function getKernelOptions(osConfigId?: number) {
+  return http.get<Array<{ label: string, value: string }>>(`${BASE_URL}/os-config/kernel-options`, { osConfigId })
+}

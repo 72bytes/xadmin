@@ -26,19 +26,19 @@ const userStore = useUserStore()
 
 .card {
   width: 100%;
-  
+
   :deep(.arco-card-body) {
     width: 100%;
     padding: 0;
   }
-  
+
   .content {
     width: 100%;
     padding: 8px 20px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    
+
     .welcome {
       margin: 8px 0;
       color: $color-text-3;

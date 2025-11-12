@@ -21,7 +21,7 @@ import type { Gender, Status } from '@/types/global'
 import { GenderList } from '@/constant/common'
 import { useResetReactive } from '@/hooks'
 import { useDept, useRole } from '@/hooks/app'
-import { encryptByRsa, encodeByBase64 } from '@/utils/encrypt'
+import { encodeByBase64, encryptByRsa } from '@/utils/encrypt'
 
 const emit = defineEmits<{
   (e: 'save-success'): void

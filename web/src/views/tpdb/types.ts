@@ -41,4 +41,3 @@ export interface TableColumn {
   ellipsis?: boolean
   tooltip?: boolean
 }
-

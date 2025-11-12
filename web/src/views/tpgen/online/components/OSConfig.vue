@@ -81,7 +81,8 @@
 </template>
 
 <script setup lang="ts">
-import { deploymentOptions, mockMachines, osOptions } from '../mockData'
+import { deploymentOptions, osOptions } from '../mockData'
+import { useMachines } from '../composables/useMachines'
 
 defineOptions({ name: 'OSConfig' })
 
@@ -89,7 +90,7 @@ const props = defineProps<{
   configMethod: 'same' | 'individual'
   os?: string
   deployment?: string
-  individualConfig: Record<number, { os: string; deployment: string }>
+  individualConfig: Record<number, { os: string, deployment: string }>
   selectedMachines: number[]
 }>()
 
@@ -97,28 +98,31 @@ const emit = defineEmits<{
   'update:configMethod': [value: 'same' | 'individual']
   'update:os': [value: string]
   'update:deployment': [value: string]
-  'update:individualConfig': [value: Record<number, { os: string; deployment: string }>]
+  'update:individualConfig': [value: Record<number, { os: string, deployment: string }>]
   'update': []
 }>()
 
+// 使用 machines composable
+const { getMachineName } = useMachines()
+
 const localConfigMethod = computed({
   get: () => props.configMethod,
-  set: val => emit('update:configMethod', val),
+  set: (val) => emit('update:configMethod', val),
 })
 
 const localOs = computed({
   get: () => props.os || '',
-  set: val => emit('update:os', val),
+  set: (val) => emit('update:os', val),
 })
 
 const localDeployment = computed({
   get: () => props.deployment || '',
-  set: val => emit('update:deployment', val),
+  set: (val) => emit('update:deployment', val),
 })
 
 const localIndividualConfig = computed({
   get: () => props.individualConfig,
-  set: val => emit('update:individualConfig', val),
+  set: (val) => emit('update:individualConfig', val),
 })
 
 // 确保每个选中的机器都有配置
@@ -132,9 +136,7 @@ watch(() => props.selectedMachines, (machines) => {
   emit('update:individualConfig', config)
 }, { immediate: true })
 
-const getMachineName = (id: number) => {
-  return mockMachines.find(m => m.id === id)?.name || `Machine ${id}`
-}
+// getMachineName 现在从 composable 提供
 
 const handleUpdate = () => {
   emit('update')
@@ -199,4 +201,3 @@ const handleUpdate = () => {
   }
 }
 </style>
-

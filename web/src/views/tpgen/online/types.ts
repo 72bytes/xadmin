@@ -1,20 +1,37 @@
-// 机器信息
+// 机器信息（匹配数据库 SutDevice 字段）
 export interface Machine {
   id: number
-  name: string
-  motherboard: string
-  gpu: string
-  cpu: string
-  status: 'Available' | 'Unavailable'
+  hostname: string // 对应数据库的 hostname
+  asicName?: string // 对应数据库的 asic_name
+  ipAddress?: string // 对应数据库的 ip_address
+  deviceId?: string // 对应数据库的 device_id
+  revId?: string // 对应数据库的 rev_id
+  gpuSeries?: string // 对应数据库的 gpu_series
+  gpuModel?: string // 对应数据库的 gpu_model
+  createdAt?: string
+  updatedAt?: string
+  // 以下为兼容旧代码的字段映射
+  name?: string // 映射到 hostname
+  gpu?: string // 映射到 gpuModel
+  status?: 'Available' | 'Unavailable' // 根据设备是否存在判断
 }
 
-// 测试用例
+// 测试用例（匹配数据库 TestCase 字段）
 export interface TestCase {
   id: number
-  name: string
-  description: string
-  testType?: string
-  subgroup?: string
+  caseName: string // 对应数据库的 case_name
+  caseConfig?: Record<string, any> // 对应数据库的 case_config (JSON)
+  testComponentId?: number // 对应数据库的 test_component_id
+  createdAt?: string
+  updatedAt?: string
+  // 以下为扩展字段，用于前端展示
+  name?: string // 兼容旧代码，映射到 caseName
+  description?: string // 从 caseConfig 中提取
+  testType?: string // 测试类型名称（从关联表获取）
+  testTypeName?: string // 测试类型名称
+  componentName?: string // 测试组件名称（从关联表获取）
+  componentCategory?: string // 组件分类（从关联表获取）
+  subgroup?: string // 兼容旧代码，映射到 componentName
   customGroup?: string
 }
 
@@ -40,11 +57,11 @@ export interface FormData {
   osConfigMethod: 'same' | 'individual'
   os?: string
   deployment?: string
-  individualOsConfig: Record<number, { os: string; deployment: string }>
+  individualOsConfig: Record<number, { os: string, deployment: string }>
   kernelConfigMethod: 'same' | 'individual'
   kernelType?: string
   kernelVersion?: string
-  individualKernelConfig: Record<number, { type: string; version: string }>
+  individualKernelConfig: Record<number, { type: string, version: string }>
   firmwareVersion: string
   versionComparison: boolean
   selectedTestCases: TestCase[]
@@ -97,4 +114,3 @@ export interface AnalysisResult {
   missingConfigurations: string[]
   warnings: string[]
 }
-

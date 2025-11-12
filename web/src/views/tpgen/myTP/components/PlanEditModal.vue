@@ -8,14 +8,14 @@
   >
     <a-form v-if="form" :model="form" layout="vertical">
       <a-form-item label="计划名称" required>
-        <a-input 
-          v-model="form.name" 
-          placeholder="请输入计划名称" 
+        <a-input
+          v-model="form.name"
+          placeholder="请输入计划名称"
           :max-length="100"
           show-word-limit
         />
       </a-form-item>
-      
+
       <a-form-item label="类别" required>
         <a-select v-model="form.category" placeholder="请选择类别">
           <a-option value="Benchmark">Benchmark - 基准测试</a-option>
@@ -25,25 +25,25 @@
           <a-option value="Custom">Custom - 自定义</a-option>
         </a-select>
       </a-form-item>
-      
+
       <a-form-item label="描述">
-        <a-textarea 
-          v-model="form.description" 
-          placeholder="请输入描述信息" 
+        <a-textarea
+          v-model="form.description"
+          placeholder="请输入描述信息"
           :rows="4"
           :max-length="500"
           show-word-limit
         />
       </a-form-item>
-      
+
       <a-form-item label="标签">
-        <a-input 
-          v-model="form.tags" 
-          placeholder="多个标签用逗号分隔" 
+        <a-input
+          v-model="form.tags"
+          placeholder="多个标签用逗号分隔"
           :max-length="200"
         />
       </a-form-item>
-      
+
       <a-form-item label="状态">
         <a-radio-group v-model="form.status">
           <a-radio :value="1">草稿</a-radio>
@@ -67,8 +67,8 @@ const props = defineProps<Props>()
 
 const emit = defineEmits<{
   'update:modelValue': [value: boolean]
-  ok: []
-  cancel: []
+  'ok': []
+  'cancel': []
 }>()
 
 const visible = computed({
@@ -84,4 +84,3 @@ const handleCancel = () => {
   emit('cancel')
 }
 </script>
-
