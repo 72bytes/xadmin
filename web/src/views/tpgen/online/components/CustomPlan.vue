@@ -49,11 +49,15 @@
 
       <!-- 操作按钮 -->
       <div class="actions">
-        <a-button @click="handleReset" :disabled="isGenerating">
+        <a-button type="primary"  @click="handleReset" :disabled="isGenerating">
           <template #icon><icon-refresh /></template>
           Reset Form
         </a-button>
-        <a-button 
+     
+        <a-space>
+
+
+          <a-button 
           type="primary" 
           @click="handleGenerate"
           :loading="isGenerating"
@@ -62,15 +66,6 @@
           <template #icon v-if="!isGenerating"><icon-settings /></template>
           {{ isGenerating ? 'Generating...' : 'Generate Test Plan' }}
         </a-button>
-        <a-space>
-          <a-button type="outline" @click="handleSave">
-            <template #icon><icon-save /></template>
-            Save Plan
-          </a-button>
-          <a-button type="primary" @click="handleGenerate">
-            <template #icon><icon-settings /></template>
-            Generate Test Plan
-          </a-button>
         </a-space>
       </div>
     </a-form>
@@ -151,196 +146,12 @@ interface CompatibilityResponse {
  * @param keyPath key 路径，如 "hardware.machines"
  * @returns 行号（从1开始），未找到返回 -1
  */
-const findKeyLineNumber = (yamlText: string, keyPath: string): number => {
-  console.log('[findKeyLineNumber] 开始查找行号...')
-  console.log('[findKeyLineNumber] keyPath:', keyPath)
-  console.log('[findKeyLineNumber] YAML 文本前 500 字符:', yamlText.substring(0, 500))
-  
-  if (!yamlText || !keyPath) {
-    console.log('[findKeyLineNumber] ❌ yamlText 或 keyPath 为空')
-    return -1
-  }
-  
-  const lines = yamlText.split('\n')
-  const keys = keyPath.split('.')
-  console.log('[findKeyLineNumber] 总行数:', lines.length)
-  console.log('[findKeyLineNumber] 需要匹配的 keys:', keys)
-  
-  let currentKeyIndex = 0
-  let expectedIndent = 0
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i]
-    const trimmedLine = line.trim()
-    
-    // 跳过空行和注释
-    if (!trimmedLine || trimmedLine.startsWith('#')) continue
-    
-    // 计算当前行的缩进级别（空格数除以2）
-    const indent = line.search(/\S/) / 2
-    
-    // 获取当前需要匹配的 key
-    const targetKey = keys[currentKeyIndex]
-    
-    // 匹配 key（支持 "key:" 格式）
-    const keyPattern = new RegExp(`^${targetKey}\\s*:`)
-    
-    if (keyPattern.test(trimmedLine) && indent === expectedIndent) {
-      console.log(`[findKeyLineNumber] ✅ 匹配到 key "${targetKey}" 在行 ${i + 1}: "${trimmedLine}"`)
-      currentKeyIndex++
-      
-      // 如果已经找到完整路径，返回行号（从1开始）
-      if (currentKeyIndex === keys.length) {
-        console.log(`[findKeyLineNumber] 🎯 找到完整路径！返回行号: ${i + 1}`)
-        return i + 1
-      }
-      
-      // 更新下一层的期望缩进
-      expectedIndent = indent + 1
-      console.log(`[findKeyLineNumber] 继续查找下一个 key，期望缩进: ${expectedIndent}`)
-    }
-  }
-  
-  console.log('[findKeyLineNumber] ❌ 未找到匹配的 key 路径')
-  return -1 // 未找到
-}
 
-/**
- * 从错误信息中提取 key 路径
- * @param errorMessage 错误信息，如 "E002 Unsupported: empty value for [hardware.machines]"
- * @returns key 路径，如 "hardware.machines"，未找到返回 null
- */
-const extractKeyFromError = (errorMessage: string): string | null => {
-  // 匹配 [xxx] 中的内容
-  const match = errorMessage.match(/\[([^\]]+)\]/)
-  return match ? match[1] : null
-}
 
-/**
- * 将 JavaScript 对象转换为 YAML 字符串
- * （与 YamlPreview.vue 中的 jsToYaml 函数保持一致）
- */
-const jsToYaml = (obj: any, indent = 0): string => {
-  let yaml = ''
-  const spaces = '  '.repeat(indent)
 
-  for (const [key, value] of Object.entries(obj)) {
-    if (Array.isArray(value)) {
-      yaml += `${spaces}${key}:\n`
-      value.forEach((item) => {
-        if (typeof item === 'object' && item !== null) {
-          const itemYaml = jsToYaml(item, indent + 2)
-          const lines = itemYaml.trim().split('\n')
-          yaml += `${spaces}  -`
-          lines.forEach((line, i) => {
-            if (i === 0) {
-              yaml += ` ${line.trim()}\n`
-            }
-            else {
-              yaml += `${spaces}    ${line.trim()}\n`
-            }
-          })
-        }
-        else {
-          yaml += `${spaces}  - ${item}\n`
-        }
-      })
-    }
-    else if (typeof value === 'object' && value !== null) {
-      yaml += `${spaces}${key}:\n${jsToYaml(value, indent + 1)}`
-    }
-    else {
-      yaml += `${spaces}${key}: ${value}\n`
-    }
-  }
 
-  return yaml
-}
 
-/**
- * 兼容性检查函数（使用 check_yaml.ts 的完整逻辑）
- * 检查 YAML 配置的完整兼容性
- */
-// const checkCompatibility = async (yamlData: any): Promise<CompatibilityResponse> => {
-//   try {
-//     // 基本验证：检查数据对象
-//     if (!yamlData || typeof yamlData !== 'object') {
-//       return {
-//         success: false,
-//         error: {
-//           code: 'E000',
-//           message: 'Invalid YAML data object',
-//         },
-//       }
-//     }
 
-//     // 🔍 调用完整的兼容性分析函数
-//     console.log('[CustomPlan] 开始完整兼容性分析...')
-//     const compatResult = compatibility_analysis(yamlData)
-    
-//     // 解析返回结果：格式 "True:0" 或 "False:E001 Unsupported: ..."
-//     const colonIndex = compatResult.indexOf(':')
-//     const isValid = compatResult.substring(0, colonIndex)
-//     const errorInfo = compatResult.substring(colonIndex + 1)
-    
-//     if (isValid === 'False') {
-//       // 验证失败，提取错误代码和消息
-//       // errorInfo 格式可能是 "E001 Unsupported: missing mandatory key [hardware.cpu]"
-//       const errorCode = errorInfo.split(' ')[0] || 'E999'
-//       const errorMessage = errorInfo || 'Compatibility check failed'
-      
-//       console.error('[CustomPlan] 兼容性验证失败:', `[${errorCode}] ${errorMessage}`)
-      
-//       // 提取 key 路径
-//       const keyPath = extractKeyFromError(errorMessage)
-//       console.log('[checkCompatibility] 提取到的 keyPath:', keyPath)
-      
-//       // 计算行号（只对 E002, E101, E102 错误计算行号）
-//       let lineNumber: number | undefined
-//       if (keyPath && (errorCode === 'E002' || errorCode === 'E101' || errorCode === 'E102')) {
-//         console.log('[checkCompatibility] 开始计算行号，错误码:', errorCode)
-//         // 将 YAML 对象转换为 YAML 格式文本（与 YamlPreview 保持一致）
-//         const yamlText = jsToYaml(yamlData).trimEnd()
-//         console.log('[checkCompatibility] YAML 文本长度:', yamlText.length)
-//         console.log('[checkCompatibility] YAML 文本格式（前 300 字符）:', yamlText.substring(0, 300))
-//         lineNumber = findKeyLineNumber(yamlText, keyPath)
-//         console.log('[checkCompatibility] 计算得到的行号:', lineNumber)
-//         if (lineNumber !== -1) {
-//           console.log(`[checkCompatibility] ✅ 找到错误行号: ${lineNumber}, key: ${keyPath}`)
-//         } else {
-//           console.log(`[checkCompatibility] ❌ 未找到行号, key: ${keyPath}`)
-//         }
-//       } else {
-//         console.log('[checkCompatibility] 跳过行号计算，原因：', 
-//           !keyPath ? 'keyPath 为空' : `错误码 ${errorCode} 不在 E002/E101/E102 范围内`)
-//       }
-      
-//       return {
-//         success: false,
-//         error: {
-//           code: errorCode,
-//           message: errorMessage,
-//           key: keyPath || undefined,
-//           lineNumber: lineNumber !== -1 ? lineNumber : undefined,
-//         },
-//       }
-//     }
-    
-//     // ✅ 验证通过
-//     console.log('[CustomPlan] ✅ 兼容性验证通过')
-//     return { success: true }
-//   }
-//   catch (error) {
-//     console.error('[CustomPlan] 兼容性检查异常:', error)
-//     return {
-//       success: false,
-//       error: {
-//         code: 'E999',
-//         message: error.message || 'Unknown error during compatibility check',
-//       },
-//     }
-//   }
-// }
 // 原来的函数调用 compatibility_analysis
 const checkCompatibility = async (yamlData: any): Promise<CompatibilityResponse> => {
   try {
@@ -375,18 +186,6 @@ const checkCompatibility = async (yamlData: any): Promise<CompatibilityResponse>
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -484,6 +283,7 @@ const handleReset = () => {
   formData.versionComparison = false
   formData.selectedTestCases = []
   generatedYaml.value = null
+  errorLineNumbers.value = []  // 清空错误高亮行
   updateProgress()
 }
 
@@ -575,6 +375,9 @@ const handleGenerate = async () => {
   }
 
   generatedYaml.value = yamlData
+  
+  // 清空之前的错误高亮行
+  errorLineNumbers.value = []
 
   // 触发生成事件
   emit('generate', {
@@ -586,6 +389,14 @@ const handleGenerate = async () => {
 
   // 显示成功消息
   Message.success('Test plan generated successfully!')
+  // ← 在这里添加下面的代码
+  progress.value = 100
+  emit('progressChange', 100)
+
+  // 滚动到预览区域
+  setTimeout(() => {
+    document.querySelector('.yaml-preview')?.scrollIntoView({ behavior: 'smooth' })
+  }, 100)
 
   // 滚动到预览区域
   setTimeout(() => {
@@ -658,7 +469,7 @@ const handleCopy = async () => {
       
       // 显示友好的错误消息
       const errorMsgWithLine = lineNumber ? `${errorMsg} (Line ${lineNumber})` : errorMsg
-      Message.error(`Compatibility Check Failed: ${errorMsgWithLine}`)
+      // Message.error(`Compatibility Check Failed: ${errorMsgWithLine}`)
       showNotification(`Compatibility Check Failed: ${errorMsgWithLine}`, 'error')
       return  // 🚫 重要：这里必须返回，阻止后续复制操作
     }
@@ -724,7 +535,7 @@ const handleDownload = async () => {
       
       // 显示友好的错误消息
       const errorMsgWithLine = lineNumber ? `${errorMsg} (Line ${lineNumber})` : errorMsg
-      Message.error(`Compatibility Check Failed: ${errorMsgWithLine}`)
+      // Message.error(`Compatibility Check Failed: ${errorMsgWithLine}`)
       showNotification(`Compatibility Check Failed: ${errorMsgWithLine}`, 'error')
       return  // 🚫 重要：这里必须返回，阻止后续下载操作
     }
@@ -763,7 +574,56 @@ const handleDownload = async () => {
 }
 
 // 处理保存按钮点击
-const handleSave = () => {
+const handleSave = async () => {
+
+  console.log('[CustomPlan handleSave] 🚀 开始保存流程...')
+    
+  if (!generatedYaml.value) {
+    console.error('[CustomPlan handleSave] ❌ 没有 YAML 数据')
+    Message.error('No YAML data to save!')
+    showNotification('No YAML data to save!', 'error')
+    return
+  }
+
+  // 🔍 执行完整的兼容性验证（E001, E002, E101, E102）
+  console.log('[CustomPlan handleSave] 🔍 开始保存前完整兼容性验证...')
+  console.log('[CustomPlan handleSave] 📋 待验证数据:', JSON.stringify(generatedYaml.value, null, 2))
+  
+  const response = await checkCompatibility(generatedYaml.value)
+  console.log('[CustomPlan handleSave] 📊 兼容性验证结果:', response)
+  
+  if (!response.success) {
+    // 验证失败，显示详细错误信息
+    const errorCode = response.error?.code || 'E999'
+    const errorMsg = response.error?.message || 'Unknown compatibility error'
+    const lineNumber = response.error?.lineNumber
+    
+    console.error('[CustomPlan handleSave] ❌ 兼容性验证失败:', `[${errorCode}] ${errorMsg}`)
+    console.error('[CustomPlan handleSave] ❌❌❌ 阻止保存操作！')
+    
+    // 更新错误行号（用于高亮显示）
+    console.log('[CustomPlan handleSave] 收到的 lineNumber:', lineNumber)
+    if (lineNumber) {
+      errorLineNumbers.value = [lineNumber]
+      console.log('[CustomPlan handleSave] ✅ 设置错误行号:', lineNumber)
+      console.log('[CustomPlan handleSave] errorLineNumbers.value:', errorLineNumbers.value)
+    } else {
+      console.log('[CustomPlan handleSave] ⚠️ lineNumber 为空，未设置错误行号')
+    }
+    
+    // 显示友好的错误消息
+    const errorMsgWithLine = lineNumber ? `${errorMsg} (Line ${lineNumber})` : errorMsg
+    // Message.error(`Compatibility Check Failed: ${errorMsgWithLine}`)
+    showNotification(`Compatibility Check Failed: ${errorMsgWithLine}`, 'error')
+    return  // 🚫 重要：这里必须返回，阻止后续下载操作
+  }
+  
+  // ✅ 验证通过，清除错误行号并开始下载
+  errorLineNumbers.value = []
+  console.log('[CustomPlan] ✅ 兼容性验证通过，开始下载...')
+
+
+
   // 验证表单是否有数据
   if (formData.selectedMachines.length === 0) {
     Message.warning('请先选择机器')

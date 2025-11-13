@@ -4,6 +4,7 @@ YAML 行号查找工具
 """
 
 import re
+from .logger import yaml_check_logger
 
 class YamlLineFinder:
     
@@ -29,11 +30,16 @@ class YamlLineFinder:
         返回：
         - 行号（从1开始），未找到返回 -1
         """
+        yaml_check_logger.debug(f"查找 key 行号: {key_path}")
+        
         if not yaml_text or not key_path:
+            yaml_check_logger.warning("yaml_text 或 key_path 为空")
             return -1
         
         lines = yaml_text.split('\n')
         keys = key_path.split('.')
+        
+        yaml_check_logger.debug(f"YAML 文本共 {len(lines)} 行，key 路径层级: {keys}")
         
         current_key_index = 0
         expected_indent = 0
@@ -60,15 +66,18 @@ class YamlLineFinder:
             
             if key_pattern.match(trimmed_line) and indent == expected_indent:
                 current_key_index += 1
+                yaml_check_logger.debug(f"匹配到 key '{target_key}' 在第 {i+1} 行")
                 
                 # 如果已经找到完整路径，返回行号（从1开始）
                 if current_key_index == len(keys):
+                    yaml_check_logger.info(f"找到完整 key 路径 '{key_path}' 在第 {i+1} 行")
                     return i + 1
                 
                 # 更新下一层的期望缩进
                 expected_indent = indent + 1
         
         # 未找到
+        yaml_check_logger.warning(f"未找到 key 路径: {key_path}")
         return -1
     
     @staticmethod

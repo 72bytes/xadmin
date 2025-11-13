@@ -1,0 +1,287 @@
+2025-11-12 16:15:01.140 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:15:01.278 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:15:01.278 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:15:01.279 | INFO     | yaml_check.validator:validate:262 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:15:01.279 | INFO     | yaml_check.validator:validate_required_root_keys:99 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:15:01.279 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:156 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:15:01.279 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:15:01.280 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:15:01.281 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:15:01.281 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:15:01.281 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:15:01.281 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.141923189163208
+2025-11-12 16:16:57.632 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:16.011 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:17.898 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:20.930 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:26.379 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:29.528 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:33.597 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:44.655 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:47.600 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:49.551 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:17:51.959 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:19:35.014 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:19:38.309 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:19:57.677 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:19:59.559 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:20:01.337 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:20:21.265 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:20:45.237 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:20:47.550 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:20:49.338 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:20:51.304 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:23:57.593 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:24:20.180 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:34:23.646 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:34:27.586 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:34:28.005 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:34:28.005 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:34:28.006 | INFO     | yaml_check.validator:validate:253 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:34:28.006 | INFO     | yaml_check.validator:validate_required_root_keys:129 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:34:28.006 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:179 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:34:28.007 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:34:28.007 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:34:28.008 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:34:28.008 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:34:28.008 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:34:28.008 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.4221537113189697
+2025-11-12 16:34:33.831 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:34:43.131 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:34:50.169 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:35:28.578 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:35:30.595 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:35:36.395 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:35:57.485 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:35:59.311 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:06.252 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:24.059 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:59.927 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:39:03.988 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:39:09.020 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:42:46.561 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:42:50.527 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:44:24.473 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:45:19.093 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:45:25.281 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:45:58.547 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:46:04.503 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:46:04.673 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:46:04.673 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:46:04.673 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:46:04.674 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:46:04.674 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:46:04.674 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:46:04.674 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:46:04.675 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:46:04.675 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:46:04.675 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:46:04.676 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.17349576950073242
+2025-11-12 16:46:26.838 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:29.006 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:35.144 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:39.181 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:41.327 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:44.457 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:48.397 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:50.363 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:52.596 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:54.780 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:46:59.917 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:47:05.039 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:47:07.115 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:47:12.156 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:47:17.127 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 16:52:52.712 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:52.975 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:53.169 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:53.324 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:53.377 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:53.377 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:53.377 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:53.378 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:53.378 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:53.378 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:53.378 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:53.379 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:53.379 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:53.380 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:53.380 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.669069766998291
+2025-11-12 16:52:53.402 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:53.403 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:53.403 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:53.403 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:53.404 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:53.404 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:53.404 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:53.405 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:53.405 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:53.405 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:53.405 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.43015122413635254
+2025-11-12 16:52:53.465 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:53.466 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:53.466 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:53.466 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:53.467 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:53.467 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:53.467 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:53.468 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:53.468 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:53.468 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:53.468 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.14391708374023438
+2025-11-12 16:52:53.505 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:53.548 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:53.548 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:53.549 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:53.549 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:53.549 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:53.549 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:53.549 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:53.550 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:53.550 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:53.550 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:53.550 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.381270170211792
+2025-11-12 16:52:53.633 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:53.663 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:53.663 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:53.663 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:53.664 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:53.664 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:53.664 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:53.664 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:53.665 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:53.665 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:53.665 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:53.665 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.16063761711120605
+2025-11-12 16:52:53.884 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:54.037 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:54.037 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:54.038 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:54.038 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:54.039 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:54.039 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:54.039 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:54.039 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:54.040 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:54.040 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:54.040 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.4068946838378906
+2025-11-12 16:52:54.083 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:54.211 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:54.211 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:54.211 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:54.212 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:54.212 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:54.212 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:54.212 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:54.213 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:54.213 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:54.213 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:54.213 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.13007831573486328
+2025-11-12 16:52:54.293 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:54.293 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:54.294 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:54.294 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:54.294 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:54.295 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:54.295 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:54.295 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:54.296 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:54.296 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:54.296 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.4117929935455322
+2025-11-12 16:52:54.443 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:55.664 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:55.665 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:55.665 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:55.666 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:55.666 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:55.666 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:55.666 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:55.667 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:55.667 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:55.667 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:55.668 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 1.2246677875518799
+2025-11-12 16:52:57.581 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:58.225 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:58.225 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:58.226 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:58.226 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:58.226 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:58.227 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:58.227 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:58.227 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:58.228 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:58.228 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:58.228 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.6474061012268066
+2025-11-12 16:52:59.513 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:52:59.658 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:52:59.658 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:52:59.659 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:52:59.659 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:52:59.659 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:52:59.660 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:52:59.660 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:52:59.660 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:52:59.661 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:52:59.661 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:52:59.661 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.14851045608520508
+2025-11-12 16:53:01.238 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:53:01.387 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:53:01.387 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:53:01.388 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:53:01.388 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:53:01.388 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:53:01.388 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:53:01.389 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:53:01.389 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:53:01.389 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:53:01.389 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:53:01.390 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.15226459503173828
+2025-11-12 16:53:05.341 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:53:05.487 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:53:05.488 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:53:05.488 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:53:05.488 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:53:05.489 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:53:05.489 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:53:05.489 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:53:05.489 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:53:05.490 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:53:05.490 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:53:05.490 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 0.14937257766723633
+2025-11-12 16:59:33.646 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 16:59:35.205 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 16:59:35.206 | INFO     | yaml_check.views:validate_yaml:42 | 收到 YAML 验证请求
+2025-11-12 16:59:35.206 | INFO     | yaml_check.validator:validate:326 | ========== 开始 YAML 验证流程 ==========
+2025-11-12 16:59:35.207 | INFO     | yaml_check.validator:validate_required_root_keys:130 | ✅ E001 验证通过：所有必需键存在
+2025-11-12 16:59:35.207 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:180 | E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 16:59:35.207 | INFO     | yaml_check.views:validate_yaml:60 | 验证完成，结果: 失败
+2025-11-12 16:59:35.207 | WARNING  | yaml_check.views:validate_yaml:68 | 验证失败: [E002] E002 Unsupported: empty value for [hardware.machines]
+2025-11-12 16:59:35.208 | INFO     | yaml_check.line_finder:find_key_line_number:73 | 找到完整 key 路径 'hardware.machines' 在第 7 行
+2025-11-12 16:59:35.208 | INFO     | yaml_check.views:validate_yaml:87 | 找到错误行号: 7, key: hardware.machines
+2025-11-12 16:59:35.208 | INFO     | yaml_check.views:validate_yaml:94 | 返回验证结果
+2025-11-12 16:59:35.209 | INFO     | xadmin.logru_config:emit:15 | "POST - validate_yaml /system/yaml/validate" 1.5630052089691162
+2025-11-12 17:00:28.315 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:00:28.586 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:00:28.926 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:00:29.075 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:00:29.096 | INFO     | xadmin.logru_config:emit:15 | "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.7812762260437012
+2025-11-12 17:00:29.581 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_options /system/sut/device/gpu-options" 0.9952681064605713
+2025-11-12 17:03:57.908 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:03:58.146 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.2481393814086914
+2025-11-12 17:03:58.147 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:03:58.215 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.3076624870300293
+2025-11-12 17:03:58.224 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:03:58.506 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:03:58.850 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.6254391670227051
+2025-11-12 17:03:59.351 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:03:59.487 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:04:00.054 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_options /system/sut/device/gpu-options" 0.7025237083435059
+2025-11-12 17:37:37.665 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:37:37.966 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:37:38.077 | INFO     | xadmin.logru_config:emit:15 | "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.41450929641723633
+2025-11-12 17:37:40.427 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:37:40.645 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:37:40.705 | INFO     | xadmin.logru_config:emit:15 | "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.2784545421600342
+2025-11-12 17:37:41.630 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 17:37:41.765 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-12 17:37:42.074 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_options /system/sut/device/gpu-options" 0.4439096450805664

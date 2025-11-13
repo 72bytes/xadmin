@@ -2,7 +2,7 @@
   <div class="table-page">
     <a-row justify="space-between" align="center" class="header page_header">
       <a-space wrap>
-        <div class="title">我的测试计划</div>
+        <div class="title">My Test Plans</div>
       </a-space>
     </a-row>
     

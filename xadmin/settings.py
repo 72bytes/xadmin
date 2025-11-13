@@ -38,11 +38,11 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 INSTALLED_APPS = [
     "corsheaders",
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     "django.contrib.auth",
     "django.contrib.contenttypes",
     # 'django.contrib.sessions',
-    # 'django.contrib.messages',
+    'django.contrib.messages',
     # 'django.contrib.staticfiles',
     "xadmin_utils",
     "xadmin_db",
@@ -50,7 +50,6 @@ INSTALLED_APPS = [
 
     "test_plan",
     "yaml_check",  # 新增
-
 
     "tpgen",  # Test Plan Generator
 
@@ -67,7 +66,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    # 'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_currentuser.middleware.ThreadLocalUserMiddleware",
 ]

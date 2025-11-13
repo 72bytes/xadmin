@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.forms.models import model_to_dict
 from xadmin_utils import utils
+from django.contrib.auth.models import PermissionsMixin
 
 
 class ModelSaveMixin:
@@ -481,22 +482,33 @@ class SysRoleMenu(models.Model):
 
 # User Manager
 class SysUserManager(BaseUserManager):
-    def create_user(self, username, password, **extra_fields):
-        user_id = extra_fields.get('id', None)
+    def create_user(self, username, password=None, **extra_fields):
+        """创建普通用户"""
         if not username:
             raise ValueError('The UserName field must be set')
-        if user_id is None:
-            raise ValueError('The UserId field must be set')
-
-        user = self.model(
-            username=username,
-            **extra_fields
-        )
-        user.set_password(password)
-        user.save()
-        return user
         
-class SysUser(ModelSaveMixin, AbstractBaseUser):
+        # 设置必填字段的默认值
+        extra_fields.setdefault('gender', 0)
+        extra_fields.setdefault('dept_id', 1)
+        extra_fields.setdefault('status', 1)
+        extra_fields.setdefault('is_system', 0)
+        
+        user = self.model(username=username, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+    
+    def create_superuser(self, username, password=None, **extra_fields):
+        """创建超级用户"""
+        # 设置必填字段的默认值
+        extra_fields.setdefault('gender', 0)
+        extra_fields.setdefault('dept_id', 1)
+        extra_fields.setdefault('status', 1)
+        extra_fields.setdefault('is_system', 1)  # 超级用户标记为系统用户
+        
+        return self.create_user(username, password, **extra_fields)
+        
+class SysUser(ModelSaveMixin, AbstractBaseUser, PermissionsMixin):    
     id = models.BigAutoField(primary_key=True, db_comment='ID')
     username = models.CharField(unique=True, max_length=64, db_comment='用户名')
     password = models.CharField(max_length=255, db_comment='密码')
@@ -514,10 +526,17 @@ class SysUser(ModelSaveMixin, AbstractBaseUser):
     create_time = models.DateTimeField(auto_now_add=True, db_comment='创建时间')
     update_user = models.BigIntegerField(blank=True, null=True, db_comment='修改人')
     update_time = models.DateTimeField(auto_now=True, blank=True, null=True, db_comment='修改时间')
+    # Django Admin 必需字段
+    is_staff = models.BooleanField(default=False, db_comment='是否可以访问admin')
+    is_active = models.BooleanField(default=True, db_comment='账号是否激活')
+    # is_superuser 已由 PermissionsMixin 提供
 
     objects = SysUserManager()
-    USERNAME_FIELD = "id"
-    REQUIRED_FIELDS = [id, username, password, gender, dept_id, status, is_system]
+    # USERNAME_FIELD = "id"
+    # REQUIRED_FIELDS = [id, username, password, gender, dept_id, status, is_system]
+    USERNAME_FIELD = "username"
+    # REQUIRED_FIELDS = ["username", "password", "gender", "dept_id", "status", "is_system"]
+    REQUIRED_FIELDS = ["gender", "dept_id", "status", "is_system"]
     class Meta:
         db_table = 'sys_user'
         db_table_comment = '用户表'

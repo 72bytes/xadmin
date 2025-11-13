@@ -34,14 +34,32 @@
     </div>
 
     <div class="actions">
-      <a-button @click="handleCopy">
+
+      <a-button  type="primary" @click="handleCopy">
         <template #icon><icon-copy /></template>
         Copy to Clipboard
       </a-button>
+
+
+
+      <a-space>
+
+      <a-button type="primary" @click="handleSave">
+        <template #icon><icon-save /></template>
+        Save Plan
+      </a-button>
+
+
+
+
       <a-button type="primary" @click="handleDownload">
         <template #icon><icon-download /></template>
         Download YAML
       </a-button>
+    </a-space>
+
+
+
     </div>
   </a-card>
 </template>
@@ -306,13 +324,18 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
       margin: 0;
       transition: all 0.3s ease;
 
-      &.error-line {
-        background-color: rgba(255, 77, 79, 0.15);
-        border-left: 4px solid #ff4d4f;
-        padding-left: 10px;
-        animation: pulse-error 1.5s ease-in-out infinite;
-        box-shadow: 0 0 10px rgba(255, 77, 79, 0.3);
-      }
+      // &.error-line {
+      //   background-color: rgba(255, 77, 79, 0.15);
+      //   border-left: 4px solid #ff4d4f;
+      //   padding-left: 10px;
+      //   animation: pulse-error 1.5s ease-in-out infinite;
+      //   box-shadow: 0 0 10px rgba(255, 77, 79, 0.3);
+      // }
+    }
+    &.error-line {
+      background-color: rgba(255, 77, 79, 0.15);
+      box-shadow: inset 4px 0 0 0 #ff4d4f;  // 内阴影模拟左边框
+      // 不需要 padding-left 和 border-left
     }
   }
 
@@ -352,7 +375,7 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
 .actions {
   display: flex;
   gap: 15px;
-  justify-content: flex-end;
+  justify-content: space-between;;
 
   @media (max-width: 768px) {
     flex-direction: column;

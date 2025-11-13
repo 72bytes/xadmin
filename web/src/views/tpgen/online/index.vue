@@ -17,7 +17,7 @@
         <a-tab-pane key="upload" title="上传测试计划">
           <template #title>
             <icon-upload />
-            上传测试计划
+            Upload Test Plan
           </template>
           <UploadPlan />
         </a-tab-pane>
@@ -25,7 +25,7 @@
         <a-tab-pane key="custom" title="自定义测试计划">
           <template #title>
             <icon-settings />
-            自定义测试计划
+            Generate Test Plan
           </template>
           <CustomPlan @progress-change="handleProgressChange" />
         </a-tab-pane>

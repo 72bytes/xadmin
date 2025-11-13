@@ -1135,3 +1135,1783 @@
 2025-11-11 17:39:11.702 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.43259739875793457
 2025-11-11 17:39:11.820 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
 2025-11-11 17:39:11.821 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.40501976013183594
+2025-11-11 18:02:24.716 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 18:02:24.716 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-11 18:02:24.716 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 09:28:36.596 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 09:28:37.075 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 09:28:37.260 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 09:29:04.606 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:05.166 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.6843075752258301
+2025-11-12 09:29:05.626 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.45359063148498535
+2025-11-12 09:29:06.571 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:06.903 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 2.2971973419189453
+2025-11-12 09:29:06.910 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:06.914 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:07.527 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:07.527 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:07.728 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.8175210952758789
+2025-11-12 09:29:09.000 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 2.085510730743408
+2025-11-12 09:29:09.007 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:09.157 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:09.557 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.5500977039337158
+2025-11-12 09:29:13.025 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:13.555 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:13.962 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.9368247985839844
+2025-11-12 09:29:17.429 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:17.723 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:17.724 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.29483938217163086
+2025-11-12 09:29:17.914 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:19.419 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:19.420 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.505871295928955
+2025-11-12 09:29:27.796 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:29:27.961 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:29:27.962 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.16568636894226074
+2025-11-12 09:31:20.439 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:31:20.845 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:31:20.846 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.40729641914367676
+2025-11-12 09:31:21.222 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:31:21.644 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:31:21.982 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:31:21.983 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.760467529296875
+2025-11-12 09:31:22.018 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:31:22.018 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.3744373321533203
+2025-11-12 09:31:22.039 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:31:22.209 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:31:22.694 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:31:22.695 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.48570799827575684
+2025-11-12 09:31:22.694 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:31:22.696 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6565039157867432
+2025-11-12 09:32:17.253 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:32:17.406 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:32:17.545 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:32:17.597 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:32:17.597 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.3445403575897217
+2025-11-12 09:32:17.694 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:32:17.958 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:32:17.959 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5528738498687744
+2025-11-12 09:32:18.122 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:32:18.123 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5777039527893066
+2025-11-12 09:32:18.140 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:32:18.140 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.44644975662231445
+2025-11-12 09:39:53.543 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:39:53.734 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.1982259750366211
+2025-11-12 09:39:53.757 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:39:53.858 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.3144528865814209
+2025-11-12 09:39:53.867 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:39:54.044 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:39:54.385 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.5184173583984375
+2025-11-12 09:39:59.216 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:39:59.352 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:39:59.502 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.2868366241455078
+2025-11-12 09:41:55.351 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:41:55.857 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:41:55.857 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5057659149169922
+2025-11-12 09:41:55.982 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:41:56.513 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:41:56.514 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5318202972412109
+2025-11-12 09:41:59.216 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:41:59.367 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:41:59.368 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.15191245079040527
+2025-11-12 09:42:00.134 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:42:00.289 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:42:00.290 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.15587258338928223
+2025-11-12 09:42:06.778 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:42:07.809 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:42:07.982 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 1.2042415142059326
+2025-11-12 09:42:21.271 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:42:21.650 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:42:21.787 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan /tpgen/saved-plan/3" 0.5160152912139893
+2025-11-12 09:42:25.848 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:42:27.063 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:42:27.095 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan /tpgen/saved-plan/3" 1.2472445964813232
+2025-11-12 09:42:34.392 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:42:34.622 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:42:34.660 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan /tpgen/saved-plan/2" 0.2674703598022461
+2025-11-12 09:43:09.124 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:43:09.747 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:43:10.147 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.0238256454467773
+2025-11-12 09:43:19.859 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:43:20.016 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:43:20.059 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.19982242584228516
+2025-11-12 09:43:57.997 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:43:58.408 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:43:59.086 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.0897541046142578
+2025-11-12 09:44:06.739 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:44:07.185 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:44:07.186 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.44707250595092773
+2025-11-12 09:44:19.059 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:44:19.696 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:44:19.700 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6410694122314453
+2025-11-12 09:44:47.462 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:44:47.651 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:44:47.760 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.2984588146209717
+2025-11-12 09:44:47.982 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:44:48.172 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:44:48.361 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.3791828155517578
+2025-11-12 09:46:49.984 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:46:50.500 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 09:46:50.915 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:46:51.035 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 1.0511195659637451
+2025-11-12 09:46:51.739 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 09:46:51.950 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.4505584239959717
+2025-11-12 10:32:33.227 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:32:44.623 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:33:52.589 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:35:15.567 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:35:16.292 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:35:16.471 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:35:17.832 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:35:18.041 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:35:18.228 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:35:21.684 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:35:21.940 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:35:22.115 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:35:24.121 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:35:27.861 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:36:03.857 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:36:04.258 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:36:04.764 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:36:13.613 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:36:13.917 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:36:14.103 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:36:15.512 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:36:15.819 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:36:16.004 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:36:34.676 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:38:43.452 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:38:44.014 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:38:44.410 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:38:46.044 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:38:46.421 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:38:46.625 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:38:48.911 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:38:49.225 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:38:49.478 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:38:53.004 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:38:53.331 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:38:53.528 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:39:57.981 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:41:28.022 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:41:28.373 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:41:28.628 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:41:31.269 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:41:31.584 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:41:31.824 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:41:44.358 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:41:44.748 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:41:44.956 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:41:46.440 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:41:46.758 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:41:46.959 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:41:53.939 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:44:18.489 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:44:19.045 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:44:19.497 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:44:28.764 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:44:48.124 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:45:00.538 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 10:45:00.870 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:45:01.051 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:47:44.821 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:47:45.307 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:47:45.505 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:48:27.165 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 10:48:27.396 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.244126558303833
+2025-11-12 10:48:27.495 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 10:48:27.579 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.41377830505371094
+2025-11-12 10:48:27.589 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 10:48:27.979 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 10:48:28.660 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 1.0713074207305908
+2025-11-12 10:48:43.959 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:48:43.959 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:48:43.964 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /admin/
+2025-11-12 10:48:44.024 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:48:44.025 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:48:44.025 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /favicon.ico
+2025-11-12 10:50:32.079 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-12 10:50:32.590 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:50:33.275 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:50:37.158 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-12 10:50:37.455 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:50:37.646 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:50:40.065 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-12 10:51:20.825 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:51:21.126 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:51:21.332 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:52:07.116 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-12 10:52:07.696 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:52:08.170 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:52:14.863 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-12 10:52:15.184 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:52:15.378 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:52:31.888 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-12 10:52:32.262 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:52:32.517 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:52:57.434 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:52:57.434 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:52:57.438 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /
+2025-11-12 10:52:57.816 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:52:57.816 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:52:57.817 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /favicon.ico
+2025-11-12 10:53:25.734 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:53:49.549 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:54:19.638 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:54:27.403 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:54:27.707 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:54:27.913 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:54:37.396 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:54:37.396 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:54:37.398 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /docs
+2025-11-12 10:54:37.431 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:54:37.431 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:54:37.432 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /favicon.ico
+2025-11-12 10:54:43.939 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:54:43.939 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:54:43.940 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /
+2025-11-12 10:57:24.392 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:57:24.702 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:57:24.910 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:57:32.275 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:57:32.275 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:57:32.277 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /
+2025-11-12 10:59:05.174 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/urls.py changed, reloading.
+2025-11-12 10:59:05.524 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:59:05.719 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:59:15.201 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/urls.py changed, reloading.
+2025-11-12 10:59:15.522 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 10:59:15.713 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 10:59:35.176 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:35.177 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:35.178 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /docs
+2025-11-12 10:59:42.138 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.138 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.139 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 10:59:42.144 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.144 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.145 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 10:59:42.147 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.148 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.148 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 10:59:42.185 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.186 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.186 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 10:59:42.193 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.194 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.194 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 10:59:42.229 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.229 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.229 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 10:59:42.242 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.242 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.243 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 10:59:42.279 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.279 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.280 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.280 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.280 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 10:59:42.281 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 10:59:42.283 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:42.284 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 10:59:42.284 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 10:59:53.609 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 10:59:53.609 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'NoneType'>
+2025-11-12 10:59:53.609 | ERROR    | xadmin.logru_config:emit:15 - Internal Server Error: /admin/login/
+2025-11-12 11:00:03.993 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:03.994 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:03.996 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:03.995 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:03.997 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:00:03.997 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:00:03.997 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:00:03.995 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:03.998 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:00:03.998 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:00:04.000 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:00:04.001 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:00:04.002 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:00:04.003 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:00:04.005 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:00:04.013 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:04.014 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:00:04.014 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-11-12 11:00:11.521 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:11.522 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'NoneType'>
+2025-11-12 11:00:11.522 | ERROR    | xadmin.logru_config:emit:15 - Internal Server Error: /admin/login/
+2025-11-12 11:00:11.544 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:00:11.544 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:00:11.545 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-11-12 11:03:29.256 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:03:29.848 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:03:30.319 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:03:51.237 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:03:51.651 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:03:51.886 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:04:16.685 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:04:17.119 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:04:17.409 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:04:30.062 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:04:30.919 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:04:31.572 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:04:33.748 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:04:34.123 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:04:34.533 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:04:38.731 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:04:39.074 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:04:39.392 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:04:41.548 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:04:41.813 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:04:42.056 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:04:54.270 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin_db/models.py changed, reloading.
+2025-11-12 11:04:54.562 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:04:54.868 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:05:00.185 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.186 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.188 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-11-12 11:05:00.190 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.191 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.193 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:05:00.202 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.203 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.204 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:05:00.238 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.239 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.239 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:05:00.251 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.252 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.262 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:05:00.287 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.288 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.289 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:05:00.311 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.312 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.312 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 11:05:00.339 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.340 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.341 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 11:05:00.364 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.365 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.366 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:05:00.370 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.370 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.371 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:05:00.376 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:00.376 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:00.377 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:05:10.500 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:10.501 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'NoneType'>
+2025-11-12 11:05:10.501 | ERROR    | xadmin.logru_config:emit:15 - Internal Server Error: /admin/login/
+2025-11-12 11:05:10.576 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:10.577 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:10.578 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-11-12 11:05:25.645 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:05:26.016 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:05:26.245 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:05:36.077 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:36.077 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:36.079 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /
+2025-11-12 11:05:36.102 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:36.102 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:36.103 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-11-12 11:05:42.820 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.820 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.821 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-11-12 11:05:42.832 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.833 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.834 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:05:42.836 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.837 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.838 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:05:42.843 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.844 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.844 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.846 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:05:42.845 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.847 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:05:42.866 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.866 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.867 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:05:42.895 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.895 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.896 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 11:05:42.920 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.921 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.921 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 11:05:42.946 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.948 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.948 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.949 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.949 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:05:42.950 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:05:42.955 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:42.958 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:42.959 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:05:50.061 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:50.061 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'NoneType'>
+2025-11-12 11:05:50.061 | ERROR    | xadmin.logru_config:emit:15 - Internal Server Error: /admin/login/
+2025-11-12 11:05:50.104 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:05:50.105 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:05:50.105 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-11-12 11:06:49.547 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:07:15.708 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:07:33.268 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:07:33.928 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:07:34.205 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:07:39.583 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.584 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.587 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:07:39.588 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.590 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.591 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:07:39.597 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.597 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.599 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.600 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:07:39.601 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.602 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:07:39.646 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.646 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.647 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:07:39.650 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.650 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.651 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 11:07:39.700 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.700 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.701 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 11:07:39.715 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.716 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.717 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.717 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.718 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:07:39.720 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:07:39.724 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:39.725 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:39.726 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:07:47.288 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.289 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.290 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:07:47.291 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.293 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.292 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.293 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.297 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.296 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.298 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.294 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.298 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.299 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:07:47.300 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.301 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:07:47.303 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 11:07:47.304 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:07:47.306 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:07:47.315 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.316 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.317 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 11:07:47.345 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.347 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.346 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.346 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:07:47.348 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:07:47.348 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.349 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:07:47.348 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:07:47.351 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:08:28.735 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:09:36.033 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.034 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.037 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:09:36.036 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.038 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.039 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:09:36.047 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.048 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.048 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.050 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.051 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:09:36.054 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:09:36.098 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.099 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.100 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:09:36.103 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.103 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.104 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 11:09:36.151 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.151 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.152 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 11:09:36.166 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.166 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.167 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:09:36.199 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.200 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.200 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:09:36.221 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.222 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.223 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:09:36.294 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:36.296 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:36.297 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /favicon.ico
+2025-11-12 11:09:43.734 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:43.736 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:43.735 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:43.735 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:43.737 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:09:43.737 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:43.738 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:43.739 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:09:43.740 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 11:09:43.743 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:43.744 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:43.745 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:09:43.746 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:43.747 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:43.748 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:43.748 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:43.749 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:09:43.750 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:09:43.790 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:09:43.790 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:09:43.791 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 11:10:30.526 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.527 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.528 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.527 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.528 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.529 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.529 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.530 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.529 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.530 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.530 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.531 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/dark_mode.css
+2025-11-12 11:10:30.532 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.534 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/base.css
+2025-11-12 11:10:30.534 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:10:30.535 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:10:30.536 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/theme.js
+2025-11-12 11:10:30.536 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:10:30.543 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.544 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.544 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/js/nav_sidebar.js
+2025-11-12 11:10:30.580 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.581 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.580 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 11:10:30.581 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.581 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.582 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 11:10:30.582 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/nav_sidebar.css
+2025-11-12 11:10:30.583 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/responsive.css
+2025-11-12 11:10:30.583 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /static/admin/css/login.css
+2025-11-12 11:11:25.285 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:11:25.587 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 11:11:25.789 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 11:11:27.921 | INFO     | xadmin_auth.api_auth:login:52 - Received password (raw): 'YWRtaW4xMjM='
+2025-11-12 11:11:27.921 | INFO     | xadmin_auth.api_auth:login:53 - Password type: <class 'str'>
+2025-11-12 11:11:27.921 | INFO     | xadmin_auth.api_auth:login:55 - user password: admin123
+2025-11-12 11:11:28.115 | INFO     | xadmin_auth.api_auth:login:59 - 登录成功 - 用户: admin, Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:11:28.116 | INFO     | xadmin.logru_config:emit:15 - "POST - login /system/auth/login" 0.33470678329467773
+2025-11-12 11:11:28.126 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:11:28.267 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:11:28.332 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.20613694190979004
+2025-11-12 11:11:28.341 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:11:28.493 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:11:28.832 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.49114513397216797
+2025-11-12 11:11:31.460 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:11:31.654 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:11:31.868 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.40782642364501953
+2025-11-12 11:28:29.939 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:28:30.081 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:28:30.082 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.1429591178894043
+2025-11-12 11:28:30.990 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:28:31.145 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:28:31.146 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.1558208465576172
+2025-11-12 11:28:31.148 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:28:31.291 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:28:31.292 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.1441342830657959
+2025-11-12 11:29:33.047 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:33.188 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:33.188 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.14197087287902832
+2025-11-12 11:29:37.180 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:37.358 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:37.359 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.17880988121032715
+2025-11-12 11:29:37.618 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:37.769 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:37.770 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.15158653259277344
+2025-11-12 11:29:38.204 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:38.341 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:38.341 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13765954971313477
+2025-11-12 11:29:41.396 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:41.916 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:41.922 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:41.922 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5264778137207031
+2025-11-12 11:29:42.391 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:42.392 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.4753916263580322
+2025-11-12 11:29:42.541 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:42.908 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:42.908 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.3670041561126709
+2025-11-12 11:29:43.048 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:43.368 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:43.404 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:43.405 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.35628628730773926
+2025-11-12 11:29:43.737 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:43.738 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.37014174461364746
+2025-11-12 11:29:46.402 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:46.536 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:46.537 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.1342475414276123
+2025-11-12 11:29:49.971 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:50.105 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:50.106 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13562583923339844
+2025-11-12 11:29:50.683 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:50.815 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:50.816 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13259673118591309
+2025-11-12 11:29:55.326 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:29:55.761 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:29:55.762 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.4356248378753662
+2025-11-12 11:30:10.677 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:30:10.814 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:30:10.815 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13756871223449707
+2025-11-12 11:30:15.160 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:30:15.293 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:30:15.294 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13406014442443848
+2025-11-12 11:30:32.197 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:30:32.333 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:30:32.333 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13679909706115723
+2025-11-12 11:30:33.162 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:30:33.314 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:30:33.315 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.15303897857666016
+2025-11-12 11:30:56.563 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 11:30:56.691 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 11:30:56.850 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.28708338737487793
+2025-11-12 13:02:10.268 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:04:07.689 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:04:08.184 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:04:08.393 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:07:11.639 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:07:11.956 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:07:12.168 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:07:36.414 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:07:36.742 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:07:36.961 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:08:50.488 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:08:50.783 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:08:50.981 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:09:25.492 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:09:25.790 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:09:25.990 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:11:15.219 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:11:15.646 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:11:15.945 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:14:06.433 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:14:06.802 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:14:07.025 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:14:25.906 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:14:26.221 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:14:26.449 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:14:31.527 | INFO     | xadmin_auth.api_auth:login:52 - Received password (raw): 'YWRtaW4xMjM='
+2025-11-12 13:14:31.528 | INFO     | xadmin_auth.api_auth:login:53 - Password type: <class 'str'>
+2025-11-12 13:14:31.528 | INFO     | xadmin_auth.api_auth:login:55 - user password: admin123
+2025-11-12 13:14:31.720 | INFO     | xadmin_auth.api_auth:login:59 - 登录成功 - 用户: admin, Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:14:31.720 | INFO     | xadmin.logru_config:emit:15 - "POST - login /system/auth/login" 0.5599777698516846
+2025-11-12 13:14:31.733 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:14:32.840 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:14:32.881 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 1.1479883193969727
+2025-11-12 13:14:32.891 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:14:32.996 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:14:33.361 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.47029590606689453
+2025-11-12 13:14:42.369 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:14:42.585 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:14:42.699 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.3303370475769043
+2025-11-12 13:14:50.827 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.11617755889892578
+2025-11-12 13:14:51.099 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.11312532424926758
+2025-11-12 13:22:32.243 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:22:32.342 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.10882329940795898
+2025-11-12 13:22:32.342 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:22:32.389 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.1457366943359375
+2025-11-12 13:22:32.399 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:22:32.499 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:22:32.718 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.31920504570007324
+2025-11-12 13:22:33.235 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:22:33.424 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:22:33.715 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.4797830581665039
+2025-11-12 13:33:31.609 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:33:31.743 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:33:31.745 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13522887229919434
+2025-11-12 13:33:44.721 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:33:45.234 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:33:45.479 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.7580394744873047
+2025-11-12 13:33:46.100 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:33:46.812 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:33:47.676 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.575193166732788
+2025-11-12 13:35:02.360 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:35:02.514 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:35:02.515 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.15501689910888672
+2025-11-12 13:37:03.877 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:37:04.223 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:37:04.224 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.3473355770111084
+2025-11-12 13:41:14.806 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:15.293 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:15.294 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.4885985851287842
+2025-11-12 13:41:15.356 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:15.507 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:15.953 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:15.954 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5984165668487549
+2025-11-12 13:41:16.238 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:16.239 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.7320363521575928
+2025-11-12 13:41:17.037 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:18.870 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:18.875 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.8381669521331787
+2025-11-12 13:41:50.039 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:50.296 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:50.297 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.25773119926452637
+2025-11-12 13:41:51.337 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:51.499 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:51.733 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:41:52.149 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:52.150 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.8132281303405762
+2025-11-12 13:41:52.320 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:52.321 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.8214027881622314
+2025-11-12 13:41:52.358 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:41:52.359 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6255924701690674
+2025-11-12 13:42:01.600 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:01.696 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:01.806 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:02.044 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:02.045 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.44470882415771484
+2025-11-12 13:42:02.131 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:02.338 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:02.457 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:02.574 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:02.592 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:02.593 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.7862811088562012
+2025-11-12 13:42:02.625 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:02.626 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.495577335357666
+2025-11-12 13:42:02.662 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:02.663 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.32506227493286133
+2025-11-12 13:42:02.748 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:02.749 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.2922706604003906
+2025-11-12 13:42:02.807 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:02.808 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.1114046573638916
+2025-11-12 13:42:02.901 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:02.901 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.3272726535797119
+2025-11-12 13:42:27.954 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:28.071 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:28.072 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.11735820770263672
+2025-11-12 13:42:29.536 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:30.053 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:30.206 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:30.328 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:32.008 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:32.009 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 2.472843647003174
+2025-11-12 13:42:32.174 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:32.176 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.8474452495574951
+2025-11-12 13:42:32.176 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:32.175 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:32.177 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 2.12372088432312
+2025-11-12 13:42:32.178 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.9715096950531006
+2025-11-12 13:42:32.582 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:33.100 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:33.100 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5184452533721924
+2025-11-12 13:42:33.224 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:33.398 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:33.492 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:33.995 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:33.997 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.7726693153381348
+2025-11-12 13:42:34.013 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:34.014 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6154129505157471
+2025-11-12 13:42:34.036 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:34.037 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5446188449859619
+2025-11-12 13:42:35.780 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:35.920 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:35.927 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:35.928 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.14842963218688965
+2025-11-12 13:42:36.051 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:36.051 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13096046447753906
+2025-11-12 13:42:36.346 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:36.450 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:36.451 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.10514354705810547
+2025-11-12 13:42:36.480 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:36.575 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:42:36.614 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:36.615 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13488030433654785
+2025-11-12 13:42:36.705 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:42:36.705 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13006281852722168
+2025-11-12 13:43:24.707 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:43:24.920 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:43:25.061 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:43:25.062 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.3548436164855957
+2025-11-12 13:43:25.610 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:43:25.610 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6902215480804443
+2025-11-12 13:43:29.140 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:43:29.276 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:43:29.277 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.13662219047546387
+2025-11-12 13:45:08.092 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:45:08.244 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:45:08.331 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.23956584930419922
+2025-11-12 13:45:11.965 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:45:12.307 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:45:13.025 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.059891939163208
+2025-11-12 13:45:15.439 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:45:15.640 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:45:15.691 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.2527148723602295
+2025-11-12 13:45:17.695 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:45:18.324 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:45:18.507 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.8117640018463135
+2025-11-12 13:45:19.285 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:45:19.941 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:45:20.119 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.8344407081604004
+2025-11-12 13:45:20.746 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:45:21.103 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:45:21.308 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.5616590976715088
+2025-11-12 13:46:39.026 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:46:39.149 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:46:39.283 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.2569465637207031
+2025-11-12 13:47:59.829 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:48:00.042 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:48:00.102 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.2727549076080322
+2025-11-12 13:48:00.845 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:48:01.039 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:48:01.170 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.3248722553253174
+2025-11-12 13:48:32.166 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:48:33.033 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:48:33.034 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.8678345680236816
+2025-11-12 13:48:33.202 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:48:33.562 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:48:33.563 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.360943078994751
+2025-11-12 13:52:29.005 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:52:29.790 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:52:30.206 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:52:38.849 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:52:39.161 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:52:39.427 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:52:41.820 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:52:42.126 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:52:42.325 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:52:43.746 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:52:44.061 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:52:44.274 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:52:51.218 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 13:52:51.428 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 13:52:51.428 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:108 - ============================================================
+2025-11-12 13:52:51.428 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:109 - 开始验证 yaml_data
+2025-11-12 13:52:51.428 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:110 - yaml_data:
+{
+  "metadata": {
+    "generated": "2025-11-12T05:52:49.907Z",
+    "version": "1.0"
+  },
+  "hardware": {
+    "cpu": "Ryzen Threadripper",
+    "gpu": "Navi 31 GFX1100",
+    "machines": []
+  },
+  "environment": {
+    "os": {
+      "method": "same",
+      "os": "",
+      "deployment": ""
+    },
+    "kernel": {
+      "method": "same",
+      "type": "",
+      "version": ""
+    }
+  },
+  "firmware": {
+    "gpu_version": "",
+    "comparison": false
+  },
+  "test_suites": []
+}
+2025-11-12 13:52:51.428 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:111 - ============================================================
+2025-11-12 13:52:51.429 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:118 - ✅ yaml_data 已保存到: /tmp/yaml_data_20251112_135251.json
+2025-11-12 13:52:51.430 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.2115476131439209
+2025-11-12 13:59:16.753 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:17.229 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:17.617 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:20.162 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:20.468 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:20.687 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:21.989 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:22.242 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:22.434 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:23.728 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:24.086 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:24.339 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:26.668 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:26.972 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:27.241 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:31.658 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:31.963 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:32.156 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:33.586 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:33.893 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:34.112 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:35.540 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:35.868 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:36.062 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:41.517 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:41.830 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:42.037 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:44.502 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:44.800 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:44.993 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:48.444 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:48.801 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:49.003 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:50.442 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:50.773 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:50.969 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:57.425 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:57.719 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:57.914 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 13:59:59.215 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 13:59:59.507 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 13:59:59.712 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:01.028 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:01.314 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:01.515 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:11.052 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:11.366 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:11.563 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:13.014 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:13.317 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:13.510 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:15.808 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:16.095 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:16.297 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:18.620 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:18.911 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:19.103 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:20.531 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:20.814 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:21.002 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:22.425 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:22.758 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:22.987 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:24.421 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:24.741 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:25.191 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:37.622 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:38.050 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:38.308 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:40.673 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:40.951 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:41.152 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:43.605 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:43.908 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:44.114 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:46.560 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:46.876 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:47.114 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:49.570 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:49.925 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:50.129 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:51.598 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:51.932 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:52.132 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:00:53.613 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:00:54.004 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:00:54.222 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:05.579 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:05.941 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:06.168 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:08.477 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:08.797 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:09.059 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:12.378 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:12.766 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:13.042 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:14.425 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:14.735 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:15.004 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:16.357 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:16.624 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:16.846 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:23.260 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:23.517 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:23.707 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:24.993 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:25.302 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:25.527 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:28.880 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:29.189 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:29.548 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:30.891 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:31.196 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:31.392 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:33.692 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:34.001 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:34.205 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:35.537 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:35.836 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:36.061 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:38.436 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:38.823 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:39.057 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:40.378 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:40.707 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:40.931 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:42.252 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:42.524 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:42.719 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:01:57.121 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:01:57.407 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:01:57.609 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:00.935 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:01.289 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:01.512 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:04.912 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:05.253 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:05.455 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:09.858 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:10.138 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:10.322 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:25.694 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:25.964 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:26.160 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:33.489 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:33.777 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:33.984 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:35.326 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:35.606 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:35.804 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:41.156 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:41.476 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:41.708 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:43.072 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:43.332 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:43.519 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:45.815 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:46.097 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:46.306 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:50.707 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:50.983 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:51.184 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:02:52.497 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:02:52.796 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:02:52.999 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:03:48.627 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:03:48.934 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:03:49.177 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:03:55.565 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:03:55.912 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:03:56.144 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:04:18.816 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:04:19.202 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:04:19.429 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:04:41.094 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:04:41.388 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:04:41.582 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:05:16.241 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:05:16.552 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:05:16.747 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:05:26.150 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:05:26.487 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:05:26.682 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:05:42.141 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:05:42.468 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:05:42.665 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:05:43.964 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:05:44.241 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:05:44.476 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:05:47.826 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:05:48.096 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:05:48.316 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:06:30.949 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:06:31.263 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:06:31.503 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:06:50.138 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:06:50.437 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:06:50.631 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:08:59.995 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:09:00.299 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:09:00.495 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:09:30.154 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:09:30.459 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:09:30.460 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:150 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:09:30.461 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.30704689025878906
+2025-11-12 14:09:31.684 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:09:32.490 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:09:32.491 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:150 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:09:32.491 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.8071339130401611
+2025-11-12 14:09:32.688 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:09:33.072 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:09:33.073 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:150 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:09:33.073 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.38453030586242676
+2025-11-12 14:09:33.916 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:09:34.513 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:09:34.514 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:150 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:09:34.514 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5982203483581543
+2025-11-12 14:09:37.123 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:09:37.311 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:09:37.311 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:150 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:09:37.312 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.18919825553894043
+2025-11-12 14:09:41.635 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:09:41.830 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:09:41.830 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:150 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:09:41.831 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.19585037231445312
+2025-11-12 14:09:44.159 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:09:44.448 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:09:44.449 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:150 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:09:44.449 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.29017114639282227
+2025-11-12 14:10:13.519 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:10:13.891 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:10:14.133 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:10:15.638 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:10:16.013 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:10:16.246 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:11:26.268 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 14:11:26.717 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:11:27.189 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:16:37.269 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:16:37.830 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:16:38.061 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:17:05.951 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:17:06.240 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:17:06.445 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:20:03.497 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:20:03.810 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:20:04.014 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:21:47.956 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 14:21:48.303 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:21:48.564 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:22:06.708 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:22:07.000 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:22:07.190 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:22:19.672 | INFO     | xadmin_auth.api_auth:login:52 - Received password (raw): 'YWRtaW4xMjM='
+2025-11-12 14:22:19.673 | INFO     | xadmin_auth.api_auth:login:53 - Password type: <class 'str'>
+2025-11-12 14:22:19.673 | INFO     | xadmin_auth.api_auth:login:55 - user password: admin123
+2025-11-12 14:22:19.895 | INFO     | xadmin_auth.api_auth:login:59 - 登录成功 - 用户: admin, Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:22:19.895 | INFO     | xadmin.logru_config:emit:15 - "POST - login /system/auth/login" 0.9475493431091309
+2025-11-12 14:22:19.910 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:22:20.473 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:22:20.592 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.6821672916412354
+2025-11-12 14:22:20.600 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:22:21.840 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:22:25.747 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 5.147012233734131
+2025-11-12 14:22:37.222 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:22:37.888 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:22:38.138 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.9161419868469238
+2025-11-12 14:22:42.536 | WARNING  | xadmin.logru_config:emit:15 - Method Not Allowed: /system/auth/login
+2025-11-12 14:22:42.745 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:22:46.164 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:22:47.376 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 4.6303160190582275
+2025-11-12 14:23:08.381 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:23:09.402 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 14:23:09.719 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:23:09.918 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:23:10.958 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:23:11.977 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:23:11.977 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:157 - ✅ E002 验证通过：所有必填字段非空
+2025-11-12 14:23:11.978 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.0206725597381592
+2025-11-12 14:23:12.240 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:23:12.574 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:23:12.575 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:157 - ✅ E002 验证通过：所有必填字段非空
+2025-11-12 14:23:12.575 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.33539533615112305
+2025-11-12 14:23:14.038 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:23:15.541 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:23:15.542 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:157 - ✅ E002 验证通过：所有必填字段非空
+2025-11-12 14:23:15.542 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.5043814182281494
+2025-11-12 14:23:20.805 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:23:25.227 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:23:25.228 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:157 - ✅ E002 验证通过：所有必填字段非空
+2025-11-12 14:23:25.228 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 4.4228832721710205
+2025-11-12 14:23:36.425 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:23:38.286 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:23:38.287 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:157 - ✅ E002 验证通过：所有必填字段非空
+2025-11-12 14:23:38.287 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.8619813919067383
+2025-11-12 14:24:32.062 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:24:33.637 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:24:33.638 | INFO     | yaml_check.validator:validate_mandatory_non_empty_keys:157 - ✅ E002 验证通过：所有必填字段非空
+2025-11-12 14:24:33.638 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.576521396636963
+2025-11-12 14:26:10.724 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/config.py changed, reloading.
+2025-11-12 14:26:11.038 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:26:11.234 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:26:35.731 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:26:36.059 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:26:36.260 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:26:38.705 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:26:39.038 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:26:39.237 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:26:41.492 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:26:42.390 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:26:42.391 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.8992412090301514
+2025-11-12 14:26:44.113 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:26:44.709 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:26:44.710 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.5967893600463867
+2025-11-12 14:26:48.763 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:26:50.338 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:26:51.333 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:26:52.021 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:26:52.022 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.684175968170166
+2025-11-12 14:26:52.084 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:26:52.085 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.7523219585418701
+2025-11-12 14:26:52.362 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:26:52.679 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:26:52.680 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.31827354431152344
+2025-11-12 14:26:55.726 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:26:56.156 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:26:56.156 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.4307229518890381
+2025-11-12 14:26:56.423 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:26:56.424 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 7.660712718963623
+2025-11-12 14:27:25.927 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:27:26.641 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:27:26.642 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.7147278785705566
+2025-11-12 14:29:47.182 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:29:47.635 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:29:48.050 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:30:03.784 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:30:04.200 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:30:04.416 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:30:10.724 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:30:11.021 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:30:11.218 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:30:27.209 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:30:27.600 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:30:27.601 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:30:27.602 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.3931913375854492
+2025-11-12 14:30:33.292 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:30:33.438 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:30:33.438 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:30:33.439 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.14624786376953125
+2025-11-12 14:30:41.917 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 14:30:42.362 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 14:30:42.768 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 14:30:46.699 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:30:46.952 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:30:48.564 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:30:48.564 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:30:48.565 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.6127936840057373
+2025-11-12 14:30:49.290 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:30:49.290 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:30:49.291 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 2.5917844772338867
+2025-11-12 14:30:50.674 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:30:51.387 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:30:51.388 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:30:51.388 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.7140078544616699
+2025-11-12 14:30:55.789 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:30:56.173 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:30:56.173 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:30:56.173 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.38428616523742676
+2025-11-12 14:31:03.373 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:31:05.599 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:31:05.765 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:31:05.766 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:31:05.766 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 2.3935747146606445
+2025-11-12 14:31:06.688 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:31:06.688 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:31:06.689 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.0896828174591064
+2025-11-12 14:31:08.547 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:31:08.880 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:31:08.881 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:31:08.881 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.33467650413513184
+2025-11-12 14:32:06.934 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:32:07.349 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:32:07.349 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:32:07.350 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.416046142578125
+2025-11-12 14:32:08.983 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:32:09.699 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:32:09.700 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:32:09.700 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.7173080444335938
+2025-11-12 14:32:16.378 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:32:17.643 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:32:17.643 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:32:17.644 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.265692949295044
+2025-11-12 14:32:21.917 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:32:23.257 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:32:23.258 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:32:23.258 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.340998888015747
+2025-11-12 14:32:23.340 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:32:23.558 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:32:23.559 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:32:23.559 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.2198963165283203
+2025-11-12 14:32:27.696 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:32:28.052 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:32:28.053 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:32:28.053 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.35740113258361816
+2025-11-12 14:36:38.500 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:36:39.770 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:36:40.035 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.5344748497009277
+2025-11-12 14:36:46.297 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:36:47.983 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:36:49.240 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 2.943878650665283
+2025-11-12 14:36:55.660 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:36:55.834 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:36:55.834 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:36:55.835 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.17506980895996094
+2025-11-12 14:36:57.399 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:36:57.756 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:36:57.757 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:36:57.757 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.35834479331970215
+2025-11-12 14:36:58.565 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:36:59.213 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:36:59.214 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:36:59.214 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6489138603210449
+2025-11-12 14:37:03.375 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:37:04.584 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:37:04.584 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:37:04.584 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.2095911502838135
+2025-11-12 14:37:04.886 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:37:05.183 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:37:05.183 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:37:05.183 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.2975945472717285
+2025-11-12 14:37:08.706 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:37:08.959 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:37:08.959 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:37:08.960 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.2537541389465332
+2025-11-12 14:37:12.653 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:37:13.801 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:37:13.801 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:37:13.802 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 1.1493139266967773
+2025-11-12 14:37:17.939 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:37:18.904 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:37:18.905 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:37:18.905 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.9662795066833496
+2025-11-12 14:37:41.382 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:37:41.564 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:37:41.927 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.5447726249694824
+2025-11-12 14:40:40.923 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:40:42.548 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:40:42.989 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 2.0653116703033447
+2025-11-12 14:40:45.352 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:40:45.589 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:40:45.589 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:40:45.590 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.23761987686157227
+2025-11-12 14:40:48.238 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:40:48.508 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:40:48.508 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:40:48.509 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.2706618309020996
+2025-11-12 14:41:52.403 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:41:53.111 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:41:54.094 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.6918854713439941
+2025-11-12 14:41:55.808 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:41:55.994 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:41:55.995 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:41:55.995 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.18707919120788574
+2025-11-12 14:41:57.637 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:41:57.853 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:41:57.853 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:41:57.854 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.21628952026367188
+2025-11-12 14:42:00.952 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:42:01.145 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:42:01.146 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:42:01.146 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.19410991668701172
+2025-11-12 14:42:38.856 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:42:39.790 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:42:40.176 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.3223474025726318
+2025-11-12 14:48:34.830 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:48:35.302 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:48:35.303 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:48:35.303 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.47345685958862305
+2025-11-12 14:48:38.549 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:48:39.162 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:48:39.162 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:48:39.163 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.6143159866333008
+2025-11-12 14:48:46.839 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:48:47.062 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:48:47.252 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.41278910636901855
+2025-11-12 14:49:07.437 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:49:07.628 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:49:07.780 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.3432185649871826
+2025-11-12 14:49:09.014 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:49:09.494 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:49:09.676 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.6613354682922363
+2025-11-12 14:49:13.507 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:49:14.205 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:49:14.440 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.932664155960083
+2025-11-12 14:49:15.964 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:49:16.435 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:49:16.760 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:49:16.823 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.8586125373840332
+2025-11-12 14:49:17.101 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:49:17.234 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.4745917320251465
+2025-11-12 14:49:17.677 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:49:17.857 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:49:18.396 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.7182672023773193
+2025-11-12 14:57:27.762 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:57:28.045 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:57:28.045 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:57:28.046 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.28415632247924805
+2025-11-12 14:58:06.631 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 14:58:07.024 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 14:58:07.025 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 14:58:07.025 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.39446282386779785
+2025-11-12 15:19:01.597 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:19:01.717 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:19:01.754 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.15813446044921875
+2025-11-12 15:19:04.030 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:19:04.141 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:19:04.248 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.21779632568359375
+2025-11-12 15:20:24.035 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:20:24.142 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:20:24.249 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.21343255043029785
+2025-11-12 15:20:33.922 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:20:34.168 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:20:34.585 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.663517951965332
+2025-11-12 15:20:36.826 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:20:37.234 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:20:38.001 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 1.1750514507293701
+2025-11-12 15:22:18.088 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:22:18.189 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.10905647277832031
+2025-11-12 15:22:18.191 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:22:18.244 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.15577149391174316
+2025-11-12 15:22:18.264 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:22:18.361 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:22:18.573 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.3091144561767578
+2025-11-12 15:22:19.043 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:22:19.131 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:22:19.221 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.17788362503051758
+2025-11-12 15:24:05.034 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:24:05.153 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:24:05.264 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.23201227188110352
+2025-11-12 15:27:51.314 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:27:51.400 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.09500861167907715
+2025-11-12 15:27:51.409 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:27:51.451 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.1373155117034912
+2025-11-12 15:27:51.592 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:27:51.685 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:27:51.905 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.3133847713470459
+2025-11-12 15:28:36.007 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:28:36.106 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.11237764358520508
+2025-11-12 15:28:36.114 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:28:36.167 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.15989160537719727
+2025-11-12 15:28:36.179 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:28:36.284 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:28:36.523 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.34418320655822754
+2025-11-12 15:28:37.321 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:28:37.430 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:28:37.556 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.23447179794311523
+2025-11-12 15:42:45.873 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:42:45.990 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:42:45.992 | WARNING  | yaml_check.validator:validate_mandatory_non_empty_keys:149 - E002: 字段 [hardware.machines] 值为空: []
+2025-11-12 15:42:45.993 | INFO     | xadmin.logru_config:emit:15 - "POST - validate_yaml /system/yaml/validate" 0.1199026107788086
+2025-11-12 15:42:48.145 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:42:48.252 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:42:48.295 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.15015602111816406
+2025-11-12 15:42:54.015 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:42:54.118 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:42:54.239 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.22447729110717773
+2025-11-12 15:43:28.737 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:43:28.870 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:43:28.903 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.16605472564697266
+2025-11-12 15:44:17.909 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:44:18.015 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:44:18.125 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.21604537963867188
+2025-11-12 15:44:25.836 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:44:25.957 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:44:25.991 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.15548110008239746
+2025-11-12 15:44:31.816 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:44:31.914 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:44:32.021 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.2049088478088379
+2025-11-12 15:45:15.240 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:45:15.355 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:45:15.395 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.15531229972839355
+2025-11-12 15:45:23.730 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:45:23.842 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:45:23.872 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.1413717269897461
+2025-11-12 15:45:38.666 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:45:38.759 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:45:38.792 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.1264631748199463
+2025-11-12 15:47:03.065 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:47:03.202 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:47:03.257 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.19250941276550293
+2025-11-12 15:47:09.892 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:47:09.993 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:47:10.023 | INFO     | xadmin.logru_config:emit:15 - "GET - get_saved_plan_list /tpgen/saved-plan/list" 0.13052082061767578
+2025-11-12 15:54:55.494 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:54:55.646 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:54:55.759 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.26538634300231934
+2025-11-12 15:58:49.759 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:58:49.856 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.1031637191772461
+2025-11-12 15:58:49.871 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:58:49.925 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.16597700119018555
+2025-11-12 15:58:49.935 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:58:50.042 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:58:50.318 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.3821849822998047
+2025-11-12 15:59:02.512 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 15:59:02.513 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 15:59:02.525 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /monitor/online
+2025-11-12 15:59:04.620 | WARNING  | xadmin_tpgen.urls:handler:28 - handling exceptions....
+2025-11-12 15:59:04.621 | WARNING  | xadmin_tpgen.urls:handler:29 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-12 15:59:04.621 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/log
+2025-11-12 15:59:08.339 | INFO     | xadmin_auth.auth:authenticate:47 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-12 15:59:08.457 | INFO     | xadmin_auth.auth:authenticate:50 - 认证成功 - 用户: admin
+2025-11-12 15:59:08.560 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_options /system/sut/device/gpu-options" 0.22130155563354492
+2025-11-12 16:06:28.598 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:06:29.540 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:06:30.004 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:08:54.771 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/views.py changed, reloading.
+2025-11-12 16:08:55.240 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:08:55.691 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:09:03.789 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:09:04.034 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:09:20.025 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:09:20.232 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:09:36.283 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:09:36.509 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:09:45.485 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:09:45.710 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:10:13.063 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:10:13.771 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:10:23.957 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:10:24.174 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:10:43.341 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:10:43.647 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:10:59.882 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:11:00.315 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:11:14.730 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:11:15.096 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:12:41.302 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:12:41.924 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:12:42.170 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:13:42.978 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:14:34.409 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:14:34.659 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:16:58.071 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:16:58.473 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:16.291 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:16.517 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:18.174 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:18.376 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:21.485 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:21.700 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:26.733 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:27.011 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:29.922 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:30.179 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:33.882 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:34.098 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:45.008 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:45.254 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:47.902 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:48.137 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:49.933 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:50.222 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:17:52.405 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:17:52.633 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:19:35.517 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:19:35.841 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:19:38.664 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:19:38.944 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:19:58.007 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:19:58.249 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:19:59.817 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:20:00.013 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:20:01.616 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:20:01.827 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:20:21.572 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:20:21.768 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:20:45.621 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:20:46.006 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:20:47.843 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:20:48.036 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:20:49.639 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:20:49.844 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:20:51.619 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:20:51.810 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:23:58.048 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:23:58.470 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:24:20.523 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:24:20.738 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:24:22.133 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:24:22.421 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:24:22.644 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:34:24.397 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:34:24.892 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:34:34.243 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:34:34.522 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:34:43.456 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:34:43.653 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:34:50.503 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:34:50.798 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:35:28.915 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:35:29.122 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:35:30.923 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:35:31.117 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:35:33.438 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:35:33.695 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:35:33.890 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:35:36.688 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:35:36.899 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:35:57.787 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:35:57.985 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:35:59.617 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:35:59.823 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:06.564 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:06.760 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:24.195 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:24.477 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:24.673 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:26.984 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:27.382 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:27.600 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:38.016 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:38.398 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:38.643 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:44.057 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:44.377 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:44.585 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:50.952 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:51.227 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:51.423 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:55.736 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:56.046 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:56.242 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:36:58.600 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:36:58.878 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:36:59.099 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:00.418 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:00.708 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:00.919 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:06.301 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:06.766 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:07.036 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:12.459 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:12.737 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:12.963 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:15.295 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:15.594 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:15.791 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:20.108 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:20.413 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:20.612 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:24.417 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:24.632 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:26.935 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:27.240 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:27.450 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:29.775 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:30.048 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:30.243 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:38.586 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:38.874 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:39.102 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:42.455 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:42.769 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:43.024 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:44.411 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:44.687 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:44.889 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:49.225 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:49.490 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:49.694 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:50.995 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:51.352 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:51.555 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:52.886 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:53.143 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:53.355 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:37:55.681 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:37:56.129 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:37:56.372 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:38:25.878 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:26.306 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:38:26.514 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:38:27.868 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:28.154 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:38:28.368 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:38:29.731 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:30.027 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:38:30.231 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:38:31.529 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:31.806 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:38:32.003 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:38:39.341 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:39.621 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:38:39.814 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:38:43.144 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:43.430 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:38:43.625 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:38:57.030 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:38:57.288 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:38:57.480 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:39:00.271 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:39:00.471 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:39:04.324 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:39:04.539 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:39:09.411 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:39:09.608 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:39:14.025 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:39:14.326 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:39:14.527 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:39:16.854 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:39:17.125 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:39:17.335 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:39:21.694 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:39:22.027 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:39:22.249 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:39:23.554 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:39:23.827 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:39:24.024 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:42:34.484 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:42:34.783 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:42:34.991 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:42:46.870 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:42:47.073 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:42:50.852 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:42:51.049 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:16.497 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:16.771 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:16.973 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:19.363 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:19.653 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:19.851 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:26.207 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:26.489 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:26.680 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:31.001 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:31.266 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:31.461 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:32.760 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:33.078 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:33.330 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:51.768 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:52.123 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:52.336 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:55.686 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:55.967 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:56.184 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:43:57.498 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:43:57.809 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:43:58.019 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:44:15.482 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_check/validator.py changed, reloading.
+2025-11-12 16:44:15.745 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:44:15.949 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:44:24.994 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:44:25.234 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:45:19.414 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:45:19.615 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:45:25.619 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:45:25.825 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:45:58.886 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:45:59.094 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:27.244 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:27.522 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:29.361 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:29.636 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:35.475 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:35.669 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:39.549 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:39.830 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:41.698 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:41.916 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:44.755 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:44.957 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:48.710 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:48.920 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:50.724 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:51.012 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:52.979 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:53.222 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:46:55.149 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:46:55.359 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:47:00.268 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:47:00.507 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:47:05.384 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:47:05.596 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:47:07.431 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:47:07.648 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:47:12.487 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:47:12.680 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-12 16:47:17.531 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-12 16:47:17.730 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
