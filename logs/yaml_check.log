@@ -285,3 +285,14 @@
 2025-11-12 17:37:41.630 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
 2025-11-12 17:37:41.765 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
 2025-11-12 17:37:42.074 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_options /system/sut/device/gpu-options" 0.4439096450805664
+2025-11-13 09:15:02.969 | INFO     | xadmin_auth.api_auth:login:52 | Received password (raw): 'YWRtaW4xMjM='
+2025-11-13 09:15:02.969 | INFO     | xadmin_auth.api_auth:login:53 | Password type: <class 'str'>
+2025-11-13 09:15:02.969 | INFO     | xadmin_auth.api_auth:login:55 | user password: admin123
+2025-11-13 09:15:03.306 | INFO     | xadmin_auth.api_auth:login:59 | 登录成功 - 用户: admin, Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 09:15:03.307 | INFO     | xadmin.logru_config:emit:15 | "POST - login /system/auth/login" 0.489626407623291
+2025-11-13 09:15:03.330 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 09:15:03.470 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-13 09:15:03.532 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.20195269584655762
+2025-11-13 09:15:03.547 | INFO     | xadmin_auth.auth:authenticate:47 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 09:15:03.690 | INFO     | xadmin_auth.auth:authenticate:50 | 认证成功 - 用户: admin
+2025-11-13 09:15:04.056 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.5088481903076172
