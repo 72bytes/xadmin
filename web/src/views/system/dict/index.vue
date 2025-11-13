@@ -22,7 +22,7 @@
           @refresh="search"
         >
           <template #toolbar-left>
-            <a-input-search v-model="queryForm.description" placeholder="搜索标签/描述" allow-clear @search="search" />
+            <a-input-search v-model="queryForm.description" placeholder="搜索标签/描述" allow-clear />
             <a-button @click="reset">
               <template #icon><icon-refresh /></template>
               <template #default>重置</template>
@@ -62,6 +62,7 @@
 </template>
 
 <script setup lang="ts">
+import { useDebounceFn } from '@vueuse/core'
 import DictTree from './tree/index.vue'
 import DictItemAddModal from './DictItemAddModal.vue'
 import { type DictItemQuery, type DictItemResp, deleteDictItem, listDictItem } from '@/apis/system/dict'
@@ -84,6 +85,15 @@ const {
   search,
   handleDelete,
 } = useTable((page) => listDictItem({ ...queryForm, ...page }), { immediate: false })
+
+// 监听搜索框输入，实时搜索（带防抖）
+const debouncedSearch = useDebounceFn(() => {
+  search()
+}, 500)
+
+watch(() => queryForm.description, () => {
+  debouncedSearch()
+})
 const columns: TableInstanceColumns[] = [
   {
     title: '序号',

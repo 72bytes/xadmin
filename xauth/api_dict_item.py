@@ -21,8 +21,10 @@ def get_dict_item_list(request: HttpRequest):
     desc = ''
     order_by = 'id'
 
+    # 初始化过滤条件
     filters = Q()
 
+    # 处理排序
     if sort:
         _sort = [_.strip() for _ in sort.split(',')]
         if 'desc' in _sort:
@@ -30,24 +32,23 @@ def get_dict_item_list(request: HttpRequest):
             _sort.remove('desc')
         if len(_sort) == 1:
             order_by = utils.camel_to_snake(_sort[0])
-    if description:
-        filters = Q(description__icontains=description)
-    if status:
-        filters = filters | Q(status=int(status))
-    if dict_id:
-        filters = filters | Q(dict_id=int(dict_id))
     
-    if filters is not None:
-        _items = models.SysDictItem.objects.filter(
-            filters
-        )
-        total = models.SysDictItem.objects.filter(dict_id=int(dict_id)).count()
-        items = _items.order_by(f'{desc}{order_by}')[(page-1)*size:page*size]
-    else:
-        _items = models.SysDictItem.objects.all(
-        )
-        total = _items.count()
-        items = _items.order_by('dict_id')[(page-1)*size:page*size]
+    # 搜索标签或描述（两个字段用OR连接）
+    if description:
+        filters &= (Q(label__icontains=description) | Q(description__icontains=description))
+    
+    # 状态过滤（与其他条件用AND连接）
+    if status:
+        filters &= Q(status=int(status))
+    
+    # 字典ID过滤（与其他条件用AND连接）
+    if dict_id:
+        filters &= Q(dict_id=int(dict_id))
+    
+    # 查询数据
+    _items = models.SysDictItem.objects.filter(filters)
+    total = _items.count()
+    items = _items.order_by(f'{desc}{order_by}')[(page-1)*size:page*size]
     data = dict()
     data['list'] = []
     data['total'] = total
