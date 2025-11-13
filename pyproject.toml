@@ -23,8 +23,13 @@ dependencies = [
 [tool.basedpyright]
 typeCheckingMode = "off"
 
+
+[tool.pytest.ini_options]
+python_files = ["tests.py", "test_*.py", "*_test.py"]
+
 [dependency-groups]
 dev = [
     "pytest>=9.0.0",
     "pytest-django>=4.11.1",
 ]
+

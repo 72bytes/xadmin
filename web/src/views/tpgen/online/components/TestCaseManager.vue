@@ -3,7 +3,7 @@
     <template #title>
       <div class="section-title">
         <icon-check-square />
-        Test Case Management
+        Test Case Select
       </div>
     </template>
 

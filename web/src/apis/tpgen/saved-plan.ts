@@ -3,7 +3,7 @@ import http from '@/utils/http'
 
 export type * from './type'
 
-const BASE_URL = '/tpgen/saved-plan'
+const BASE_URL = '/tpgen/saved-plans'  // 注意：与后端保持一致，使用复数形式
 
 /** @desc 查询保存的测试计划列表 */
 export function listSavedPlan(query: T.SavedPlanPageQuery) {

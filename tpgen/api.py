@@ -6,7 +6,7 @@ from django.http import HttpRequest
 from ninja_extra import Router
 from typing import List
 from . import models, schemas
-from xadmin_utils import utils
+from xutils import utils
 
 
 # ============================================================================
@@ -163,6 +163,81 @@ def list_sut_devices(request: HttpRequest,
     resp = utils.RespSuccessTempl()
     resp.data = data
     return resp.as_dict()
+
+
+@sut_device_router.get('/gpu-options', response=dict)
+def get_gpu_options(request: HttpRequest):
+    """获取 GPU ASIC 名称选项列表（去重）"""
+    try:
+        # 从数据库中获取所有不为空的 asic_name，并去重
+        asic_names = models.SutDevice.objects.exclude(
+            asic_name__isnull=True
+        ).exclude(
+            asic_name__exact=''
+        ).values_list('asic_name', flat=True).distinct().order_by('asic_name')
+        
+        data = [
+            {'label': name, 'value': name}
+            for name in asic_names
+        ]
+        
+        resp = utils.RespSuccessTempl()
+        resp.data = data
+        return resp.as_dict()
+    except Exception as e:
+        resp = utils.RespFailedTempl()
+        resp.data = f'获取 GPU 选项失败: {str(e)}'
+        return resp.as_dict()
+
+
+@sut_device_router.get('/gpu-series-options', response=dict)
+def get_gpu_series_options(request: HttpRequest):
+    """获取 GPU 系列选项列表（去重）"""
+    try:
+        # 从数据库中获取所有不为空的 gpu_series，并去重
+        gpu_series_list = models.SutDevice.objects.exclude(
+            gpu_series__isnull=True
+        ).exclude(
+            gpu_series__exact=''
+        ).values_list('gpu_series', flat=True).distinct().order_by('gpu_series')
+        
+        data = [
+            {'label': series, 'value': series}
+            for series in gpu_series_list
+        ]
+        
+        resp = utils.RespSuccessTempl()
+        resp.data = data
+        return resp.as_dict()
+    except Exception as e:
+        resp = utils.RespFailedTempl()
+        resp.data = f'获取 GPU 系列选项失败: {str(e)}'
+        return resp.as_dict()
+
+
+@sut_device_router.get('/gpu-model-options', response=dict)
+def get_gpu_model_options(request: HttpRequest):
+    """获取 GPU 型号选项列表（去重）"""
+    try:
+        # 从数据库中获取所有不为空的 gpu_model，并去重
+        gpu_models = models.SutDevice.objects.exclude(
+            gpu_model__isnull=True
+        ).exclude(
+            gpu_model__exact=''
+        ).values_list('gpu_model', flat=True).distinct().order_by('gpu_model')
+        
+        data = [
+            {'label': model, 'value': model}
+            for model in gpu_models
+        ]
+        
+        resp = utils.RespSuccessTempl()
+        resp.data = data
+        return resp.as_dict()
+    except Exception as e:
+        resp = utils.RespFailedTempl()
+        resp.data = f'获取 GPU 型号选项失败: {str(e)}'
+        return resp.as_dict()
 
 
 @sut_device_router.get('/{device_id}', response=dict)

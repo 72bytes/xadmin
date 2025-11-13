@@ -1,6 +1,6 @@
 from ninja import Router, File
 from ninja.files import UploadedFile
-from xadmin_auth.auth import TitwBaseAuth
+from xauth.auth import XadminBaseAuth
 from .validator import validate_yaml_full
 from .models import TestPlanYaml
 from django.db import transaction
@@ -8,7 +8,7 @@ from django.db import transaction
 router = Router(tags=["YAML测试计划验证"])
 
 
-@router.post("/upload", auth=TitwBaseAuth(), summary="上传YAML测试计划")
+@router.post("/upload", auth=XadminBaseAuth(), summary="上传YAML测试计划")
 def upload_yaml(request, file: UploadedFile = File(...)):
     """上传并验证 YAML 测试计划文件"""
     try:
@@ -81,7 +81,7 @@ def upload_yaml(request, file: UploadedFile = File(...)):
         }
 
 
-@router.get("/list", auth=TitwBaseAuth(), summary="获取YAML列表")
+@router.get("/list", auth=XadminBaseAuth(), summary="获取YAML列表")
 def list_yaml(request, page: int = 1, page_size: int = 10):
     """获取 YAML 测试计划列表"""
     try:
@@ -118,7 +118,7 @@ def list_yaml(request, page: int = 1, page_size: int = 10):
         }
 
 
-@router.delete("/{id}", auth=TitwBaseAuth(), summary="删除YAML记录")
+@router.delete("/{id}", auth=XadminBaseAuth(), summary="删除YAML记录")
 def delete_yaml(request, id: int):
     """删除指定的 YAML 记录"""
     try:

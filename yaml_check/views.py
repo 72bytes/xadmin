@@ -1,6 +1,6 @@
 from django.http import JsonResponse, HttpRequest
 from ninja_extra import Router, api_controller
-from xadmin_utils import utils
+from xutils import utils
 from .validator import YamlValidator
 from .line_finder import YamlLineFinder
 from .logger import yaml_check_logger

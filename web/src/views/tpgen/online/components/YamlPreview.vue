@@ -8,8 +8,15 @@
     </template>
 
     <div class="yaml-content">
-      <div class="yaml-display">
-        <div ref="lineNumbersRef" class="yaml-line-numbers" @scroll="syncScroll">
+
+      <div class="yaml-display" :style="{ maxHeight: `${dynamicHeight}px` }">
+        <div 
+          class="yaml-line-numbers" 
+          ref="lineNumbersRef" 
+          @scroll="syncScroll"
+          :style="{ maxHeight: `${dynamicHeight}px` }"
+        >
+
           <div
             v-for="(line, index) in yamlLines"
             :key="index"
@@ -19,7 +26,14 @@
             {{ index + 1 }}
           </div>
         </div>
-        <div ref="yamlContentRef" class="yaml-code-content" @scroll="handleYamlScroll">
+
+        <div 
+          class="yaml-code-content" 
+          ref="yamlContentRef" 
+          @scroll="handleYamlScroll"
+          :style="{ maxHeight: `${dynamicHeight}px` }"
+        >
+
           <div
             v-for="(line, index) in yamlLines"
             :key="index"
@@ -65,7 +79,9 @@
 </template>
 
 <script setup lang="ts">
+
 import { Message } from '@arco-design/web-vue'
+
 import type { YamlData } from '../types'
 
 defineOptions({ name: 'YamlPreview' })
@@ -79,6 +95,7 @@ const emit = defineEmits<{
   close: []
   copy: []
   download: []
+  save: []
 }>()
 
 // 监听 props 变化
@@ -106,6 +123,29 @@ const yamlLines = computed(() => {
   console.log('[YamlPreview yamlLines] 前 10 行:', lines.slice(0, 10))
   return lines
 })
+
+// 动态计算预览区高度
+const dynamicHeight = computed(() => {
+  const lineCount = yamlLines.value.length
+  const lineHeight = 25.6 // 每行高度（px）
+  const padding = 50 // 上下内边距总和（px）
+  const minHeight = 200 // 最小高度
+  const maxHeight = 800 // 最大高度
+  
+  // 计算内容高度
+  const contentHeight = lineCount * lineHeight + padding
+  
+  // 限制在最小和最大高度之间
+  if (contentHeight < minHeight) return minHeight
+  if (contentHeight > maxHeight) return maxHeight
+  return contentHeight
+})
+
+// 保存按钮 - 触发父组件的保存逻辑
+function handleSave() {
+  console.log('[YamlPreview handleSave] 触发保存事件')
+  emit('save')
+}
 
 // 检查指定行是否是错误行
 const isErrorLine = (lineNumber: number): boolean => {
@@ -257,8 +297,8 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
 
   .yaml-display {
     display: flex;
-    max-height: 500px;
     height: auto;
+    transition: max-height 0.3s ease; // 平滑过渡效果
   }
 
   .yaml-line-numbers {
@@ -266,7 +306,7 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
     color: #718096;
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-left: 20px;
+    padding-left: 10px;
     padding-right: 15px;
     text-align: right;
     user-select: none;
@@ -275,8 +315,8 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
     overflow-x: hidden;
     flex-shrink: 0;
     min-width: 60px;
-    max-height: 500px;
     position: relative;
+    transition: max-height 0.3s ease; // 平滑过渡效果
 
     .line-number {
       font-family: 'Fira Code', 'Courier New', monospace;
@@ -308,7 +348,7 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
     padding-right: 25px;
     overflow-y: auto;
     overflow-x: auto;
-    max-height: 500px;
+    transition: max-height 0.3s ease; // 平滑过渡效果
 
     .code-line {
       font-family: 'Fira Code', 'Courier New', monospace;

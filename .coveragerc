@@ -1,0 +1,65 @@
+[run]
+# 指定要测试覆盖率的源代码路径
+source = 
+    xadmin
+    xadmin_auth
+    xadmin_db
+    xadmin_tpgen
+    xadmin_utils
+    yaml_check
+    yaml_test_plan
+    tpgen
+
+# 忽略的文件或目录
+omit = 
+    */migrations/*
+    */tests/*
+    */__pycache__/*
+    */venv/*
+    */.venv/*
+    */site-packages/*
+    manage.py
+    */wsgi.py
+    */asgi.py
+    */settings.py
+    */conftest.py
+    test_*.py
+
+# 数据文件位置
+data_file = .coverage
+
+# 并行模式（多进程测试时使用）
+parallel = True
+
+[report]
+# 精度
+precision = 2
+
+# 显示缺失的行
+show_missing = True
+
+# 跳过覆盖的文件
+skip_covered = False
+
+# 覆盖率阈值（低于此值会失败）
+fail_under = 70
+
+# 排除的代码行模式
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    if TYPE_CHECKING:
+    @abstractmethod
+    @abc.abstractmethod
+
+[html]
+# HTML报告输出目录
+directory = htmlcov
+
+[xml]
+# XML报告输出文件
+output = coverage.xml
+

@@ -2915,3 +2915,942 @@
 2025-11-12 16:47:12.680 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
 2025-11-12 16:47:17.531 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
 2025-11-12 16:47:17.730 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:10:54.501 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:10:55.136 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:10:55.389 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:14:44.436 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:14:44.881 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:14:45.182 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:15:46.954 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:15:47.428 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:15:47.884 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:21:56.202 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:21:56.397 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:23:43.094 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:23:43.420 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:23:43.629 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:25:35.938 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:25:36.287 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:25:36.510 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:26:13.631 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:26:13.978 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:26:14.212 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:27:17.689 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:27:18.003 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:27:18.251 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:28:20.258 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:28:20.869 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:28:21.128 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:29:18.703 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:29:18.914 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:29:26.837 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:29:27.037 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:29:44.606 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:29:45.067 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:29:45.282 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 09:30:18.501 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 09:30:18.690 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 10:02:47.855 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 10:02:48.279 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 10:02:52.469 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 10:02:52.695 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 10:02:55.587 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 10:02:55.799 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 10:37:43.869 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 10:37:44.258 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 11:07:34.062 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 11:07:34.649 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 11:27:02.773 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 11:28:04.161 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 11:32:14.608 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 11:32:15.068 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 13:31:53.251 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:32:13.929 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:39:24.932 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:39:37.869 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:39:58.436 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:43:27.207 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:43:36.713 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:43:51.409 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:44:58.440 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:45:26.936 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:48:12.913 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:50:49.106 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:53:43.625 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:53:54.424 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:53:57.785 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:54:08.675 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:54:14.434 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:54:27.845 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:56:47.642 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:56:47.889 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 13:56:53.855 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:56:54.075 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 13:57:00.528 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:57:26.303 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:57:26.544 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 13:57:40.700 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:57:58.990 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:58:13.002 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:58:28.327 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:58:37.074 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:58:46.740 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:58:57.987 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:59:07.359 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:59:45.523 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 13:59:45.715 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:00:27.286 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:02:04.788 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:02:22.215 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:02:55.463 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:03:11.066 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:03:41.467 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:08:53.324 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:09:34.367 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:09:40.768 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:09:49.130 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:10:04.041 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:10:11.461 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:10:18.130 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:10:26.787 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:10:38.386 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:10:47.118 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:10:54.495 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:11:00.571 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:11:07.749 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:11:29.543 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:11:40.188 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:11:46.004 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:11:53.005 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:11:56.518 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:12:04.789 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:12:14.434 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:12:21.124 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:12:30.841 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:12:42.893 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:13:40.244 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:13:46.219 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:13:51.998 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:14:07.964 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:14:15.532 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:14:24.866 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:14:43.448 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:15:04.392 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:15:12.828 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:15:33.032 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:18:54.016 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:18:54.311 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:18:57.449 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:18:57.705 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:19:00.839 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:19:01.130 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:19:54.777 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:20:18.648 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:25:05.074 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:25:05.465 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:25:07.454 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:25:07.660 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:25:51.073 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:26:02.983 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:27:32.236 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:32:05.289 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:37:34.788 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:37:57.912 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:39:48.927 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:39:57.035 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:40:04.479 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:41:32.220 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:41:45.033 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:44:04.248 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:46:40.291 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:46:41.139 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:54:09.375 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/urls.py changed, reloading.
+2025-11-13 14:54:09.718 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:54:09.952 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:54:11.012 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/urls.py changed, reloading.
+2025-11-13 14:54:11.259 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:54:11.465 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:54:12.525 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/urls.py changed, reloading.
+2025-11-13 14:54:12.850 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:54:13.067 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 14:58:43.815 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:58:44.107 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 14:58:44.285 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:02:23.978 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:02:24.314 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:02:24.539 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:08:47.073 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:08:47.597 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:08:47.815 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:09:22.610 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:09:22.920 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:09:23.134 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:09:45.816 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:09:46.120 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:09:46.334 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:11:23.855 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:11:24.609 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:11:24.998 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:12:15.979 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:12:16.324 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:12:16.590 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:12:51.294 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:12:51.800 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:12:52.036 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:13:36.143 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:13:36.469 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:13:36.705 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:14:12.892 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:14:13.232 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:14:13.454 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:14:53.188 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:14:53.660 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:14:53.932 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:15:17.973 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:15:18.285 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:15:18.630 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:15:43.958 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:15:44.470 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:15:44.721 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:16:05.028 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:16:05.370 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:16:05.589 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:17:02.398 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/tpgen/urls.py changed, reloading.
+2025-11-13 15:17:02.704 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_test_plan/api.py changed, reloading.
+2025-11-13 15:17:02.789 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:17:03.025 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:17:03.251 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:17:03.302 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:17:23.220 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:17:23.504 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:17:23.710 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:18:02.215 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_test_plan/urls.py changed, reloading.
+2025-11-13 15:18:02.723 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:18:03.021 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:18:03.437 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:18:09.828 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:18:10.313 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:18:10.622 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:18:10.991 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:18:29.157 | INFO     | xauth.api_auth:login:59 - 登录成功 - 用户: admin, Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:18:29.158 | INFO     | xadmin.logru_config:emit:15 - "POST - login /system/auth/login" 0.3917512893676758
+2025-11-13 15:18:29.180 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:18:29.338 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:18:29.580 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.3999900817871094
+2025-11-13 15:18:29.592 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:18:30.254 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:18:30.346 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.7536263465881348
+2025-11-13 15:18:36.167 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:18:36.346 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:18:37.058 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.9074311256408691
+2025-11-13 15:18:37.059 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:18:37.093 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:18:37.128 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.9615888595581055
+2025-11-13 15:18:37.145 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:18:38.843 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:18:39.146 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 2.0003480911254883
+2025-11-13 15:18:57.531 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_test_plan/urls.py changed, reloading.
+2025-11-13 15:18:58.004 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:18:58.233 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:18:58.543 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:20:24.694 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:20:24.869 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.1803746223449707
+2025-11-13 15:20:24.907 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:20:24.987 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.29415249824523926
+2025-11-13 15:20:24.999 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:20:25.135 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:20:25.171 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.17222881317138672
+2025-11-13 15:20:27.837 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.2929494380950928
+2025-11-13 15:20:27.840 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2909095287322998
+2025-11-13 15:20:27.864 | INFO     | xadmin.logru_config:emit:15 - "GET - list_os_configs /tp/api/os-config/list" 0.3237590789794922
+2025-11-13 15:20:27.874 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.33826661109924316
+2025-11-13 15:20:28.314 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.4665660858154297
+2025-11-13 15:20:29.635 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 1.3159620761871338
+2025-11-13 15:20:31.132 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.4843759536743164
+2025-11-13 15:20:32.924 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.7807424068450928
+2025-11-13 15:22:51.455 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:22:51.675 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.22852873802185059
+2025-11-13 15:22:51.675 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:22:51.793 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.33759069442749023
+2025-11-13 15:22:51.802 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:22:51.954 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:22:51.984 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.18190932273864746
+2025-11-13 15:22:55.345 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:22:55.352 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:22:55.358 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/sut/device/gpu-series-options
+2025-11-13 15:22:56.146 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.7920334339141846
+2025-11-13 15:22:56.297 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.9504799842834473
+2025-11-13 15:22:56.298 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.947495698928833
+2025-11-13 15:22:57.155 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.999133825302124
+2025-11-13 15:22:57.768 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6035952568054199
+2025-11-13 15:22:58.551 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.7741711139678955
+2025-11-13 15:22:58.823 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2571530342102051
+2025-11-13 15:22:59.055 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21382904052734375
+2025-11-13 15:22:59.287 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.22264909744262695
+2025-11-13 15:22:59.655 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.35768842697143555
+2025-11-13 15:22:59.858 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.19384241104125977
+2025-11-13 15:23:00.023 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.15328216552734375
+2025-11-13 15:23:00.480 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4476604461669922
+2025-11-13 15:23:00.852 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.3644289970397949
+2025-11-13 15:23:01.022 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.16069626808166504
+2025-11-13 15:23:01.510 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4801158905029297
+2025-11-13 15:23:01.747 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.22757792472839355
+2025-11-13 15:23:02.023 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2602837085723877
+2025-11-13 15:23:02.192 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1589353084564209
+2025-11-13 15:23:02.616 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.41579198837280273
+2025-11-13 15:23:02.808 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.18063902854919434
+2025-11-13 15:23:02.945 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.12801480293273926
+2025-11-13 15:23:03.620 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6657958030700684
+2025-11-13 15:23:03.851 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.18337345123291016
+2025-11-13 15:23:25.608 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:23:25.608 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:23:25.609 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /tpgen/saved-plan/list
+2025-11-13 15:23:28.008 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:23:28.535 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.5303859710693359
+2025-11-13 15:23:28.648 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:23:28.751 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.7430810928344727
+2025-11-13 15:23:28.761 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:23:30.064 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:23:30.112 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 1.3506572246551514
+2025-11-13 15:23:31.214 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:23:31.215 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:23:31.215 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /tpgen/saved-plan/list
+2025-11-13 15:23:34.674 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:23:34.678 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:23:34.680 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/sut/device/gpu-series-options
+2025-11-13 15:23:35.108 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.4269065856933594
+2025-11-13 15:23:35.147 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.4707827568054199
+2025-11-13 15:23:35.148 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.4631922245025635
+2025-11-13 15:23:35.501 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.38016676902770996
+2025-11-13 15:23:36.066 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5522012710571289
+2025-11-13 15:23:36.315 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2387218475341797
+2025-11-13 15:23:36.617 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.29181432723999023
+2025-11-13 15:23:37.035 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.40888214111328125
+2025-11-13 15:23:37.614 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5697906017303467
+2025-11-13 15:23:38.047 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4238135814666748
+2025-11-13 15:23:38.192 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.13734769821166992
+2025-11-13 15:23:38.588 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.3870835304260254
+2025-11-13 15:23:38.864 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.26812291145324707
+2025-11-13 15:23:39.074 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2005329132080078
+2025-11-13 15:23:39.304 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21999001502990723
+2025-11-13 15:23:39.676 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.3624894618988037
+2025-11-13 15:23:39.878 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.1924116611480713
+2025-11-13 15:23:40.077 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.19028735160827637
+2025-11-13 15:23:40.269 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1832115650177002
+2025-11-13 15:23:40.533 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.25542497634887695
+2025-11-13 15:23:40.778 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.23655319213867188
+2025-11-13 15:23:41.166 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.3796694278717041
+2025-11-13 15:23:42.770 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.5950069427490234
+2025-11-13 15:23:44.800 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 2.021611213684082
+2025-11-13 15:24:34.191 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:24:34.619 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.4355044364929199
+2025-11-13 15:24:34.620 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:24:34.677 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.486614465713501
+2025-11-13 15:24:34.687 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:24:34.819 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:24:34.846 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.15863561630249023
+2025-11-13 15:24:35.683 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:24:35.683 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:24:35.687 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/sut/device/gpu-series-options
+2025-11-13 15:24:36.015 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.3256204128265381
+2025-11-13 15:24:36.121 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.42876625061035156
+2025-11-13 15:24:36.123 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.4382021427154541
+2025-11-13 15:24:36.735 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.6726021766662598
+2025-11-13 15:24:37.318 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.572899580001831
+2025-11-13 15:24:38.997 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.6696650981903076
+2025-11-13 15:24:39.842 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.836127758026123
+2025-11-13 15:24:40.722 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.8708817958831787
+2025-11-13 15:24:41.073 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.3421964645385742
+2025-11-13 15:24:41.271 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.18996477127075195
+2025-11-13 15:24:41.582 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.3026864528656006
+2025-11-13 15:24:41.824 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.23245620727539062
+2025-11-13 15:24:42.070 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.23714661598205566
+2025-11-13 15:24:42.275 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.19668173789978027
+2025-11-13 15:24:42.694 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4096040725708008
+2025-11-13 15:24:43.222 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.519686222076416
+2025-11-13 15:24:45.007 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.7761147022247314
+2025-11-13 15:24:46.360 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.3428826332092285
+2025-11-13 15:24:47.887 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.5179312229156494
+2025-11-13 15:24:48.138 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.24172234535217285
+2025-11-13 15:24:48.617 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.47071123123168945
+2025-11-13 15:24:48.893 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2647206783294678
+2025-11-13 15:24:49.205 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.30149078369140625
+2025-11-13 15:24:49.693 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4787158966064453
+2025-11-13 15:25:25.330 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:25:25.643 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.32048702239990234
+2025-11-13 15:25:25.721 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:25:25.798 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.46799349784851074
+2025-11-13 15:25:25.808 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:25:26.107 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:25:26.164 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.3559262752532959
+2025-11-13 15:25:26.767 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:25:26.770 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:25:26.773 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/sut/device/gpu-series-options
+2025-11-13 15:25:26.970 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.19806146621704102
+2025-11-13 15:25:26.998 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.22943329811096191
+2025-11-13 15:25:27.001 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.22537684440612793
+2025-11-13 15:25:27.147 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.16669368743896484
+2025-11-13 15:25:28.040 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.8842298984527588
+2025-11-13 15:25:28.589 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5391032695770264
+2025-11-13 15:25:28.896 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.298022985458374
+2025-11-13 15:25:29.713 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.80780029296875
+2025-11-13 15:25:30.398 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6729121208190918
+2025-11-13 15:25:32.758 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 2.351264238357544
+2025-11-13 15:25:32.944 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.1759812831878662
+2025-11-13 15:25:33.110 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.15766072273254395
+2025-11-13 15:25:33.392 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2718789577484131
+2025-11-13 15:25:33.727 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.32587575912475586
+2025-11-13 15:25:33.951 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21619129180908203
+2025-11-13 15:25:34.113 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.15323376655578613
+2025-11-13 15:25:34.395 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.27283668518066406
+2025-11-13 15:25:34.958 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5541682243347168
+2025-11-13 15:25:35.131 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.16211271286010742
+2025-11-13 15:25:35.649 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.5095868110656738
+2025-11-13 15:25:36.577 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.9182064533233643
+2025-11-13 15:25:36.744 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.15771174430847168
+2025-11-13 15:25:36.925 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.17180657386779785
+2025-11-13 15:25:37.333 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.39824962615966797
+2025-11-13 15:27:49.578 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/yaml_test_plan/urls.py changed, reloading.
+2025-11-13 15:27:49.950 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:27:50.250 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:27:50.622 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:30:51.248 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-13 15:30:51.569 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:30:51.760 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:30:52.021 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:32:21.943 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/tpgen/api.py changed, reloading.
+2025-11-13 15:32:22.452 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:32:22.985 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:32:23.453 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:32:37.058 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:32:37.068 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:32:37.722 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.6624548435211182
+2025-11-13 15:32:44.761 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:32:45.266 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:33:16.544 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:33:30.331 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:33:53.385 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:33:55.689 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:33:55.727 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:33:55.729 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-options
+2025-11-13 15:33:56.292 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:33:56.293 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:33:56.784 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-model-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:33:56.784 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-model-options
+2025-11-13 15:33:58.108 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:33:58.109 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-options
+2025-11-13 15:34:20.072 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:34:21.072 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:34:21.072 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 1.0076956748962402
+2025-11-13 15:34:21.237 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 1.164484977722168
+2025-11-13 15:34:21.248 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:34:21.844 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:34:21.868 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.6204617023468018
+2025-11-13 15:34:22.417 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:34:22.426 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:34:23.689 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 1.2701356410980225
+2025-11-13 15:34:23.706 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 1.2843284606933594
+2025-11-13 15:34:23.711 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 1.286855697631836
+2025-11-13 15:34:23.996 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2961146831512451
+2025-11-13 15:34:24.552 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5471370220184326
+2025-11-13 15:34:24.733 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.17160844802856445
+2025-11-13 15:34:24.931 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.18772649765014648
+2025-11-13 15:34:25.167 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.22777748107910156
+2025-11-13 15:34:25.651 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4760172367095947
+2025-11-13 15:34:26.268 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6078641414642334
+2025-11-13 15:34:26.768 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.48897886276245117
+2025-11-13 15:34:27.996 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.2188959121704102
+2025-11-13 15:34:28.272 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.26781606674194336
+2025-11-13 15:34:28.617 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.335268497467041
+2025-11-13 15:34:29.094 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.46685028076171875
+2025-11-13 15:34:29.603 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5014381408691406
+2025-11-13 15:34:30.063 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.4502902030944824
+2025-11-13 15:34:30.863 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.7900781631469727
+2025-11-13 15:34:31.883 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.0107738971710205
+2025-11-13 15:34:32.881 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.9871253967285156
+2025-11-13 15:34:33.764 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.8732099533081055
+2025-11-13 15:34:34.221 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.4477846622467041
+2025-11-13 15:34:34.616 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.37450408935546875
+2025-11-13 15:34:34.796 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1698620319366455
+2025-11-13 15:35:09.207 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/tpgen/api.py changed, reloading.
+2025-11-13 15:35:09.824 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:35:10.604 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:35:11.321 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:35:49.197 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:35:51.730 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:35:51.783 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:35:51.786 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-options
+2025-11-13 15:35:52.204 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:35:52.206 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:35:52.801 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-model-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:35:52.802 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-model-options
+2025-11-13 15:35:53.906 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:35:53.908 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-options
+2025-11-13 15:39:28.505 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:39:29.268 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:39:29.270 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.7694747447967529
+2025-11-13 15:39:29.663 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 1.1576642990112305
+2025-11-13 15:39:29.674 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:39:30.097 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:39:30.175 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.5018899440765381
+2025-11-13 15:39:30.803 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:39:30.818 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:39:31.116 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.31182026863098145
+2025-11-13 15:39:31.279 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.4708890914916992
+2025-11-13 15:39:31.304 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.4932534694671631
+2025-11-13 15:39:31.542 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2528653144836426
+2025-11-13 15:39:31.962 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4106252193450928
+2025-11-13 15:39:32.342 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.3699662685394287
+2025-11-13 15:39:33.929 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.5756921768188477
+2025-11-13 15:39:35.752 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.8129208087921143
+2025-11-13 15:39:37.349 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.5889978408813477
+2025-11-13 15:39:38.037 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6781623363494873
+2025-11-13 15:39:39.118 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.071058988571167
+2025-11-13 15:39:40.744 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.6062836647033691
+2025-11-13 15:39:41.984 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:39:41.986 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:39:42.500 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.7445180416107178
+2025-11-13 15:39:43.256 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 1.2697086334228516
+2025-11-13 15:39:43.764 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.2552413940429688
+2025-11-13 15:39:44.007 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.23485565185546875
+2025-11-13 15:39:44.328 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.3126716613769531
+2025-11-13 15:39:44.809 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.4712214469909668
+2025-11-13 15:39:45.925 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.1063687801361084
+2025-11-13 15:39:48.280 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 2.3450233936309814
+2025-11-13 15:39:50.047 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.7566893100738525
+2025-11-13 15:39:50.707 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6500575542449951
+2025-11-13 15:39:51.264 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.5479958057403564
+2025-11-13 15:39:51.790 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5157256126403809
+2025-11-13 15:39:52.298 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4993281364440918
+2025-11-13 15:40:59.522 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:40:59.529 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:40:59.803 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.27599668502807617
+2025-11-13 15:40:59.805 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.28149938583374023
+2025-11-13 15:40:59.860 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.3285079002380371
+2025-11-13 15:41:00.078 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2615487575531006
+2025-11-13 15:41:00.316 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2280561923980713
+2025-11-13 15:41:00.709 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.38321518898010254
+2025-11-13 15:41:01.255 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5361459255218506
+2025-11-13 15:41:01.766 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5013682842254639
+2025-11-13 15:41:01.999 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.22405433654785156
+2025-11-13 15:41:02.218 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.20797514915466309
+2025-11-13 15:41:02.484 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2565805912017822
+2025-11-13 15:41:02.901 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.4042937755584717
+2025-11-13 15:41:03.102 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1901412010192871
+2025-11-13 15:41:03.292 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.17806100845336914
+2025-11-13 15:41:03.573 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2708902359008789
+2025-11-13 15:41:03.851 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2689540386199951
+2025-11-13 15:41:03.998 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.13837671279907227
+2025-11-13 15:41:04.671 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6630680561065674
+2025-11-13 15:41:04.932 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.25157618522644043
+2025-11-13 15:41:05.545 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.6038515567779541
+2025-11-13 15:41:05.818 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.262836217880249
+2025-11-13 15:41:06.587 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.7605340480804443
+2025-11-13 15:41:07.169 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.23173260688781738
+2025-11-13 15:41:07.280 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6826651096343994
+2025-11-13 15:41:07.794 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5016944408416748
+2025-11-13 15:41:11.350 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 1.2398254871368408
+2025-11-13 15:41:11.353 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 1.245042324066162
+2025-11-13 15:41:11.671 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 1.5560948848724365
+2025-11-13 15:41:11.865 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:41:11.866 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:41:12.950 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.5849621295928955
+2025-11-13 15:41:13.272 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 1.4038147926330566
+2025-11-13 15:41:13.748 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:41:14.014 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.0518012046813965
+2025-11-13 15:41:14.152 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:41:14.153 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.41170310974121094
+2025-11-13 15:41:14.238 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.49076032638549805
+2025-11-13 15:41:14.248 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:41:14.663 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:41:14.731 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.482616662979126
+2025-11-13 15:41:15.443 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:41:15.444 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:41:15.935 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.4901738166809082
+2025-11-13 15:41:15.971 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.5228474140167236
+2025-11-13 15:41:15.973 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.532660722732544
+2025-11-13 15:41:16.151 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.20320558547973633
+2025-11-13 15:41:16.585 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.42551374435424805
+2025-11-13 15:41:17.439 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.844489574432373
+2025-11-13 15:41:17.726 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:41:17.997 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.2829101085662842
+2025-11-13 15:41:18.022 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:41:18.083 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.35781383514404297
+2025-11-13 15:41:18.095 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:41:18.273 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:41:18.330 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.23518610000610352
+2025-11-13 15:41:19.152 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:41:19.156 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:41:19.447 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.28560709953308105
+2025-11-13 15:41:20.572 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 1.414680004119873
+2025-11-13 15:41:20.613 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 1.4606034755706787
+2025-11-13 15:41:21.155 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.5734703540802002
+2025-11-13 15:41:21.861 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.6925172805786133
+2025-11-13 15:41:22.986 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.1132285594940186
+2025-11-13 15:41:24.695 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.6958675384521484
+2025-11-13 15:41:25.891 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.1832666397094727
+2025-11-13 15:41:27.142 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.2399728298187256
+2025-11-13 15:41:27.368 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21485090255737305
+2025-11-13 15:41:27.651 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2735555171966553
+2025-11-13 15:41:27.874 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.21285414695739746
+2025-11-13 15:41:28.355 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.46941137313842773
+2025-11-13 15:41:28.880 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5135884284973145
+2025-11-13 15:41:29.258 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.3696894645690918
+2025-11-13 15:41:30.210 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.9433197975158691
+2025-11-13 15:41:30.552 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.33228206634521484
+2025-11-13 15:41:30.838 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2764575481414795
+2025-11-13 15:41:31.085 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.23563480377197266
+2025-11-13 15:41:31.354 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.25894927978515625
+2025-11-13 15:41:31.951 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5863120555877686
+2025-11-13 15:41:32.136 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.17680001258850098
+2025-11-13 15:41:32.379 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2333388328552246
+2025-11-13 15:41:32.851 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.46343016624450684
+2025-11-13 15:41:35.370 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:41:36.189 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:41:36.873 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 1.5118324756622314
+2025-11-13 15:41:36.874 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:41:37.105 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:41:37.771 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 2.4012362957000732
+2025-11-13 15:41:37.780 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:41:38.491 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:41:38.610 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.8295609951019287
+2025-11-13 15:41:39.137 | WARNING  | xadmin.logru_config:emit:15 - "GET - get_sut_device /tp/api/sut-device/gpu-series-options" ([{'type': 'int_parsing', 'loc': ('path', 'device_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer'}],)
+2025-11-13 15:41:39.141 | WARNING  | xadmin.logru_config:emit:15 - Unprocessable Content: /tp/api/sut-device/gpu-series-options
+2025-11-13 15:41:39.313 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.17031455039978027
+2025-11-13 15:41:39.331 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.18512988090515137
+2025-11-13 15:41:39.333 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.19425320625305176
+2025-11-13 15:41:39.740 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.3259611129760742
+2025-11-13 15:41:40.022 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.27355146408081055
+2025-11-13 15:41:40.240 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.20905017852783203
+2025-11-13 15:41:40.478 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.22953081130981445
+2025-11-13 15:41:41.273 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.7857615947723389
+2025-11-13 15:41:42.769 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.4875819683074951
+2025-11-13 15:41:43.324 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5465443134307861
+2025-11-13 15:41:43.657 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.31702685356140137
+2025-11-13 15:41:43.820 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.15175652503967285
+2025-11-13 15:41:44.119 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2909667491912842
+2025-11-13 15:41:44.646 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5166001319885254
+2025-11-13 15:41:44.852 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.19205522537231445
+2025-11-13 15:41:45.056 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1934218406677246
+2025-11-13 15:41:45.799 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.7331671714782715
+2025-11-13 15:41:47.207 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.3995904922485352
+2025-11-13 15:41:49.817 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 2.600954294204712
+2025-11-13 15:41:50.270 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.4436171054840088
+2025-11-13 15:41:51.677 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.3969435691833496
+2025-11-13 15:41:52.173 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.4862935543060303
+2025-11-13 15:41:52.566 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.38530659675598145
+2025-11-13 15:41:52.788 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21229147911071777
+2025-11-13 15:42:29.718 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:29.718 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:29.719 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:31.195 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:31.195 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:31.196 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:33.323 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:33.324 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:33.325 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:34.575 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:34.575 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:34.575 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:36.631 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:36.631 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:36.631 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:37.567 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:37.567 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:37.567 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:38.624 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:38.624 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:38.625 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:39.959 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:39.959 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:39.959 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:42.779 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:42.779 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:42.779 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:43.211 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:43.211 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:43.211 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:43.503 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:43.503 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:43.503 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:44.007 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:44.007 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:44.007 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:44.343 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:44.343 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:44.343 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:44.535 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:44.535 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:44.535 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:44.719 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:44.719 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:44.719 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:45.291 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:45.292 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:45.292 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:42:45.467 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:42:45.467 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:42:45.468 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:00.462 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:00.463 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:00.463 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:01.244 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:01.245 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:01.245 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:01.539 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:01.539 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:01.539 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:01.691 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:01.691 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:01.692 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:01.852 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:01.852 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:01.852 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:02.019 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:02.019 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:02.020 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:02.919 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:02.919 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:02.920 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:03.107 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:03.107 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:03.107 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:03.583 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:03.583 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:03.584 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:03.751 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:03.751 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:03.751 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:05.163 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:05.163 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:05.164 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:07.219 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:07.220 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:07.220 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:07.403 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:07.403 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:07.404 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:08.619 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:08.620 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:08.620 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:08.851 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:43:08.851 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:43:08.852 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:43:32.989 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/tpgen/api.py changed, reloading.
+2025-11-13 15:43:33.415 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:43:33.632 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:43:33.924 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:43:41.777 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:43:41.989 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.2174229621887207
+2025-11-13 15:43:42.013 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:43:42.136 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.3594167232513428
+2025-11-13 15:43:42.147 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:43:42.307 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:43:42.516 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.36948442459106445
+2025-11-13 15:43:43.719 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.4791545867919922
+2025-11-13 15:43:43.723 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_series_options /tp/api/sut-device/gpu-series-options" 0.4880390167236328
+2025-11-13 15:43:43.931 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.689389705657959
+2025-11-13 15:43:43.941 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.7032802104949951
+2025-11-13 15:43:44.612 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.8233456611633301
+2025-11-13 15:43:48.536 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 3.912067174911499
+2025-11-13 15:43:49.298 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.7522618770599365
+2025-11-13 15:43:49.662 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.34543466567993164
+2025-11-13 15:43:49.942 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2640194892883301
+2025-11-13 15:43:50.178 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21980047225952148
+2025-11-13 15:43:50.358 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.16850781440734863
+2025-11-13 15:43:50.615 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.24663710594177246
+2025-11-13 15:43:50.788 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.1644914150238037
+2025-11-13 15:43:50.975 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.17317438125610352
+2025-11-13 15:43:51.196 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21041631698608398
+2025-11-13 15:43:51.445 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.23829174041748047
+2025-11-13 15:43:51.835 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.3809969425201416
+2025-11-13 15:43:52.655 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.8117959499359131
+2025-11-13 15:43:52.842 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.17766571044921875
+2025-11-13 15:43:53.043 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.18993425369262695
+2025-11-13 15:43:53.404 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/tpgen/api.py changed, reloading.
+2025-11-13 15:43:53.992 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:43:54.473 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:43:54.979 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:44:00.357 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:44:00.903 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:44:08.368 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/tpgen/api.py changed, reloading.
+2025-11-13 15:44:08.780 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:44:08.991 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:44:09.437 | DEBUG    | xcase.file_manager:_ensure_storage_exists:47 - Storage root ensured: /home/zx/xadmin_zx/media/caseeditor
+2025-11-13 15:45:07.494 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:45:07.699 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.20909500122070312
+2025-11-13 15:45:07.756 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:45:07.942 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.44835662841796875
+2025-11-13 15:45:07.952 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:45:08.126 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:45:08.152 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.199904203414917
+2025-11-13 15:45:09.067 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_series_options /tp/api/sut-device/gpu-series-options" 0.22943425178527832
+2025-11-13 15:45:09.091 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.24896764755249023
+2025-11-13 15:45:09.093 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.24594950675964355
+2025-11-13 15:45:09.125 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.2750823497772217
+2025-11-13 15:45:09.246 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.13773560523986816
+2025-11-13 15:45:09.804 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5450918674468994
+2025-11-13 15:45:09.994 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.18123626708984375
+2025-11-13 15:45:10.221 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21713805198669434
+2025-11-13 15:45:10.659 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.43026232719421387
+2025-11-13 15:45:10.831 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1607654094696045
+2025-11-13 15:45:11.043 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.20282936096191406
+2025-11-13 15:45:11.210 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.1572427749633789
+2025-11-13 15:45:11.359 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.13753104209899902
+2025-11-13 15:45:11.725 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.35703444480895996
+2025-11-13 15:45:12.313 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5779860019683838
+2025-11-13 15:45:12.746 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.42347192764282227
+2025-11-13 15:45:12.926 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.17102861404418945
+2025-11-13 15:45:13.223 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.28548622131347656
+2025-11-13 15:45:13.391 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.15810155868530273
+2025-11-13 15:45:13.840 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4383859634399414
+2025-11-13 15:45:14.080 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.21831607818603516
+2025-11-13 15:45:14.309 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2091684341430664
+2025-11-13 15:45:14.653 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.3331565856933594
+2025-11-13 15:45:14.821 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1591932773590088
+2025-11-13 15:45:15.002 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.1708991527557373
+2025-11-13 15:46:10.617 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:46:10.791 | INFO     | xadmin.logru_config:emit:15 - "GET - get_dict_option /system/common/dict/option" 0.18233203887939453
+2025-11-13 15:46:10.792 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:46:10.859 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_info /system/auth/user/info" 0.24228572845458984
+2025-11-13 15:46:10.869 | INFO     | xauth.auth:authenticate:48 - 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-13 15:46:11.057 | INFO     | xauth.auth:authenticate:51 - 认证成功 - 用户: admin
+2025-11-13 15:46:11.084 | INFO     | xadmin.logru_config:emit:15 - "GET - get_user_route /system/auth/route" 0.21555852890014648
+2025-11-13 15:46:12.311 | INFO     | xadmin.logru_config:emit:15 - "GET - get_gpu_series_options /tp/api/sut-device/gpu-series-options" 0.4413328170776367
+2025-11-13 15:46:12.314 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_types /tp/api/test-type/list" 0.4363374710083008
+2025-11-13 15:46:12.347 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.46880269050598145
+2025-11-13 15:46:12.349 | INFO     | xadmin.logru_config:emit:15 - "GET - list_sut_devices /tp/api/sut-device/list" 0.47555065155029297
+2025-11-13 15:46:12.661 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.31853747367858887
+2025-11-13 15:46:12.862 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.19163942337036133
+2025-11-13 15:46:13.090 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21602320671081543
+2025-11-13 15:46:13.311 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.21208906173706055
+2025-11-13 15:46:13.773 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.45192933082580566
+2025-11-13 15:46:14.053 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.2586057186126709
+2025-11-13 15:46:15.279 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 1.2163748741149902
+2025-11-13 15:46:15.495 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2059328556060791
+2025-11-13 15:46:15.807 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.3024625778198242
+2025-11-13 15:46:16.094 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.27721333503723145
+2025-11-13 15:46:16.939 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.8359663486480713
+2025-11-13 15:46:17.910 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.9591314792633057
+2025-11-13 15:46:18.722 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.8015356063842773
+2025-11-13 15:46:20.359 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 1.6267168521881104
+2025-11-13 15:46:21.080 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.711920976638794
+2025-11-13 15:46:21.625 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.5370275974273682
+2025-11-13 15:46:21.895 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.2598302364349365
+2025-11-13 15:46:22.373 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4686241149902344
+2025-11-13 15:46:22.669 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_components /tp/api/test-component/list" 0.28495311737060547
+2025-11-13 15:46:23.181 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.4977242946624756
+2025-11-13 15:46:23.911 | INFO     | xadmin.logru_config:emit:15 - "GET - list_test_cases /tp/api/test-case/list" 0.7210860252380371
+2025-11-13 15:47:11.971 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:47:11.971 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:47:11.975 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:47:17.368 | WARNING  | xauth.urls:handler:44 - handling exceptions....
+2025-11-13 15:47:17.369 | WARNING  | xauth.urls:handler:45 - <class 'django.urls.exceptions.Resolver404'>
+2025-11-13 15:47:17.369 | WARNING  | xadmin.logru_config:emit:15 - Not Found: /system/yaml/validate
+2025-11-13 15:50:54.354 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xauth/urls.py changed, reloading.
+2025-11-13 15:50:54.911 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:50:55.448 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:51:02.152 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:51:02.426 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:51:14.854 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:51:15.184 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:51:15.399 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:51:47.683 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:51:47.913 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 15:58:40.188 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:59:14.440 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 15:59:40.960 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:00:13.136 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:06:38.484 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:08:09.559 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:08:49.281 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:09:16.140 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:09:52.277 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:12:49.319 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:12:56.916 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:13:12.033 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:13:24.636 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:13:35.033 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:13:47.348 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:14:12.575 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:14:22.102 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:14:56.318 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:15:25.793 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:15:37.474 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:15:44.427 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:15:48.347 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:15:49.189 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:16:32.533 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:18:12.180 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:18:22.561 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:21:03.313 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:21:07.608 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:21:48.997 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:22:56.482 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:23:20.162 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:24:09.977 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:24:31.493 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:24:38.515 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:24:55.317 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:27:46.841 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:29:33.231 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:33:19.919 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:34:38.702 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:34:50.335 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:36:19.099 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:36:28.065 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:36:36.150 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:36:40.605 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:36:44.497 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:37:22.315 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:37:35.378 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:38:44.570 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:40:44.171 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:42:08.634 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:52:12.851 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:59:38.092 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 16:59:38.541 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 16:59:47.008 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:00:07.090 | INFO     | xadmin.logru_config:emit:15 - /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-13 17:00:07.464 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:00:07.676 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:00:12.696 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:00:29.401 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:04:02.285 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:04:02.872 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:07:50.082 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:07:50.315 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:07:58.859 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:07:59.111 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:08:14.297 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:08:14.561 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:08:24.858 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:08:25.076 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:09:00.495 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:09:00.712 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:09:29.049 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:10:25.360 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:11:22.969 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:11:23.464 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:15:43.184 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:15:44.120 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:15:58.424 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:16:12.869 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:20:23.473 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:20:37.570 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:21:25.724 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:22:43.535 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:22:43.804 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:22:46.206 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:22:46.498 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:22:48.645 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:22:48.860 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:22:50.775 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:22:50.987 | INFO     | xadmin.logru_config:emit:15 - Watching for file changes with StatReloader
+2025-11-13 17:23:23.150 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:23:23.734 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:23:35.736 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:23:52.267 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:23:57.527 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:24:06.472 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-13 17:37:03.823 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.

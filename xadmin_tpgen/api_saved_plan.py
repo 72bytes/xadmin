@@ -1,9 +1,8 @@
 from django.http import HttpRequest
 from django.db.models import Q
 from ninja_extra import Router
-from xadmin_db import models
-from xadmin_utils import utils
-from xadmin_db import schemas
+from xadmin_tpgen import models, schemas
+from xutils import utils
 from datetime import datetime
 
 
@@ -134,9 +133,16 @@ def get_saved_plan(request: HttpRequest, plan_id: int):
 def add_saved_plan(request: HttpRequest, plan: schemas.TpgenSavedPlanIn):
     """新增保存的测试计划"""
     try:
+        import json
+        
         # 获取当前用户信息
         current_user = request.user
         user_name = current_user.username if hasattr(current_user, 'username') else ''
+        
+        # 将 yaml_data 转换为字符串（如果是对象）
+        yaml_data_str = plan.yaml_data
+        if isinstance(plan.yaml_data, dict):
+            yaml_data_str = json.dumps(plan.yaml_data, ensure_ascii=False, indent=2)
         
         # 创建测试计划配置
         saved_plan = models.TpgenSavedPlan.objects.create(
@@ -144,7 +150,7 @@ def add_saved_plan(request: HttpRequest, plan: schemas.TpgenSavedPlanIn):
             category=plan.category,
             description=plan.description,
             config_data=plan.config_data,
-            yaml_data=plan.yaml_data,
+            yaml_data=yaml_data_str,
             cpu=plan.cpu,
             gpu=plan.gpu,
             machine_count=plan.machine_count,
@@ -170,6 +176,8 @@ def add_saved_plan(request: HttpRequest, plan: schemas.TpgenSavedPlanIn):
 def update_saved_plan(request: HttpRequest, plan_id: int, plan: schemas.TpgenSavedPlanUpdate):
     """修改保存的测试计划"""
     try:
+        import json
+        
         saved_plan = models.TpgenSavedPlan.objects.get(id=plan_id)
         
         # 获取当前用户信息
@@ -186,7 +194,11 @@ def update_saved_plan(request: HttpRequest, plan_id: int, plan: schemas.TpgenSav
         if plan.config_data is not None:
             saved_plan.config_data = plan.config_data
         if plan.yaml_data is not None:
-            saved_plan.yaml_data = plan.yaml_data
+            # 将 yaml_data 转换为字符串（如果是对象）
+            yaml_data_str = plan.yaml_data
+            if isinstance(plan.yaml_data, dict):
+                yaml_data_str = json.dumps(plan.yaml_data, ensure_ascii=False, indent=2)
+            saved_plan.yaml_data = yaml_data_str
         if plan.cpu is not None:
             saved_plan.cpu = plan.cpu
         if plan.gpu is not None:

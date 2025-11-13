@@ -62,10 +62,11 @@
           @click="handleGenerate"
           :loading="isGenerating"
           :disabled="isGenerating"
-          @click="handleGenerate"
         >
-          <template v-if="!isGenerating" #icon><icon-settings /></template>
-          {{ isGenerating ? 'Generating...' : 'Generate Test Plan' }}
+
+          <template #icon v-if="!isGenerating"><icon-settings /></template>
+          {{ isGenerating ? 'Previewing...' : 'Preview Test Plan' }}
+
         </a-button>
         </a-space>
       </div>
@@ -95,11 +96,54 @@
       @close="generatedYaml = null"
       @copy="handleCopy"
       @download="handleDownload"
+      @save="handleSavePlan"
     />
+
+    <!-- 保存对话框 -->
+    <a-modal
+      v-model:visible="saveDialogVisible"
+      title="保存测试计划"
+      @ok="handleSaveConfirm"
+      @cancel="handleSaveCancel"
+      :ok-loading="isSaving"
+    >
+      <a-form :model="saveForm" layout="vertical">
+        <a-form-item label="计划名称" required>
+          <a-input v-model="saveForm.name" placeholder="请输入计划名称" />
+        </a-form-item>
+        
+        <a-form-item label="类别" required>
+          <a-select v-model="saveForm.category" placeholder="请选择类别">
+            <a-option value="Benchmark">Benchmark</a-option>
+            <a-option value="Stress">Stress</a-option>
+            <a-option value="Functional">Functional</a-option>
+            <a-option value="Performance">Performance</a-option>
+          </a-select>
+        </a-form-item>
+        
+        <a-form-item label="描述">
+          <a-textarea 
+            v-model="saveForm.description" 
+            placeholder="请输入描述信息"
+            :rows="3"
+          />
+        </a-form-item>
+        
+        <a-form-item label="标签">
+          <a-input 
+            v-model="saveForm.tags" 
+            placeholder="多个标签用逗号分隔"
+          />
+        </a-form-item>
+      </a-form>
+    </a-modal>
   </div>
 </template>
 
 <script setup lang="ts">
+
+
+
 import { Message } from '@arco-design/web-vue'
 import type { FormData, YamlData } from '../types'
 import { useMachines } from '../composables/useMachines'
@@ -117,16 +161,18 @@ import { addSavedPlan } from '@/apis/tpgen'
 // 导入后端 API（如果存在）
 // import { generateTestPlan, validateYaml, checkCompatibility } from '../api/testPlanApi'
 // 修改为
-import { validateYaml } from '@/apis/yamlCheck' // 新增
+
+
+
+import { validateYaml } from '@/apis/yamlCheck'  // 新增
+
+
+
+
+
 
 defineOptions({ name: 'CustomPlan' })
 
-const emit = defineEmits<{
-  progressChange: [value: number]
-  generate: [data: any]
-  copy: []
-  download: []
-}>()
 
 // 使用 machines composable
 const { machines, getMachineById, loadMachines } = useMachines()
@@ -229,6 +275,7 @@ const errorLineNumbers = ref<number[]>([])
 
 // 保存相关状态
 const saveDialogVisible = ref(false)
+const isSaving = ref(false)
 const saveForm = reactive({
   name: '',
   category: 'Benchmark',
@@ -237,13 +284,7 @@ const saveForm = reactive({
   status: 1,
 })
 
-const saveFormRules = {
-  name: [
-    { required: true, message: '请输入计划名称' },
-    { minLength: 2, message: '计划名称至少2个字符' },
-  ],
-  category: [{ required: true, message: '请选择类别' }],
-}
+
 
 // 更新进度
 const updateProgress = () => {
@@ -293,6 +334,7 @@ const handleReset = () => {
   generatedYaml.value = null
   errorLineNumbers.value = []  // 清空错误高亮行
   updateProgress()
+  showNotification('Reset form successfully!')
 }
 
 /**
@@ -313,6 +355,24 @@ const getTimestamp = () => {
 // 生成 YAML
 const handleGenerate = async () => {
   isGenerating.value = true
+
+  
+
+  // // 验证表单数据
+  if (formData.selectedMachines.length === 0) {
+    Message.warning('请先选择机器')
+    isGenerating.value = false
+    return
+  }
+
+  if (formData.selectedTestCases.length === 0) {
+    Message.warning('请先选择测试用例')
+    isGenerating.value = false
+    return
+  }
+
+
+
 
   try {
   // 获取操作系统配置
@@ -377,10 +437,10 @@ const handleGenerate = async () => {
         os: osConfig,
         kernel: kernelConfig,
       },
-      firmware: {
-        gpu_version: formData.firmwareVersion,
-        comparison: formData.versionComparison,
-      },
+      // firmware: {
+      //   gpu_version: formData.firmwareVersion,
+      //   comparison: formData.versionComparison,
+      // },
       test_suites: testSuites,
     }
 
@@ -398,7 +458,10 @@ const handleGenerate = async () => {
     })
 
   // 显示成功消息
-  Message.success('Test plan generated successfully!')
+  // Message.success('Test plan previewed successfully!')
+  showNotification('Test plan previewed successfully!')
+
+
   // ← 在这里添加下面的代码
   progress.value = 100
   emit('progressChange', 100)
@@ -500,7 +563,6 @@ const handleCopy = async () => {
     showNotification(`Failed to copy: ${error.message || 'Unknown error'}`, 'error')
   }
 }
-
 /**
  * 处理下载 YAML 文件
  * 包含完整的兼容性验证逻辑和时间戳文件名（来自 check_yaml.ts）
@@ -572,32 +634,26 @@ const handleDownload = async () => {
     URL.revokeObjectURL(url)
 
     emit('download')
-    Message.success(`Test plan downloaded: ${filename}`)
+    // Message.success(`Test plan downloaded: ${filename}`)
     showNotification(`Test plan downloaded: ${filename}`, 'success')
     console.log('[CustomPlan] ✅ YAML 文件已下载:', filename)
   } catch (error) {
     console.error('[CustomPlan] Download error:', error)
-    Message.error(`Failed to download YAML file: ${error.message || 'Unknown error'}`)
+    // Message.error(`Failed to download YAML file: ${error.message || 'Unknown error'}`)
     showNotification(`Failed to download: ${error.message || 'Unknown error'}`, 'error')
   }
 }
 
-// 处理保存按钮点击
-const handleSave = async () => {
-
-  console.log('[CustomPlan handleSave] 🚀 开始保存流程...')
-    
+// 处理保存计划 - 显示保存对话框
+const handleSavePlan = async () => {
+  console.log('[CustomPlan handleSavePlan] 打开保存对话框')
+  
+  // 验证是否有生成的 YAML 数据
   if (!generatedYaml.value) {
-    console.error('[CustomPlan handleSave] ❌ 没有 YAML 数据')
-    Message.error('No YAML data to save!')
-    showNotification('No YAML data to save!', 'error')
+    Message.warning('请先生成测试计划') 
     return
   }
 
-  // 🔍 执行完整的兼容性验证（E001, E002, E101, E102）
-  console.log('[CustomPlan handleSave] 🔍 开始保存前完整兼容性验证...')
-  console.log('[CustomPlan handleSave] 📋 待验证数据:', JSON.stringify(generatedYaml.value, null, 2))
-  
   const response = await checkCompatibility(generatedYaml.value)
   console.log('[CustomPlan handleSave] 📊 兼容性验证结果:', response)
   
@@ -633,22 +689,16 @@ const handleSave = async () => {
 
 
 
-  // 验证表单是否有数据
-  if (formData.selectedMachines.length === 0) {
-    Message.warning('请先选择机器')
-    return
-  }
-  if (formData.selectedTestCases.length === 0) {
-    Message.warning('请先选择测试用例')
-    return
-  }
-
+ 
   // 显示保存对话框
   saveDialogVisible.value = true
 }
 
 // 确认保存
 const handleSaveConfirm = async () => {
+  console.log('[CustomPlan handleSaveConfirm] 开始保存')
+  
+  // 验证必填字段
   if (!saveForm.name) {
     Message.warning('请输入计划名称')
     return
@@ -657,6 +707,11 @@ const handleSaveConfirm = async () => {
     Message.warning('请选择类别')
     return
   }
+
+  
+  isSaving.value = true
+  
+
 
   try {
     // 准备保存数据
@@ -676,30 +731,61 @@ const handleSaveConfirm = async () => {
       status: saveForm.status,
     }
 
+    
+    console.log('[CustomPlan handleSaveConfirm] 保存数据:', saveData)
+    
+
+
+
     // 调用 API 保存
     const res = await addSavedPlan(saveData)
+    
     if (res.code === 200) {
       Message.success('保存成功')
+      showNotification('Test plan saved successfully!', 'success')
       saveDialogVisible.value = false
+      
       // 重置保存表单
       saveForm.name = ''
       saveForm.description = ''
       saveForm.tags = ''
       saveForm.status = 1
       saveForm.category = 'Benchmark'
-    } else {
-      Message.error(res.data || '保存失败')
+
+      
+      console.log('[CustomPlan handleSaveConfirm] ✅ 保存成功')
     }
-  } catch (error) {
+    else {
+
+      Message.error(res.data || '保存失败')
+      showNotification(res.data || 'Failed to save test plan', 'error')
+      console.error('[CustomPlan handleSaveConfirm] ❌ 保存失败:', res.data)
+    }
+
+  }
+
+  catch (error) {
+
     Message.error('保存失败，请重试')
-    console.error(error)
+    showNotification('Failed to save: ' + (error.message || 'Unknown error'), 'error')
+  }
+  finally {
+    isSaving.value = false
   }
 }
 
 // 取消保存
 const handleSaveCancel = () => {
+  console.log('[CustomPlan handleSaveCancel] 取消保存')
   saveDialogVisible.value = false
+  
+  // 重置表单（可选）
+  // saveForm.name = ''
+  // saveForm.description = ''
+  // saveForm.tags = ''
 }
+
+
 
 // 监听表单变化
 watch(() => formData, updateProgress, { deep: true })

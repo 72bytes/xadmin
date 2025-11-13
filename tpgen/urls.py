@@ -8,7 +8,7 @@ from django.urls import path
 from django.conf import urls as default_urls
 from ninja_extra import NinjaExtraAPI
 from ninja_jwt.exceptions import AuthenticationFailed
-from xadmin_utils.utils import RespFailedTempl
+from xutils.utils import RespFailedTempl
 from loguru import logger
 
 # 导入视图

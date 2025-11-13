@@ -1,0 +1,7 @@
+2025-11-13 17:37:25 [    INFO] [django.request:131] "GET - get_dict_option /system/common/dict/option" 0.04448413848876953
+2025-11-13 17:37:33 [ WARNING] [django.request:131] "POST - login /system/auth/login" ([{'type': 'missing', 'loc': ('body', 'data', 'username'), 'msg': 'Field required'}, {'type': 'missing', 'loc': ('body', 'data', 'password'), 'msg': 'Field required'}],)
+2025-11-13 17:37:33 [ WARNING] [django.request:253] Unprocessable Content: /system/auth/login
+2025-11-13 17:37:34 [    INFO] [django.request:131] "GET - get_dict_option /system/common/dict/option" 0.03987479209899902
+2025-11-13 17:37:34 [    INFO] [django.request:131] "POST - validate_yaml /system/yaml/validate" 0.0002346038818359375
+2025-11-13 17:37:34 [ WARNING] [django.request:253] Unauthorized: /system/yaml/validate
+2025-11-13 17:37:34 [ WARNING] [django.request:253] Method Not Allowed: /system/auth/login

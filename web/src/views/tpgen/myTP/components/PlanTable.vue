@@ -59,7 +59,7 @@
     <template #hardware="{ record }">
       <div class="hardware-info">
         <div v-if="record.cpu" class="info-item">
-          <icon-cpu />
+          <icon-code-square />
           <span>{{ record.cpu }}</span>
         </div>
         <div v-if="record.gpu" class="info-item">

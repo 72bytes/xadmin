@@ -62,7 +62,6 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { Message } from '@arco-design/web-vue'
 import type { Machine } from '../types'
-import { getGpuOptions, getGpuSeriesOptions } from '@/apis/sutDevice'
 import * as tpdbApi from '@/apis/tpdb'
 
 defineOptions({ name: 'HardwareConfig' })
@@ -115,7 +114,8 @@ const loadGpuOptions = async () => {
   gpuLoading.value = true
   try {
     // 使用 GPU Series 选项
-    const options = await getGpuSeriesOptions()
+    const response = await tpdbApi.getGpuSeriesOptions()
+    const options = response.data || []
     gpuOptions.value = options
     console.log('[HardwareConfig] GPU 系列选项加载成功:', options)
 

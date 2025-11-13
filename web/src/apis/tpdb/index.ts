@@ -40,6 +40,21 @@ export function deleteSutDevice(ids: number | number[]) {
   return http.del(`${BASE_URL}/sut-device/${idStr}`)
 }
 
+/** @desc 获取 GPU ASIC 名称选项（去重） */
+export function getGpuOptions() {
+  return http.get<Array<{ label: string, value: string }>>(`${BASE_URL}/sut-device/gpu-options`)
+}
+
+/** @desc 获取 GPU 系列选项（去重） */
+export function getGpuSeriesOptions() {
+  return http.get<Array<{ label: string, value: string }>>(`${BASE_URL}/sut-device/gpu-series-options`)
+}
+
+/** @desc 获取 GPU 型号选项（去重） */
+export function getGpuModelOptions() {
+  return http.get<Array<{ label: string, value: string }>>(`${BASE_URL}/sut-device/gpu-model-options`)
+}
+
 // ============================================================================
 // OS Config API (操作系统配置)
 // ============================================================================
