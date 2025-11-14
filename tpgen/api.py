@@ -130,31 +130,58 @@ def list_sut_devices(request: HttpRequest,
                      page: int = 1,
                      size: int = 10):
     """获取测试设备列表"""
-    queryset = models.SutDevice.objects.all()
+    from django.db import connection
+    
+    # 构建 SQL 查询（使用原始 SQL 绕过 ORM 缓存问题）
+    where_clauses = []
+    params = []
     
     if hostname:
-        queryset = queryset.filter(hostname__icontains=hostname)
+        where_clauses.append("hostname ILIKE %s")
+        params.append(f'%{hostname}%')
     if gpu_model:
-        queryset = queryset.filter(gpu_model__icontains=gpu_model)
+        where_clauses.append("gpu_model ILIKE %s")
+        params.append(f'%{gpu_model}%')
     
-    total = queryset.count()
-    devices = queryset.order_by('-created_at')[(page-1)*size:page*size]
+    where_sql = "WHERE " + " AND ".join(where_clauses) if where_clauses else ""
+    
+    # 获取总数
+    count_sql = f"SELECT COUNT(*) FROM sut_devices {where_sql}"
+    with connection.cursor() as cursor:
+        cursor.execute(count_sql, params)
+        total = cursor.fetchone()[0]
+    
+    # 获取数据列表
+    offset = (page - 1) * size
+    list_sql = f"""
+        SELECT id, hostname, asic_name, product_name, ip_address, 
+               device_id, rev_id, gpu_series, gpu_model, created_at, updated_at
+        FROM sut_devices 
+        {where_sql}
+        ORDER BY created_at DESC
+        LIMIT %s OFFSET %s
+    """
+    
+    with connection.cursor() as cursor:
+        cursor.execute(list_sql, params + [size, offset])
+        columns = [col[0] for col in cursor.description]
+        devices = [dict(zip(columns, row)) for row in cursor.fetchall()]
     
     data = {
         'total': total,
         'list': [
             {
-                'id': d.id,
-                'hostname': d.hostname,
-                'asicName': d.asic_name,
-                'productName': d.product_name,
-                'ipAddress': d.ip_address,
-                'deviceId': d.device_id,
-                'revId': d.rev_id,
-                'gpuSeries': d.gpu_series,
-                'gpuModel': d.gpu_model,
-                'createdAt': utils.dateformat(d.created_at),
-                'updatedAt': utils.dateformat(d.updated_at),
+                'id': d['id'],
+                'hostname': d['hostname'],
+                'asicName': d['asic_name'],
+                'productName': d['product_name'],
+                'ipAddress': str(d['ip_address']) if d['ip_address'] else None,
+                'deviceId': d['device_id'],
+                'revId': d['rev_id'],
+                'gpuSeries': d['gpu_series'],
+                'gpuModel': d['gpu_model'],
+                'createdAt': utils.dateformat(d['created_at']),
+                'updatedAt': utils.dateformat(d['updated_at']),
             }
             for d in devices
         ]

@@ -103,6 +103,7 @@
 import { computed, watch } from 'vue'
 
 import { useMachines } from '../composables/useMachines'
+import { kernelTypeOptions, kernelVersionOptions } from '../mockData'
 
 defineOptions({ name: 'KernelConfig' })
 

@@ -7488,3 +7488,227 @@ newlines	and	tabs
 2025-11-14 13:37:28.768 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
 2025-11-14 13:38:06.416 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
 2025-11-14 13:38:11.370 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/xadmin/settings.py changed, reloading.
+2025-11-14 15:40:29.465 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:30.066 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.6037619113922119
+2025-11-14 15:40:30.090 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:30.250 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.7846493721008301
+2025-11-14 15:40:30.260 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:30.273 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:30.431 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.3558473587036133
+2025-11-14 15:40:30.935 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:30.935 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:31.082 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.8090658187866211
+2025-11-14 15:40:31.250 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.9908130168914795
+2025-11-14 15:40:31.422 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.646043062210083
+2025-11-14 15:40:33.060 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:33.178 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:33.187 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:33.246 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.1861283779144287
+2025-11-14 15:40:33.337 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:33.358 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.1792137622833252
+2025-11-14 15:40:33.457 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:33.579 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:33.607 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.14964771270751953
+2025-11-14 15:40:35.211 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:35.302 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.1033329963684082
+2025-11-14 15:40:35.320 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:35.371 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.15935587882995605
+2025-11-14 15:40:35.381 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:40:35.487 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:40:35.504 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.12370634078979492
+2025-11-14 15:40:38.460 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_series_options /tp/api/sut-device/gpu-series-options" 0.1230933666229248
+2025-11-14 15:40:38.469 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_types /tp/api/test-type/list" 0.12456560134887695
+2025-11-14 15:40:38.483 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:40:38.484 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:40:38.484 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:40:38.486 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:40:38.487 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:40:38.487 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:40:38.487 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:40:38.488 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:40:38.596 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.11606121063232422
+2025-11-14 15:40:38.738 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13307523727416992
+2025-11-14 15:40:38.872 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1267714500427246
+2025-11-14 15:40:39.022 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13793301582336426
+2025-11-14 15:40:39.163 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13015961647033691
+2025-11-14 15:40:39.289 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11775994300842285
+2025-11-14 15:40:39.403 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1054534912109375
+2025-11-14 15:40:39.520 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.10930895805358887
+2025-11-14 15:40:39.738 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.20978283882141113
+2025-11-14 15:40:40.022 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2756025791168213
+2025-11-14 15:40:40.225 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.19555974006652832
+2025-11-14 15:40:40.428 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.1950368881225586
+2025-11-14 15:40:40.684 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2483196258544922
+2025-11-14 15:40:40.854 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.16275906562805176
+2025-11-14 15:40:41.135 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2719109058380127
+2025-11-14 15:40:41.438 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2960474491119385
+2025-11-14 15:40:41.942 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.48976731300354004
+2025-11-14 15:40:42.427 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.47579503059387207
+2025-11-14 15:40:42.908 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.47263383865356445
+2025-11-14 15:40:43.251 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.33331751823425293
+2025-11-14 15:40:43.723 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.46384096145629883
+2025-11-14 15:40:44.040 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.30863070487976074
+2025-11-14 15:40:44.349 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.29875922203063965
+2025-11-14 15:40:44.483 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12313508987426758
+2025-11-14 15:40:44.596 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.10457849502563477
+2025-11-14 15:40:44.730 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12596821784973145
+2025-11-14 15:40:44.847 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.10843586921691895
+2025-11-14 15:40:44.977 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12207889556884766
+2025-11-14 15:40:45.127 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13919305801391602
+2025-11-14 15:40:45.264 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12967300415039062
+2025-11-14 15:43:22.552 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:43:22.556 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:43:22.556 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:43:22.556 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:43:31.227 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:43:31.228 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:43:31.228 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:43:31.228 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:49:31.950 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:49:32.058 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.11771130561828613
+2025-11-14 15:49:32.072 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:49:32.122 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.17156100273132324
+2025-11-14 15:49:32.134 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:49:32.248 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:49:32.268 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.13440537452697754
+2025-11-14 15:49:33.162 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:49:33.163 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:49:33.163 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:49:33.163 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:49:34.379 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_types /tp/api/test-type/list" 1.3729896545410156
+2025-11-14 15:49:34.379 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_series_options /tp/api/sut-device/gpu-series-options" 1.3783366680145264
+2025-11-14 15:49:34.392 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:49:34.392 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:49:34.392 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:49:34.393 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:49:34.496 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.10664725303649902
+2025-11-14 15:49:34.627 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11965084075927734
+2025-11-14 15:49:34.757 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11916327476501465
+2025-11-14 15:49:34.879 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11335444450378418
+2025-11-14 15:49:35.006 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11876368522644043
+2025-11-14 15:49:35.155 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.14020299911499023
+2025-11-14 15:49:35.290 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12602567672729492
+2025-11-14 15:49:35.421 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12293577194213867
+2025-11-14 15:49:35.553 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12374162673950195
+2025-11-14 15:49:35.686 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12444901466369629
+2025-11-14 15:49:35.799 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.10342597961425781
+2025-11-14 15:49:35.921 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.11261224746704102
+2025-11-14 15:49:36.061 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1310262680053711
+2025-11-14 15:49:36.194 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12578463554382324
+2025-11-14 15:49:36.319 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11571335792541504
+2025-11-14 15:49:36.442 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11481189727783203
+2025-11-14 15:49:36.573 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12158441543579102
+2025-11-14 15:49:36.697 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11542654037475586
+2025-11-14 15:49:36.841 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13111543655395508
+2025-11-14 15:49:36.951 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.09633111953735352
+2025-11-14 15:49:37.076 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11185479164123535
+2025-11-14 15:49:37.208 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12385272979736328
+2025-11-14 15:49:37.328 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1092073917388916
+2025-11-14 15:49:37.451 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11544322967529297
+2025-11-14 15:49:37.649 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.18521428108215332
+2025-11-14 15:49:37.932 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2691824436187744
+2025-11-14 15:49:38.159 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.2166597843170166
+2025-11-14 15:49:38.372 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.20511579513549805
+2025-11-14 15:49:38.628 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.24792933464050293
+2025-11-14 15:49:38.860 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2224283218383789
+2025-11-14 15:49:54.978 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:49:54.978 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:49:54.978 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:49:54.980 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:51:06.398 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:51:06.540 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.1448955535888672
+2025-11-14 15:51:06.614 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:51:06.694 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.2955513000488281
+2025-11-14 15:51:06.706 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 15:51:06.844 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 15:51:06.867 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.1616652011871338
+2025-11-14 15:51:07.687 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:51:07.688 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:51:07.688 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:51:07.691 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:51:07.782 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_series_options /tp/api/sut-device/gpu-series-options" 0.1268167495727539
+2025-11-14 15:51:07.799 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_types /tp/api/test-type/list" 0.1379702091217041
+2025-11-14 15:51:07.817 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:51:07.818 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:51:07.818 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:51:07.818 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:51:07.820 | WARNING  | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" ('column sut_devices.product_name does not exist\nLINE 1: ...t_devices"."hostname", "sut_devices"."asic_name", "sut_devic...\n                                                             ^',)
+2025-11-14 15:51:07.821 | WARNING  | xauth.urls:handler:46 | handling exceptions....
+2025-11-14 15:51:07.821 | WARNING  | xauth.urls:handler:47 | <class 'NoneType'>
+2025-11-14 15:51:07.822 | ERROR    | xadmin.logru_config:emit:15 | Internal Server Error: /tp/api/sut-device/list
+2025-11-14 15:51:07.968 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.15619468688964844
+2025-11-14 15:51:08.127 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1484227180480957
+2025-11-14 15:51:08.262 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12402009963989258
+2025-11-14 15:51:08.396 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1234591007232666
+2025-11-14 15:51:08.537 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.129929780960083
+2025-11-14 15:51:08.669 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12424397468566895
+2025-11-14 15:51:08.797 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11829686164855957
+2025-11-14 15:51:08.925 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.11908650398254395
+2025-11-14 15:51:09.067 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13320112228393555
+2025-11-14 15:51:09.221 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1452958583831787
+2025-11-14 15:51:10.435 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 1.2057709693908691
+2025-11-14 15:51:10.715 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.27190470695495605
+2025-11-14 15:51:10.951 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2283463478088379
+2025-11-14 15:51:11.180 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2210533618927002
+2025-11-14 15:51:11.463 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2746317386627197
+2025-11-14 15:51:11.971 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.4962501525878906
+2025-11-14 15:51:12.382 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.40204954147338867
+2025-11-14 15:51:12.849 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.45551562309265137
+2025-11-14 15:51:13.205 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.3449254035949707
+2025-11-14 15:51:13.647 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.4324178695678711
+2025-11-14 15:51:14.019 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.36362743377685547
+2025-11-14 15:51:14.341 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.31230759620666504
+2025-11-14 15:51:14.636 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.2853963375091553
+2025-11-14 15:51:14.773 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.126723051071167
+2025-11-14 15:51:14.891 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.10831427574157715
+2025-11-14 15:51:15.024 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1227424144744873
+2025-11-14 15:51:15.135 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.1019890308380127
+2025-11-14 15:51:15.288 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.14432883262634277
+2025-11-14 15:51:15.422 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12487387657165527
+2025-11-14 15:51:15.552 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12041926383972168
+2025-11-14 15:55:18.068 | INFO     | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" 0.14868474006652832
+2025-11-14 16:00:57.939 | INFO     | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" 0.1396923065185547
+2025-11-14 16:01:04.627 | INFO     | xadmin.logru_config:emit:15 | "GET - get_dict_option /system/common/dict/option" 0.49642324447631836
+2025-11-14 16:01:06.251 | INFO     | xauth.api_auth:login:59 | 登录成功 - 用户: admin, Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 16:01:06.251 | INFO     | xadmin.logru_config:emit:15 | "POST - login /system/auth/login" 0.6264019012451172
+2025-11-14 16:01:06.263 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 16:01:06.463 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 16:01:06.562 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_info /system/auth/user/info" 0.2985250949859619
+2025-11-14 16:01:06.570 | INFO     | xauth.auth:authenticate:48 | 认证请求 - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90e...
+2025-11-14 16:01:06.765 | INFO     | xauth.auth:authenticate:51 | 认证成功 - 用户: admin
+2025-11-14 16:01:06.782 | INFO     | xadmin.logru_config:emit:15 | "GET - get_user_route /system/auth/route" 0.21211481094360352
+2025-11-14 16:01:07.625 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_types /tp/api/test-type/list" 0.11938333511352539
+2025-11-14 16:01:07.630 | INFO     | xadmin.logru_config:emit:15 | "GET - get_gpu_series_options /tp/api/sut-device/gpu-series-options" 0.13144707679748535
+2025-11-14 16:01:07.645 | INFO     | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" 0.14261817932128906
+2025-11-14 16:01:07.664 | INFO     | xadmin.logru_config:emit:15 | "GET - list_sut_devices /tp/api/sut-device/list" 0.1547868251800537
+2025-11-14 16:01:07.779 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.12861299514770508
+2025-11-14 16:01:07.930 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1407909393310547
+2025-11-14 16:01:08.079 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13927292823791504
+2025-11-14 16:01:08.246 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.15501785278320312
+2025-11-14 16:01:08.391 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13675475120544434
+2025-11-14 16:01:08.526 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1264791488647461
+2025-11-14 16:01:08.702 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.16811394691467285
+2025-11-14 16:01:08.901 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1875753402709961
+2025-11-14 16:01:09.077 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.16753339767456055
+2025-11-14 16:01:09.280 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1918349266052246
+2025-11-14 16:01:09.439 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.15055203437805176
+2025-11-14 16:01:09.622 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.1745290756225586
+2025-11-14 16:01:09.820 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.18933987617492676
+2025-11-14 16:01:10.231 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.39981913566589355
+2025-11-14 16:01:10.380 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13909482955932617
+2025-11-14 16:01:10.542 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.15276265144348145
+2025-11-14 16:01:10.723 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.16968870162963867
+2025-11-14 16:01:10.894 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.16183257102966309
+2025-11-14 16:01:11.082 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.17453813552856445
+2025-11-14 16:01:11.255 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.16294574737548828
+2025-11-14 16:01:11.435 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.16716861724853516
+2025-11-14 16:01:11.594 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.14607024192810059
+2025-11-14 16:01:11.732 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.1277318000793457
+2025-11-14 16:01:11.871 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12735748291015625
+2025-11-14 16:01:11.997 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.11514663696289062
+2025-11-14 16:01:12.141 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13122868537902832
+2025-11-14 16:01:12.304 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_components /tp/api/test-component/list" 0.15181827545166016
+2025-11-14 16:01:12.470 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.14790821075439453
+2025-11-14 16:01:12.617 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.13399195671081543
+2025-11-14 16:01:12.757 | INFO     | xadmin.logru_config:emit:15 | "GET - list_test_cases /tp/api/test-case/list" 0.12975120544433594
+2025-11-14 16:01:23.132 | INFO     | xadmin.logru_config:emit:15 | /home/zx/xadmin_zx/tpgen/api.py changed, reloading.
