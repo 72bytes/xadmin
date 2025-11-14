@@ -55,18 +55,15 @@
         </a-button>
      
         <a-space>
-
-
           <a-button 
-          type="primary" 
-          @click="handleGenerate"
-          :loading="isGenerating"
-          :disabled="isGenerating"
-          @click="handleGenerate"
-        >
-          <template v-if="!isGenerating" #icon><icon-settings /></template>
-          {{ isGenerating ? 'Generating...' : 'Generate Test Plan' }}
-        </a-button>
+            type="primary" 
+            :loading="isGenerating"
+            :disabled="isGenerating"
+            @click="handleGenerate"
+          >
+            <template v-if="!isGenerating" #icon><icon-settings /></template>
+            {{ isGenerating ? 'Generating...' : 'Generate Test Plan' }}
+          </a-button>
         </a-space>
       </div>
     </a-form>
@@ -194,15 +191,6 @@ const checkCompatibility = async (yamlData: any): Promise<CompatibilityResponse>
     }
   }
 }
-
-
-
-const emit = defineEmits<{
-  progressChange: [value: number]
-  generate: [data: any]
-  copy: []
-  download: []
-}>()
 
 const formData = reactive<FormData>({
   cpu: 'Ryzen Threadripper',
