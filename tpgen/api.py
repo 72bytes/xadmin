@@ -6,7 +6,7 @@ from django.http import HttpRequest
 from ninja_extra import Router
 from typing import List
 from . import models, schemas
-from xadmin_utils import utils
+from xutils import utils
 
 
 # ============================================================================

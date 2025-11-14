@@ -1,9 +1,9 @@
 from django.http import HttpRequest
 from django.db.models import Q
 from ninja_extra import Router
-from xadmin_db import models
-from xadmin_utils import utils
-from xadmin_db import schemas
+from xauth import models
+from xutils import utils
+from xauth import schemas
 from datetime import datetime
 
 

@@ -14,11 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+# from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('system/', include('xauth.urls')),
-    path('case/', include('xcase.urls')),  # 用例管理模块
+    path('system/', include('xauth.urls')),  # 认证和系统管理 API
+    # TODO: xadmin_tpgen 需要 TpgenSavedPlan 模型，暂时禁用
+    # path('tpgen/', include('xadmin_tpgen.urls')),  # TPGEN 管理后台 API
+    path('tp/', include('tpgen.urls')),  # TPGEN 核心 API
 ]

@@ -687,83 +687,12 @@ const handleGenerate = async () => {
           orderedTestCases: config.orderedTestCases
         })
         
-        // 构建 component_categories 结构
-        const componentCategories: any[] = []
-        
-        // 按 category 分组组件
-        const categoryMap = new Map<string, any[]>()
-        
-        // 如果没有 testComponents，但有 orderedTestCases，则按 componentName 分组
-        if (!config.testComponents || config.testComponents.length === 0) {
-          // 从 orderedTestCases 中提取组件信息
-          const componentNamesSet = new Set<string>()
-          for (const testCase of config.orderedTestCases || []) {
-            if (testCase.componentName) {
-              componentNamesSet.add(testCase.componentName)
-            }
-          }
-          
-          for (const componentName of componentNamesSet) {
-            const casesForComponent = (config.orderedTestCases || [])
-              .filter((c: any) => c.componentName === componentName)
-              .map((c: any) => c.caseName || c.case_name || c.name)
-              .filter(Boolean)
-            
-            if (casesForComponent.length > 0) {
-              const category = config.orderedTestCases?.find((c: any) => c.componentName === componentName)?.category || 'Other'
-              if (!categoryMap.has(category)) {
-                categoryMap.set(category, [])
-              }
-              categoryMap.get(category)!.push({
-                component_name: componentName,
-                test_cases: casesForComponent
-              })
-            }
-          }
-        } else {
-          // 标准流程：基于 testComponents
-          for (const comp of config.testComponents || []) {
-            // ✅ 修复：使用正确的字段名 componentCategory
-            const category = comp.componentCategory || comp.component_category || 'Other'
-            if (!categoryMap.has(category)) {
-              categoryMap.set(category, [])
-            }
-            
-            const compName = comp.componentName || comp.component_name || comp.name
-            
-            // 获取该组件的选中用例（通过 componentName 匹配）
-            const selectedCases = (config.orderedTestCases || [])
-              .filter((c: any) => c.componentName === compName)
-              .map((c: any) => c.caseName || c.case_name || c.name)
-              .filter(Boolean)  // 过滤掉 undefined
-            
-            if (selectedCases.length > 0) {
-              categoryMap.get(category)!.push({
-                // ✅ 修复：使用正确的字段名 componentName
-                component_name: compName,
-                test_cases: selectedCases
-              })
-            }
-          }
-        }
-        
-        // 转换为数组
-        categoryMap.forEach((components, category) => {
-          if (components.length > 0) {
-            componentCategories.push({
-              component_category: category,
-              components
-            })
-          }
-        })
-        
-        // ✅ 修复：execution_case_list 使用正确的字段名
+        // ✅ 构建 execution_case_list（使用正确的字段名）
         const executionCaseList = (config.orderedTestCases || [])
           .map((c: any) => c.caseName || c.case_name || c.name)
           .filter(Boolean)  // 过滤掉 undefined
         
         console.log('[handleGenerate] 配置结果:', {
-          componentCategories,
           executionCaseList
         })
         
@@ -771,8 +700,8 @@ const handleGenerate = async () => {
           config_id: index + 1,
           environment: {
             os: {
-              os_id: config.osId,
-              os_family: config.osFamily,
+              id: config.osId,
+              family: config.osFamily,
               version: config.osVersion
             },
             deployment_method: config.deploymentMethod,
@@ -782,7 +711,6 @@ const handleGenerate = async () => {
           },
           test_configuration: {
             test_type: config.testTypeName,
-            component_categories: componentCategories,
             execution_case_list: executionCaseList
           }
         }
@@ -827,8 +755,8 @@ const handleGenerate = async () => {
             configurations: m.configurations.map((config: any) => ({
               config_id: config.config_id,
               os: {
-                os_id: config.environment.os.os_id,
-                os_family: config.environment.os.os_family,
+                id: config.environment.os.id,
+                family: config.environment.os.family,
                 version: config.environment.os.version
               },
               deployment_method: config.environment.deployment_method,
@@ -836,7 +764,6 @@ const handleGenerate = async () => {
                 kernel_version: config.environment.kernel.kernel_version
               },
               test_type: config.test_configuration.test_type,
-              component_categories: config.test_configuration.component_categories,
               execution_case_list: config.test_configuration.execution_case_list
             }))
           }
