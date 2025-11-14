@@ -122,7 +122,7 @@ import YamlPreview from './YamlPreview.vue'
 // import { generateTestPlan, validateYaml, checkCompatibility } from '../api/testPlanApi'
 // 修改为
 import { showNotification } from '../check_yaml'  // 保留 showNotification
-import { validateYaml } from '@/apis/yamlCheck'  // 新增
+// import { validateYaml } from '@/apis/yamlCheck'  // 暂时注释，后端 API 未实现
 
 
 
@@ -361,15 +361,34 @@ const checkCompatibility = async (yamlData: any): Promise<CompatibilityResponse>
       }
     }
 
-    // 旧代码：调用前端函数
-    // const compatResult = compatibility_analysis(yamlData)
+    // TODO: 后端验证 API 暂未实现 (/system/yaml/validate)
+    // 暂时跳过验证，直接返回成功
+    console.log('[CustomPlan] ⚠️ 跳过后端验证（API 未实现），直接允许操作')
     
-    // 新代码：调用后端 API
-    console.log('[CustomPlan] 调用后端验证 API...')
-    const result = await validateYaml(yamlData)
-    console.log('[CustomPlan] 后端验证结果:', result)
+    // 基本的客户端验证：检查必需字段
+    const hasMetadata = yamlData.metadata && typeof yamlData.metadata === 'object'
+    const hasHardware = yamlData.hardware && typeof yamlData.hardware === 'object'
+    const hasEnvironment = yamlData.environment && typeof yamlData.environment === 'object'
     
-    return result
+    if (!hasMetadata || !hasHardware || !hasEnvironment) {
+      console.error('[CustomPlan] ❌ 缺少必需字段')
+      return {
+        success: false,
+        error: {
+          code: 'E001',
+          message: 'Missing required sections: metadata, hardware, or environment',
+        },
+      }
+    }
+    
+    console.log('[CustomPlan] ✅ 基本验证通过')
+    return { success: true }
+    
+    // 以下是原后端 API 调用代码（待后端实现后可启用）
+    // console.log('[CustomPlan] 调用后端验证 API...')
+    // const result = await validateYaml(yamlData)
+    // console.log('[CustomPlan] 后端验证结果:', result)
+    // return result
     
   } catch (error) {
     console.error('[CustomPlan] 兼容性检查异常:', error)
@@ -881,7 +900,11 @@ const handleCopy = async () => {
     // ✅ 验证通过，清除错误行号并复制
     errorLineNumbers.value = []
     console.log('[CustomPlan] ✅ 兼容性验证通过，开始复制...')
-    const yamlText = JSON.stringify(generatedYaml.value, null, 2)
+    
+    // 将对象转换为 YAML 字符串
+    const yamlText = jsToYaml(generatedYaml.value).trimEnd()
+    console.log('[CustomPlan handleCopy] 📋 生成的 YAML 文本 (前 500 字符):', yamlText.substring(0, 500))
+    
     await navigator.clipboard.writeText(yamlText)
     
     emit('copy')
@@ -952,11 +975,12 @@ const handleDownload = async () => {
     const timestamp = getTimestamp()
     const filename = `test-plan_${timestamp}.yaml`
     
-    // 将 YAML 对象转换为字符串
-    const yamlText = JSON.stringify(generatedYaml.value, null, 2)
+    // 将对象转换为 YAML 字符串
+    const yamlText = jsToYaml(generatedYaml.value).trimEnd()
+    console.log('[CustomPlan handleDownload] 📋 生成的 YAML 文本 (前 500 字符):', yamlText.substring(0, 500))
     
     // 创建 Blob 并下载
-    const blob = new Blob([yamlText], { type: 'text/yaml' })
+    const blob = new Blob([yamlText], { type: 'text/yaml;charset=utf-8' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
