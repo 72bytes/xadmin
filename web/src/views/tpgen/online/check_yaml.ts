@@ -108,7 +108,7 @@ function validateRequiredRootKeys(yamlData: YamlData): ValidationResult {
       return {
         valid: false,
         errorCode: `E001 Unsupported: missing mandatory key [${key}]`,
-        errorMessage: `E001 Unsupported: missing mandatory key [${key}]`,
+        errorMessage: `Unsupported: missing mandatory key [${key}]`,
       }
     }
   }
@@ -134,7 +134,7 @@ function validateMandatoryNonEmptyKeys(yamlData: YamlData): ValidationResult {
       return {
         valid: false,
         errorCode: `E002 Unsupported: empty value for [${key}]`,
-        errorMessage: `E002 Unsupported: empty value for [${key}]`,
+        errorMessage: `Unsupported: empty value for [${key}]`,
       }
     }
 
@@ -142,7 +142,7 @@ function validateMandatoryNonEmptyKeys(yamlData: YamlData): ValidationResult {
       return {
         valid: false,
         errorCode: `E002 Unsupported: empty value for [${key}]`,
-        errorMessage: `E002 Unsupported: empty value for [${key}]`,
+        errorMessage: `Unsupported: empty value for [${key}]`,
       }
     }
   }
@@ -180,7 +180,7 @@ function validateValueTypes(yamlData: YamlData): ValidationResult {
       return {
         valid: false,
         errorCode: `E101 Unsupported: value type error for [${key}]. Expected ${expectedType}, got ${actualType}`,
-        errorMessage: `E101 Unsupported: value type error for [${key}]. Expected ${expectedType}, got ${actualType}`,
+        errorMessage: `Unsupported: value type error for [${key}]. Expected ${expectedType}, got ${actualType}`,
       }
     }
   }
@@ -206,7 +206,7 @@ function validateValueRanges(yamlData: YamlData): ValidationResult {
       return {
         valid: false,
         errorCode: `E102 Unsupported: invalid value range for [${key}]. Value "${value}" is not in whitelist [${allowedValues.join(', ')}]`,
-        errorMessage: `E102 Unsupported: invalid value range for [${key}]. Value "${value}" is not in whitelist [${allowedValues.join(', ')}]`,
+        errorMessage: `Unsupported: invalid value range for [${key}]. Value "${value}" is not in whitelist [${allowedValues.join(', ')}]`,
       }
     }
   }

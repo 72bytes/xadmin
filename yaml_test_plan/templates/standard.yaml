@@ -1,0 +1,35 @@
+metadata:
+  generated: 2025-11-17T06:01:57.767Z
+  version: 2.0
+  description: TPGen Test Plan Configuration (Multi-Configuration Mode)
+
+hardware:
+  machines:
+    - id: 3
+      hostname: gpu-test-node-02
+      productName: navi31
+      asicName: Navi31 GFX1100
+      ipAddress: 192.168.1.102
+      gpuModel: RX 7900 XT
+
+environment:
+  machines:
+    gpu-test-node-02:
+      configurations:
+        - config_id: 1
+          os:
+            id: 5
+            family: RHEL
+            version: 8.8
+          deployment_method: bare_metal
+          kernel:
+            kernel_version: realtime
+          test_type: Benchmark
+          execution_case_list:
+            - 3DMark_default_test
+            - FP64_Performance
+            - FP32_Performance
+            - H265_4K_Encode
+            - H264_4K_Encode
+            - H264_1080p_Encode
+

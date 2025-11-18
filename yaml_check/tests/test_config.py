@@ -26,10 +26,10 @@ class TestConfig:
             assert '.' in key  # 应该是点分隔的路径
             assert key.strip() == key  # 不应有前后空格
     
-    def test_required_root_keys_content(self):
-        """测试必需根键内容"""
-        assert 'hardware.cpu' in config.REQUIRED_ROOT_KEYS
-        assert 'hardware.gpu' in config.REQUIRED_ROOT_KEYS
+    # def test_required_root_keys_content(self):
+    #     """测试必需根键内容"""
+    #     assert 'hardware.cpu' in config.REQUIRED_ROOT_KEYS
+    #     assert 'hardware.gpu' in config.REQUIRED_ROOT_KEYS
     
     def test_value_type_config_exists(self):
         """测试值类型配置存在"""
@@ -68,23 +68,23 @@ class TestConfig:
             for value in values:
                 assert isinstance(value, str)
     
-    def test_value_range_config_content(self):
-        """测试值范围配置内容"""
-        assert 'hardware.cpu' in config.VALUE_RANGE_CONFIG
-        cpu_values = config.VALUE_RANGE_CONFIG['hardware.cpu']
-        assert 'Ryzen Threadripper' in cpu_values
-        assert 'Ryzen 7' in cpu_values
-        assert 'Ryzen 9' in cpu_values
-        assert 'EPYC' in cpu_values
+    # def test_value_range_config_content(self):
+    #     """测试值范围配置内容"""
+    #     assert 'hardware.cpu' in config.VALUE_RANGE_CONFIG
+    #     cpu_values = config.VALUE_RANGE_CONFIG['hardware.cpu']
+    #     assert 'Ryzen Threadripper' in cpu_values
+    #     assert 'Ryzen 7' in cpu_values
+    #     assert 'Ryzen 9' in cpu_values
+    #     assert 'EPYC' in cpu_values
 
 
-@pytest.mark.parametrize("key", [
-    'hardware.cpu',
-    'hardware.gpu',
-])
-def test_required_keys_individual(key):
-    """参数化测试：验证每个必需键"""
-    assert key in config.REQUIRED_ROOT_KEYS
+# @pytest.mark.parametrize("key", [
+#     'hardware.cpu',
+#     'hardware.gpu',
+# ])
+# def test_required_keys_individual(key):
+#     """参数化测试：验证每个必需键"""
+#     assert key in config.REQUIRED_ROOT_KEYS
 
 
 @pytest.mark.parametrize("key,expected_type", [

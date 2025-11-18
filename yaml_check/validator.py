@@ -65,6 +65,7 @@ YAML 验证器主类
 
 from .config import (
     REQUIRED_ROOT_KEYS,
+    CAN_BE_EMPTY_KEYS,
     VALUE_TYPE_CONFIG,
     VALUE_RANGE_CONFIG
 )
@@ -79,22 +80,63 @@ class YamlValidator:
     
     def _flatten_json(self, data, parent_key=''):
         """
-        递归扁平化 JSON 数据
+        递归扁平化 JSON 数据（支持数组递归展开）
+        
+        更新说明：
+        - 现在支持递归展开数组内部的对象
+        - 数组内的对象字段也会被扁平化，可以进行验证
         
         示例:
-        输入: {"hardware": {"cpu": "Intel", "machines": []}}
-        输出: {"hardware.cpu": "Intel", "hardware.machines": []}
+        输入: {
+            "hardware": {
+                "cpu": "Intel",
+                "machines": [
+                    {"id": 1, "name": "Machine1"},
+                    {"id": 2, "name": "Machine2"}
+                ]
+            }
+        }
+        输出: {
+            "hardware.cpu": "Intel",
+            "hardware.machines.0.id": 1,
+            "hardware.machines.0.name": "Machine1",
+            "hardware.machines.1.id": 2,
+            "hardware.machines.1.name": "Machine2"
+        }
+        
+        参数:
+            data: 待扁平化的数据（dict、list 或其他类型）
+            parent_key: 父级键名（用于构建完整路径）
+        
+        返回:
+            dict: 扁平化后的字典，键为点号分隔的路径
         """
         items = []
         
         if isinstance(data, dict):
+            # 处理字典：递归展开每个键值对
             for k, v in data.items():
                 new_key = f"{parent_key}.{k}" if parent_key else k
-                if isinstance(v, dict):
+                if isinstance(v, (dict, list)):
+                    # 递归处理嵌套的字典和列表
                     items.extend(self._flatten_json(v, new_key).items())
                 else:
+                    # 基础类型直接添加
                     items.append((new_key, v))
+        
+        elif isinstance(data, list):
+            # 处理列表：为每个元素添加索引
+            for i, item in enumerate(data):
+                new_key = f"{parent_key}.{i}" if parent_key else str(i)
+                if isinstance(item, (dict, list)):
+                    # 递归处理列表中的复杂对象
+                    items.extend(self._flatten_json(item, new_key).items())
+                else:
+                    # 基础类型直接添加
+                    items.append((new_key, item))
+        
         else:
+            # 基础类型（字符串、数字等）
             items.append((parent_key, data))
         
         return dict(items)
@@ -124,7 +166,7 @@ class YamlValidator:
                 return {
                     'valid': False,
                     'error_code': 'E001',
-                    'error_message': f'E001 Unsupported: missing mandatory key [{key}]'
+                    'error_message': f'Unsupported: missing mandatory key [{key}]'
                 }
         
         yaml_check_logger.info("✅ E001 验证通过：所有必需键存在")
@@ -134,11 +176,16 @@ class YamlValidator:
         """
         E002: 验证不能为空的键
         直接从 self.flattened_data 检查所有字段是否为空
+        
+        支持 CAN_BE_EMPTY_KEYS 配置：
+        - 如果字段在 CAN_BE_EMPTY_KEYS 中，允许为空
+        - 支持完整路径匹配或键名后缀匹配
         """
         import json
         from datetime import datetime
         
         yaml_check_logger.debug("开始 E002 验证：检查空值")
+        yaml_check_logger.debug(f"允许为空的键: {CAN_BE_EMPTY_KEYS}")
         
         # 调试模式开关（生产环境设为 False）
         DEBUG_MODE = False
@@ -166,13 +213,35 @@ class YamlValidator:
         
         # 检查所有字段是否为空
         for key, value in self.flattened_data.items():
+            # 检查是否在允许为空的键列表中
+            # 支持两种匹配方式：
+            # 1. 完整路径匹配：key 完全匹配 CAN_BE_EMPTY_KEYS 中的某项
+            # 2. 后缀匹配：key 的最后一个点后面的部分匹配 CAN_BE_EMPTY_KEYS 中的某项
+            is_allowed_empty = False
+            
+            # 方式1：完整匹配
+            if key in CAN_BE_EMPTY_KEYS:
+                is_allowed_empty = True
+                yaml_check_logger.debug(f"字段 [{key}] 在允许为空列表中（完整匹配），跳过验证")
+            
+            # 方式2：后缀匹配（取最后一个点后面的部分）
+            if not is_allowed_empty and '.' in key:
+                key_suffix = key.split('.')[-1]
+                if key_suffix in CAN_BE_EMPTY_KEYS:
+                    is_allowed_empty = True
+                    yaml_check_logger.debug(f"字段 [{key}] 的后缀 [{key_suffix}] 在允许为空列表中（后缀匹配），跳过验证")
+            
+            # 如果允许为空，跳过此字段的验证
+            if is_allowed_empty:
+                continue
+            
             # 字段不存在
             if value is None:
                 yaml_check_logger.warning(f"E002: 字段 [{key}] 不存在")
                 return {
                     'valid': False,
                     'error_code': 'E002',
-                    'error_message': f'E002 Unsupported: empty value for [{key}]'
+                    'error_message': f'Unsupported: empty value for [{key}]'
                 }
             
             # 字段值为空（空字符串、空数组等）
@@ -181,10 +250,10 @@ class YamlValidator:
                 return {
                     'valid': False,
                     'error_code': 'E002',
-                    'error_message': f'E002 Unsupported: empty value for [{key}]'
+                    'error_message': f'Unsupported: empty value for [{key}]'
                 }
         
-        yaml_check_logger.info("✅ E002 验证通过：所有字段非空")
+        yaml_check_logger.info("✅ E002 验证通过：所有字段非空（或允许为空）")
         return {'valid': True, 'error_code': '0', 'error_message': 'OK'}
     
 
@@ -261,7 +330,7 @@ class YamlValidator:
                         return {
                             'valid': False,
                             'error_code': 'E101',
-                            'error_message': f'E101 Unsupported: value type error for [{flat_key}]. Expected IPv4, got invalid IP: {value}'
+                            'error_message': f'Unsupported: value type error for [{flat_key}]. Expected IPv4, got invalid IP: {value}'
                         }
                     continue
                 
@@ -287,7 +356,7 @@ class YamlValidator:
                     return {
                         'valid': False,
                         'error_code': 'E101',
-                        'error_message': f'E101 Unsupported: value type error for [{flat_key}]. Expected {expected_type}, got {actual_type}'
+                        'error_message': f'Unsupported: value type error for [{flat_key}]. Expected {expected_type}, got {actual_type}'
                     }
                 
                 yaml_check_logger.debug(f"    ✅ 类型验证通过: {actual_type} in {valid_types}")
@@ -311,7 +380,7 @@ class YamlValidator:
                 return {
                     'valid': False,
                     'error_code': 'E102',
-                    'error_message': f'E102 Unsupported: invalid value range for [{key}]. Value "{value}" is not in whitelist [{", ".join(allowed_values)}]'
+                    'error_message': f'Unsupported: invalid value range for [{key}]. Value "{value}" is not in whitelist [{", ".join(allowed_values)}]'
                 }
         
         yaml_check_logger.info("✅ E102 验证通过：值范围合法")

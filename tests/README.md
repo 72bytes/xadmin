@@ -290,3 +290,4 @@ A: 安装 `pytest-xdist`，然后运行：`pytest -n auto`
 ### Q: 如何查看覆盖率详情？
 A: 运行 `pytest --cov=. --cov-report=html`，然后打开 `htmlcov/index.html`
 
+

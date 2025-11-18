@@ -4,9 +4,9 @@
  */
 
 import { computed, ref } from 'vue'
-import { Message } from '@arco-design/web-vue'
 import type { Machine } from '../types'
 import * as tpdbApi from '@/apis/tpdb'
+import { showNotification } from '../check_yaml'
 
 // 全局机器数据缓存
 const machinesCache = ref<Machine[]>([])
@@ -50,7 +50,7 @@ export function useMachines() {
       return machinesCache.value
     } catch (error) {
       console.error('[useMachines] 加载机器数据失败:', error)
-      Message.error('加载机器数据失败')
+      showNotification('加载机器数据失败', 'error')
       return []
     } finally {
       loading.value = false

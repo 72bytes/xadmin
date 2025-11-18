@@ -1,0 +1,113 @@
+version: '3.8'
+
+services:
+  # PostgreSQL 数据库
+  postgres:
+    image: postgres:16-alpine
+    container_name: xadmin-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-xadmin}
+      POSTGRES_USER: ${POSTGRES_USER:-amd}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-amdyes}
+      TZ: Asia/Shanghai
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-amd}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - xadmin-network
+
+  # Redis 缓存
+  redis:
+    image: redis:7-alpine
+    container_name: xadmin-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-redis123}
+    volumes:
+      - redis_data:/data
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - xadmin-network
+
+  # Django 后端
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: xadmin-backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - TZ=Asia/Shanghai
+      - POSTGRES_DB=${POSTGRES_DB:-xadmin}
+      - POSTGRES_USER=${POSTGRES_USER:-amd}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-amdyes}
+      - TPDB_NAME=${TPDB_NAME:-tpdb}
+    volumes:
+      - ./logs:/app/logs
+      - ./media:/app/media
+      - static_files:/app/staticfiles
+    ports:
+      - "${BACKEND_PORT:-9527}:9527"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "
+        echo 'Waiting for database...' &&
+        sleep 5 &&
+        python manage.py migrate --database=default --noinput &&
+        python manage.py migrate --database=tpdb --noinput &&
+        python manage.py collectstatic --noinput &&
+        gunicorn xadmin.wsgi:application -c gunicorn.conf.py
+      "
+    networks:
+      - xadmin-network
+
+  # Vue 前端
+  frontend:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: xadmin-frontend
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-80}:80"
+    depends_on:
+      - backend
+    networks:
+      - xadmin-network
+
+volumes:
+  postgres_data:
+    name: xadmin-postgres-data
+  redis_data:
+    name: xadmin-redis-data
+  static_files:
+    name: xadmin-static-files
+
+networks:
+  xadmin-network:
+    name: xadmin-network
+    driver: bridge
+

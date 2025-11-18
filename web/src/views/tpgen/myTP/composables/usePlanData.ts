@@ -1,3 +1,4 @@
+import { computed, ref, type Ref } from 'vue'
 import { Message, Modal } from '@arco-design/web-vue'
 import type { EditForm, QueryForm } from '../types'
 import type { SavedPlanResp } from '@/apis/tpgen'
@@ -10,10 +11,9 @@ import { useTable } from '@/hooks'
 export function usePlanData(queryForm: QueryForm) {
   // 表格数据管理
   const { loading, tableData, pagination, selectedKeys, search: tableSearch, refresh } = useTable(
-    () =>
+    (params) =>
       listSavedPlan({
-        page: pagination.current,
-        size: pagination.pageSize,
+        ...params,
         ...queryForm,
       }),
   )

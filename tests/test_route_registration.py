@@ -186,29 +186,7 @@ class TestRouteRegistration:
         except Resolver404:
             pytest.fail("❌ 选项列表路由未注册: /system/option")
     
-    # ========== Case 模块 ==========
-    
-    # 注意：/case/case 路由在当前项目中不存在，实际是 /case/caseeditor/* 和 /case/casebrowser/*
-    # def test_case_list_route_registered(self):
-    #     """✅ 测试用例列表路由已注册: GET /case/case"""
-    #     try:
-    #         resolve('/case/case')
-    #         assert True
-    #     except Resolver404:
-    #         pytest.fail("❌ 用例列表路由未注册: /case/case")
-    
-    # ========== TP (TPGen) 模块 ==========
-    
-    # 注意：/tp/saved-plan/list 路由在当前项目中不存在，实际是 /tp/api/* 路由
-    # def test_tp_saved_plan_route_registered(self):
-    #     """✅ 测试保存的测试计划路由已注册: GET /tp/saved-plan/list"""
-    #     try:
-    #         resolve('/tp/saved-plan/list')
-    #         assert True
-    #     except Resolver404:
-    #         pytest.fail("❌ 保存的测试计划路由未注册: /tp/saved-plan/list")
-    
-    # ========== TPGEN (xadmin_tpgen) 模块 ==========
+
     
     def test_tpgen_saved_plans_list_route_registered(self):
         """✅ 测试保存的测试计划列表路由已注册: GET /tpgen/saved-plans/list"""
