@@ -67,7 +67,8 @@
         </div>
 
         <!-- File Content with Error Highlighting -->
-        <div v-if="fileContent.length > 0" class="file-content-section">
+        <!-- 只在有语法错误时显示文件内容和错误高亮 -->
+        <div v-if="errorSummary.length > 0 && fileContent.length > 0" class="file-content-section">
           <a-collapse
             :default-active-key="['file-content']"
             expand-icon-position="right"
@@ -148,6 +149,58 @@
       </div>
     </a-card>
 
+    <!-- 双列对比视图（仅在无语法错误且标准模板已加载时显示） -->
+    <a-card 
+      v-if="standardLoaded && errorSummary.length === 0 && analysisResult" 
+      class="form-section comparison-view" 
+      :bordered="false"
+    >
+      <template #title>
+        <div class="section-title">
+          <icon-swap />
+          Configuration Comparison
+        </div>
+      </template>
+
+      <div class="comparison-container">
+        <!-- 左侧：标准模板 -->
+        <div class="comparison-column">
+          <h4 class="column-title">
+            <icon-file />
+            Standard Template
+          </h4>
+          <div class="code-view-box">
+            <div
+              v-for="(line, index) in standardTemplate"
+              :key="`std-${index}`"
+              class="comparison-code-line"
+            >
+              <span class="comparison-line-number">{{ index + 1 }}</span>
+              <pre class="comparison-line-content">{{ line || ' ' }}</pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧：用户上传的文件 -->
+        <div class="comparison-column">
+          <h4 class="column-title">
+            <icon-file />
+            Uploaded File ({{ uploadedFile?.name }})
+          </h4>
+          <div class="code-view-box">
+            <div
+              v-for="(line, index) in fileContent"
+              :key="`upload-${index}`"
+              class="comparison-code-line"
+            >
+              <span class="comparison-line-number">{{ index + 1 }}</span>
+              <pre class="comparison-line-content">{{ line || ' ' }}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a-card>
+
     <!-- 分析结果详情 -->
     <a-card v-if="analysisResult" class="form-section analysis-output" :bordered="false">
       <template #title>
@@ -182,9 +235,10 @@
                   class="machine-card compatible"
                 >
                   <h4>{{ machine.name }}</h4>
-                  <p><strong>Motherboard:</strong> {{ machine.motherboard }}</p>
-                  <p><strong>GPU:</strong> {{ machine.gpu }}</p>
-                  <p><strong>CPU:</strong> {{ machine.cpu }}</p>
+                  <p><strong>Product Name:</strong> {{ machine.productName }}</p>
+                  <p><strong>ASIC Name:</strong> {{ machine.asicName }}</p>
+                  <p><strong>GPU Model:</strong> {{ machine.gpuModel }}</p>
+                  <p><strong>IP Address:</strong> {{ machine.ipAddress }}</p>
                   <a-tag color="green">Compatible</a-tag>
                 </div>
               </div>
@@ -218,9 +272,10 @@
                   class="machine-card incompatible"
                 >
                   <h4>{{ item.machine.name }}</h4>
-                  <p><strong>Motherboard:</strong> {{ item.machine.motherboard }}</p>
-                  <p><strong>GPU:</strong> {{ item.machine.gpu }}</p>
-                  <p><strong>CPU:</strong> {{ item.machine.cpu }}</p>
+                  <p><strong>Product Name:</strong> {{ item.machine.productName }}</p>
+                  <p><strong>ASIC Name:</strong> {{ item.machine.asicName }}</p>
+                  <p><strong>GPU Model:</strong> {{ item.machine.gpuModel }}</p>
+                  <p><strong>IP Address:</strong> {{ item.machine.ipAddress }}</p>
                   <a-tag color="red">Incompatible</a-tag>
                   <ul class="reasons">
                     <li v-for="(reason, idx) in item.reasons" :key="idx">{{ reason }}</li>
@@ -273,22 +328,27 @@ defineOptions({ name: 'UploadPlan' })
 
 // Mock 机器数据 (实际项目中应该从 API 获取)
 const mockMachines: Machine[] = [
-  { id: 1, name: 'Machine A', motherboard: 'ASUS Pro WS X570-ACE', gpu: 'Radeon RX 7900 Series', cpu: 'Ryzen Threadripper', status: 'Available' },
-  { id: 2, name: 'Machine B', motherboard: 'Gigabyte B550 AORUS', gpu: 'Radeon RX 7900 Series', cpu: 'Ryzen Threadripper', status: 'Available' },
-  { id: 3, name: 'Machine C', motherboard: 'ASRock X570 Taichi', gpu: 'Radeon RX 6800 Series', cpu: 'Ryzen 7', status: 'Available' },
-  { id: 4, name: 'Machine D', motherboard: 'MSI MEG X570 GODLIKE', gpu: 'Radeon Pro W7800', cpu: 'EPYC', status: 'Available' },
-  { id: 5, name: 'Machine E', motherboard: 'ASUS Pro WS X570-ACE', gpu: 'Radeon Pro W6800', cpu: 'Ryzen Threadripper', status: 'Available' },
+  { id: 1, name: 'Machine A', productName: 'navi31', asicName: 'Navi31 GFX1200', ipAddress: '192.168.1.100', gpuModel: 'RX 7900 XT', status: 'Available' },
+  { id: 2, name: 'Machine B', productName: 'navi32', asicName: 'Navi31 GFX1100', ipAddress: '192.168.1.101', gpuModel: 'RX 7900 XT', status: 'Available' },
+  { id: 3, name: 'Machine C', productName: 'navi31', asicName: 'Navi31 GFX1100', ipAddress: '192.168.1.102', gpuModel: 'RX 7900 XT', status: 'Available' },
+  { id: 4, name: 'Machine D', productName: 'navi33', asicName: 'Navi31 GFX1500', ipAddress: '192.168.1.103', gpuModel: 'RX 7900 XT', status: 'Available' },
+  { id: 5, name: 'Machine E', productName: 'navi31', asicName: 'Navi31 GFX1300', ipAddress: '192.168.1.104', gpuModel: 'RX 7900 XT', status: 'Available' },
 ]
 
 const fileInputRef = ref<HTMLInputElement>()
 const isDragOver = ref(false)
 const uploadedFile = ref<File | null>(null)
+const uploadedFileBlob = ref<Blob | null>(null) // 存储文件的 Blob 副本
+const uploadedFileName = ref<string>('') // 存储文件名
+const uploadedFileSize = ref<number>(0) // 存储文件大小
 const analyzing = ref(false)
 const validationResults = ref<Array<{ type: string; title: string; message?: string; items?: string[] }>>([])
 const analysisResult = ref<AnalysisResult | null>(null)
 const errorSummary = ref<Array<{ line: number; column: number; message: string }>>([])
 const fileContent = ref<string[]>([])
 const errorLines = ref<number[]>([])
+const standardTemplate = ref<string[]>([]) // 标准模板内容（按行分割）
+const standardLoaded = ref(false) // 标准模板是否已加载
 
 const handleClickUpload = () => {
   fileInputRef.value?.click()
@@ -298,6 +358,8 @@ const handleFileChange = (event: Event) => {
   const target = event.target as HTMLInputElement
   if (target.files && target.files.length > 0) {
     handleFile(target.files[0])
+    // 清空 input value，允许重复上传同一文件名
+    target.value = ''
   }
 }
 
@@ -305,6 +367,10 @@ const handleDrop = (event: DragEvent) => {
   isDragOver.value = false
   if (event.dataTransfer?.files && event.dataTransfer.files.length > 0) {
     handleFile(event.dataTransfer.files[0])
+    // 清空文件输入框的 value
+    if (fileInputRef.value) {
+      fileInputRef.value.value = ''
+    }
   }
 }
 
@@ -314,12 +380,17 @@ const handleFile = (file: File) => {
     return
   }
 
+  // 清理所有之前的状态
   uploadedFile.value = file
+  uploadedFileBlob.value = file.slice(0, file.size) // 创建 Blob 副本
+  uploadedFileName.value = file.name // 存储文件名
+  uploadedFileSize.value = file.size // 存储文件大小
   validationResults.value = []
   analysisResult.value = null
   errorSummary.value = []
   fileContent.value = []
   errorLines.value = []
+  standardLoaded.value = false // 清空标准模板加载状态，下次需要重新加载
   Message.success('File uploaded successfully')
 }
 
@@ -333,14 +404,18 @@ const formatFileSize = (bytes: number): string => {
 }
 
 const handleAnalyze = async () => {
-  if (!uploadedFile.value)
+  if (!uploadedFileBlob.value || !uploadedFileName.value)
     return
 
   analyzing.value = true
   try {
     // 第一步：调用后端 API 进行严格的 YAML 语法验证
     const formData = new FormData()
-    formData.append('file', uploadedFile.value)
+    // 使用 Blob 副本和文件名创建新的 File 对象
+    const fileToUpload = new File([uploadedFileBlob.value], uploadedFileName.value, {
+      type: 'application/x-yaml',
+    })
+    formData.append('file', fileToUpload)
 
     const token = localStorage.getItem('token') || sessionStorage.getItem('token')
     const response = await fetch('/api/system/test/plan/yaml/upload', {
@@ -380,8 +455,11 @@ const handleAnalyze = async () => {
     }
 
     // 第二步：后端验证通过，继续前端分析
-    const text = await uploadedFile.value.text()
-    const yamlData = parseYaml(text)
+    // 设置文件内容（用于双列对比显示）
+    fileContent.value = backendResult.data?.lines || []
+    
+    // 使用后端返回的解析数据（而不是前端简单解析器）
+    const yamlData = backendResult.data?.parsed_data || {}
 
     // 验证和分析
     const result = validateYamlConfig(yamlData)
@@ -394,6 +472,9 @@ const handleAnalyze = async () => {
         message: '',
       },
     ]
+
+    // 加载标准模板用于对比
+    await loadStandardTemplate()
 
     // 滚动到分析结果
     setTimeout(() => {
@@ -411,6 +492,34 @@ const handleAnalyze = async () => {
   }
   finally {
     analyzing.value = false
+  }
+}
+
+// 加载标准模板
+async function loadStandardTemplate() {
+  if (standardLoaded.value) {
+    return // 已经加载过，直接返回
+  }
+
+  try {
+    const token = localStorage.getItem('token') || sessionStorage.getItem('token')
+    const response = await fetch('/api/system/test/plan/yaml/standard-template', {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    })
+
+    const result = await response.json()
+
+    if (response.ok && result.code === 200) {
+      standardTemplate.value = result.data.lines || []
+      standardLoaded.value = true
+    } else {
+      console.error('Failed to load standard template:', result.message)
+    }
+  } catch (error) {
+    console.error('Error loading standard template:', error)
   }
 }
 
@@ -444,7 +553,7 @@ function parseYaml(yamlContent: string): any {
   return result
 }
 
-// 验证 YAML 配置
+// 验证 YAML 配置（基于标准模板规则）
 function validateYamlConfig(yamlData: any): AnalysisResult {
   const result: AnalysisResult = {
     compatibleMachines: [],
@@ -453,43 +562,173 @@ function validateYamlConfig(yamlData: any): AnalysisResult {
     warnings: [],
   }
 
-  const requiredCPU = yamlData.hardware?.cpu
-  const requiredGPU = yamlData.hardware?.gpu
-
-  if (!requiredCPU || !requiredGPU) {
-    result.missingConfigurations.push('Hardware configuration (CPU/GPU) is missing in the YAML file')
+  // ============ 必需配置检查 (must) ============
+  
+  // 1. 检查 hardware 字段
+  if (!yamlData.hardware) {
+    result.missingConfigurations.push('hardware field is required but missing')
+    return result
   }
 
-  // 检查机器兼容性
-  mockMachines.forEach((machine) => {
-    const cpuMatch = !requiredCPU || machine.cpu === requiredCPU
-    const gpuMatch = !requiredGPU || machine.gpu === requiredGPU
+  // 2. 检查 hardware.machines
+  const machines = yamlData.hardware.machines
+  if (!machines || !Array.isArray(machines) || machines.length === 0) {
+    result.missingConfigurations.push('hardware.machines is required and must contain at least one machine')
+    return result
+  }
 
-    if (cpuMatch && gpuMatch) {
-      result.compatibleMachines.push(machine)
+  // 3. 检查每个机器的必需字段
+  machines.forEach((machine: any, index: number) => {
+    const machinePrefix = `hardware.machines[${index}]`
+    
+    if (!machine.hostname) {
+      result.missingConfigurations.push(`${machinePrefix}.hostname is required but missing`)
     }
-    else {
-      result.incompatibleMachines.push({
-        machine,
-        reasons: [
-          ...(!cpuMatch ? [`CPU mismatch: required ${requiredCPU}, found ${machine.cpu}`] : []),
-          ...(!gpuMatch ? [`GPU mismatch: required ${requiredGPU}, found ${machine.gpu}`] : []),
-        ],
-      })
+    if (!machine.productName) {
+      result.missingConfigurations.push(`${machinePrefix}.productName is required but missing`)
+    }
+    if (!machine.gpuModel) {
+      result.missingConfigurations.push(`${machinePrefix}.gpuModel is required but missing`)
     }
   })
 
-  // 检查其他配置
-  if (!yamlData.environment?.os) {
-    result.warnings.push('OS configuration is not specified')
+  // 4. 检查 environment 字段
+  if (!yamlData.environment) {
+    result.missingConfigurations.push('environment field is required but missing')
+    return result
   }
 
-  if (!yamlData.environment?.kernel) {
-    result.warnings.push('Kernel configuration is not specified')
+  // 5. 检查 environment.machines
+  if (!yamlData.environment.machines || typeof yamlData.environment.machines !== 'object') {
+    result.missingConfigurations.push('environment.machines is required but missing')
+    return result
   }
 
-  if (!yamlData.firmware?.gpu_version) {
-    result.warnings.push('GPU firmware version is not specified')
+  // 6. 检查每个 hostname 是否在 environment.machines 中定义
+  const envMachines = yamlData.environment.machines
+  machines.forEach((machine: any, index: number) => {
+    if (!machine.hostname) return // 已经在上面报错了
+
+    const hostname = machine.hostname
+    if (!envMachines[hostname]) {
+      result.missingConfigurations.push(`environment.machines["${hostname}"] is required but missing (referenced in hardware.machines[${index}])`)
+      return
+    }
+
+    // 7. 检查 configurations 数组
+    const configurations = envMachines[hostname].configurations
+    if (!configurations || !Array.isArray(configurations) || configurations.length === 0) {
+      result.missingConfigurations.push(`environment.machines["${hostname}"].configurations is required and must contain at least one configuration`)
+      return
+    }
+
+    // 8. 检查每个 configuration 的必需字段
+    configurations.forEach((config: any, configIndex: number) => {
+      const configPrefix = `environment.machines["${hostname}"].configurations[${configIndex}]`
+
+      // 检查 os 字段
+      if (!config.os || typeof config.os !== 'object') {
+        result.missingConfigurations.push(`${configPrefix}.os is required but missing`)
+      } else {
+        if (!config.os.id && config.os.id !== 0) {
+          result.missingConfigurations.push(`${configPrefix}.os.id is required but missing`)
+        }
+        if (!config.os.family) {
+          result.missingConfigurations.push(`${configPrefix}.os.family is required but missing`)
+        }
+        if (!config.os.version) {
+          result.missingConfigurations.push(`${configPrefix}.os.version is required but missing`)
+        }
+      }
+
+      // 检查 kernel 字段
+      if (!config.kernel || typeof config.kernel !== 'object') {
+        result.missingConfigurations.push(`${configPrefix}.kernel is required but missing`)
+      } else if (!config.kernel.kernel_version) {
+        result.missingConfigurations.push(`${configPrefix}.kernel.kernel_version is required but missing`)
+      }
+
+      // 检查 execution_case_list（至少要有一个测试用例）
+      if (!config.execution_case_list || !Array.isArray(config.execution_case_list) || config.execution_case_list.length === 0) {
+        result.missingConfigurations.push(`${configPrefix}.execution_case_list is required and must contain at least one test case`)
+      }
+    })
+  })
+
+  // ============ 可选配置检查 (option) - 仅警告 ============
+  
+  // 检查 metadata
+  if (!yamlData.metadata) {
+    result.warnings.push('metadata field is recommended but not provided')
+  } else {
+    if (!yamlData.metadata.version) {
+      result.warnings.push('metadata.version is recommended but not provided')
+    }
+    if (!yamlData.metadata.generated) {
+      result.warnings.push('metadata.generated is recommended but not provided')
+    }
+    if (!yamlData.metadata.description) {
+      result.warnings.push('metadata.description is recommended but not provided')
+    }
+  }
+
+  // 检查每个机器的可选字段
+  machines.forEach((machine: any, index: number) => {
+    if (!machine.hostname) return // 没有 hostname 就跳过
+    
+    const machinePrefix = `hardware.machines[${index}] (${machine.hostname})`
+    
+    if (!machine.id && machine.id !== 0) {
+      result.warnings.push(`${machinePrefix}.id is recommended but not provided`)
+    }
+    if (!machine.asicName) {
+      result.warnings.push(`${machinePrefix}.asicName is recommended but not provided`)
+    }
+    if (!machine.ipAddress) {
+      result.warnings.push(`${machinePrefix}.ipAddress is recommended but not provided`)
+    }
+  })
+
+  // 检查每个 configuration 的可选字段
+  machines.forEach((machine: any) => {
+    if (!machine.hostname) return
+    const hostname = machine.hostname
+    const configurations = envMachines[hostname]?.configurations
+    if (!configurations) return
+
+    configurations.forEach((config: any, configIndex: number) => {
+      const configPrefix = `environment.machines["${hostname}"].configurations[${configIndex}]`
+
+      if (!config.config_id && config.config_id !== 0) {
+        result.warnings.push(`${configPrefix}.config_id is recommended but not provided`)
+      }
+      if (!config.deployment_method) {
+        result.warnings.push(`${configPrefix}.deployment_method is recommended but not provided`)
+      }
+      if (!config.test_type) {
+        result.warnings.push(`${configPrefix}.test_type is recommended but not provided`)
+      }
+    })
+  })
+
+  // ============ 机器兼容性检查（与 mockMachines 对比）============
+  
+  // 只有在没有严重缺失配置时才检查兼容性
+  if (result.missingConfigurations.length === 0) {
+    mockMachines.forEach((mockMachine) => {
+      const match = machines.find((um: any) => 
+        um.productName === mockMachine.productName && um.gpuModel === mockMachine.gpuModel
+      )
+
+      if (match) {
+        result.compatibleMachines.push(mockMachine)
+      } else {
+        result.incompatibleMachines.push({
+          machine: mockMachine,
+          reasons: ['No matching productName/gpuModel found in uploaded configuration'],
+        })
+      }
+    })
   }
 
   return result
@@ -514,7 +753,7 @@ const getErrorMessage = (lineNum: number): string => {
 }
 
 const handleDownloadYaml = () => {
-  if (!uploadedFile.value || fileContent.value.length === 0)
+  if (!uploadedFileName.value || fileContent.value.length === 0)
     return
 
   // 从 fileContent 重新组合完整内容，并添加错误注释
@@ -530,13 +769,13 @@ const handleDownloadYaml = () => {
   const url = URL.createObjectURL(blob)
   const link = document.createElement('a')
   link.href = url
-  link.download = uploadedFile.value.name
+  link.download = uploadedFileName.value
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
   URL.revokeObjectURL(url)
   
-  Message.success(`Downloaded: ${uploadedFile.value.name}`)
+  Message.success(`Downloaded: ${uploadedFileName.value}`)
 }
 
 const handleCopyFileContent = async () => {
@@ -1149,6 +1388,96 @@ const handleCopyFileContent = async () => {
       // 为 Missing Configurations 和 Configuration Warnings 添加圆角
       :deep(.arco-alert) {
         border-radius: 8px;
+      }
+    }
+  }
+
+  // 双列对比视图样式
+  .comparison-view {
+    margin-top: 20px;
+
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .comparison-column {
+      background: #f7f9fc;
+      border-radius: 8px;
+      padding: 15px;
+      border: 1px solid #e1e5eb;
+
+      .column-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 12px 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2c3e50;
+
+        .arco-icon {
+          font-size: 18px;
+          color: #3498db;
+        }
+      }
+
+      .code-view-box {
+        background: white;
+        border: 1px solid #dce0e6;
+        border-radius: 6px;
+        padding: 0;
+        max-height: 500px;
+        overflow-y: auto;
+
+        .comparison-code-line {
+          display: flex;
+          min-height: 22px;
+          line-height: 22px;
+          border-bottom: 1px solid #f0f2f5;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover {
+            background: #f7f9fc;
+          }
+        }
+
+        .comparison-line-number {
+          flex-shrink: 0;
+          width: 50px;
+          padding: 0 12px;
+          text-align: right;
+          color: #86909c;
+          background: #f7f9fc;
+          border-right: 1px solid #e5e6eb;
+          font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace;
+          font-size: 12px;
+          user-select: none;
+        }
+
+        .comparison-line-content {
+          flex: 1;
+          margin: 0;
+          padding: 0 15px;
+          font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace;
+          font-size: 13px;
+          color: #2c3e50;
+          white-space: pre;
+          word-wrap: normal;
+          overflow-x: auto;
+        }
+      }
+    }
+
+    // 响应式：在小屏幕上改为单列
+    @media (max-width: 768px) {
+      .comparison-container {
+        grid-template-columns: 1fr;
       }
     }
   }
