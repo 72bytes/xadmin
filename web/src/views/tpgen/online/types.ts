@@ -82,8 +82,8 @@ export interface YamlData {
     description?: string
   }
   hardware: {
-    productName: string
-    asicName: string
+    productName?: string
+    asicName?: string
     machines: Array<{
       id: number
       hostname: string
@@ -94,10 +94,22 @@ export interface YamlData {
     }>
   }
   environment: {
-    os: any
-    kernel: any
+    os?: any
+    kernel?: any
+    machines?: {
+      [hostname: string]: {
+        configurations: Array<{
+          config_id: number
+          os: any
+          deployment_method: string
+          kernel: any
+          test_type: string
+          execution_case_list: string[]
+        }>
+      }
+    }
   }
-  testConfiguration: any
+  testConfiguration?: any
 }
 
 // 分析结果

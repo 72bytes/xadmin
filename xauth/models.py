@@ -757,3 +757,41 @@ class SysUserSocial(models.Model):
 
 # Case 相关模型已迁移到 xcase app
 # from xcase.models import CaseMetadata, CaseTag, CaseOption
+
+
+class TpgenSavedPlan(models.Model):
+    """保存的测试计划配置"""
+    id = models.BigAutoField(primary_key=True, db_comment='ID')
+    name = models.CharField(max_length=100, db_comment='计划名称')
+    category = models.CharField(max_length=50, db_index=True, db_comment='类别')
+    description = models.TextField(blank=True, null=True, db_comment='描述')
+    config_data = models.JSONField(db_comment='配置数据(JSON)')
+    yaml_data = models.JSONField(blank=True, null=True, db_comment='YAML数据(JSON)')
+    cpu = models.CharField(max_length=100, blank=True, null=True, db_comment='CPU')
+    gpu = models.CharField(max_length=100, blank=True, null=True, db_comment='GPU')
+    machine_count = models.IntegerField(default=0, db_comment='机器数量')
+    os_type = models.CharField(max_length=50, blank=True, null=True, db_comment='操作系统类型')
+    kernel_type = models.CharField(max_length=50, blank=True, null=True, db_comment='内核类型')
+    test_case_count = models.IntegerField(default=0, db_comment='测试用例数量')
+    status = models.IntegerField(default=1, db_index=True, db_comment='状态(1:正常,0:停用)')
+    tags = models.CharField(max_length=200, blank=True, null=True, db_comment='标签')
+    use_count = models.IntegerField(default=0, db_comment='使用次数')
+    last_used_time = models.DateTimeField(blank=True, null=True, db_comment='最后使用时间')
+    create_user = models.BigIntegerField(db_index=True, db_comment='创建人ID')
+    create_user_name = models.CharField(max_length=50, blank=True, null=True, db_comment='创建人姓名')
+    create_time = models.DateTimeField(auto_now_add=True, db_index=True, db_comment='创建时间')
+    update_user = models.BigIntegerField(blank=True, null=True, db_comment='更新人ID')
+    update_user_name = models.CharField(max_length=50, blank=True, null=True, db_comment='更新人姓名')
+    update_time = models.DateTimeField(blank=True, null=True, db_comment='更新时间')
+
+    class Meta:
+        db_table = 'tpgen_saved_plan'
+        db_table_comment = '测试计划配置表'
+        indexes = [
+            models.Index(fields=['name', 'category'], name='idx_name_category'),
+            models.Index(fields=['create_user', 'category'], name='idx_user_category'),
+            models.Index(fields=['-create_time'], name='idx_create_time_desc'),
+        ]
+    
+    def __str__(self):
+        return f"<{self.name}, {self.category}>"

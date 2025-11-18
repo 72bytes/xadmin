@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # 'django.contrib.staticfiles',
     "xutils",  # 新的工具模块
     "xauth",  # 合并了 xadmin_db 和 xadmin_auth
+    "xadmin_tpgen",  # TPGEN 保存计划管理
     "tpgen.apps.TpgenConfig",
 ]
 

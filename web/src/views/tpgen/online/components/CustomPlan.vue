@@ -101,6 +101,57 @@ git<template>
       @download="handleDownload"
     />
   </div>
+
+  <!-- 保存对话框 -->
+  <a-modal
+      v-model:visible="saveDialogVisible"
+      title="保存测试计划配置"
+      :width="600"
+      @ok="handleSaveConfirm"
+      @cancel="handleSaveCancel"
+    >
+      <a-form :model="saveForm" layout="vertical" :rules="saveFormRules">
+        <a-form-item label="计划名称" field="name" required>
+          <a-input
+            v-model="saveForm.name"
+            placeholder="请输入计划名称"
+            :max-length="100"
+            show-word-limit
+          />
+        </a-form-item>
+        <a-form-item label="类别" field="category" required>
+          <a-select v-model="saveForm.category" placeholder="请选择类别">
+            <a-option value="Benchmark">Benchmark - 基准测试</a-option>
+            <a-option value="Functional">Functional - 功能测试</a-option>
+            <a-option value="Performance">Performance - 性能测试</a-option>
+            <a-option value="Stress">Stress - 压力测试</a-option>
+            <a-option value="Custom">Custom - 自定义</a-option>
+          </a-select>
+        </a-form-item>
+        <a-form-item label="描述" field="description">
+          <a-textarea
+            v-model="saveForm.description"
+            placeholder="请输入描述信息"
+            :rows="4"
+            :max-length="500"
+            show-word-limit
+          />
+        </a-form-item>
+        <a-form-item label="标签" field="tags">
+          <a-input
+            v-model="saveForm.tags"
+            placeholder="多个标签用逗号分隔，例如：gpu,ubuntu,benchmark"
+            :max-length="200"
+          />
+        </a-form-item>
+        <a-form-item label="状态" field="status">
+          <a-radio-group v-model="saveForm.status">
+            <a-radio :value="1">草稿</a-radio>
+            <a-radio :value="2">已发布</a-radio>
+          </a-radio-group>
+        </a-form-item>
+      </a-form>
+    </a-modal>
 </template>
 
 <script setup lang="ts">
@@ -1012,10 +1063,10 @@ const handleSave = () => {
     Message.warning('请先选择机器')
     return
   }
-  if (formData.selectedTestCases.length === 0) {
-    Message.warning('请先选择测试用例')
-    return
-  }
+  // if (formData.selectedTestCases.length === 0) {
+  //   Message.warning('请先选择测试用例')
+  //   return
+  // }
   
   // 显示保存对话框
   saveDialogVisible.value = true
@@ -1033,6 +1084,20 @@ const handleSaveConfirm = async () => {
   }
   
   try {
+    // 统计 execution_case_list 中的测试用例总数
+    let testCaseCount = 0
+    if (generatedYaml.value?.environment?.machines) {
+      Object.values(generatedYaml.value.environment.machines).forEach((machine: any) => {
+        if (machine.configurations) {
+          machine.configurations.forEach((config: any) => {
+            if (config.execution_case_list) {
+              testCaseCount += config.execution_case_list.length
+            }
+          })
+        }
+      })
+    }
+    
     // 准备保存数据
     const saveData = {
       name: saveForm.name,
@@ -1046,7 +1111,7 @@ const handleSaveConfirm = async () => {
       machineCount: formData.selectedMachines.length,
       osType: formData.os || '',
       kernelType: formData.kernelType || '',
-      testCaseCount: formData.selectedTestCases.length,
+      testCaseCount: testCaseCount,
       status: saveForm.status,
     }
     
