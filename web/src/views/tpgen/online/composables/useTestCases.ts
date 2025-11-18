@@ -4,9 +4,9 @@
  */
 
 import { computed, ref } from 'vue'
-import { Message } from '@arco-design/web-vue'
 import type { TestCase, TestCaseGroup } from '../types'
 import * as tpdbApi from '@/apis/tpdb'
+import { showNotification } from '../check_yaml'
 
 // 全局测试用例数据缓存
 const testCaseGroupsCache = ref<TestCaseGroup>({})
@@ -84,7 +84,7 @@ export function useTestCases() {
       return groups
     } catch (error) {
       console.error('[useTestCases] 加载测试用例失败:', error)
-      Message.error('加载测试用例数据失败')
+      showNotification('加载测试用例数据失败', 'error')
       return {}
     } finally {
       loading.value = false

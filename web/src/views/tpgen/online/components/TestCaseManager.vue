@@ -158,6 +158,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, watch } from 'vue'
 import { VueDraggable } from 'vue-draggable-plus'
 import type { TestCase } from '../types'
 import { useTestCases } from '../composables/useTestCases'

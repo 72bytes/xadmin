@@ -2,7 +2,7 @@
   <a-card class="form-section" :bordered="false">
     <template #title>
       <div class="section-title">
-        <icon-cpu />
+        <icon-computer />
         Hardware Platform Configuration
       </div>
     </template>

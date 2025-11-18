@@ -112,6 +112,7 @@ const kernelVersionOptions = [
   { value: '6.5', label: '6.5' },
 ]
 import { useMachines } from '../composables/useMachines'
+import { kernelTypeOptions, kernelVersionOptions } from '../mockData'
 
 defineOptions({ name: 'KernelConfig' })
 

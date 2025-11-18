@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Django 后端（使用外部数据库）
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: xadmin-backend
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./logs:/app/logs
+      - ./media:/app/media
+      - static_files:/app/staticfiles
+    ports:
+      - "9527:9527"
+    # 使用 host 网络模式，可以直接访问宿主机的网络
+    network_mode: host
+    command: >
+      sh -c "
+        python manage.py migrate --noinput || true &&
+        python manage.py collectstatic --noinput || true &&
+        gunicorn xadmin.wsgi:application -c gunicorn.conf.py
+      "
+
+  # Vue 前端
+  frontend:
+    build:
+      context: ./web
+      dockerfile: Dockerfile.simple
+    container_name: xadmin-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  static_files:
+    name: xadmin-static-files
+

@@ -32,5 +32,6 @@ python_files = ["tests.py", "test_*.py", "*_test.py"]
 dev = [
     "pytest>=9.0.0",
     "pytest-django>=4.11.1",
+    "pytest-cov>=7.0.0",
 ]
 

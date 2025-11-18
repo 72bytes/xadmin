@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+
+# 测试
+.coverage
+.pytest_cache/
+test_*.py
+*_test.py
+tests/
+.tox/
+
+# 文档
+*.md
+docs/
+
+# Node (如果后端有前端资源)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 临时文件
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# 环境变量
+.env
+.env.*
+!.env.example
+
+# 其他
+*.bak
+*.orig
+
+
+

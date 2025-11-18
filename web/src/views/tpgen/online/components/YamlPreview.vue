@@ -8,43 +8,11 @@
     </template>
 
     <div class="yaml-content">
-
-      <div class="yaml-display" :style="{ maxHeight: `${dynamicHeight}px` }">
-        <div 
-          class="yaml-line-numbers" 
-          ref="lineNumbersRef" 
-          @scroll="syncScroll"
-          :style="{ maxHeight: `${dynamicHeight}px` }"
-        >
-
-          <div
-            v-for="(line, index) in yamlLines"
-            :key="index"
-            class="line-number"
-            :class="{ error: isErrorLine(index + 1) }"
-          >
-            {{ index + 1 }}
-          </div>
-        </div>
-
-        <div 
-          class="yaml-code-content" 
-          ref="yamlContentRef" 
-          @scroll="handleYamlScroll"
-          :style="{ maxHeight: `${dynamicHeight}px` }"
-        >
-
-          <div
-            v-for="(line, index) in yamlLines"
-            :key="index"
-            :ref="isErrorLine(index + 1) ? 'errorLineRef' : undefined"
-            class="code-line"
-            :class="{ 'error-line': isErrorLine(index + 1) }"
-          >
-            {{ line }}
-          </div>
-        </div>
-      </div>
+      <div 
+        ref="editorContainer" 
+        class="monaco-editor-container"
+        :style="{ height: `${dynamicHeight}px` }"
+      />
     </div>
 
     <div class="actions">
@@ -79,10 +47,22 @@
 </template>
 
 <script setup lang="ts">
-
+import { computed, ref, watch, nextTick, shallowRef, onMounted, onBeforeUnmount } from 'vue'
 import { Message } from '@arco-design/web-vue'
-
 import type { YamlData } from '../types'
+import * as monaco from 'monaco-editor'
+import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
+import jsonWorker from 'monaco-editor/esm/vs/language/json/json.worker?worker'
+
+// 配置 Monaco Editor 的 worker
+self.MonacoEnvironment = {
+  getWorker(_: any, label: string) {
+    if (label === 'json') {
+      return new jsonWorker()
+    }
+    return new editorWorker()
+  },
+}
 
 defineOptions({ name: 'YamlPreview' })
 
@@ -98,37 +78,55 @@ const emit = defineEmits<{
   save: []
 }>()
 
-// 监听 props 变化
-watch(() => props.errorLines, (newVal) => {
-  console.log('[YamlPreview props] errorLines prop 收到:', newVal)
-}, { immediate: true })
+// Monaco Editor 相关 refs
+const editorContainer = ref<HTMLElement>()
+const editorInstance = shallowRef<monaco.editor.IStandaloneCodeEditor>()
+const decorations = ref<string[]>([])
 
-// Refs for line numbers and content
-const lineNumbersRef = ref<HTMLElement | null>(null)
-const yamlContentRef = ref<HTMLElement | null>(null)
-const errorLineRef = ref<HTMLElement | null>(null)
+// 编辑器配置选项
+const editorOptions = {
+  readOnly: true,
+  fontSize: 14.4,
+  lineHeight: 25.6,
+  fontFamily: "'Fira Code', 'Courier New', monospace",
+  minimap: { enabled: false },
+  scrollBeyondLastLine: false,
+  automaticLayout: true,
+  lineNumbers: 'on' as const,
+  scrollbar: {
+    vertical: 'visible' as const,
+    horizontal: 'visible' as const,
+    verticalScrollbarSize: 10,
+    horizontalScrollbarSize: 10,
+  },
+  glyphMargin: true,
+  folding: true,
+  lineDecorationsWidth: 0,
+  lineNumbersMinChars: 4,
+}
 
 // 将 JavaScript 对象转换为 YAML 字符串
-const yamlString = computed(() => {
-  const yaml = jsToYaml(props.yamlData)
-  // 去除末尾多余的换行符，保持格式统一
-  return yaml.trimEnd()
+const yamlString = computed({
+  get: () => {
+    const yaml = jsToYaml(props.yamlData)
+    return yaml.trimEnd()
+  },
+  set: () => {
+    // 只读模式，不允许修改
+  },
 })
 
-// 将 YAML 字符串按行分割
+// 将 YAML 字符串按行分割（用于计算高度）
 const yamlLines = computed(() => {
   if (!yamlString.value) return []
-  const lines = yamlString.value.split('\n')
-  console.log('[YamlPreview yamlLines] 总行数:', lines.length)
-  console.log('[YamlPreview yamlLines] 前 10 行:', lines.slice(0, 10))
-  return lines
+  return yamlString.value.split('\n')
 })
 
 // 动态计算预览区高度
 const dynamicHeight = computed(() => {
   const lineCount = yamlLines.value.length
   const lineHeight = 25.6 // 每行高度（px）
-  const padding = 50 // 上下内边距总和（px）
+  const padding = 30 // 上下内边距总和（px）
   const minHeight = 200 // 最小高度
   const maxHeight = 800 // 最大高度
   
@@ -141,21 +139,7 @@ const dynamicHeight = computed(() => {
   return contentHeight
 })
 
-// 保存按钮 - 触发父组件的保存逻辑
-function handleSave() {
-  console.log('[YamlPreview handleSave] 触发保存事件')
-  emit('save')
-}
-
-// 检查指定行是否是错误行
-const isErrorLine = (lineNumber: number): boolean => {
-  const isError = props.errorLines?.includes(lineNumber) || false
-  if (isError) {
-    console.log(`[YamlPreview isErrorLine] 行 ${lineNumber} 是错误行`)
-  }
-  return isError
-}
-
+// JavaScript 对象转换为 YAML 字符串
 function jsToYaml(obj: any, indent = 0): string {
   let yaml = ''
   const spaces = '  '.repeat(indent)
@@ -189,6 +173,106 @@ function jsToYaml(obj: any, indent = 0): string {
   return yaml
 }
 
+// 定义自定义深色主题（匹配现有样式）
+function defineCustomTheme() {
+  monaco.editor.defineTheme('custom-dark', {
+    base: 'vs-dark',
+    inherit: true,
+    rules: [
+      { token: '', foreground: 'e2e8f0' },
+      { token: 'comment', foreground: '718096' },
+      { token: 'keyword', foreground: '63b3ed' },
+      { token: 'string', foreground: '68d391' },
+      { token: 'number', foreground: 'f6ad55' },
+    ],
+    colors: {
+      'editor.background': '#2d3748',
+      'editor.foreground': '#e2e8f0',
+      'editorLineNumber.foreground': '#718096',
+      'editorLineNumber.activeForeground': '#cbd5e0',
+      'editor.lineHighlightBackground': '#374151',
+      'editorGutter.background': '#1e2530',
+      'scrollbarSlider.background': '#4a556866',
+      'scrollbarSlider.hoverBackground': '#71809699',
+      'scrollbarSlider.activeBackground': '#718096cc',
+      'editorCursor.foreground': '#63b3ed',
+      'editor.selectionBackground': '#4a556866',
+    },
+  })
+}
+
+// 初始化 Monaco Editor
+function initMonacoEditor() {
+  if (!editorContainer.value) return
+
+  try {
+    // 定义自定义主题
+    defineCustomTheme()
+
+    // 创建编辑器实例
+    const editor = monaco.editor.create(editorContainer.value, {
+      value: yamlString.value,
+      language: 'yaml',
+      theme: 'custom-dark',
+      ...editorOptions,
+    })
+
+    editorInstance.value = editor
+
+    console.log('[YamlPreview] Monaco Editor initialized')
+
+    // 初始化时如果有错误行，立即高亮
+    if (props.errorLines && props.errorLines.length > 0) {
+      updateErrorDecorations()
+      scrollToErrorLine()
+    }
+  } catch (error) {
+    console.error('[YamlPreview] Failed to initialize Monaco Editor:', error)
+    Message.error('Failed to load code editor')
+  }
+}
+
+// 更新错误行装饰
+function updateErrorDecorations() {
+  if (!editorInstance.value || !props.errorLines?.length) {
+    if (editorInstance.value && decorations.value.length > 0) {
+      decorations.value = editorInstance.value.deltaDecorations(decorations.value, [])
+    }
+    return
+  }
+
+  console.log('[YamlPreview] 更新错误行装饰:', props.errorLines)
+
+  const newDecorations: monaco.editor.IModelDeltaDecoration[] = props.errorLines.map(lineNumber => ({
+    range: new monaco.Range(lineNumber, 1, lineNumber, 1),
+    options: {
+      isWholeLine: true,
+      className: 'error-line-decoration',
+      glyphMarginClassName: 'error-line-glyph',
+      overviewRuler: {
+        color: '#ff4d4f',
+        position: monaco.editor.OverviewRulerLane.Full,
+      },
+    },
+  }))
+
+  decorations.value = editorInstance.value.deltaDecorations(decorations.value, newDecorations)
+}
+
+// 滚动到错误行
+function scrollToErrorLine() {
+  if (!editorInstance.value || !props.errorLines?.length) {
+    return
+  }
+
+  console.log('[YamlPreview] 滚动到错误行:', props.errorLines[0])
+
+  nextTick(() => {
+    const lineNumber = props.errorLines![0]
+    editorInstance.value!.revealLineInCenter(lineNumber, 1) // 1 = Smooth scroll
+  })
+}
+
 // 复制到剪贴板 - 触发父组件的验证逻辑
 const handleCopy = () => {
   emit('copy')
@@ -199,65 +283,46 @@ const handleDownload = () => {
   emit('download')
 }
 
-// 处理 YAML 内容滚动，同步行号滚动
-const handleYamlScroll = () => {
-  if (lineNumbersRef.value && yamlContentRef.value) {
-    lineNumbersRef.value.scrollTop = yamlContentRef.value.scrollTop
-  }
+// 保存按钮 - 触发父组件的保存逻辑
+function handleSave() {
+  console.log('[YamlPreview handleSave] 触发保存事件')
+  emit('save')
 }
 
-// 同步滚动
-const syncScroll = () => {
-  if (lineNumbersRef.value && yamlContentRef.value) {
-    yamlContentRef.value.scrollTop = lineNumbersRef.value.scrollTop
-  }
-}
-
-// 滚动到错误行
-const scrollToErrorLine = () => {
-  console.log('[YamlPreview scrollToErrorLine] 开始滚动到错误行')
-  console.log('[YamlPreview scrollToErrorLine] props.errorLines:', props.errorLines)
-
-  if (!props.errorLines || props.errorLines.length === 0) {
-    console.log('[YamlPreview scrollToErrorLine] ⚠️ 没有错误行，跳过滚动')
-    return
-  }
-
-  nextTick(() => {
-    console.log('[YamlPreview scrollToErrorLine] nextTick 执行')
-    const errorLine = errorLineRef.value
-    console.log('[YamlPreview scrollToErrorLine] errorLineRef.value:', errorLine)
-
-    if (errorLine && yamlContentRef.value) {
-      // 如果 errorLineRef 是数组（多个错误行），取第一个
-      const target = Array.isArray(errorLine) ? errorLine[0] : errorLine
-      console.log('[YamlPreview scrollToErrorLine] 滚动目标元素:', target)
-
-      if (target) {
-        console.log('[YamlPreview scrollToErrorLine] ✅ 执行滚动')
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      } else {
-        console.log('[YamlPreview scrollToErrorLine] ❌ 目标元素为空')
-      }
-    } else {
-      console.log('[YamlPreview scrollToErrorLine] ❌ errorLineRef 或 yamlContentRef 为空')
+// 监听 YAML 内容变化，更新编辑器
+watch(() => yamlString.value, (newValue) => {
+  if (editorInstance.value) {
+    const currentValue = editorInstance.value.getValue()
+    if (currentValue !== newValue) {
+      editorInstance.value.setValue(newValue)
     }
-  })
-}
+  }
+})
 
-// 监听错误行变化，自动滚动
-watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
-  console.log('[YamlPreview watch] errorLines 变化')
-  console.log('[YamlPreview watch] 旧值:', oldErrorLines)
-  console.log('[YamlPreview watch] 新值:', newErrorLines)
-
+// 监听错误行变化
+watch(() => props.errorLines, (newErrorLines) => {
+  console.log('[YamlPreview watch] errorLines 变化:', newErrorLines)
+  
   if (newErrorLines && newErrorLines.length > 0) {
     console.log('[YamlPreview watch] ✅ 检测到错误行:', newErrorLines)
+    updateErrorDecorations()
     scrollToErrorLine()
   } else {
-    console.log('[YamlPreview watch] ⚠️ 错误行为空')
+    console.log('[YamlPreview watch] ⚠️ 错误行为空，清除装饰')
+    if (editorInstance.value) {
+      decorations.value = editorInstance.value.deltaDecorations(decorations.value, [])
+    }
   }
 }, { immediate: true, deep: true })
+
+// 生命周期钩子
+onMounted(() => {
+  initMonacoEditor()
+})
+
+onBeforeUnmount(() => {
+  editorInstance.value?.dispose()
+})
 </script>
 
 <style scoped lang="scss">
@@ -287,94 +352,53 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
 
 .yaml-content {
   background: #2d3748;
-  color: #e2e8f0;
   border-radius: 12px;
-  font-family: 'Fira Code', 'Courier New', monospace;
   margin-bottom: 20px;
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
   border: 1px solid #4a5568;
   overflow: hidden;
-
-  .yaml-display {
-    display: flex;
-    height: auto;
-    transition: max-height 0.3s ease; // 平滑过渡效果
+  
+  // Monaco Editor 容器样式
+  .monaco-editor-container {
+    width: 100%;
+    border-radius: 12px;
   }
-
-  .yaml-line-numbers {
-    background: #1e2530;
-    color: #718096;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 10px;
-    padding-right: 15px;
-    text-align: right;
-    user-select: none;
-    border-right: 2px solid #4a5568;
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex-shrink: 0;
-    min-width: 60px;
-    position: relative;
-    transition: max-height 0.3s ease; // 平滑过渡效果
-
-    .line-number {
-      font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 14.4px;
-      line-height: 25.6px;
-      font-weight: 500;
-      padding: 0 5px;
-      transition: all 0.3s ease;
-
-      &.error {
-        color: #ff4d4f;
-        font-weight: bold;
-        background-color: rgba(255, 77, 79, 0.15);
+  
+  :deep(.monaco-editor) {
+    .margin {
+      background-color: #1e2530 !important;
+    }
+    
+    .monaco-scrollable-element {
+      .scrollbar {
+        .slider {
+          background: rgba(74, 85, 104, 0.4) !important;
+          
+          &:hover {
+            background: rgba(113, 128, 150, 0.6) !important;
+          }
+          
+          &.active {
+            background: rgba(113, 128, 150, 0.8) !important;
+          }
+        }
       }
     }
-
-    /* 隐藏滚动条但保持滚动功能 */
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
   }
-
-  .yaml-code-content {
-    flex: 1;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
-    overflow-y: auto;
-    overflow-x: auto;
-    transition: max-height 0.3s ease; // 平滑过渡效果
-
-    .code-line {
-      font-family: 'Fira Code', 'Courier New', monospace;
-      font-size: 14.4px;
-      line-height: 25.6px;
-      color: #e2e8f0;
-      white-space: pre;
-      padding: 0 5px;
-      margin: 0;
-      transition: all 0.3s ease;
-
-      // &.error-line {
-      //   background-color: rgba(255, 77, 79, 0.15);
-      //   border-left: 4px solid #ff4d4f;
-      //   padding-left: 10px;
-      //   animation: pulse-error 1.5s ease-in-out infinite;
-      //   box-shadow: 0 0 10px rgba(255, 77, 79, 0.3);
-      // }
-    }
-    &.error-line {
-      background-color: rgba(255, 77, 79, 0.15);
-      box-shadow: inset 4px 0 0 0 #ff4d4f;  // 内阴影模拟左边框
-      // 不需要 padding-left 和 border-left
-    }
+  
+  // 错误行装饰样式
+  :deep(.error-line-decoration) {
+    background-color: rgba(255, 77, 79, 0.15) !important;
+    border-left: 4px solid #ff4d4f !important;
+    animation: pulse-error 1.5s ease-in-out infinite;
   }
-
+  
+  :deep(.error-line-glyph) {
+    background-color: #ff4d4f !important;
+    width: 3px !important;
+    margin-left: 3px;
+  }
+  
   /* 错误行脉冲动画 */
   @keyframes pulse-error {
     0%, 100% {
@@ -384,26 +408,6 @@ watch(() => props.errorLines, (newErrorLines, oldErrorLines) => {
     50% {
       background-color: rgba(255, 77, 79, 0.25);
       box-shadow: 0 0 20px rgba(255, 77, 79, 0.5);
-    }
-  }
-
-  // 自定义滚动条样式
-  .yaml-code-content::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  .yaml-code-content::-webkit-scrollbar-track {
-    background: #1e2530;
-    border-radius: 5px;
-  }
-
-  .yaml-code-content::-webkit-scrollbar-thumb {
-    background: #4a5568;
-    border-radius: 5px;
-
-    &:hover {
-      background: #718096;
     }
   }
 }

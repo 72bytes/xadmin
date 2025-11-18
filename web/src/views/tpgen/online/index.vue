@@ -1,6 +1,6 @@
 <template>
   <div class="tpgen-container">
-    <div class="tpgen-header" style="display: none;">
+    <div class="tpgen-header">
       <div class="header-content">
         <h1>
           <icon-experiment />
@@ -13,7 +13,7 @@
     </div>
 
     <div class="tpgen-main">
-      <a-tabs v-model:active-key="activeTab" class="tpgen-tabs">
+      <a-tabs v-model:active-key="activeTab" type="rounded" class="tpgen-tabs">
         <a-tab-pane key="upload" title="上传测试计划">
           <template #title>
             <icon-upload />
@@ -33,8 +33,8 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
+import { ref } from 'vue'
 import UploadPlan from './components/UploadPlan.vue'
 import CustomPlan from './components/CustomPlan.vue'
 
