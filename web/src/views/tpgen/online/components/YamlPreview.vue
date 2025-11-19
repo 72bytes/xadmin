@@ -15,34 +15,24 @@
       />
     </div>
 
-    <div class="actions">
+      <div class="actions">
+    <a-button type="primary" @click="handleCopy">
+      <template #icon><icon-copy /></template>
+      Copy to Clipboard
+    </a-button>
 
-      <a-button  type="primary" @click="handleCopy">
-        <template #icon><icon-copy /></template>
-        Copy to Clipboard
-      </a-button>
-
-
-
-      <a-space>
-
+    <a-space>
       <a-button type="primary" @click="handleSave">
         <template #icon><icon-save /></template>
         Save Plan
       </a-button>
-
-
-
 
       <a-button type="primary" @click="handleDownload">
         <template #icon><icon-download /></template>
         Download YAML
       </a-button>
     </a-space>
-
-
-
-    </div>
+  </div>
   </a-card>
 </template>
 
@@ -50,6 +40,7 @@
 import { computed, ref, watch, nextTick, shallowRef, onMounted, onBeforeUnmount } from 'vue'
 import { Message } from '@arco-design/web-vue'
 import type { YamlData } from '../types'
+import { jsToYaml } from '../utils/yamlConverter'
 import * as monaco from 'monaco-editor'
 import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
 import jsonWorker from 'monaco-editor/esm/vs/language/json/json.worker?worker'
@@ -71,12 +62,20 @@ const props = defineProps<{
   errorLines?: number[]
 }>()
 
+// 监听 props 变化
+watch(() => props.errorLines, (newVal) => {
+  console.log('[YamlPreview props] errorLines prop 收到:', newVal)
+}, { immediate: true })
+
 const emit = defineEmits<{
   close: []
   copy: []
   download: []
   save: []
 }>()
+
+
+
 
 // Monaco Editor 相关 refs
 const editorContainer = ref<HTMLElement>()
@@ -138,40 +137,6 @@ const dynamicHeight = computed(() => {
   if (contentHeight > maxHeight) return maxHeight
   return contentHeight
 })
-
-// JavaScript 对象转换为 YAML 字符串
-function jsToYaml(obj: any, indent = 0): string {
-  let yaml = ''
-  const spaces = '  '.repeat(indent)
-
-  for (const [key, value] of Object.entries(obj)) {
-    if (Array.isArray(value)) {
-      yaml += `${spaces}${key}:\n`
-      value.forEach((item) => {
-        if (typeof item === 'object' && item !== null) {
-          const itemYaml = jsToYaml(item, indent + 2)
-          const lines = itemYaml.trim().split('\n')
-          yaml += `${spaces}  -`
-          lines.forEach((line, i) => {
-            if (i === 0) {
-              yaml += ` ${line.trim()}\n`
-            } else {
-              yaml += `${spaces}    ${line.trim()}\n`
-            }
-          })
-        } else {
-          yaml += `${spaces}  - ${item}\n`
-        }
-      })
-    } else if (typeof value === 'object' && value !== null) {
-      yaml += `${spaces}${key}:\n${jsToYaml(value, indent + 1)}`
-    } else {
-      yaml += `${spaces}${key}: ${value}\n`
-    }
-  }
-
-  return yaml
-}
 
 // 定义自定义深色主题（匹配现有样式）
 function defineCustomTheme() {
@@ -415,7 +380,7 @@ onBeforeUnmount(() => {
 .actions {
   display: flex;
   gap: 15px;
-  justify-content: space-between;;
+  justify-content: space-between;  // ← 改这里！从 flex-end 改为 space-between
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -425,4 +390,6 @@ onBeforeUnmount(() => {
     }
   }
 }
+
 </style>
+

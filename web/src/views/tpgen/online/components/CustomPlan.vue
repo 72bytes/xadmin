@@ -8,66 +8,38 @@
     <a-form :model="formData" layout="vertical">
       <!-- 硬件平台配置 -->
       <HardwareConfig
-        v-model:cpu="formData.cpu"
-        v-model:gpu="formData.gpu"
+        v-model:product-name="formData.productName"
+        v-model:asic-name="formData.asicName"
         v-model:selected-machines="formData.selectedMachines"
         @update="updateProgress"
+        @machines-update="handleMachinesUpdate"
       />
 
-      <!-- 操作系统环境 -->
-      <OSConfig
-        v-model:config-method="formData.osConfigMethod"
-        v-model:os="formData.os"
-        v-model:deployment="formData.deployment"
-        v-model:individual-config="formData.individualOsConfig"
+      <!-- 多配置管理（新版本） -->
+      <MachineTestConfig
         :selected-machines="formData.selectedMachines"
-        @update="updateProgress"
-      />
-
-      <!-- 内核和驱动配置 -->
-      <KernelConfig
-        v-model:config-method="formData.kernelConfigMethod"
-        v-model:kernel-type="formData.kernelType"
-        v-model:kernel-version="formData.kernelVersion"
-        v-model:individual-config="formData.individualKernelConfig"
-        :selected-machines="formData.selectedMachines"
-        @update="updateProgress"
-      />
-
-      <!-- 固件管理
-      <FirmwareConfig
-        v-model:firmware-version="formData.firmwareVersion"
-        v-model:version-comparison="formData.versionComparison"
-        @update="updateProgress"
-      /> -->
-
-      <!-- 管理测试用例 -->
-      <TestCaseManager
-        v-model:selected-test-cases="formData.selectedTestCases"
+        :machines-map="machinesMap"
+        v-model:machine-configurations="formData.machineConfigurations"
         @update="updateProgress"
       />
 
       <!-- 操作按钮 -->
       <div class="actions">
-        <a-button type="primary"  @click="handleReset" :disabled="isGenerating">
+        <a-button type="primary" @click="handleReset" :disabled="isGenerating">
           <template #icon><icon-refresh /></template>
           Reset Form
         </a-button>
-     
+      
         <a-space>
-
-
           <a-button 
-          type="primary" 
-          @click="handleGenerate"
-          :loading="isGenerating"
-          :disabled="isGenerating"
-        >
-
-          <template #icon v-if="!isGenerating"><icon-settings /></template>
-          {{ isGenerating ? 'Previewing...' : 'Preview Test Plan' }}
-
-        </a-button>
+            type="primary" 
+            @click="handleGenerate"
+            :loading="isGenerating"
+            :disabled="isGenerating"
+          >
+            <template #icon v-if="!isGenerating"><icon-settings /></template>
+            {{ isGenerating ? 'Previewing...' : 'Preview Test Plan' }}
+          </a-button>
         </a-space>
       </div>
     </a-form>
@@ -98,6 +70,51 @@
       @download="handleDownload"
       @save="handleSavePlan"
     />
+
+
+
+    <!-- 保存对话框 -->
+    <a-modal
+      v-model:visible="saveDialogVisible"
+      title="保存测试计划"
+      @ok="handleSaveConfirm"
+      @cancel="handleSaveCancel"
+      :ok-loading="isSaving"
+    >
+      <a-form :model="saveForm" layout="vertical">
+        <a-form-item label="计划名称" required>
+          <a-input v-model="saveForm.name" placeholder="请输入计划名称" />
+        </a-form-item>
+        
+        <a-form-item label="类别" required>
+          <a-select v-model="saveForm.category" placeholder="请选择类别">
+            <a-option value="Benchmark">Benchmark</a-option>
+            <a-option value="Stress">Stress</a-option>
+            <a-option value="Functional">Functional</a-option>
+            <a-option value="Performance">Performance</a-option>
+          </a-select>
+        </a-form-item>
+        
+        <a-form-item label="描述">
+          <a-textarea 
+            v-model="saveForm.description" 
+            placeholder="请输入描述信息"
+            :rows="3"
+          />
+        </a-form-item>
+        
+        <a-form-item label="标签">
+          <a-input 
+            v-model="saveForm.tags" 
+            placeholder="多个标签用逗号分隔"
+          />
+        </a-form-item>
+      </a-form>
+    </a-modal>
+
+
+
+
 
     <!-- 保存对话框 -->
     <a-modal
@@ -138,39 +155,79 @@
       </a-form>
     </a-modal>
   </div>
+
+  <!-- 保存对话框 -->
+  <a-modal
+      v-model:visible="saveDialogVisible"
+      title="保存测试计划配置"
+      :width="600"
+      @ok="handleSaveConfirm"
+      @cancel="handleSaveCancel"
+    >
+      <a-form :model="saveForm" layout="vertical" :rules="saveFormRules">
+        <a-form-item label="计划名称" field="name" required>
+          <a-input
+            v-model="saveForm.name"
+            placeholder="请输入计划名称"
+            :max-length="100"
+            show-word-limit
+          />
+        </a-form-item>
+        <a-form-item label="类别" field="category" required>
+          <a-select v-model="saveForm.category" placeholder="请选择类别">
+            <a-option value="Benchmark">Benchmark - 基准测试</a-option>
+            <a-option value="Functional">Functional - 功能测试</a-option>
+            <a-option value="Performance">Performance - 性能测试</a-option>
+            <a-option value="Stress">Stress - 压力测试</a-option>
+            <a-option value="Custom">Custom - 自定义</a-option>
+          </a-select>
+        </a-form-item>
+        <a-form-item label="描述" field="description">
+          <a-textarea
+            v-model="saveForm.description"
+            placeholder="请输入描述信息"
+            :rows="4"
+            :max-length="500"
+            show-word-limit
+          />
+        </a-form-item>
+        <a-form-item label="标签" field="tags">
+          <a-input
+            v-model="saveForm.tags"
+            placeholder="多个标签用逗号分隔，例如：gpu,ubuntu,benchmark"
+            :max-length="200"
+          />
+        </a-form-item>
+        <a-form-item label="状态" field="status">
+          <a-radio-group v-model="saveForm.status">
+            <a-radio :value="1">草稿</a-radio>
+            <a-radio :value="2">已发布</a-radio>
+          </a-radio-group>
+        </a-form-item>
+      </a-form>
+    </a-modal>
 </template>
 
 <script setup lang="ts">
 import { ref, reactive, watch, onMounted } from 'vue'
 import { Message } from '@arco-design/web-vue'
 import type { FormData, YamlData } from '../types'
-import { useMachines } from '../composables/useMachines'
-import { showNotification } from '../check_yaml' // 保留 showNotification
+import { addSavedPlan } from '@/apis/tpgen'
+import { getTestTypes } from '@/apis/testType'
+import { getOsOptions } from '@/apis/osConfig'
 import HardwareConfig from './HardwareConfig.vue'
 import OSConfig from './OSConfig.vue'
 import KernelConfig from './KernelConfig.vue'
-// import FirmwareConfig from './FirmwareConfig.vue'
-import TestCaseManager from './TestCaseManager.vue'
+import MachineTestConfig from './MachineTestConfig.vue'
 import YamlPreview from './YamlPreview.vue'
-import { addSavedPlan } from '@/apis/tpgen'
+import { jsToYaml } from '../utils/yamlConverter'
 
 // 导入兼容性分析函数和通知函数
-// import { compatibility_analysis, showNotification } from '../check_yaml'
-// 导入后端 API（如果存在）
-// import { generateTestPlan, validateYaml, checkCompatibility } from '../api/testPlanApi'
-// 修改为
-
-
-
-import { validateYaml } from '@/apis/yamlCheck'  // 新增
-
-
-
-
-
+import { showNotification } from '../check_yaml'  // 保留 showNotification
+import { validateYaml } from '@/apis/yamlCheck'
+import { useMachines } from '../composables/useMachines'
 
 defineOptions({ name: 'CustomPlan' })
-
 
 // 使用 machines composable
 const { machines, getMachineById, loadMachines } = useMachines()
@@ -201,9 +258,11 @@ interface CompatibilityResponse {
  */
 
 
-
-
-
+/**
+ * 从错误信息中提取 key 路径
+ * @param errorMessage 错误信息，如 "E002 Unsupported: empty value for [hardware.machines]"
+ * @returns key 路径，如 "hardware.machines"，未找到返回 null
+ */
 
 // 原来的函数调用 compatibility_analysis
 const checkCompatibility = async (yamlData: any): Promise<CompatibilityResponse> => {
@@ -240,7 +299,6 @@ const checkCompatibility = async (yamlData: any): Promise<CompatibilityResponse>
 }
 
 
-
 const emit = defineEmits<{
   progressChange: [value: number]
   generate: [data: any]
@@ -249,17 +307,27 @@ const emit = defineEmits<{
 }>()
 
 const formData = reactive<FormData>({
-  cpu: 'Ryzen Threadripper',
-  gpu: '', // 初始为空，等待从数据库加载真实选项后自动选择
+  cpu: '',
+  gpu: '',
+  productName: '', // Product Name (从数据库加载)
+  asicName: '',     // ASIC Name (从数据库加载，根据 productName 过滤)
   selectedMachines: [],
-  osConfigMethod: 'same',
+  
+  // 多配置模式（新）
+  machineConfigurations: {},
+  
+  // 旧字段（保留以备兼容）
+  osConfigMethod: 'individual',
   os: '',
   deployment: '',
   individualOsConfig: {},
-  kernelConfigMethod: 'same',
+  kernelConfigMethod: 'individual',
   kernelType: '',
   kernelVersion: '',
   individualKernelConfig: {},
+  testType: '',
+  testTypeConfigMethod: 'individual',
+  individualTestTypeConfig: {},
   firmwareVersion: '',
   versionComparison: false,
   selectedTestCases: [],
@@ -270,6 +338,18 @@ const generatedYaml = ref<YamlData | null>(null)
 const isGenerating = ref(false)
 const validationStatus = ref<any>(null)
 const errorLineNumbers = ref<number[]>([])
+
+// 机器数据映射表 (ID -> Machine Info)
+const machinesMap = ref<Record<number, any>>({})
+
+// OS 配置映射表 (OS ID -> OS Info)
+const osConfigMap = ref<Record<string, any>>({})
+
+// Test Type 映射表 (Test Type ID -> Test Type Info)
+const testTypeMap = ref<Record<string, any>>({})
+
+// Test Components 和 Test Cases 选中数据
+const testComponentsData = ref<any>(null)
 
 // 保存相关状态
 const saveDialogVisible = ref(false)
@@ -283,12 +363,22 @@ const saveForm = reactive({
 })
 
 
+// 处理机器列表更新
+const handleMachinesUpdate = (machines: any[]) => {
+  // 将机器数组转换为 ID -> Machine 的映射
+  const newMap: Record<number, any> = {}
+  machines.forEach(machine => {
+    newMap[machine.id] = machine
+  })
+  machinesMap.value = newMap
+  console.log('[CustomPlan] 机器数据已更新:', machinesMap.value)
+}
 
 // 更新进度
 const updateProgress = () => {
   // 计算表单完成度
   let filledFields = 0
-  const totalFields = 10
+  let totalFields = 10
 
   if (formData.cpu)
     filledFields++
@@ -313,7 +403,34 @@ const updateProgress = () => {
   emit('progressChange', progress.value)
 }
 
-// 重置表单
+// 处理 Test Components 和 Test Cases 数据更新
+const handleTestDataUpdate = (selectedData: any) => {
+  testComponentsData.value = selectedData
+  console.log('[CustomPlan] Test Components Data updated:', selectedData)
+  updateProgress()
+}
+
+// // 重置表单
+// const handleReset = () => {
+//   formData.cpu = 'Ryzen Threadripper'
+//   formData.gpu = '' // 重置为空，让用户重新选择
+//   formData.selectedMachines = []
+//   formData.osConfigMethod = 'same'
+//   formData.os = ''
+//   formData.deployment = ''
+//   formData.individualOsConfig = {}
+//   formData.kernelConfigMethod = 'same'
+//   formData.kernelType = ''
+//   formData.kernelVersion = ''
+//   formData.individualKernelConfig = {}
+//   formData.firmwareVersion = ''
+//   formData.versionComparison = false
+//   formData.selectedTestCases = []
+//   generatedYaml.value = null
+//   updateProgress()
+//   showNotification('Reset form successfully!')
+// }
+
 const handleReset = () => {
   formData.cpu = 'Ryzen Threadripper'
   formData.gpu = '' // 重置为空，让用户重新选择
@@ -329,10 +446,98 @@ const handleReset = () => {
   formData.firmwareVersion = ''
   formData.versionComparison = false
   formData.selectedTestCases = []
+  
+  // 多配置模式的字段
+  formData.machineConfigurations = {}
+  
   generatedYaml.value = null
-  errorLineNumbers.value = []  // 清空错误高亮行
+  errorLineNumbers.value = []  // ← 添加这一行！清空错误高亮行
   updateProgress()
-  showNotification('Reset form successfully!')
+  showNotification('Reset form successfully!')  // ← 添加这一行！用户提示
+}
+
+
+
+/**
+ * 构建完整的 Test Configuration（包含 components 和 cases）
+ */
+const buildFullTestConfiguration = (testTypeConfig: any, componentsData: any, machines: any[], selectedMachineIds: number[]) => {
+  if (!componentsData) {
+    return testTypeConfig
+  }
+
+  // 构建 Test Type 信息（只返回 type_name）
+  const buildTestTypeInfo = (testTypeId: string | number) => {
+    const typeInfo = testTypeMap.value[String(testTypeId)]
+    if (typeInfo) {
+      return {
+        test_type: typeInfo.typeName  // 只返回 type_name 字符串
+      }
+    }
+    return { 
+      test_type: String(testTypeId)  // 如果找不到，返回 ID 字符串
+    }
+  }
+
+  // 构建 Test Components 结构（按 category 分组，不带序号）
+  const buildTestComponents = (components: any[], cases: any[]) => {
+    if (!components || components.length === 0) {
+      return []
+    }
+    
+    // 如果 components 已经是按 category 分组的结构
+    if (components[0]?.category) {
+      return components.map((cat: any) => ({
+        component_category: cat.category,
+        components: cat.components.map((comp: any) => ({
+          component_name: comp.name,
+          test_cases: comp.testCases || []
+        }))
+      }))
+    }
+    
+    // 否则，创建一个默认的 category
+    return [{
+      component_category: 'Default',
+      components: components.map((comp: any) => ({
+        component_name: typeof comp === 'string' ? comp : comp.name,
+        test_cases: cases || []
+      }))
+    }]
+  }
+
+  if (componentsData.testTypeConfigMethod === 'same') {
+    // Same 模式
+    return {
+      method: 'same',
+      ...buildTestTypeInfo(componentsData.testType),
+      component_categories: buildTestComponents(componentsData.components, componentsData.cases)
+    }
+  } else {
+    // Individual 模式：按照用户选择的机器顺序构建（保持选择顺序）
+    const machineConfigs: any = {}
+    
+    // ✅ 按照 selectedMachineIds 的顺序遍历，而不是 Object.entries()
+    selectedMachineIds.forEach(machineId => {
+      const config = componentsData.machineConfigs?.[machineId]
+      if (!config) return
+      
+      // 查找对应的机器信息
+      const machine = machines.find(m => m.id === machineId)
+      const hostname = machine?.hostname || `machine_${machineId}`
+      
+      machineConfigs[hostname] = {
+        ...buildTestTypeInfo(config.testType),
+        component_categories: buildTestComponents(config.components, config.cases),
+        execution_case_list: config.executionCaseList || []
+      }
+    })
+
+    return {
+      method: 'individual',
+      machines: machineConfigs
+    }
+  }
 }
 
 /**
@@ -350,137 +555,212 @@ const getTimestamp = () => {
   return `${year}-${month}-${day}-${hours}-${minutes}-${seconds}`
 }
 
-// 生成 YAML
+// 生成 YAML（支持多配置模式）
 const handleGenerate = async () => {
+  console.log('[handleGenerate] 🚀 开始生成...')
   isGenerating.value = true
 
-  
-
-  // // 验证表单数据
-  if (formData.selectedMachines.length === 0) {
-
-    showNotification('Please select at least one machine', 'error')
-
-    isGenerating.value = false
-    return
-  }
-
-  if (formData.selectedTestCases.length === 0) {
-
-
-    showNotification('Please select at least one test case', 'error')
-    isGenerating.value = false
-    return
-  }
-
-
-
-
   try {
-  // 获取操作系统配置
-    const osConfig = formData.osConfigMethod === 'same'
-      ? {
-          method: 'same',
-          os: formData.os,
-          deployment: formData.deployment,
+    // ============ 数据验证 ============
+    console.log('[handleGenerate] 开始数据验证（多配置模式）...')
+    console.log('[handleGenerate] formData:', {
+      selectedMachines: formData.selectedMachines,
+      productName: formData.productName,
+      asicName: formData.asicName,
+      machineConfigurations: formData.machineConfigurations
+    })
+    
+    // 1. 验证机器选择
+    if (!formData.selectedMachines || formData.selectedMachines.length === 0) {
+      console.error('[handleGenerate] ❌ 没有选择机器')
+      showNotification('Please select at least one machine', 'error')
+      isGenerating.value = false
+      return
+    }
+    
+    // 2. 验证 Product Name 和 ASIC Name
+    if (!formData.productName || !formData.asicName) {
+      // Message.error('Please select Product Name and ASIC Name')
+      showNotification('Please select Product Name and ASIC Name', 'error')
+      isGenerating.value = false  // ← 添加
+      return  // ← 改为 return
+    }
+    
+    // 3. 验证每台机器至少有一个配置
+    for (const machineId of formData.selectedMachines) {
+      const configs = formData.machineConfigurations[machineId]
+      if (!configs || configs.length === 0) {
+        const machineName = machinesMap.value[machineId]?.hostname || `Machine ${machineId}`
+        // Message.error(`${machineName} has no configuration. Please add at least one configuration.`)
+        showNotification(`${machineName}  has no configuration. Please add at least one configuration.`, 'error')
+        isGenerating.value = false  // ← 添加
+        return  // ← 改为 return
+      }
+      
+      // 验证每个配置的必填字段
+      for (let i = 0; i < configs.length; i++) {
+        const config = configs[i]
+        if (!config.osId || !config.kernelVersion || !config.testTypeId) {
+          const machineName = machinesMap.value[machineId]?.hostname || `Machine ${machineId}`
+          // Message.error(`${machineName} Configuration ${i + 1} is incomplete. Please fill in all required fields.`)
+          showNotification(`${machineName} Configuration ${i + 1} is incomplete`, 'error')
+          isGenerating.value = false  // ← 添加
+          return  // ← 改为 return
         }
-      : {
-          method: 'individual',
-          machines: formData.individualOsConfig,
-        }
-
-    // 获取内核配置
-    const kernelConfig = formData.kernelConfigMethod === 'same'
-      ? {
-          method: 'same',
-          type: formData.kernelType,
-          version: formData.kernelVersion,
-        }
-      : {
-          method: 'individual',
-          machines: formData.individualKernelConfig,
-        }
-
-    // 构建测试套件
-    const testSuites = formData.selectedTestCases.map((testCase, index) => ({
-      id: testCase.id,
-      name: testCase.name,
-      description: testCase.description,
-      type: testCase.testType || '',
-      subgroup: testCase.subgroup || '',
-      order: index + 1,
-    }))
-
-    // 生成 YAML 数据
-    const yamlData: YamlData = {
-      metadata: {
-        generated: new Date().toISOString(),
-        version: '1.0',
-      },
-      hardware: {
-        cpu: formData.cpu,
-        gpu: formData.gpu,
-        machines: formData.selectedMachines.map((id) => {
-          const machine = getMachineById(id)
-          if (!machine) return null
-          return {
-            id: machine.id,
-            name: machine.hostname || machine.name || `Machine ${id}`,
-            specs: {
-              asicName: machine.asicName,
-              gpuModel: machine.gpuModel,
-              gpuSeries: machine.gpuSeries,
-              ipAddress: machine.ipAddress,
+      }
+    }
+    
+    console.log('[handleGenerate] ✅ 数据验证通过')
+    
+    // ============ 构建 YAML 数据 ============
+    console.log('[handleGenerate] 开始构建 YAML 数据...')
+    
+    // 构建机器列表（支持多配置）
+    const machinesWithConfigs = formData.selectedMachines.map((id) => {
+      const machine = machinesMap.value[id]
+      if (!machine) {
+        console.error(`[handleGenerate] ⚠️ 机器 ID ${id} 未找到数据`)
+        return null
+      }
+      
+      const configs = formData.machineConfigurations[id] || []
+      
+      // 为每个配置构建详细信息
+      const configurations = configs.map((config, index) => {
+        console.log('[handleGenerate] 处理配置:', index + 1, {
+          testComponents: config.testComponents,
+          orderedTestCases: config.orderedTestCases
+        })
+        
+        // ✅ 构建 execution_case_list（使用正确的字段名）
+        const executionCaseList = (config.orderedTestCases || [])
+          .map((c: any) => c.caseName || c.case_name || c.name)
+          .filter(Boolean)  // 过滤掉 undefined
+        
+        console.log('[handleGenerate] 配置结果:', {
+          executionCaseList
+        })
+        
+        return {
+          config_id: index + 1,
+          environment: {
+            os: {
+              id: Number(config.osId),  // 正确转换为数字类型
+              // id: config.osId,  // 注入故障用
+              family: config.osFamily,
+              version: config.osVersion
             },
+            deployment_method: config.deploymentMethod,
+            kernel: {
+              kernel_version: config.kernelVersion
+            }
+          },
+          test_configuration: {
+            test_type: config.testTypeName,
+            execution_case_list: executionCaseList
           }
-        }).filter(Boolean),
-      },
-      environment: {
-        os: osConfig,
-        kernel: kernelConfig,
-      },
-      // firmware: {
-      //   gpu_version: formData.firmwareVersion,
-      //   comparison: formData.versionComparison,
-      // },
-      test_suites: testSuites,
+        }
+      })
+      
+      return {
+        id: machine.id,  // ✅ 添加 id 字段（来自数据库）
+        hostname: machine.hostname,
+        productName: machine.productName,
+        asicName: machine.asicName,
+        ipAddress: machine.ipAddress,
+        gpuModel: machine.gpuModel,
+        configurations
+      }
+    }).filter(Boolean)
+    
+    if (machinesWithConfigs.length === 0) {
+      // Message.error('No valid machine data found. Please select machines again.')
+      showNotification('No valid machine data found. Please select machines again.', 'error')
+      isGenerating.value = false  // ← 添加
+      return  // ← 改为 return
+    }
+    
+    console.log('[handleGenerate] 机器配置列表（来自数据库）:', machinesWithConfigs)
+
+    // 构建 hardware 结构（只包含 machines，数据来自数据库）
+    const hardwareData = {
+      machines: machinesWithConfigs.map((m: any) => ({
+        id: m.id,  // ✅ 机器 ID（来自数据库）
+        hostname: m.hostname,  // ✅ 来自数据库
+        productName: m.productName,  // ✅ 来自数据库
+        asicName: m.asicName,  // ✅ 来自数据库
+        ipAddress: m.ipAddress,  // ✅ 来自数据库
+        gpuModel: m.gpuModel  // ✅ 来自数据库
+      }))
     }
 
-  generatedYaml.value = yamlData
-  
-  // 清空之前的错误高亮行
-  errorLineNumbers.value = []
+    // 构建 environment 结构（包含所有机器的配置信息）
+    const environmentData = {
+      machines: Object.fromEntries(
+        machinesWithConfigs.map((m: any) => [
+          m.hostname,  // 使用 hostname 作为 key
+          {
+            configurations: m.configurations.map((config: any) => ({
+              config_id: config.config_id,
+              os: {
+                id: Number(config.environment.os.id),  // 确保为数字类型
+                family: config.environment.os.family,
+                version: config.environment.os.version
+              },
+              deployment_method: config.environment.deployment_method,
+              kernel: {
+                kernel_version: config.environment.kernel.kernel_version
+              },
+              test_type: config.test_configuration.test_type,
+              execution_case_list: config.test_configuration.execution_case_list
+            }))
+          }
+        ])
+      )
+    }
+
+    // 生成 YAML 数据
+    const yamlData: any = {
+      metadata: {
+        generated: new Date().toISOString(),
+        version: '2.0',
+        description: 'TPGen Test Plan Configuration (Multi-Configuration Mode)',
+      },
+      hardware: hardwareData,
+      environment: environmentData
+    }
+
+    generatedYaml.value = yamlData
+    
+    console.log('[handleGenerate] ✅ YAML 数据构建完成:', yamlData)
 
     // 触发生成事件
     emit('generate', {
       hardware: yamlData.hardware,
-      environment: yamlData.environment,
-      firmware: yamlData.firmware,
-      testSuites: yamlData.test_suites,
+      environment: yamlData.environment
     })
 
-  // 显示成功消息
-  // Message.success('Test plan previewed successfully!')
-  showNotification('Test plan previewed successfully!')
+    // 显示成功消息
+    showNotification('Test plan generated successfully!', 'success')
+    console.log('[handleGenerate] ✅ 生成成功')
 
-
-  // ← 在这里添加下面的代码
-  progress.value = 100
-  emit('progressChange', 100)
-
-  // 滚动到预览区域
-  setTimeout(() => {
-    document.querySelector('.yaml-preview')?.scrollIntoView({ behavior: 'smooth' })
-  }, 100)
+    // 更新进度
+    progress.value = 100
+    emit('progressChange', 100)
 
     // 滚动到预览区域
     setTimeout(() => {
       document.querySelector('.yaml-preview')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
-  } catch (error) {
-    console.error('[CustomPlan] 生成失败:', error)
-    Message.error(`Failed to generate test plan: ${error.message || 'Unknown error'}`)
+
+  } catch (error: any) {
+    console.error('[handleGenerate] ❌ 生成失败:', error)
+    console.error('[handleGenerate] 错误堆栈:', error.stack)
+    // Message.error(`Failed to generate test plan: ${error.message || 'Unknown error'}`)
+    showNotification(`Failed to generate: ${error.message || 'Unknown error'}`, 'error')
+
   } finally {
+    console.log('[handleGenerate] 🏁 完成，重置 isGenerating')
     isGenerating.value = false
   }
 }
@@ -492,10 +772,10 @@ const handleGenerate = async () => {
 const handleCopy = async () => {
   try {
     console.log('[CustomPlan handleCopy] 🚀 开始复制流程...')
-
+    
     if (!generatedYaml.value) {
       console.error('[CustomPlan handleCopy] ❌ 没有 YAML 数据')
-      Message.error('No YAML data to copy!')
+      // Message.error('No YAML data to copy!')
       showNotification('No YAML data to copy!', 'error')
       return
     }
@@ -503,35 +783,35 @@ const handleCopy = async () => {
     // 检查浏览器是否支持 Clipboard API
     if (!navigator.clipboard) {
       console.error('[CustomPlan handleCopy] ❌ 浏览器不支持剪贴板 API')
-      Message.error('Browser does not support clipboard operation!')
-      showNotification('Browser not supported!', 'error')
+      // Message.error('Browser does not support clipboard operation!')
+      showNotification('Browser does not support clipboard operation!', 'error')
       return
     }
-
+    
     // 检查是否在安全上下文中（HTTPS 或 localhost）
     if (!window.isSecureContext) {
       console.error('[CustomPlan handleCopy] ❌ 需要 HTTPS 环境')
-      Message.error('HTTPS required for clipboard access!')
-      showNotification('HTTPS required!', 'error')
+      // Message.error('HTTPS required for clipboard access!')
+      showNotification('HTTPS required for clipboard access!', 'error')
       return
     }
-
+    
     // 🔍 执行完整的兼容性验证（E001, E002, E101, E102）
     console.log('[CustomPlan handleCopy] 🔍 开始完整兼容性验证...')
     console.log('[CustomPlan handleCopy] 📋 待验证数据:', JSON.stringify(generatedYaml.value, null, 2))
-
+    
     const response = await checkCompatibility(generatedYaml.value)
     console.log('[CustomPlan handleCopy] 📊 兼容性验证结果:', response)
-
+    
     if (!response.success) {
       // 验证失败，显示详细错误信息
       const errorCode = response.error?.code || 'E999'
       const errorMsg = response.error?.message || 'Unknown compatibility error'
       const lineNumber = response.error?.lineNumber
-
+      
       console.error('[CustomPlan handleCopy] ❌ 兼容性验证失败:', `[${errorCode}] ${errorMsg}`)
       console.error('[CustomPlan handleCopy] ❌❌❌ 阻止复制操作！')
-
+      
       // 更新错误行号（用于高亮显示）
       console.log('[CustomPlan handleCopy] 收到的 lineNumber:', lineNumber)
       if (lineNumber) {
@@ -541,28 +821,33 @@ const handleCopy = async () => {
       } else {
         console.log('[CustomPlan handleCopy] ⚠️ lineNumber 为空，未设置错误行号')
       }
-
+      
       // 显示友好的错误消息
       const errorMsgWithLine = lineNumber ? `${errorMsg} (Line ${lineNumber})` : errorMsg
       // Message.error(`Compatibility Check Failed: ${errorMsgWithLine}`)
       showNotification(`Compatibility Check Failed: ${errorMsgWithLine}`, 'error')
-      return // 🚫 重要：这里必须返回，阻止后续复制操作
+      return  // 🚫 重要：这里必须返回，阻止后续复制操作
     }
-
+    
     // ✅ 验证通过，清除错误行号并复制
     errorLineNumbers.value = []
     console.log('[CustomPlan] ✅ 兼容性验证通过，开始复制...')
-    const yamlText = JSON.stringify(generatedYaml.value, null, 2)
+    
+    // 将对象转换为 YAML 字符串
+    const yamlText = jsToYaml(generatedYaml.value).trimEnd()
+    console.log('[CustomPlan handleCopy] 📋 生成的 YAML 文本 (前 500 字符):', yamlText.substring(0, 500))
+    
     await navigator.clipboard.writeText(yamlText)
-
+    
     emit('copy')
     Message.success('Test plan copied to clipboard!')
     showNotification('Test plan copied to clipboard!', 'success')
     console.log('[CustomPlan] ✅ 复制成功')
+    
   } catch (error) {
     console.error('[CustomPlan] Copy error:', error)
-    Message.error(`Failed to copy to clipboard: ${error.message || 'Unknown error'}`)
-    showNotification(`Failed to copy: ${error.message || 'Unknown error'}`, 'error')
+    // Message.error(`Failed to copy to clipboard: ${error.message || 'Unknown error'}`)
+    showNotification(`Failed to copy to clipboard: ${error.message || 'Unknown error'}`, 'error')
   }
 }
 /**
@@ -572,10 +857,10 @@ const handleCopy = async () => {
 const handleDownload = async () => {
   try {
     console.log('[CustomPlan handleDownload] 🚀 开始下载流程...')
-
+    
     if (!generatedYaml.value) {
       console.error('[CustomPlan handleDownload] ❌ 没有 YAML 数据')
-      Message.error('No YAML data to download!')
+      // Message.error('No YAML data to download!')
       showNotification('No YAML data to download!', 'error')
       return
     }
@@ -583,19 +868,19 @@ const handleDownload = async () => {
     // 🔍 执行完整的兼容性验证（E001, E002, E101, E102）
     console.log('[CustomPlan handleDownload] 🔍 开始下载前完整兼容性验证...')
     console.log('[CustomPlan handleDownload] 📋 待验证数据:', JSON.stringify(generatedYaml.value, null, 2))
-
+    
     const response = await checkCompatibility(generatedYaml.value)
     console.log('[CustomPlan handleDownload] 📊 兼容性验证结果:', response)
-
+    
     if (!response.success) {
       // 验证失败，显示详细错误信息
       const errorCode = response.error?.code || 'E999'
       const errorMsg = response.error?.message || 'Unknown compatibility error'
       const lineNumber = response.error?.lineNumber
-
+      
       console.error('[CustomPlan handleDownload] ❌ 兼容性验证失败:', `[${errorCode}] ${errorMsg}`)
       console.error('[CustomPlan handleDownload] ❌❌❌ 阻止下载操作！')
-
+      
       // 更新错误行号（用于高亮显示）
       console.log('[CustomPlan handleDownload] 收到的 lineNumber:', lineNumber)
       if (lineNumber) {
@@ -605,27 +890,28 @@ const handleDownload = async () => {
       } else {
         console.log('[CustomPlan handleDownload] ⚠️ lineNumber 为空，未设置错误行号')
       }
-
+      
       // 显示友好的错误消息
       const errorMsgWithLine = lineNumber ? `${errorMsg} (Line ${lineNumber})` : errorMsg
       // Message.error(`Compatibility Check Failed: ${errorMsgWithLine}`)
       showNotification(`Compatibility Check Failed: ${errorMsgWithLine}`, 'error')
-      return // 🚫 重要：这里必须返回，阻止后续下载操作
+      return  // 🚫 重要：这里必须返回，阻止后续下载操作
     }
-
+    
     // ✅ 验证通过，清除错误行号并开始下载
     errorLineNumbers.value = []
     console.log('[CustomPlan] ✅ 兼容性验证通过，开始下载...')
-
+    
     // 生成带时间戳的文件名
     const timestamp = getTimestamp()
     const filename = `test-plan_${timestamp}.yaml`
-
-    // 将 YAML 对象转换为字符串
-    const yamlText = JSON.stringify(generatedYaml.value, null, 2)
-
+    
+    // 将对象转换为 YAML 字符串
+    const yamlText = jsToYaml(generatedYaml.value).trimEnd()
+    console.log('[CustomPlan handleDownload] 📋 生成的 YAML 文本 (前 500 字符):', yamlText.substring(0, 500))
+    
     // 创建 Blob 并下载
-    const blob = new Blob([yamlText], { type: 'text/yaml' })
+    const blob = new Blob([yamlText], { type: 'text/yaml;charset=utf-8' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
@@ -634,7 +920,7 @@ const handleDownload = async () => {
     a.click()
     document.body.removeChild(a)
     URL.revokeObjectURL(url)
-
+    
     emit('download')
     // Message.success(`Test plan downloaded: ${filename}`)
     showNotification(`Test plan downloaded: ${filename}`, 'success')
@@ -689,9 +975,6 @@ const handleSavePlan = async () => {
   errorLineNumbers.value = []
   console.log('[CustomPlan] ✅ 兼容性验证通过，开始下载...')
 
-
-
- 
   // 显示保存对话框
   saveDialogVisible.value = true
 }
@@ -716,6 +999,20 @@ const handleSaveConfirm = async () => {
 
 
   try {
+    // 统计 execution_case_list 中的测试用例总数
+    let testCaseCount = 0
+    if (generatedYaml.value?.environment?.machines) {
+      Object.values(generatedYaml.value.environment.machines).forEach((machine: any) => {
+        if (machine.configurations) {
+          machine.configurations.forEach((config: any) => {
+            if (config.execution_case_list) {
+              testCaseCount += config.execution_case_list.length
+            }
+          })
+        }
+      })
+    }
+    
     // 准备保存数据
     const saveData = {
       name: saveForm.name,
@@ -729,7 +1026,7 @@ const handleSaveConfirm = async () => {
       machineCount: formData.selectedMachines.length,
       osType: formData.os || '',
       kernelType: formData.kernelType || '',
-      testCaseCount: formData.selectedTestCases.length,
+      testCaseCount: testCaseCount,
       status: saveForm.status,
     }
 
@@ -759,7 +1056,7 @@ const handleSaveConfirm = async () => {
     }
     else {
 
-      Message.error(res.data || '保存失败')
+      // Message.error(res.data || '保存失败')
       showNotification(res.data || 'Failed to save test plan', 'error')
       console.error('[CustomPlan handleSaveConfirm] ❌ 保存失败:', res.data)
     }
@@ -768,7 +1065,7 @@ const handleSaveConfirm = async () => {
 
   catch (error) {
 
-    Message.error('保存失败，请重试')
+    // Message.error('保存失败，请重试')
     showNotification('Failed to save: ' + (error.message || 'Unknown error'), 'error')
   }
   finally {
@@ -790,13 +1087,51 @@ const handleSaveCancel = () => {
 
 
 // 监听表单变化
-watch(() => formData, updateProgress, { deep: true })
+// watch(() => formData, updateProgress, { deep: true })
+watch(formData, updateProgress, { deep: true })
+
+// 加载 OS 配置数据
+const loadOsConfigMap = async () => {
+  try {
+    const configs = await getOsOptions()
+    const map: Record<string, any> = {}
+    configs.forEach((c: any) => {
+      map[c.value] = {
+        id: c.id,
+        osFamily: c.osFamily,
+        version: c.version
+      }
+    })
+    osConfigMap.value = map
+    console.log('[CustomPlan] OS Config Map loaded:', osConfigMap.value)
+  } catch (error) {
+    console.error('[CustomPlan] Failed to load OS config map:', error)
+  }
+}
+
+// 加载 Test Type 配置数据
+const loadTestTypeMap = async () => {
+  try {
+    const testTypes = await getTestTypes()
+    const map: Record<string, any> = {}
+    testTypes.forEach((t: any) => {
+      map[String(t.id)] = {
+        id: t.id,
+        typeName: t.typeName
+      }
+    })
+    testTypeMap.value = map
+    console.log('[CustomPlan] Test Type Map loaded:', testTypeMap.value)
+  } catch (error) {
+    console.error('[CustomPlan] Failed to load test type map:', error)
+  }
+}
 
 // 初始化
-onMounted(async () => {
-  // 加载机器数据
-  await loadMachines()
+onMounted(() => {
   updateProgress()
+  loadOsConfigMap()
+  loadTestTypeMap()
 })
 </script>
 
@@ -852,12 +1187,71 @@ onMounted(async () => {
 
   .actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  // ← 改这里！从 center 改为 space-between
+    align-items: center;
     margin-top: 40px;
-    gap: 15px;
+    gap: 16px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    :deep(.arco-btn) {
+      min-width: 160px;
+      height: 44px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      &.arco-btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        
+        &:hover {
+          background: linear-gradient(135deg, #5568d3 0%, #6a4190 100%);
+        }
+      }
+
+      &.arco-btn-outline {
+        border: 2px solid #667eea;
+        color: #667eea;
+        background: white;
+        
+        &:hover {
+          border-color: #5568d3;
+          color: #5568d3;
+          background: rgba(102, 126, 234, 0.05);
+        }
+      }
+
+      &:not(.arco-btn-primary):not(.arco-btn-outline) {
+        background: white;
+        border: 1px solid #d9d9d9;
+        
+        &:hover {
+          border-color: #667eea;
+          color: #667eea;
+        }
+      }
+    }
 
     @media (max-width: 768px) {
       flex-direction: column;
+      gap: 12px;
+
+      :deep(.arco-btn) {
+        width: 100%;
+      }
     }
   }
 
@@ -919,3 +1313,4 @@ onMounted(async () => {
   }
 }
 </style>
+

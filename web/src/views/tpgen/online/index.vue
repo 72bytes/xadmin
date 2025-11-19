@@ -30,6 +30,16 @@
           <CustomPlan @progress-change="handleProgressChange" />
         </a-tab-pane>
       </a-tabs>
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
 </template>

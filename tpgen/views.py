@@ -12,14 +12,14 @@ def index(request: HttpRequest):
         'message': 'Welcome to Test Plan Generator (TPGEN)',
         'version': '1.0.0',
         'status': 'ok',
-        'api_docs': '/tpgen/api/docs',
+        'api_docs': '/tp/api/docs',
         'api_endpoints': {
-            'sut_device': '/tpgen/api/sut-device',
-            'os_config': '/tpgen/api/os-config',
-            'test_type': '/tpgen/api/test-type',
-            'test_component': '/tpgen/api/test-component',
-            'test_case': '/tpgen/api/test-case',
-            'test_plan': '/tpgen/api/test-plan',
+            'sut_device': '/tp/api/sut-device',
+            'os_config': '/tp/api/os-config',
+            'test_type': '/tp/api/test-type',
+            'test_component': '/tp/api/test-component',
+            'test_case': '/tp/api/test-case',
+            'test_plan': '/tp/api/test-plan',
         }
     })
 

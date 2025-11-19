@@ -17,6 +17,7 @@ api = NinjaExtraAPI(auth=auth.XadminBaseAuth(),
 # 添加保存的计划管理路由
 api.add_router('saved-plans', api_saved_plan.router)
 
+
 @api.exception_handler(AuthenticationFailed)
 def handl_auth_fail(request, exception):
     resp = RespFailedTempl()

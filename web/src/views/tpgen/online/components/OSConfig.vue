@@ -9,15 +9,20 @@
 
     <a-form-item label="OS Configuration Method">
       <a-radio-group v-model="localConfigMethod" @change="handleUpdate">
-        <a-radio value="same">Same OS for all machines</a-radio>
         <a-radio value="individual">Individual OS configuration</a-radio>
+        <a-radio value="same">Same OS for all machines</a-radio>
       </a-radio-group>
     </a-form-item>
 
     <!-- 统一配置 -->
     <template v-if="localConfigMethod === 'same'">
-      <a-form-item label="OS Distribution" field="os">
-        <a-select v-model="localOs" placeholder="Select an OS" @change="handleUpdate">
+      <a-form-item label="OS Family" field="os">
+        <a-select 
+          v-model="localOs" 
+          placeholder="Select an OS" 
+          :loading="osLoading"
+          @change="handleUpdate"
+        >
           <a-option v-for="option in osOptions" :key="option.value" :value="option.value">
             {{ option.label }}
           </a-option>
@@ -52,10 +57,11 @@
             </div>
           </template>
 
-          <a-form-item label="OS Distribution">
+          <a-form-item label="OS Family">
             <a-select
               v-model="localIndividualConfig[machineId].os"
               placeholder="Select an OS"
+              :loading="osLoading"
               @change="handleUpdate"
             >
               <a-option v-for="option in osOptions" :key="option.value" :value="option.value">
@@ -81,19 +87,9 @@
 </template>
 
 <script setup lang="ts">
-// Options data
-const osOptions = [
-  { value: 'debian', label: 'Debian' },
-  { value: 'ubuntu', label: 'Ubuntu' },
-  { value: 'rhel', label: 'RHEL' },
-  { value: 'sles', label: 'SLES' },
-]
-
-const deploymentOptions = [
-  { value: 'Bare Metal', label: 'Bare Metal' },
-  { value: 'Container', label: 'Container' },
-]
-import { useMachines } from '../composables/useMachines'
+import { computed, watch, ref, onMounted } from 'vue'
+import { getOsOptions } from '@/apis/osConfig'
+import { Message } from '@arco-design/web-vue'
 
 defineOptions({ name: 'OSConfig' })
 
@@ -101,57 +97,93 @@ const props = defineProps<{
   configMethod: 'same' | 'individual'
   os?: string
   deployment?: string
-  individualConfig: Record<number, { os: string, deployment: string }>
+  individualConfig: Record<number, { os: string; deployment: string }>
   selectedMachines: number[]
+  machinesMap?: Record<number, any>
 }>()
 
 const emit = defineEmits<{
   'update:configMethod': [value: 'same' | 'individual']
   'update:os': [value: string]
   'update:deployment': [value: string]
-  'update:individualConfig': [value: Record<number, { os: string, deployment: string }>]
+  'update:individualConfig': [value: Record<number, { os: string; deployment: string }>]
   'update': []
 }>()
 
-// 使用 machines composable
-const { getMachineName } = useMachines()
+// OS 选项（从数据库加载）
+const osOptions = ref<Array<{label: string, value: string}>>([])
+const osLoading = ref(false)
+
+// Deployment 选项（Bare Metal / VM / WSL）
+const deploymentOptions = ref([
+  { label: 'Bare Metal', value: 'bare_metal' },
+  { label: 'VM', value: 'vm' },
+  { label: 'WSL', value: 'wsl' },
+])
 
 const localConfigMethod = computed({
   get: () => props.configMethod,
-  set: (val) => emit('update:configMethod', val),
+  set: val => emit('update:configMethod', val),
 })
 
 const localOs = computed({
   get: () => props.os || '',
-  set: (val) => emit('update:os', val),
+  set: val => emit('update:os', val),
 })
 
 const localDeployment = computed({
   get: () => props.deployment || '',
-  set: (val) => emit('update:deployment', val),
+  set: val => emit('update:deployment', val),
 })
 
 const localIndividualConfig = computed({
   get: () => props.individualConfig,
-  set: (val) => emit('update:individualConfig', val),
+  set: val => emit('update:individualConfig', val),
 })
+
+// 加载 OS 选项
+const loadOsOptions = async () => {
+  osLoading.value = true
+  try {
+    const configs = await getOsOptions()
+    osOptions.value = configs.map(c => ({
+      label: c.label,
+      value: c.value
+    }))
+  } catch (error) {
+    console.error('[OSConfig] 加载 OS 选项失败:', error)
+    Message.error('Failed to load OS options')
+  } finally {
+    osLoading.value = false
+  }
+}
 
 // 确保每个选中的机器都有配置
 watch(() => props.selectedMachines, (machines) => {
   const config = { ...localIndividualConfig.value }
   machines.forEach((id) => {
     if (!config[id]) {
-      config[id] = { os: '', deployment: '' }
+      config[id] = {
+        os: osOptions.value[0]?.value || '',
+        deployment: deploymentOptions.value[0]?.value || ''
+      }
     }
   })
   emit('update:individualConfig', config)
 }, { immediate: true })
 
-// getMachineName 现在从 composable 提供
+const getMachineName = (id: number) => {
+  const machine = props.machinesMap?.[id]
+  return machine?.hostname || `Machine ${id}`
+}
 
 const handleUpdate = () => {
   emit('update')
 }
+
+onMounted(() => {
+  loadOsOptions()
+})
 </script>
 
 <style scoped lang="scss">
@@ -191,6 +223,7 @@ const handleUpdate = () => {
 
 .individual-configs {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 20px;
 
   .machine-config {
@@ -212,3 +245,4 @@ const handleUpdate = () => {
   }
 }
 </style>
+

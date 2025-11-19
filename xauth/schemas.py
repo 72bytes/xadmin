@@ -178,3 +178,38 @@ class SysUserProfile(Schema):
 # )
 
 
+# TPGEN Saved Plan Schemas
+class TpgenSavedPlanIn(Schema):
+    """保存的测试计划输入模式"""
+    name: str
+    category: str
+    description: Optional[str] = None
+    config_data: dict = Field(..., alias='configData')
+    yaml_data: Optional[dict] = Field(None, alias='yamlData')
+    cpu: Optional[str] = None
+    gpu: Optional[str] = None
+    machine_count: int = Field(0, alias='machineCount')
+    os_type: Optional[str] = Field(None, alias='osType')
+    kernel_type: Optional[str] = Field(None, alias='kernelType')
+    test_case_count: int = Field(0, alias='testCaseCount')
+    status: int = 1
+    tags: Optional[str] = None
+
+
+class TpgenSavedPlanUpdate(Schema):
+    """保存的测试计划更新模式（所有字段可选）"""
+    name: Optional[str] = None
+    category: Optional[str] = None
+    description: Optional[str] = None
+    config_data: Optional[dict] = Field(None, alias='configData')
+    yaml_data: Optional[dict] = Field(None, alias='yamlData')
+    cpu: Optional[str] = None
+    gpu: Optional[str] = None
+    machine_count: Optional[int] = Field(None, alias='machineCount')
+    os_type: Optional[str] = Field(None, alias='osType')
+    kernel_type: Optional[str] = Field(None, alias='kernelType')
+    test_case_count: Optional[int] = Field(None, alias='testCaseCount')
+    status: Optional[int] = None
+    tags: Optional[str] = None
+
+

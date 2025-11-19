@@ -29,7 +29,11 @@ from .api import (
 # 如果需要认证，使用: from xadmin_auth import auth
 # ninja_api = NinjaExtraAPI(auth=auth.TitwBaseAuth(), title='TPGEN API', urls_namespace='tpgen-api')
 # 暂时不启用认证，方便测试
-ninja_api = NinjaExtraAPI(auth=None, title='TPGEN API', urls_namespace='tpgen-api')
+ninja_api = NinjaExtraAPI(
+    auth=None, 
+    title='Test Plan Generator API',
+    urls_namespace='tpgen'
+)
 
 
 # 注册所有路由
@@ -71,12 +75,12 @@ def create_exception_handler(code: int):
 
 
 # URL 配置
-app_name = 'tpgen'
+# app_name = 'tpgen'  # 注释掉以避免与 ninja_api 的 urls_namespace 冲突
 
 urlpatterns = [
-    path('', views.index, name='index'),
     path('health', views.health_check, name='health_check'),
-    path('api/', ninja_api.urls),
+    path('api/', ninja_api.urls, name='tpgen'),
+    path('', views.index, name='index'),
 ]
 
 # 注册全局异常处理器

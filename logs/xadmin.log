@@ -4,3 +4,21 @@
 2025-11-19 09:46:46.313 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
 2025-11-19 09:46:46.876 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
 2025-11-19 09:46:47.103 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
+2025-11-19 10:15:29.265 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:15:29.768 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:15:29.978 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
+2025-11-19 10:15:54.186 | INFO     | xadmin.logru_config:emit:23 - /home/zx/xadmin_zx/xadmin/urls.py changed, reloading.
+2025-11-19 10:15:54.432 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:15:54.612 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
+2025-11-19 10:16:20.969 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:16:21.239 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:16:21.425 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
+2025-11-19 10:18:18.046 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:18:18.409 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
+2025-11-19 10:25:01.487 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:25:01.768 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
+2025-11-19 10:25:47.632 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 10:25:47.948 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
+2025-11-19 13:12:50.585 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 13:12:52.020 | INFO     | xadmin.settings:<module>:17 - Django settings loaded.
+2025-11-19 13:12:52.966 | INFO     | xadmin.logru_config:emit:23 - Watching for file changes with StatReloader
