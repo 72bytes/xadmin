@@ -449,14 +449,17 @@ async function loadTestComponents(testTypeId: string) {
         selectedComponents.value[comp.id] = true
         localConfig.testComponents.push(comp)
         
-        // 默认勾选所有 cases
+        // 默认勾选所有 cases（检查是否已存在，避免重复添加）
         for (const testCase of cases) {
           selectedCases.value[testCase.id] = true
-          localConfig.orderedTestCases.push({
-            ...testCase,
-            category: comp.componentCategory || 'Uncategorized',
-            componentName: comp.componentName
-          } as any)
+          // 检查是否已经存在，避免重复添加
+          if (!localConfig.orderedTestCases.some((c: any) => c.id === testCase.id)) {
+            localConfig.orderedTestCases.push({
+              ...testCase,
+              category: comp.componentCategory || 'Uncategorized',
+              componentName: comp.componentName
+            } as any)
+          }
         }
       } catch (error) {
         console.error(`[ConfigurationForm] 加载 Component ${comp.id} 的 Cases 失败:`, error)
