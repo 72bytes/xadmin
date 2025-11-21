@@ -327,13 +327,33 @@ import { Message } from '@arco-design/web-vue'
 defineOptions({ name: 'UploadPlan' })
 
 // Mock 机器数据 (实际项目中应该从 API 获取)
-const mockMachines: Machine[] = [
-  { id: 1, name: 'Machine A', productName: 'navi31', asicName: 'Navi31 GFX1200', ipAddress: '192.168.1.100', gpuModel: 'RX 7900 XT', status: 'Available' },
-  { id: 2, name: 'Machine B', productName: 'navi32', asicName: 'Navi31 GFX1100', ipAddress: '192.168.1.101', gpuModel: 'RX 7900 XT', status: 'Available' },
-  { id: 3, name: 'Machine C', productName: 'navi31', asicName: 'Navi31 GFX1100', ipAddress: '192.168.1.102', gpuModel: 'RX 7900 XT', status: 'Available' },
-  { id: 4, name: 'Machine D', productName: 'navi33', asicName: 'Navi31 GFX1500', ipAddress: '192.168.1.103', gpuModel: 'RX 7900 XT', status: 'Available' },
-  { id: 5, name: 'Machine E', productName: 'navi31', asicName: 'Navi31 GFX1300', ipAddress: '192.168.1.104', gpuModel: 'RX 7900 XT', status: 'Available' },
-]
+// 从数据库加载的机器数据
+const machines = ref<Machine[]>([])
+const machinesLoading = ref(false)
+
+// 加载机器数据
+const loadMachines = async () => {
+  machinesLoading.value = true
+  try {
+    const response = await fetch('http://localhost:8000/tp/api/sut-device/list?size=1000')
+    if (!response.ok) {
+      throw new Error('Failed to fetch machines')
+    }
+    const data = await response.json()
+    machines.value = data.data.list || []
+    console.log('[UploadPlan] 加载了', machines.value.length, '台机器')
+  } catch (error) {
+    console.error('[UploadPlan] 加载机器数据失败:', error)
+    Message.error('Failed to load machine data')
+  } finally {
+    machinesLoading.value = false
+  }
+}
+
+// 组件挂载时加载机器数据
+onMounted(() => {
+  loadMachines()
+})
 
 const fileInputRef = ref<HTMLInputElement>()
 const isDragOver = ref(false)
@@ -571,14 +591,14 @@ function validateYamlConfig(yamlData: any): AnalysisResult {
   }
 
   // 2. 检查 hardware.machines
-  const machines = yamlData.hardware.machines
-  if (!machines || !Array.isArray(machines) || machines.length === 0) {
+  const yamlMachines = yamlData.hardware.machines
+  if (!yamlMachines || !Array.isArray(yamlMachines) || yamlMachines.length === 0) {
     result.missingConfigurations.push('hardware.machines is required and must contain at least one machine')
     return result
   }
 
   // 3. 检查每个机器的必需字段
-  machines.forEach((machine: any, index: number) => {
+  yamlMachines.forEach((machine: any, index: number) => {
     const machinePrefix = `hardware.machines[${index}]`
     
     if (!machine.hostname) {
@@ -606,7 +626,7 @@ function validateYamlConfig(yamlData: any): AnalysisResult {
 
   // 6. 检查每个 hostname 是否在 environment.machines 中定义
   const envMachines = yamlData.environment.machines
-  machines.forEach((machine: any, index: number) => {
+  yamlMachines.forEach((machine: any, index: number) => {
     if (!machine.hostname) return // 已经在上面报错了
 
     const hostname = machine.hostname
@@ -673,7 +693,7 @@ function validateYamlConfig(yamlData: any): AnalysisResult {
   }
 
   // 检查每个机器的可选字段
-  machines.forEach((machine: any, index: number) => {
+  yamlMachines.forEach((machine: any, index: number) => {
     if (!machine.hostname) return // 没有 hostname 就跳过
     
     const machinePrefix = `hardware.machines[${index}] (${machine.hostname})`
@@ -690,7 +710,7 @@ function validateYamlConfig(yamlData: any): AnalysisResult {
   })
 
   // 检查每个 configuration 的可选字段
-  machines.forEach((machine: any) => {
+  yamlMachines.forEach((machine: any) => {
     if (!machine.hostname) return
     const hostname = machine.hostname
     const configurations = envMachines[hostname]?.configurations
@@ -711,24 +731,47 @@ function validateYamlConfig(yamlData: any): AnalysisResult {
     })
   })
 
-  // ============ 机器兼容性检查（与 mockMachines 对比）============
+  // ============ 机器兼容性检查（与数据库机器对比）============
   
   // 只有在没有严重缺失配置时才检查兼容性
-  if (result.missingConfigurations.length === 0) {
-    mockMachines.forEach((mockMachine) => {
-      const match = machines.find((um: any) => 
-        um.productName === mockMachine.productName && um.gpuModel === mockMachine.gpuModel
-      )
+  console.log('[validateYamlConfig] 开始机器兼容性检查')
+  console.log('[validateYamlConfig] YAML machines:', machines)
+  console.log('[validateYamlConfig] DB machines.value:', machines.value)
+  console.log('[validateYamlConfig] missingConfigurations:', result.missingConfigurations)
+  
+  if (result.missingConfigurations.length === 0 && machines.value && machines.value.length > 0) {
+    console.log('[validateYamlConfig] 条件通过，开始遍历')
+    let compatibleCount = 0
+    let incompatibleCount = 0
+    
+    machines.value.forEach((dbMachine) => {
+      const match = yamlMachines.find((ym: any) => {
+        const productMatch = ym.productName?.toLowerCase() === dbMachine.productName?.toLowerCase()
+        const gpuMatch = ym.gpuModel?.toLowerCase() === dbMachine.gpuModel?.toLowerCase()
+        console.log(`[validateYamlConfig] 检查 ${dbMachine.hostname}: productMatch=${productMatch}, gpuMatch=${gpuMatch}`)
+        return productMatch && gpuMatch
+      })
 
       if (match) {
-        result.compatibleMachines.push(mockMachine)
+        console.log(`[validateYamlConfig] ✅ ${dbMachine.hostname} 兼容`)
+        result.compatibleMachines.push(dbMachine)
+        compatibleCount++
       } else {
+        console.log(`[validateYamlConfig] ❌ ${dbMachine.hostname} 不兼容`)
         result.incompatibleMachines.push({
-          machine: mockMachine,
+          machine: dbMachine,
           reasons: ['No matching productName/gpuModel found in uploaded configuration'],
         })
+        incompatibleCount++
       }
     })
+    
+    console.log(`[validateYamlConfig] 完成: ${compatibleCount} 兼容, ${incompatibleCount} 不兼容`)
+  } else {
+    console.log('[validateYamlConfig] 跳过兼容性检查，原因：')
+    console.log('  - missingConfigurations.length:', result.missingConfigurations.length)
+    console.log('  - machines.value exists:', !!machines.value)
+    console.log('  - machines.value.length:', machines.value?.length)
   }
 
   return result
