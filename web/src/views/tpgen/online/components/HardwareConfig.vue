@@ -64,15 +64,19 @@
           v-for="machine in machines"
           :key="machine.id"
           class="machine-card"
-          :class="{ selected: localSelectedMachines.includes(machine.id) }"
-          @click="toggleMachine(machine.id)"
+          :class="{ 
+            selected: localSelectedMachines.includes(machine.id),
+            disabled: !localAsicName
+          }"
+          @click="localAsicName ? toggleMachine(machine.id) : null"
         >
           <h4>{{ machine.hostname }}</h4>
           <p><strong>Product:</strong> {{ machine.productName || 'N/A' }}</p>
           <p><strong>ASIC:</strong> {{ machine.asicName || 'N/A' }}</p>
           <p><strong>GPU:</strong> {{ machine.gpuModel || 'N/A' }}</p>
           <p><strong>IP:</strong> {{ machine.ipAddress || 'N/A' }}</p>
-          <a-tag color="green">Available</a-tag>
+          <a-tag v-if="!localAsicName" color="gray">Please select ASIC first</a-tag>
+          <a-tag v-else color="green">Available</a-tag>
         </div>
       </div>
     </a-form-item>
@@ -250,12 +254,32 @@ const handleProductNameChange = (value: string | number | boolean | Record<strin
   // 不清空已选机器，支持跨类型选择
   if (stringValue) {
     loadAsicNames(stringValue)
-    loadMachines()
+    // 立即加载匹配 product name 的机器（不依赖 ASIC name）
+    loadMachinesByProductOnly(stringValue)
   } else {
     asicNameOptions.value = []
     machines.value = []
   }
   handleUpdate()
+}
+
+// 仅根据 Product Name 加载机器列表
+const loadMachinesByProductOnly = async (productName: string) => {
+  machinesLoading.value = true
+  try {
+    // 只传入 productName，不传入 asicName
+    const result = await getMachinesBySelection(productName, '')
+    machines.value = result
+    // 通知父组件机器列表已更新
+    emit('machinesUpdate', result)
+  } catch (error) {
+    console.error('[HardwareConfig] 加载机器列表失败:', error)
+    Message.error('Failed to load machines')
+    machines.value = []
+    emit('machinesUpdate', [])
+  } finally {
+    machinesLoading.value = false
+  }
 }
 
 // ASIC Name 改变时的处理
@@ -441,6 +465,22 @@ onMounted(() => {
       &::before {
         transform: scaleX(1);
         background: #27ae60;
+      }
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+      background: #f5f5f5;
+
+      &:hover {
+        border-color: #e1e5eb;
+        transform: none;
+        box-shadow: none;
+
+        &::before {
+          transform: scaleX(0);
+        }
       }
     }
 
