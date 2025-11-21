@@ -59,6 +59,8 @@
   flex-direction: column;
   // overflow: hidden; // 改为 hidden，让内部元素控制滚动
   overflow-y: auto; // ✅ 改为 auto，让整个主容器可滚动
+  overflow-x: hidden; // ✅ 添加这行：禁止横向滚动
+
 
   padding: 15px 20px 0;
   max-width: 98%;
@@ -70,9 +72,9 @@
     flex-direction: column;
     // height: 100%;
     min-height: 100%; // ✅ 改为 min-height，让内容可以超出
-
-    // overflow: hidden;
-    overflow: visible; // ✅ 改为 visible
+    // overflow: visible; // ✅ 改为 visible
+    overflow-x: hidden; // ✅ 改为 hidden：防止横向溢出
+    overflow-y: visible; // ✅ 保持 visible：让纵向滚动正常
 
     :deep(.arco-tabs-nav) {
       background: transparent;
@@ -81,7 +83,7 @@
       box-shadow: none;
       margin-bottom: 3px;
       flex-shrink: 0;
-      position: sticky;
+      position: relative;
       top: 0;
       z-index: 100;
     }
@@ -169,12 +171,18 @@
     // ✨ 关键：让内容区域可滚动
     :deep(.arco-tabs-content) {
       flex: 1;
-      overflow: visible; // ✅ 改为 visible，让父容器控制滚动
+      // overflow: visible; // ✅ 改为 visible，让父容器控制滚动
+      overflow-x: hidden; // ✅ 防止横向滚动
+      overflow-y: visible; // ✅ 允许纵向滚动
       padding: 0;
+      width: 100%; // ✅ 添加这行：限制宽度
+
     }
 
     :deep(.arco-tabs-content-item) {
       height: auto;
+      width: 100%; // ✅ 添加这行：限制宽度
+      overflow-x: hidden; // ✅ 添加这行：防止横向溢出
     }
   }
 }

@@ -6,6 +6,7 @@ REQUIRED_ROOT_KEYS = [
     'metadata.generated',           # 生成时间戳
     'metadata.version',             # 配置版本号
     'metadata.description',         # 配置描述信息
+
     
     # ========== Hardware（硬件配置） ==========
     'hardware.machines',            # 机器列表（数组）

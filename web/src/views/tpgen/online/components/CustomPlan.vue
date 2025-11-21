@@ -43,7 +43,8 @@
             :loading="isGenerating"
             :disabled="isGenerating"
           >
-            <template #icon v-if="!isGenerating"><icon-settings /></template>
+            <!-- <template #icon v-if="!isGenerating"><icon-settings /></template> -->
+            <template #icon v-if="!isGenerating"><icon-eye /></template>
             {{ isGenerating ? 'Previewing...' : 'Preview Test Plan' }}
           </a-button>
         </a-space>
@@ -731,6 +732,57 @@ const handleGenerate = async () => {
   }
 }
 
+const copyToClipboard = async (text) => {
+  // 方法1: 优先使用 Clipboard API（现代浏览器 + HTTPS/localhost）
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text)
+      return { success: true, method: 'clipboard-api' }
+    } catch (err) {
+      console.warn('[copyToClipboard] Clipboard API 失败，尝试降级方案:', err)
+      // 继续尝试降级方案
+    }
+  }
+
+  // 方法2: 降级使用 execCommand（兼容 HTTP 环境）
+  try {
+    const textarea = document.createElement('textarea')
+    textarea.value = text
+    
+    // 避免影响页面布局和可见性
+    textarea.style.position = 'fixed'
+    textarea.style.top = '-9999px'
+    textarea.style.left = '-9999px'
+    textarea.style.opacity = '0'
+    textarea.style.pointerEvents = 'none'
+    textarea.setAttribute('readonly', '')
+    
+    document.body.appendChild(textarea)
+    
+    // 选中文本
+    textarea.select()
+    textarea.setSelectionRange(0, textarea.value.length)
+    
+    // 执行复制
+    const successful = document.execCommand('copy')
+    // 执行复制
+
+    // 清理
+    document.body.removeChild(textarea)
+    
+    if (successful) {
+      return { success: true, method: 'execCommand' }
+    } else {
+      throw new Error('execCommand 返回 false')
+    }
+  } catch (err) {
+    console.error('[copyToClipboard] 所有复制方法都失败:', err)
+    return { success: false, error: err.message }
+  }
+}
+
+
+
 /**
  * 处理复制到剪贴板
  * 包含完整的兼容性验证逻辑（来自 check_yaml.ts）
@@ -738,6 +790,21 @@ const handleGenerate = async () => {
 const handleCopy = async () => {
   try {
     console.log('[CustomPlan handleCopy] 🚀 开始复制流程...')
+    console.log('navigator.clipboard:', navigator.clipboard);
+    // 检查1: navigator.clipboard 是否存在
+    console.log('navigator.clipboard:', navigator.clipboard);
+
+    // 检查2: 是否在安全上下文中
+    console.log('isSecureContext:', window.isSecureContext);
+
+    // 检查3: 当前协议
+    console.log('protocol:', window.location.protocol);
+
+    // 检查4: 当前 hostname
+    console.log('hostname:', window.location.hostname);
+
+    // 检查5: 浏览器信息
+    console.log('userAgent:', navigator.userAgent);
     
     if (!generatedYaml.value) {
       console.error('[CustomPlan handleCopy] ❌ 没有 YAML 数据')
@@ -746,21 +813,21 @@ const handleCopy = async () => {
       return
     }
 
-    // 检查浏览器是否支持 Clipboard API
-    if (!navigator.clipboard) {
-      console.error('[CustomPlan handleCopy] ❌ 浏览器不支持剪贴板 API')
-      // Message.error('Browser does not support clipboard operation!')
-      showNotification('Browser does not support clipboard operation!', 'error')
-      return
-    }
+    // // 检查浏览器是否支持 Clipboard API
+    // if (!navigator.clipboard) {
+    //   console.error('[CustomPlan handleCopy] ❌ 浏览器不支持剪贴板 API')
+    //   // Message.error('Browser does not support clipboard operation!')
+    //   showNotification('Browser does not support clipboard operation!', 'error')
+    //   return
+    // }
     
-    // 检查是否在安全上下文中（HTTPS 或 localhost）
-    if (!window.isSecureContext) {
-      console.error('[CustomPlan handleCopy] ❌ 需要 HTTPS 环境')
-      // Message.error('HTTPS required for clipboard access!')
-      showNotification('HTTPS required for clipboard access!', 'error')
-      return
-    }
+    // // 检查是否在安全上下文中（HTTPS 或 localhost）
+    // if (!window.isSecureContext) {
+    //   console.error('[CustomPlan handleCopy] ❌ 需要 HTTPS 环境')
+    //   // Message.error('HTTPS required for clipboard access!')
+    //   showNotification('HTTPS required for clipboard access!', 'error')
+    //   return
+    // }
     
     // 🔍 执行完整的兼容性验证（E001, E002, E101, E102）
     console.log('[CustomPlan handleCopy] 🔍 开始完整兼容性验证...')
@@ -803,12 +870,21 @@ const handleCopy = async () => {
     const yamlText = jsToYaml(generatedYaml.value).trimEnd()
     console.log('[CustomPlan handleCopy] 📋 生成的 YAML 文本 (前 500 字符):', yamlText.substring(0, 500))
     
-    await navigator.clipboard.writeText(yamlText)
+    // await navigator.clipboard.writeText(yamlText)
+    // 🎯 使用降级方案复制
+    const result = await copyToClipboard(yamlText)
     
-    emit('copy')
+    // emit('copy')
     // Message.success('Test plan copied to clipboard!')
     showNotification('Test plan copied to clipboard!', 'success')
-    console.log('[CustomPlan] ✅ 复制成功')
+    // console.log('[CustomPlan] ✅ 复制成功')
+    if (result.success) {
+      console.log(`[CustomPlan] ✅ 复制成功 (使用 ${result.method})`)
+      emit('copy')
+      showNotification('Test plan copied to clipboard!', 'success')
+    } else {
+      throw new Error(result.error || 'Copy failed')
+    }
     
   } catch (error) {
     console.error('[CustomPlan] Copy error:', error)
@@ -1033,7 +1109,7 @@ const handleSaveConfirm = async () => {
       : await addSavedPlan(saveData)
     
     if (res.code === 200) {
-      Message.success(isUpdate ? 'Updated successfully' : 'Saved successfully')
+      // Message.success(isUpdate ? 'Updated successfully' : 'Saved successfully')
       showNotification(isUpdate ? 'Test plan updated successfully!' : 'Test plan saved successfully!', 'success')
       saveDialogVisible.value = false
       
