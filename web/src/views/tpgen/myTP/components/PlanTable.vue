@@ -9,6 +9,7 @@
     :row-selection="rowSelection"
     :selected-keys="selectedKeys"
     :disabled-tools="['size']"
+    :row-class="getRowClass"
     @select="handleSelect"
     @select-all="handleSelectAll"
     @refresh="emit('refresh')"
@@ -130,9 +131,15 @@ interface Props {
   pagination: any
   selectedKeys: (string | number)[]
   queryForm: QueryForm
+  highlightId?: string  // 需要高亮的行 ID
 }
 
 const props = defineProps<Props>()
+
+// 为高亮行添加 CSS 类
+const getRowClass = (record: SavedPlanResp) => {
+  return record.id === props.highlightId ? 'highlight-row' : ''
+}
 
 const emit = defineEmits<{
   'refresh': []
@@ -283,6 +290,25 @@ const rowSelection = reactive({
     display: inline-flex;
     align-items: center;
     gap: 4px;
+  }
+}
+
+// 高亮行样式
+:deep(.highlight-row) {
+  background-color: rgba(var(--primary-6), 0.1) !important;
+  animation: highlight-fade 3s ease-out forwards;
+  
+  td {
+    background-color: rgba(var(--primary-6), 0.1) !important;
+  }
+}
+
+@keyframes highlight-fade {
+  0% {
+    background-color: rgba(var(--primary-6), 0.2);
+  }
+  100% {
+    background-color: transparent;
   }
 }
 </style>

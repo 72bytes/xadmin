@@ -57,7 +57,7 @@
               {{ record.testCaseCount }}
             </a-tag>
           </a-tooltip>
-          <a-tooltip content="USE COUNT">
+          <a-tooltip content="REFERENCE COUNT">
             <a-tag size="small" color="blue">
               <icon-eye />
               {{ record.useCount }}

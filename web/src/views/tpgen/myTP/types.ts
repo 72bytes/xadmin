@@ -5,6 +5,7 @@ export interface QueryForm {
   name?: string
   category?: string
   status?: number
+  createUser?: number  // 创建人 ID，用于过滤当前用户的测试计划
   sort: string[]
 }
 

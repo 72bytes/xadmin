@@ -135,6 +135,12 @@ def add_saved_plan(request: HttpRequest, plan: schemas.TpgenSavedPlanIn):
     try:
         import json
         
+        # 检查名称是否已存在
+        if models.TpgenSavedPlan.objects.filter(name=plan.name).exists():
+            resp = utils.RespFailedTempl()
+            resp.data = f'Test plan name "{plan.name}" already exists. Please use a different name.'
+            return resp.as_dict()
+        
         # 获取当前用户信息
         current_user = request.user
         user_name = current_user.username if hasattr(current_user, 'username') else ''
@@ -179,6 +185,14 @@ def update_saved_plan(request: HttpRequest, plan_id: int, plan: schemas.TpgenSav
         import json
         
         saved_plan = models.TpgenSavedPlan.objects.get(id=plan_id)
+        
+        # 检查名称是否与其他计划重复（排除当前计划自己）
+        if plan.name is not None and plan.name != saved_plan.name:
+            if models.TpgenSavedPlan.objects.filter(name=plan.name).exclude(id=plan_id).exists():
+                resp = utils.RespFailedTempl()
+                resp.data = f'Test plan name "{plan.name}" already exists. Please use a different name.'
+                resp.msg = "Test plan name already exists"
+                return resp.as_dict()
         
         # 获取当前用户信息
         current_user = request.user

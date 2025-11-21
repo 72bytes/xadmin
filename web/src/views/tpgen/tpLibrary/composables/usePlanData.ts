@@ -68,9 +68,26 @@ export function usePlanPreview() {
 }
 
 /**
+ * 生成时间戳字符串（用于文件名或命名）
+ * @returns {string} 格式：YYYYMMDDHHmmss
+ */
+const getTimestamp = () => {
+  const now = new Date()
+  const year = now.getFullYear()
+  const month = String(now.getMonth() + 1).padStart(2, '0')
+  const day = String(now.getDate()).padStart(2, '0')
+  const hours = String(now.getHours()).padStart(2, '0')
+  const minutes = String(now.getMinutes()).padStart(2, '0')
+  const seconds = String(now.getSeconds()).padStart(2, '0')
+  return `${year}${month}${day}${hours}${minutes}${seconds}`
+}
+
+/**
  * 复制计划到我的测试计划功能
  */
 export function usePlanCopy(refresh: () => void) {
+  const router = useRouter()
+
   const onCopy = async (record: SavedPlanResp) => {
     try {
       Modal.confirm({
@@ -89,9 +106,13 @@ export function usePlanCopy(refresh: () => void) {
 
             const planData = detailRes.data as SavedPlanResp
             
+            // 生成带时间戳的名称，防止重复
+            const timestamp = getTimestamp()
+            const newName = `${planData.name}_${timestamp}_COPY`
+            
             // 创建新的私有计划
             const newPlan = {
-              name: `${planData.name} (Copy)`,
+              name: newName,
               category: planData.category,
               description: planData.description,
               configData: planData.configData,
@@ -113,8 +134,12 @@ export function usePlanCopy(refresh: () => void) {
               
               Message.success('Successfully copied to My Test Plans')
               
-              // 刷新数据以显示更新后的useCount
-              refresh()
+              // 跳转到 MyTestPlan 页面，并传递新创建的计划 ID 用于高亮
+              const newPlanId = res.data?.id || res.data
+              router.push({
+                path: '/tpgen/my-plans',
+                query: { highlight: newPlanId }
+              })
             } else {
               Message.error(res.data || 'Copy failed')
             }
