@@ -100,6 +100,12 @@ const editorOptions = {
   scrollBeyondLastLine: false,
   automaticLayout: true,
   lineNumbers: 'on' as const,
+
+  // ✅ 添加滚动优化配置
+  stickyScroll: {
+    enabled: false,  // ✅ 关键：禁用 sticky scroll，解决第一行冻结问题
+  },
+  
   scrollbar: {
     vertical: 'visible' as const,
     horizontal: 'visible' as const,
